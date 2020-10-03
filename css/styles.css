@@ -2472,8 +2472,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #FFA500; /* original: #fed136*/
+  border-color: #FFA500;
 }
 .btn-primary:hover {
   color: #fff;
@@ -9797,6 +9797,18 @@ button.bg-dark:focus {
   color: #fff !important;
 }
 
+.text-blue {
+    color: #00ffff;
+}
+
+.text-purple {
+    color: #cc00cc;
+}
+
+.text-orange {
+    color: #ffa500;
+}
+
 .text-primary {
   color: #fed136 !important;
 }
@@ -10141,7 +10153,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/header-bg.jpg");
+  background-image: url("../assets/img/header.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
