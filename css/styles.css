@@ -10282,7 +10282,7 @@ header.masthead .masthead-heading {
   padding: 0;
   list-style: none;
 }
-.timeline:before {
+.timeline:before { /*line*/
   position: absolute;
   top: 0;
   bottom: 0;
@@ -10323,7 +10323,7 @@ header.masthead .masthead-heading {
   border-right-width: 14px;
   border-left-width: 0;
 }
-.timeline > li .timeline-image {
+.timeline > li .timeline-image { /* images*/
   position: absolute;
   z-index: 100;
   left: 0;
@@ -10334,7 +10334,7 @@ header.masthead .masthead-heading {
   color: white;
   border: 7px solid #e9ecef;
   border-radius: 100%;
-  background-color: #fed136;
+  background-color: #cc00cc;
 }
 .timeline > li .timeline-image h4 {
   font-size: 10px;
