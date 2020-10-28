@@ -5,15 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Maria Grandury</title>
+        <title>Maria Grandury - MLE</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
-        <!-- Font Awesome icons (free version)-->
+        <!-- Font Awesome icons -->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <!-- CSS W3 (Slides) -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Core theme CSS -->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
 
@@ -27,10 +29,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">My Story</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">More</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#story">My Story</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#more">More</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -52,8 +54,8 @@
             </p>
         </header>
 
-        <!-- Services-->
-        <section class="page-section" id="services">
+        <!-- Skills -->
+        <section class="page-section" id="skills">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Skills</h2>
@@ -230,12 +232,26 @@
             </div>
         </section>
 
-        <!-- About-->
-        <section class="page-section" id="about">
+        <!-- Quote --
+        <section class="page-section bg-dark" id="quote">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="large text-muted" style="font-size: 26px; padding: 32px;">
+                        “Our intelligence is what makes us human, <br />
+                        and AI is an extension of that quality.”
+                    </p>
+                    <p class="large text-muted">Yann LeCun</p>
+                </div>
+            </div>
+        </section>
+        //-->
+
+        <!-- My Story -->
+        <section class="page-section" id="story">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">My Story</h2>
-                    <h3 class="section-subheading text-muted">How I became a Data Scientist</h3>
+                    <h3 class="section-subheading text-muted">How I became a Machine Learning Engineer</h3>
                 </div>
                 <ul class="timeline">
                     <li>
@@ -338,13 +354,73 @@
             </div>
         </section>
 
-        <!-- Team-->
-        <section class="page-section bg-light" id="team">
+        <!-- References //-->
+        <section class="page-section bg-dark" style="height: 464px" id="references">
+            <div class="w3-content w3-display-container" style="max-width:800px; color: white;">
+                <div class="mySlides text-center ref-border">
+                    <h3 style="padding-bottom: 12px">My Thesis Tutor</h3>
+                    <p class="text-muted">"I have worked with María as the supervisor on her BSc thesis. María has shown during this period
+                        to have robust skills on the machine learning rudiments, including some of the most common
+                        frameworks (keras, tensorflow). She has also excellent communication and team working skills."</p>
+                </div>
+                <div class="mySlides text-center ref-border">
+                    <h3 style="padding-bottom: 12px">My Mathematics Teacher</h3>
+                    <p class="text-muted">"María has been an excellent student. <br />
+                        She has great qualities for research, innovation and teamwork. <br />
+                        An excellent incorporation to any business project."</p>
+                </div>
+                <div class="mySlides text-center ref-border">
+                    <h3 style="padding-bottom: 12px">My Manager at SADEI</h3>
+                    <p class="text-muted">"Maria has been one of the most outstanding students among all SADEI interns.
+                        She demonstrated a great ability to understand the objectives of the work and quickly learn new tools. I have seen her
+                        excellent training, as well as her tenacity, motivation and collaboration with the rest of the team."</p>
+                </div>
+                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%; bottom: -96px;">
+                    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+
+            function currentDiv(n) {
+              showDivs(slideIndex = n);
+            }
+
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+              }
+              x[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " w3-white";
+            }
+        </script>
+
+        <!-- Volunteering -->
+        <section class="page-section bg-white" id="more">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Volunteering</h2>
+                    <h2 class="section-heading text-uppercase" style="padding-bottom: 23px;">Volunteering</h2>
                     <!--
-                    <h3 class="section-subheading text-muted">Helping people around the world</h3>
+                    <h3 class="section-subheading text-muted">“Our intelligence is what makes us human, and AI is an extension of that quality.” - Yann LeCun</h3>
                     //-->
                 </div>
                 <div class="row">
@@ -370,19 +446,13 @@
                         </div>
                     </div>
                 </div>
-                <!--
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
-                </div>
-                //-->
-            </div>
-        </section>
 
-        <!-- Team-->
-        <section class="page-section bg-light" id="interests">
+            </div>
+
+            <!-- Interests //-->
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Interests</h2>
+                    <h2 class="section-heading text-uppercase" style="padding: 32px;">Interests</h2>
                     <!--
                     <h3 class="section-subheading text-muted">I always say "yes" to a new plan!</h3>
                     //-->
@@ -410,33 +480,29 @@
                         </div>
                     </div>
                 </div>
-                <!--
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Good stories never begin with an "I stayed at home"</p></div>
-                </div>
-                //-->
             </div>
-        </section>
 
-        <!-- Clients-->
-        <div class="py-5">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Organizations</h2>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a target="_blank" href="https://www.womentech.net/"><img class="img-fluid d-block mx-auto" src="assets/img/logos/WomenTech.png" alt="" /></a>
+        <!-- Organizations -->
+            <div class="py-5">
+                <div class="container">
+                    <div class="text-center">
+                        <h2 class="section-heading text-uppercase" style="padding: 32px;">Organizations</h2>
                     </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a target="_blank" href="https://www.larche.org/ca/larche-india#all"><img class="img-fluid d-block mx-auto" src="assets/img/logos/LArche.jpg" alt="" /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a target="_blank" href="https://www.facebook.com/BandadeMusicaCiudaddePonferrada/"><img class="img-fluid d-block mx-auto" src="assets/img/logos/Banda.jpg" alt="" /></a>
+                    <div class="row text-center">
+                        <div class="col-md-3 col-sm-6 my-3">
+                            <a target="_blank" href="https://www.womentech.net/"><img class="img-fluid d-block mx-auto" src="assets/img/logos/WomenTech.png" alt="" /></a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 my-3">
+                            <a target="_blank" href="https://www.larche.org/ca/larche-india#all"><img class="img-fluid d-block mx-auto" src="assets/img/logos/LArche.jpg" alt="" /></a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 my-3">
+                            <a target="_blank" href="https://www.facebook.com/BandadeMusicaCiudaddePonferrada/"><img class="img-fluid d-block mx-auto" src="assets/img/logos/Banda.jpg" alt="" /></a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        </section>
 
         <section class="page-section" id="contact">
             <div class="container">
