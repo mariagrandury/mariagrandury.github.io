@@ -3,12 +3,14 @@
 Welcome to my personal website! 
 
 You'll find the following sections:
-- skills
-- portfolio
-- my story
-- volunteering
-- interests
-- contact
+- Skills
+- Portfolio
+- My Story
+- Recommendations
+- Volunteering
+- Interests
+- Organizations
+- Contact
 
 [Have a look!](https://mariagrandury.github.io/)
 
