@@ -1,24 +1,21 @@
 <template>
-  <div class="bg-teal-50 dark:bg-teal-900">
-    <div class="container mx-auto min-h-screen flex flex-col">
-      <NavBar />
-      <div
-        class="container mx-auto flex-grow grid content-center place-items-center text-3xl"
-      >
-        Here are my projects!
-      </div>
+  <Container class="bg-white dark:bg-gray-900">
+    <NavBar />
+  </Container>
+  <Container class="bg-white dark:bg-gray-900">
+    <div>
+      <h1 class="flex items-center gap-2">
+        <span class="text-4xl font-semibold">Projects</span>
+        <i-fluent-design-ideas-24-regular style="font-size: 2rem;" />
+      </h1>
+      <h2 class="py-6">
+        I'm really interested in NLP and XAI, especially applied to Healthcare
+        and Biomedicine.
+      </h2>
     </div>
-  </div>
+    <div class="py-6 grid gap-6">
+      <div>Project 1</div>
+      <div>Project 2</div>
+    </div>
+  </Container>
 </template>
-
-<script lang="ts">
-import { ref, defineComponent } from "vue";
-import NavBar from "../components/NavBar.vue";
-
-export default defineComponent({
-  name: "Projects",
-  components: {
-    NavBar,
-  },
-});
-</script>
