@@ -1,40 +1,27 @@
+<script setup lang="ts">
+import { ref } from "vue";
+
+const i = ref(0)
+const greetings = ref([
+  "Hi, I'm María.",
+  "Hola, Yo soy María.",
+  "Bonjour, Je suis María.",
+  "Hallo, Ich bin María.",
+])
+</script>
+
 <template>
-  <div class="bg-teal-50 dark:bg-teal-900">
-    <div class="container mx-auto min-h-screen flex flex-col">
+  <div class="min-h-screen grid grid-rows-[auto,1fr]">
+    <Container class="bg-white dark:bg-gray-900">
       <NavBar />
+    </Container>
+    <Container class="bg-white dark:bg-gray-900">
       <div
-        class="container mx-auto flex-grow grid content-center place-items-center text-3xl"
+        @click="i = (i + 1) % greetings.length"
+        class="h-full grid place-items-center cursor-pointer select-none"
       >
-        <div
-          @click="i = (i + 1) % greetings.length"
-          class="cursor-pointer select-none"
-        >
-          {{ greetings[i] }}
-        </div>
+        <h1 class="text-4xl">{{ greetings[i] }}</h1>
       </div>
-    </div>
+    </Container>
   </div>
 </template>
-
-<script lang="ts">
-import { ref, defineComponent } from "vue";
-import NavBar from "../components/NavBar.vue";
-
-export default defineComponent({
-  name: "Home",
-  components: {
-    NavBar,
-  },
-  data() {
-    return {
-      i: 0,
-      greetings: [
-        "Hi! I'm María.",
-        "Hola! Yo soy María.",
-        "Bonjour! Je suis María.",
-        "Hallo! Ich bin María.",
-      ],
-    };
-  },
-});
-</script>
