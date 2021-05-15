@@ -1,3 +1,3 @@
 <template>
-  <i-mdi-alpha-m-box-outline class="text-2rem" />
+  <i-fluent-rating-mature-20-regular class="text-2rem" />
 </template>
