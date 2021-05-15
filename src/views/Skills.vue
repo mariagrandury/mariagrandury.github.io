@@ -23,14 +23,14 @@
         text="ML algorithms and metrics, quality and trustworthiness"
         color="text-blue-600 bg-blue-50 dark:text-white dark:bg-blue-600"
       >
-        <i-ant-design-robot-outlined />
+        <i-fluent-bot-20-regular />
       </SkillCard>
       <SkillCard
         title="Deep Learning"
         text="DL.AI Specialization TF Professional Developer"
         color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
       >
-        <i-carbon-machine-learning-model />
+        <i-fluent-brain-circuit-20-regular />
       </SkillCard>
       <SkillCard
         title="Research"
@@ -58,14 +58,14 @@
         text="Docker, MLflow, AWS: S3, Lambda, CloudFront, Sagemaker"
         color="text-orange-600 bg-orange-50 dark:text-white dark:bg-orange-600"
       >
-        <i-fluent-cloud-sync-24-regular />
+        <i-clarity-network-settings-line />
       </SkillCard>
       <SkillCard
         title="Technical Communication"
         text="Data Visualization with Tableau"
         color="text-red-600 bg-red-50 dark:text-white dark:bg-red-600"
       >
-        <i-ant-design-pie-chart-outlined />
+        <i-fluent-chat-multiple-20-regular />
       </SkillCard>
     </div>
     <div class="my-6 flex justify-center">
@@ -81,11 +81,3 @@
     </div>
   </Container>
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "Skills",
-});
-</script>

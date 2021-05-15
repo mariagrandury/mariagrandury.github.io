@@ -4,9 +4,9 @@ import { ref } from "vue";
 const i = ref(0)
 const greetings = ref([
   "Hi, I'm María.",
-  "Hola, Yo soy María.",
-  "Bonjour, Je suis María.",
-  "Hallo, Ich bin María.",
+  "Hola, soy María.",
+  "Bonjour, je suis María.",
+  "Hallo, ich bin María.",
 ])
 </script>
 
