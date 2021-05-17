@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
+import { useInterval } from "@vueuse/core";
 
-const i = ref(0)
 const greetings = ref([
   "Hi, I'm María.",
   "Hola, soy María.",
   "Bonjour, je suis María.",
   "Hallo, ich bin María.",
 ])
+const { counter } = useInterval(1500)
+const index = computed(() => counter.value % greetings.value.length)
 </script>
 
 <template>
@@ -16,11 +18,8 @@ const greetings = ref([
       <NavBar />
     </Container>
     <Container class="bg-white dark:bg-gray-900">
-      <div
-        @click="i = (i + 1) % greetings.length"
-        class="h-full grid place-items-center cursor-pointer select-none"
-      >
-        <h1 class="text-4xl">{{ greetings[i] }}</h1>
+      <div class="h-full grid place-items-center">
+        <h1 class="text-4xl">{{ greetings[index] }}</h1>
       </div>
     </Container>
   </div>
