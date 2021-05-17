@@ -10,7 +10,7 @@
       </h1>
       <h2 class="py-6">I'm passionate about what I do and always learning something new!</h2>
     </div>
-    <div class="py-6 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+    <div class="py-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
       <SkillCard
         title="Programming"
         text="Python: NumPy, Pandas, TensorFlow 2, Keras, Sklearn"
