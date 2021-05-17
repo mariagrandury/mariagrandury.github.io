@@ -22,20 +22,19 @@ export default defineComponent({
     <div
         class="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-black hover:shadow-md rounded-md"
     >
-        <div class="grid grid-cols-[max-content,auto,max-content] gap-3">
+        <div class="grid grid-cols-[auto,1fr,auto] gap-3">
             <div class="w-4rem h-4rem grid place-items-center rounded-md text-2rem" :class="color">
                 <slot></slot>
             </div>
-            <div class="flex flex-col gap-3">
+            <div class="grid gap-3">
                 <h1>{{ title }}</h1>
-                <div>
+                <div class="flex flex-wrap gap-3">
                     <span
                         v-for="(tag, index) in tags"
                         :key="index"
-                        class="text-sm whitespace-nowrap px-2 py-1 mr-2 bg-gray-50 dark:bg-gray-700 border border-gray-100 dark:border-black h-10 rounded select-none"
+                        class="text-sm px-2 py-0.5 bg-gray-50 dark:bg-gray-700 border border-gray-100 dark:border-black rounded select-none"
                     >{{ tag }}</span>
                 </div>
-                <slot name="description"></slot>
             </div>
             <a
                 v-if="link"
@@ -45,6 +44,9 @@ export default defineComponent({
             >
                 <i-fluent-rocket-20-regular style="font-size: 1.25rem;" />
             </a>
+            <div class="col-start-2 col-span-2">
+                <slot name="description"></slot>
+            </div>
         </div>
     </div>
 </template>
