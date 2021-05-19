@@ -20,10 +20,10 @@ export default defineComponent({
 
 <template>
     <div
-        class="p-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-black hover:shadow-md rounded-md"
+        class="bg-white border rounded-md border-gray-200 p-6 dark:border-black hover:shadow-md dark:bg-gray-800"
     >
-        <div class="grid grid-cols-[auto,1fr,auto] gap-3">
-            <div class="w-4rem h-4rem grid place-items-center rounded-md text-2rem" :class="color">
+        <div class="grid gap-3 grid-cols-[auto,1fr,auto]">
+            <div class="rounded-md h-4rem grid text-2rem w-4rem place-items-center" :class="color">
                 <slot></slot>
             </div>
             <div class="grid gap-3">
@@ -32,7 +32,7 @@ export default defineComponent({
                     <span
                         v-for="(tag, index) in tags"
                         :key="index"
-                        class="text-sm px-2 py-0.5 bg-gray-50 dark:bg-gray-700 border border-gray-100 dark:border-black rounded select-none"
+                        class="border rounded bg-gray-50 border-gray-100 text-sm py-0.5 px-2 dark:border-black select-none dark:bg-gray-700"
                     >{{ tag }}</span>
                 </div>
             </div>
@@ -40,7 +40,7 @@ export default defineComponent({
                 v-if="link"
                 :href="link"
                 target="_blank"
-                class="self-start p-2 dark:bg-gray-700 border border-gray-200 dark:border-black rounded-md items-center flex items-center hover:ring"
+                class="border rounded-md flex border-gray-200 p-2 self-start dark:border-black items-center hover:ring dark:bg-gray-700"
             >
                 <i-fluent-rocket-20-regular style="font-size: 1.25rem;" />
             </a>

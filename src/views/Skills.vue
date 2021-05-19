@@ -4,13 +4,13 @@
   </Container>
   <Container class="bg-white dark:bg-gray-900">
     <div>
-      <h1 class="flex items-center gap-2">
-        <span class="text-4xl font-semibold">Skills</span>
+      <h1 class="flex gap-2 items-center">
+        <span class="font-semibold text-4xl">Skills</span>
         <i-fluent-color-24-regular style="font-size: 2rem;" />
       </h1>
       <h2 class="py-6">I'm passionate about what I do and always learning something new!</h2>
     </div>
-    <div class="py-6 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+    <div class="grid py-6 gap-6 md:grid-cols-2 lg:grid-cols-4">
       <SkillCard
         title="Programming"
         text="Python: NumPy, Pandas, TensorFlow 2, Keras, Sklearn"
@@ -68,11 +68,11 @@
         <i-fluent-chat-multiple-20-regular />
       </SkillCard>
     </div>
-    <div class="my-6 flex justify-center">
+    <div class="flex my-6 justify-center">
       <a
         href="https://github.com/mariagrandury/mariagrandury/tree/main/Certificates"
         target="_blank"
-        class="p-6 font-medium border-2 border-dashed border-gray-200 hover:ring-4 hover:border-transparent rounded-md flex items-center gap-3"
+        class="border-dashed rounded-md flex font-medium border-2 border-gray-200 p-6 gap-3 hover:border-transparent items-center hover:ring-4"
       >
         <i-carbon-certificate-check class="text-1.25rem" />
         <span>Check my certificates</span>

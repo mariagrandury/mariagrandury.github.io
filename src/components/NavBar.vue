@@ -9,13 +9,13 @@ const isDark = useDark();
     <router-link class="contents" to="/">
       <Logo class="<md:mx-auto" />
     </router-link>
-    <div class="flex justify-around items-center gap-6">
+    <div class="flex gap-6 justify-around items-center">
       <router-link to="/projects">Projects</router-link>
       <router-link to="/skills">Skills</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/contact">Contact</router-link>
     </div>
-    <div class="flex justify-around items-center gap-6">
+    <div class="flex gap-6 justify-around items-center">
       <a href="https://github.com/mariagrandury" target="_blank" class="contents">
         <i-uil-github />
       </a>

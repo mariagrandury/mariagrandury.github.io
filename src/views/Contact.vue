@@ -30,21 +30,21 @@ const rotationStyle = computed(() => {
     <Container class="bg-white dark:bg-gray-800">
       <div class="h-full grid place-items-center" style="perspective: 800px;">
         <!-- uncomment to use translucency -->
-        <!-- class="bg-[#fff5] dark:bg-[#0002] grid p-10 border-1 border-white dark:border-black border-opacity-25 dark:border-opacity-25 rounded-2xl absolute" -->
+        <!-- class="border-white bg-[#fff5] border-1 border-opacity-25 rounded-2xl grid p-10 dark:border-black absolute dark:bg-[#0002] dark:border-opacity-25" -->
         <!-- style="backdrop-filter: blur(20px)" -->
         <div
-          class="grid p-10 bg-white dark:bg-gray-900 border-1 border-gray-200 dark:border-black rounded-2xl shadow absolute"
+          class="bg-white border-1 border-gray-200 rounded-2xl shadow grid p-10 dark:border-black absolute dark:bg-gray-900"
           style="width: 180mm; height: 104mm;"
           :style="rotationStyle"
         >
           <div class="grid grid-cols-[auto,max-content]" style>
             <div>
-              <h1 class="text-3xl font-medium">María Grandury</h1>
-              <h2 class="text-lg font-light">Machine Learning Research Engineer</h2>
+              <h1 class="font-medium text-3xl">María Grandury</h1>
+              <h2 class="font-light text-lg">Machine Learning Research Engineer</h2>
             </div>
             <Logo style="font-size: 2rem" />
           </div>
-          <div class="text-lg font-light grid grid-cols-[auto,1fr] gap-x-4 gap-y-1 items-center">
+          <div class="font-light text-lg grid gap-x-4 gap-y-1 grid-cols-[auto,1fr] items-center">
             <a href="tel:+34681188591" class="contents">
               <i-fluent-phone-24-regular />
               <span>+34 681188591</span>

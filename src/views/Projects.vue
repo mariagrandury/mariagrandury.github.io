@@ -4,8 +4,8 @@
   </Container>
   <Container class="bg-white dark:bg-gray-900">
     <div>
-      <h1 class="flex items-center gap-2">
-        <span class="text-4xl font-semibold">Projects</span>
+      <h1 class="flex gap-2 items-center">
+        <span class="font-semibold text-4xl">Projects</span>
         <i-fluent-design-ideas-24-regular style="font-size: 2rem;" />
       </h1>
       <h2 class="py-6">
@@ -13,7 +13,7 @@
         and Biomedicine.
       </h2>
     </div>
-    <div class="py-6 grid gap-x-6 gap-y-3 lg:grid-cols-2">
+    <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
       <Project
         title="Chatbot COVID-19"
         :tags="['Conversational AI', 'Backend', 'Frontend', 'DevOps']"
@@ -26,7 +26,7 @@
             <a
               target="_blank"
               href="https://d3g60fts6ncstu.cloudfront.net/"
-              class="underline text-accent-700 dark:text-accent-300"
+              class="text-accent-700 underline dark:text-accent-300"
             >AURORA!</a>
           </p>
         </template>
