@@ -42,7 +42,7 @@ const rotationStyle = computed(() => {
               <h1 class="font-medium text-3xl">María Grandury</h1>
               <h2 class="font-light text-lg">Machine Learning Research Engineer</h2>
             </div>
-            <Logo style="font-size: 2rem" />
+            <Logo style="font-size: 2rem;" />
           </div>
           <div class="font-light text-lg grid gap-x-4 gap-y-1 grid-cols-[auto,1fr] items-center">
             <a href="tel:+34681188591" class="contents">
