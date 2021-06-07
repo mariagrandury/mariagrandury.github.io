@@ -4,7 +4,7 @@
   </Container>
   <Container>
     <h1 class="flex gap-2 items-center mb-12">
-      <span class="font-semibold text-4xl">My Story</span>
+      <span class="font-semibold text-4xl tracking-tight">My Story</span>
       <i-fluent-earth-24-regular style="font-size: 2rem" />
       <i-fluent-rocket-24-regular style="font-size: 2rem" />
     </h1>

@@ -5,7 +5,7 @@
   <Container class="bg-white dark:bg-gray-900">
     <div>
       <h1 class="flex gap-2 items-center">
-        <span class="font-semibold text-4xl">Skills</span>
+        <span class="font-semibold text-4xl tracking-tight">Skills</span>
         <i-fluent-color-24-regular style="font-size: 2rem;" />
       </h1>
       <h2 class="py-6">I'm passionate about what I do and always learning something new!</h2>

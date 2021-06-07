@@ -5,7 +5,7 @@
   <Container class="bg-white dark:bg-gray-900">
     <div>
       <h1 class="flex gap-2 items-center">
-        <span class="font-semibold text-4xl">Projects</span>
+        <span class="font-semibold text-4xl tracking-tight">Projects</span>
         <i-fluent-design-ideas-24-regular style="font-size: 2rem;" />
       </h1>
       <h2 class="py-6">
@@ -14,7 +14,7 @@
       </h2>
     </div>
     <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
-      <Project
+      <ProjectCard
         title="Chatbot COVID-19"
         :tags="['Conversational AI', 'Backend', 'Frontend', 'DevOps']"
         link="https://github.com/mariagrandury/chatbot-covid-backend"
@@ -30,71 +30,71 @@
             >AURORA!</a>
           </p>
         </template>
-      </Project>
-      <Project
+      </ProjectCard>
+      <ProjectCard
         title="Neural Network for the study of the Higgs Boson with data from the LHC"
         :tags="['Machine Learning', 'Physics']"
       >
         <i-carbon-network-4 />
-      </Project>
-      <Project
+      </ProjectCard>
+      <ProjectCard
         title="Quality Analysis of ML Models"
         :tags="['Python Package', 'AI Performance', 'AI Robustness']"
         link="https://github.com/mariagrandury/ml-model-quality-analysis"
       >
         <i-fluent-hd-20-regular />
-      </Project>
-      <Project
+      </ProjectCard>
+      <ProjectCard
         title="The Annotated Transformer"
         :tags="['NLP', 'Transformers', 'PyTorch', 'TensorFlow 2']"
         link="https://github.com/nlp-en-es/the-annotated-transformer"
       >
         <i-fluent-document-search-20-regular />
-      </Project>
-      <Project
+      </ProjectCard>
+      <ProjectCard
         title="TensorFlow Models"
         :tags="['NLP', 'Computer Vision', 'TensorFlow 2']"
         link="https://github.com/mariagrandury/tensorflow-models"
       >
         <i-simple-icons-tensorflow />
-      </Project>
-      <Project title="Sarcarsm Detector" :tags="['NLP', 'TensorFlow 2', 'Docker', 'Flask']">
+      </ProjectCard>
+      <ProjectCard title="Sarcarsm Detector" :tags="['NLP', 'TensorFlow 2', 'Docker', 'Flask']">
         <i-fluent-emoji-laugh-20-regular />
-      </Project>
-      <Project title="Punctuation and capitalization of Speech Recognition" :tags="['NLP']">
+      </ProjectCard>
+      <ProjectCard title="Punctuation and capitalization of Speech Recognition" :tags="['NLP']">
         <i-fluent-speaker-edit-20-regular />
-      </Project>
-      <Project title="Text To Image Model" :tags="['NLP', 'Computer Vision', 'BERT', 'BigGAN']">
+      </ProjectCard>
+      <ProjectCard title="Text To Image Model" :tags="['NLP', 'Computer Vision', 'BERT', 'BigGAN']">
         <i-fluent-image-alt-text-20-regular />
-      </Project>
-      <Project
+      </ProjectCard>
+      <ProjectCard
         title="Image Classification Web App"
         :tags="['Computer Vision', 'TensorFlow 2', 'Flask']"
         link="https://github.com/mariagrandury/image-classification-web-app"
       >
         <i-fluent-tab-desktop-image-20-regular />
-      </Project>
-      <Project
+      </ProjectCard>
+      <ProjectCard
         title="Viz For Social Good"
         :tags="['Data Visualization', 'Tableau']"
         link="https://public.tableau.com/profile/maria.grandury#!/vizhome/VizForSocialGood2021-01FondationFollereau/Dashboard"
       >
         <i-fluent-people-community-20-regular />
-      </Project>
-      <Project
+      </ProjectCard>
+      <ProjectCard
         title="World Development Indicators - Operation Fistula"
         :tags="['Data Visualization', 'Tableau']"
         link="https://public.tableau.com/profile/maria.grandury#!/vizhome/WorldDevelopmentIndicators-OperationFistula/Dashboard"
       >
         <i-fluent-data-scatter-24-regular />
-      </Project>
-      <Project
+      </ProjectCard>
+      <ProjectCard
         title="Pink Smile"
         :tags="['Flask']"
         link="https://github.com/mariagrandury/pink-smile"
       >
         <i-fluent-emoji-20-regular class="text-pink-500" />
-      </Project>
+      </ProjectCard>
     </div>
   </Container>
 </template>
