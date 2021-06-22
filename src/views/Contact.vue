@@ -28,16 +28,29 @@ const rotationStyle = computed(() => {
       <NavBar />
     </Container>
     <Container class="bg-white dark:bg-gray-800">
-      <div class="h-full grid place-items-center" style="perspective: 800px;">
+      <div class="relative h-full grid place-items-center" style="perspective: 800px;">
         <!-- uncomment to use translucency -->
         <!-- class="border-white bg-[#fff5] border-1 border-opacity-25 rounded-2xl grid p-10 dark:border-black absolute dark:bg-[#0002] dark:border-opacity-25" -->
         <!-- style="backdrop-filter: blur(20px)" -->
         <div
-          class="bg-white border-1 border-gray-200 rounded-2xl shadow grid p-10 dark:border-black absolute dark:bg-gray-900"
+          class="bg-white border-1 border-gray-200 rounded-2xl shadow grid p-10 dark:border-black absolute dark:bg-gray-900 overflow-hidden"
           style="width: 180mm; height: 104mm;"
           :style="rotationStyle"
         >
-          <div class="grid grid-cols-[auto,max-content]" style>
+          <!-- uncomment for blurry circles -->
+          <!-- <div
+            class="-z-1 absolute -bottom-3 -right-4 w-32 h-32 rounded-full bg-purple-300"
+            style="mix-blend-mode: multiply; filter: blur(40px);"
+          ></div>
+          <div
+            class="-z-1 absolute top-0 -right-4 w-32 h-32 rounded-full bg-yellow-300"
+            style="mix-blend-mode: multiply; filter: blur(40px);"
+          ></div>
+          <div
+            class="-z-1 absolute top-19 right-12 w-32 h-32 rounded-full bg-pink-300"
+            style="mix-blend-mode: multiply; filter: blur(40px);"
+          ></div>-->
+          <div class="grid grid-cols-[auto,max-content]">
             <div>
               <h1 class="font-medium text-3xl tracking-tight mb-1">María Grandury</h1>
               <h2 class="font-light text-lg tracking-tight">Machine Learning Research Engineer</h2>
