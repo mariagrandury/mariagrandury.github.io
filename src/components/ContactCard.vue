@@ -1,21 +1,15 @@
 <script setup lang="ts">
-import { computed, defineProps } from "vue";
-import { useMouse, useWindowSize } from "@vueuse/core";
+import { computed, ref } from "vue";
+import { useMouseInElement } from "@vueuse/core";
 
-defineProps<{
-    scaling: {
-        type: Number,
-        default: 1
-    },
-}>()
-
-const { x: mouseX, y: mouseY } = useMouse({ touch: false });
-const { width, height } = useWindowSize();
+const el = ref(null);
+const { elementX, elementY, elementWidth, elementHeight } = useMouseInElement(el);
 const rotationStyle = computed(() => {
-    const scale = Math.min(2, Math.ceil(width.value / 768)) / 2;
-    const x = - mouseY.value / height.value + 0.5;
-    const y = mouseX.value / width.value - 0.5;
-    const angle = 30 * Math.sqrt(x * x + y * y);
+    const scale = Math.min(2, Math.ceil(elementWidth.value / 500)) / 2;
+    const x = - elementY.value / elementHeight.value + 0.5;
+    const y = elementX.value / elementWidth.value - 0.5;
+    const tmp = Math.sqrt(x * x + y * y)
+    const angle = 30 * tmp / (1 + Math.abs(tmp));
     return {
         transform: `scale(${scale}) rotate3d(${x}, ${y}, 0, ${angle}deg)`,
     };
@@ -31,13 +25,17 @@ const rotationStyle = computed(() => {
 </style> -->
 
 <template>
-    <div class="relative h-full grid place-items-center" style="perspective: 800px;">
+    <div
+        ref="el"
+        class="relative w-full h-full grid place-items-center"
+        style="min-height: 400px; perspective: 800px;"
+    >
         <!-- uncomment to use translucency -->
         <!-- class="border-white bg-[#fff5] border-1 border-opacity-25 rounded-2xl grid p-10 dark:border-black absolute dark:bg-[#0002] dark:border-opacity-25" -->
         <!-- style="backdrop-filter: blur(20px)" -->
         <div
-            class="bg-white border-1 border-gray-200 rounded-2xl shadow grid p-10 dark:border-black absolute dark:bg-gray-900 overflow-hidden"
-            style="width: 180mm; height: 104mm;"
+            class="bg-white border-1 border-gray-200 rounded-2xl shadow grid p-8 dark:border-black absolute dark:bg-gray-900 overflow-hidden"
+            style="width: 540px; height: 312px;"
             :style="rotationStyle"
         >
             <!-- uncomment for blurry circles -->
@@ -55,12 +53,12 @@ const rotationStyle = computed(() => {
             ></div>-->
             <div class="grid grid-cols-[auto,max-content]">
                 <div>
-                    <h1 class="font-medium text-3xl tracking-tight mb-1">María Grandury</h1>
-                    <h2 class="font-light text-lg tracking-tight">Machine Learning Research Engineer</h2>
+                    <h1 class="font-medium text-2xl tracking-tight mb-1">María Grandury</h1>
+                    <h2 class="font-light text- tracking-tight">Machine Learning Research Engineer</h2>
                 </div>
                 <Logo style="font-size: 2rem;" />
             </div>
-            <div class="font-light text-lg grid gap-x-4 gap-y-1 grid-cols-[auto,1fr] items-center">
+            <div class="font-light grid gap-x-4 gap-y-1 grid-cols-[auto,1fr] items-center">
                 <a href="tel:+34681188591" class="contents">
                     <i-fluent-phone-24-regular />
                     <span>+34 681188591</span>
