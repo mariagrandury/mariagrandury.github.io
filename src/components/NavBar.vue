@@ -17,14 +17,14 @@ const isDark = useDark();
       <!-- <router-link to="/contact">Contact</router-link> -->
     </div>
     <div class="flex gap-6 justify-around items-center">
-      <a href="https://github.com/mariagrandury" target="_blank" class="contents">
-        <i-uil-github />
+      <a href="https://twitter.com/mariagrandury" target="_blank" class="contents">
+        <i-uil-twitter />
       </a>
       <a href="https://linkedin.com/in/mariagrandury/" target="_blank" class="contents">
         <i-uil-linkedin />
       </a>
-      <a href="https://twitter.com/mariagrandury" target="_blank" class="contents">
-        <i-uil-twitter />
+      <a href="https://github.com/mariagrandury" target="_blank" class="contents">
+        <i-uil-github />
       </a>
       <div class="contents select-none">
         <i-uil-sun @click="isDark = true" class="cursor-pointer" v-show="!isDark" />
