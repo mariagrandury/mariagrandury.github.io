@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head'
+import Container from './components/Container.vue';
 
 useHead({
   title: 'María Grandury',
@@ -16,5 +17,8 @@ useHead({
 <template>
   <div class="dark:text-white dark:bg-gray-900 min-h-screen">
     <router-view />
+    <Container>
+      <Footer />
+    </Container>
   </div>
 </template>
