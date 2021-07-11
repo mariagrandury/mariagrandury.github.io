@@ -3,12 +3,12 @@
     <NavBar class="container mx-auto" />
   </Container>
   <Container>
-    <h1 class="flex gap-2 items-center mb-12">
-      <span class="font-semibold text-4xl tracking-tight">My Story</span>
+    <h1 class="flex mb-12 gap-2 items-center">
+      <div class="font-semibold tracking-tight text-4xl">My Story</div>
       <i-fluent-earth-24-regular style="font-size: 2rem" />
       <i-fluent-rocket-24-regular style="font-size: 2rem" />
     </h1>
-    <div class="grid md:grid-cols-[auto,1fr] gap-x-8 gap-y-12">
+    <div class="grid gap-x-8 gap-y-12 md:grid-cols-[auto,1fr]">
       <CVItem
         location="neurocat GmbH"
         title="I'm starting a new adventure"

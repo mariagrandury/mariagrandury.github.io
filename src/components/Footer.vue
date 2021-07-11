@@ -1,6 +1,6 @@
 <template>
-    <footer class="flex flex-col items-center gap-2">
-        <div class="flex gap-6 text-lg">
+    <footer class="flex flex-col gap-2 items-center">
+        <div class="flex text-lg gap-6">
             <a href="https://twitter.com/mariagrandury" target="_blank" class="hover:text-gray-500">
                 <i-uil-twitter />
             </a>

@@ -15,7 +15,7 @@ useHead({
 </script>
 
 <template>
-  <div class="dark:text-white dark:bg-gray-900 min-h-screen">
+  <div class="min-h-screen dark:bg-gray-900 dark:text-white">
     <router-view />
     <Container>
       <Footer />

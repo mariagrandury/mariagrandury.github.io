@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <div
-    class="bg-white border rounded-md border-gray-200 p-6 hover:shadow-md dark:border-black dark:bg-gray-800"
+    class="bg-white border rounded-md border-gray-200 p-6 dark:border-black dark:bg-gray-800 hover:shadow-md"
   >
     <div class="rounded-md h-4rem grid text-2rem w-4rem place-items-center" :class="color">
       <slot></slot>

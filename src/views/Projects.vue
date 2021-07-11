@@ -5,7 +5,7 @@
   <Container class="bg-white dark:bg-gray-900">
     <div>
       <h1 class="flex gap-2 items-center">
-        <span class="font-semibold text-4xl tracking-tight">Projects</span>
+        <div class="font-semibold tracking-tight text-4xl">Projects</div>
         <i-fluent-design-ideas-24-regular style="font-size: 2rem;" />
       </h1>
       <h2 class="py-6">
