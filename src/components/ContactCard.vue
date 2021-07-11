@@ -5,7 +5,7 @@ import { useMouseInElement } from "@vueuse/core";
 const el = ref(null);
 const { elementX, elementY, elementWidth, elementHeight } = useMouseInElement(el);
 const rotationStyle = computed(() => {
-    const scale = Math.min(2, Math.ceil(elementWidth.value / 500)) / 2;
+    const scale = (Number(elementWidth.value > 500) + 1) / 2;
     const x = - elementY.value / elementHeight.value + 0.5;
     const y = elementX.value / elementWidth.value - 0.5;
     const tmp = Math.sqrt(x * x + y * y)
@@ -34,7 +34,7 @@ const rotationStyle = computed(() => {
         <!-- class="border-white bg-[#fff5] border-1 border-opacity-25 rounded-2xl grid p-10 absolute dark:border-black dark:bg-[#0002] dark:border-opacity-25" -->
         <!-- style="backdrop-filter: blur(20px)" -->
         <div
-            class="bg-white border-1 border-gray-200 rounded-2xl shadow grid p-8 absolute overflow-hidden dark:border-black dark:bg-gray-900"
+            class="bg-white rounded-lg border-1 border-gray-200 shadow grid p-8 absolute overflow-hidden dark:border-black dark:bg-gray-900"
             style="width: 540px; height: 312px;"
             :style="rotationStyle"
         >
@@ -56,7 +56,7 @@ const rotationStyle = computed(() => {
                     <h1 class="font-medium mb-1 tracking-tight text-2xl">María Grandury</h1>
                     <h2 class="font-light text- tracking-tight">Machine Learning Research Engineer</h2>
                 </div>
-                <Logo />
+                <!-- <Logo /> -->
             </div>
             <div class="font-light grid gap-x-4 gap-y-1 grid-cols-[auto,1fr] items-center">
                 <a href="tel:+34681188591" class="contents">
