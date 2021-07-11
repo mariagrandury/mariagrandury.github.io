@@ -19,9 +19,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <div
-        class="bg-white border rounded-md border-gray-200 p-6 dark:border-black dark:bg-gray-800 hover:shadow-md"
-    >
+    <GenericCard class="p-6">
         <div class="grid gap-3 grid-cols-[auto,1fr,auto]">
             <div class="rounded-md h-4rem grid text-2rem w-4rem place-items-center" :class="color">
                 <slot></slot>
@@ -48,5 +46,5 @@ export default defineComponent({
                 <slot name="description"></slot>
             </div>
         </div>
-    </div>
+    </GenericCard>
 </template>
