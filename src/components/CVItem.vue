@@ -9,12 +9,12 @@ defineProps<{
 <template>
     <div>
         <h1 class="font-medium text-lg mb-4">{{ location }}</h1>
-        <p>{{ timeline }}</p>
+        <div>{{ timeline }}</div>
     </div>
     <div>
         <h2 class="font-medium mb-4">{{ title }}</h2>
-        <p>
+        <div>
             <slot></slot>
-        </p>
+        </div>
     </div>
 </template>

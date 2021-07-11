@@ -3,31 +3,51 @@ import { ref, computed } from "vue";
 import { useInterval } from "@vueuse/core";
 
 const greetings = ref([
-  "Hi, I'm María.",
-  "Hola, soy María.",
-  "Bonjour, je suis María.",
-  "Hallo, ich bin María.",
+  "Hi,",
+  "Hola,",
+  "Bonjour,",
+  "Hallo,",
 ])
 const counter = useInterval(1500)
 const index = computed(() => counter.value % greetings.value.length)
 </script>
 
 <template>
-  <div class="min-h-screen grid grid-rows-[auto,1fr]">
-    <Container class="bg-white dark:bg-gray-900">
-      <NavBar />
-    </Container>
-    <Container class="bg-white dark:bg-gray-900">
-      <div class="h-full grid xl:grid-cols-2 gap-8 place-items-center">
-        <div class="p-8">
-          <h1 class="text-4xl tracking-tight mb-8">{{ greetings[index] }}</h1>
-          <p class="text-lg mb-4">Welcome to my personal website!</p>
-          <p
-            class="text-lg"
-          >It includes my portfolio, the story of how I became an MLE and more information about volunteering and interests. Have a look! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro libero aperiam magni similique sapiente qui cumque ad quasi adipisci distinctio nulla consectetur ipsa maxime facilis iusto doloribus amet aliquam unde rem, nisi repellat? Quod pariatur mollitia fuga sequi dolores molestiae tempore consectetur maiores nisi hic ad corrupti, cum nam alias!</p>
+  <Container class="bg-white dark:bg-gray-900">
+    <NavBar />
+  </Container>
+  <Container class="bg-white dark:bg-gray-900">
+    <div class="h-full grid gap-8 place-items-center lg:py-32 xl:grid-cols-2">
+      <div class="p-8">
+        <h1 class="font-medium mb-3 tracking-tighter text-3xl">{{ greetings[index] }}</h1>
+        <div class="text-xl mb-4">I am María. Key features:</div>
+        <div>
+          <ul class="flex flex-col gap-1">
+            <li>💡 Machine Learning Research Engineer</li>
+            <li>🎯 #NLP, #XAI and Adversarial Attacks (#TrustedAI)</li>
+            <li>🎓 Mathematician & Physicist</li>
+            <li>
+              👩🏻‍💻 Text Attacks
+              <a href="//www.neurocat.ai/" class="text-accent-500">@neurocat.ai</a>
+            </li>
+            <li>
+              🚀 Founder
+              <a
+                href="https://twitter.com/nlp_en_es"
+                class="text-accent-500"
+              >@NLP_en_ES 🤗</a>
+            </li>
+            <li>
+              ⚡ Core Team
+              <a
+                href="https://twitter.com/wairobotics"
+                class="text-accent-500"
+              >@WAIRobotics</a>
+            </li>
+          </ul>
         </div>
-        <ContactCard />
       </div>
-    </Container>
-  </div>
+      <ContactCard />
+    </div>
+  </Container>
 </template>

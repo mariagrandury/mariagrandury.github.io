@@ -14,6 +14,6 @@ defineProps<{
       <slot></slot>
     </div>
     <h3 class="font-medium mt-4 mb-2">{{ title }}</h3>
-    <p class="text-sm text-gray-700 dark:text-white">{{ text }}</p>
+    <div class="text-sm text-gray-700 dark:text-white">{{ text }}</div>
   </div>
 </template>

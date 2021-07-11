@@ -21,14 +21,14 @@
       >
         <i-fluent-bot-20-regular />
         <template v-slot:description>
-          <p class="text-sm text-gray-700 dark:text-white">
+          <div class="text-sm text-gray-700 dark:text-white">
             Chatbot that understands and answers questions about the COVID-19: symptoms, prevention, regulation, the situation in Spain. Don't hesitate to chat with
             <a
               target="_blank"
               href="https://d3g60fts6ncstu.cloudfront.net/"
               class="text-accent-700 underline dark:text-accent-300"
             >AURORA!</a>
-          </p>
+          </div>
         </template>
       </ProjectCard>
       <ProjectCard
@@ -93,7 +93,7 @@
         :tags="['Flask']"
         link="https://github.com/mariagrandury/pink-smile"
       >
-        <i-fluent-emoji-20-regular class="text-pink-500" />
+        <i-fluent-emoji-20-regular />
       </ProjectCard>
     </div>
   </Container>
