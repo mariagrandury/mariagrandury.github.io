@@ -10188,7 +10188,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/header.png");
+  background-image: url("../assets/header.png");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -10541,7 +10541,7 @@ header.masthead .masthead-heading {
 
 section#contact {
   background-color: #010B13;
-  background-image: url("../assets/img/map-image.png");
+  background-image: url("../assets/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }

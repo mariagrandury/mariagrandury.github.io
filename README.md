@@ -17,7 +17,7 @@ You'll find the following sections:
 ## Preview
 This is how the Skills section looks like:
 
-![Skills](https://github.com/mariagrandury/mariagrandury.github.io/blob/main/assets/img/screenshot-skills.PNG)
+![Skills](https://github.com/mariagrandury/mariagrandury.github.io/blob/main/assets/screenshot-skills.PNG)
 
 ## Technologies
 The website was developed using HTML, CSS and JavaScript.
