@@ -8,7 +8,7 @@ const greetings = ref([
   "Bonjour, je suis María.",
   "Hallo, ich bin María.",
 ])
-const { counter } = useInterval(1500)
+const counter = useInterval(1500)
 const index = computed(() => counter.value % greetings.value.length)
 </script>
 
