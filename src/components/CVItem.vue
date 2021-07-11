@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 defineProps<{
     location: String,
     title: String,
@@ -9,7 +8,7 @@ defineProps<{
 
 <template>
     <div>
-        <h1 class="text-lg font-medium mb-4">{{ location }}</h1>
+        <h1 class="font-medium text-lg mb-4">{{ location }}</h1>
         <p>{{ timeline }}</p>
     </div>
     <div>
