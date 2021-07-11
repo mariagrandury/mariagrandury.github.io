@@ -34,7 +34,7 @@ const rotationStyle = computed(() => {
         <!-- class="border-white bg-[#fff5] border-1 border-opacity-25 rounded-2xl grid p-10 absolute dark:border-black dark:bg-[#0002] dark:border-opacity-25" -->
         <!-- style="backdrop-filter: blur(20px)" -->
         <div
-            class="bg-white rounded-lg border-1 border-gray-200 shadow grid p-8 absolute overflow-hidden dark:border-black dark:bg-gray-900"
+            class="bg-white rounded-lg border-1 border-gray-200 shadow grid p-8 absolute overflow-hidden dark:border-black dark:bg-gray-800"
             style="width: 540px; height: 312px;"
             :style="rotationStyle"
         >
