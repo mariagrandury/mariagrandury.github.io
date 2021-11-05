@@ -6,7 +6,7 @@
       <NavBar />
     </Container>
     <Container class="bg-white dark:bg-gray-800">
-      <ContactCard />
+      <CardContact />
     </Container>
   </div>
 </template>

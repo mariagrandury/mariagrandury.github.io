@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useInterval } from "@vueuse/core";
-import ContactCard from "../components/ContactCard.vue";
+import CardContact from "../components/CardContact.vue";
 
 const greetings = ref([
   "Hi,",
@@ -55,9 +55,9 @@ const index = computed(() => counter.value % greetings.value.length)
       <div class="p-8">
         <div class="text-xl mb-4">I'm currently working on</div>
         <div class="grid py-6 gap-x-6 gap-y-3">
-          <ProjectCard
+          <CardProject
             title="BigScience Research Workshop"
-            :tags="['NLP', 'Hugging Face']"
+            :tags="['NLP', 'Hugging F  ace']"
             link="https://bigscience.huggingface.co/"
           >
             <i-whh-flower />
@@ -66,8 +66,8 @@ const index = computed(() => counter.value % greetings.value.length)
                 class="text-sm text-gray-700 dark:text-white"
               >A one-year long research workshop on large multilingual models and datasets. I'm part of the data tooling working group.</div>
             </template>
-          </ProjectCard>
-          <ProjectCard
+          </CardProject>
+          <CardProject
             title="Course: NLP de 0 a 100 con Hugging Face"
             :tags="['NLP', 'NLP en ES']"
             link="https://nlp-en-es.org/nlp-de-cero-a-cien"
@@ -78,10 +78,10 @@ const index = computed(() => counter.value % greetings.value.length)
                 class="text-sm text-gray-700 dark:text-white"
               >The first NLP course from zero to hero in Spanish. Organized by NLP en ES in collaboration with Spain AI.</div>
             </template>
-          </ProjectCard>
-          <ProjectCard
+          </CardProject>
+          <CardProject
             title="WaiACCELERATE Program"
-            :tags="['Entrepreneurship', 'Women in AI & Robotics']"
+            :tags="['Entrepr  eneurship', 'Women in AI & Robotics']"
             link="https://womeninairobotics.de"
           >
             <i-fluent-rocket-24-regular />
@@ -90,7 +90,7 @@ const index = computed(() => counter.value % greetings.value.length)
                 class="text-sm text-gray-700 dark:text-white"
               >A program where we provide women entrepreneurs with the tools, knowledge, mentoring and network to successfully realize their startup/business idea in the AI sector.</div>
             </template>
-          </ProjectCard>
+          </CardProject>
         </div>
       </div>
       <div>
@@ -102,6 +102,6 @@ const index = computed(() => counter.value % greetings.value.length)
     </div>
   </Container>
   <Container class="bg-white dark:bg-gray-900">
-    <ContactCard />
+    <CardContact />
   </Container>
 </template>

@@ -14,7 +14,7 @@
       </h2>
     </div>
     <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
-      <ProjectCard
+      <CardProject
         title="BigScience Research Workshop"
         :tags="['NLP', 'Hugging Face', 'Team Project']"
         link="https://bigscience.huggingface.co/"
@@ -25,8 +25,8 @@
             class="text-sm text-gray-700 dark:text-white"
           >BigScience is a one-year long research workshop on large multilingual models and datasets. I'm part of the data tooling working group.</div>
         </template>
-      </ProjectCard>
-      <ProjectCard
+      </CardProject>
+      <CardProject
         title="BERTIN Project"
         :tags="['NLP', 'Hugging Face', 'Team Project']"
         link="https://huggingface.co/bertin-project"
@@ -42,8 +42,8 @@
             >model card.</a>
           </div>
         </template>
-      </ProjectCard>
-      <ProjectCard
+      </CardProject>
+      <CardProject
         title="Pre-training GPT-2, T5 & Wav2Vec2 models in Spanish"
         :tags="['NLP', 'Hugging Face', 'Team Project']"
         link="https://huggingface.co/bertin-project"
@@ -73,8 +73,8 @@
             >Wav2Vec2 model.</a>
           </div>
         </template>
-      </ProjectCard>
-      <ProjectCard
+      </CardProject>
+      <CardProject
         title="Adding NLP datasets in Spanish"
         :tags="['NLP', 'Hugging Face']"
         link="https://huggingface.co/datasets?languages=languages:es&multilinguality=multilinguality:monolingual"
@@ -108,8 +108,8 @@
             >Spanish Billion Words Corpus.</a>
           </div>
         </template>
-      </ProjectCard>
-      <ProjectCard
+      </CardProject>
+      <CardProject
         title="Chatbot COVID-19"
         :tags="['Conversational AI', 'Backend', 'Frontend', 'DevOps']"
         link="https://github.com/mariagrandury/chatbot-covid-backend"
@@ -130,8 +130,8 @@
             Collaboration with Accenture’s Gijón office.
           </div>
         </template>
-      </ProjectCard>
-      <ProjectCard
+      </CardProject>
+      <CardProject
         title="NN  for the study of the Higgs Boson with data from the LHC"
         :tags="['Machine Learning', 'Physics Thesis']"
       >
@@ -143,8 +143,8 @@
             Collaboration with the university's high energy particle research team.
           </div>
         </template>
-      </ProjectCard>
-      <ProjectCard
+      </CardProject>
+      <CardProject
         title="Quality Analysis of ML Models"
         :tags="['Python Package', 'AI Performance', 'AI Robustness']"
         link="https://github.com/mariagrandury/ml-model-quality-analysis"
@@ -156,8 +156,8 @@
             It focuses on the three quality pillars: functionality, robustness and explainability.
           </div>
         </template>
-      </ProjectCard>
-      <ProjectCard
+      </CardProject>
+      <CardProject
         title="The Annotated Transformer"
         :tags="['NLP', 'Transformers', 'PyTorch', 'TensorFlow 2']"
         link="https://github.com/nlp-en-es/the-annotated-transformer"
@@ -170,57 +170,57 @@
             where the paper "Attention Is All You Need" is explained and implemented.
           </div>
         </template>
-      </ProjectCard>
-      <ProjectCard
+      </CardProject>
+      <CardProject
         title="TensorFlow Models"
         :tags="['NLP', 'Computer Vision', 'TensorFlow 2']"
         link="https://github.com/mariagrandury/tensorflow-models"
       >
         <i-simple-icons-tensorflow />
-      </ProjectCard>
-      <ProjectCard title="Sarcarsm Detector" :tags="['NLP', 'TensorFlow 2', 'Docker', 'Flask']">
+      </CardProject>
+      <CardProject title="Sarcarsm Detector" :tags="['NLP', 'TensorFlow 2', 'Docker', 'Flask']">
         <i-fluent-emoji-laugh-20-regular />
-      </ProjectCard>
-      <ProjectCard
+      </CardProject>
+      <CardProject
         title="Punctuation and capitalization of Speech Recognition"
         :tags="['NLP', 'Speech-to-Text']"
       >
         <i-fluent-speaker-edit-20-regular />
-      </ProjectCard>
-      <ProjectCard title="Text To Image Model" :tags="['NLP', 'Computer Vision', 'BERT', 'BigGAN']">
+      </CardProject>
+      <CardProject title="Text To Image Model" :tags="['NLP', 'Computer Vision', 'BERT', 'BigGAN']">
         <i-fluent-image-alt-text-20-regular />
-      </ProjectCard>
-      <ProjectCard
+      </CardProject>
+      <CardProject
         title="Image Classification Web App"
         :tags="['Computer Vision', 'TensorFlow 2', 'Flask']"
         link="https://github.com/mariagrandury/image-classification-web-app"
       >
         <i-fluent-tab-desktop-image-20-regular />
-      </ProjectCard>
+      </CardProject>
       <!--
-      <ProjectCard
+      <CardProject
         title="Viz For Social Good"
         :tags="['Data Visualization', 'Tableau']"
         link="https://public.tableau.com/profile/maria.grandury#!/vizhome/VizForSocialGood2021-01FondationFollereau/Dashboard"
       >
         <i-fluent-data-scatter-24-regular />
-      </ProjectCard>
+      </CardProject>
       -->
-      <ProjectCard
+      <CardProject
         title="World Development Indicators - Operation Fistula"
         :tags="['Data Visualization', 'VizForSocialGood', 'Tableau']"
         link="https://public.tableau.com/profile/maria.grandury#!/vizhome/WorldDevelopmentIndicators-OperationFistula/Dashboard"
       >
         <i-fluent-people-community-20-regular />
-      </ProjectCard>
+      </CardProject>
       <!--
-      <ProjectCard
+      <CardProject
         title="Pink Smile"
         :tags="['Flask']"
         link="https://github.com/mariagrandury/pink-smile"
       >
         <i-fluent-emoji-20-regular />
-      </ProjectCard>
+      </CardProject>
       -->
     </div>
   </Container>

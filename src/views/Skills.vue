@@ -11,62 +11,62 @@
       <h2 class="py-6">I'm passionate about what I do and always learning something new!</h2>
     </div>
     <div class="grid py-6 gap-6 md:grid-cols-2 lg:grid-cols-4">
-      <SkillCard
+      <CardSkill
         title="Programming"
         text="Python: NumPy, Pandas, TensorFlow 2, Keras, Sklearn"
         color="text-purple-600 bg-purple-50 dark:text-white dark:bg-purple-600"
       >
         <i-ant-design-code-outlined />
-      </SkillCard>
-      <SkillCard
+      </CardSkill>
+      <CardSkill
         title="Machine Learning"
         text="ML algorithms and metrics, quality and trustworthiness"
         color="text-blue-600 bg-blue-50 dark:text-white dark:bg-blue-600"
       >
         <i-fluent-bot-20-regular />
-      </SkillCard>
-      <SkillCard
+      </CardSkill>
+      <CardSkill
         title="Deep Learning"
         text="DL.AI Specialization TF Professional Developer"
         color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
       >
         <i-fluent-brain-circuit-20-regular />
-      </SkillCard>
-      <SkillCard
+      </CardSkill>
+      <CardSkill
         title="Research"
         text="XAI, AI Robustness, AI Ethics NLP: Transformers"
         color="text-teal-600 bg-teal-50 dark:text-white dark:bg-teal-600"
       >
         <i-ant-design-experiment-outlined />
-      </SkillCard>
-      <SkillCard
+      </CardSkill>
+      <CardSkill
         title="Math & Stats"
         text="Double Degree in Mathematics and Physics: 5 years, 345 ECTS"
         color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600"
       >
         <i-ant-design-function-outlined />
-      </SkillCard>
-      <SkillCard
+      </CardSkill>
+      <CardSkill
         title="Software Engineering"
         text="Experience as Software Engineer, Git, Testing, Circle-CI, Code QA"
         color="text-indigo-600 bg-indigo-50 dark:text-white dark:bg-indigo-600"
       >
         <i-ant-design-code-sandbox-outlined />
-      </SkillCard>
-      <SkillCard
+      </CardSkill>
+      <CardSkill
         title="DevOps / MLOps"
         text="Docker, MLflow, AWS: S3, Lambda, CloudFront, Sagemaker"
         color="text-orange-600 bg-orange-50 dark:text-white dark:bg-orange-600"
       >
         <i-clarity-network-settings-line />
-      </SkillCard>
-      <SkillCard
+      </CardSkill>
+      <CardSkill
         title="Technical Communication"
         text="Data Visualization with Tableau"
         color="text-red-600 bg-red-50 dark:text-white dark:bg-red-600"
       >
         <i-fluent-chat-multiple-20-regular />
-      </SkillCard>
+      </CardSkill>
     </div>
     <div class="flex my-6 justify-center">
       <a

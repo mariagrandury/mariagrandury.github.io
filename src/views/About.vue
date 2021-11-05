@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import OrganizationCard from '../components/OrganizationCard.vue';
+import CardOrg from '../components/CardOrg.vue';
 
 const memberships = ref(["ACM.png", "AIGuild.png", "Banda.jpg", "NovaTalent.png", "VFSG.jpeg", "WomenTech.png", "WomenWhoCode.jpg", "WomenInAI.PNG"])
 </script>
@@ -150,34 +150,30 @@ const memberships = ref(["ACM.png", "AIGuild.png", "Banda.jpg", "NovaTalent.png"
         <div>
             <h1 class="font-medium text-2xl underline">Organisations</h1>
             <div class="grid py-8 gap-4 sm:grid-cols-4 sm:grid-rows-[auto,1fr,1fr]">
-                <OrganizationCard class="col-span-2" img="NLPenES.png" url="https://nlp-en-es.org/">
+                <CardOrg class="col-span-2" img="NLPenES.png" url="https://nlp-en-es.org/">
                     <h1 class="font-medium">NLP en ES 🤗</h1>
                     <h2>Founder</h2>
-                </OrganizationCard>
-                <OrganizationCard
-                    class="col-span-2"
-                    img="WAIR.jpg"
-                    url="https://www.womeninairobotics.de/"
-                >
+                </CardOrg>
+                <CardOrg class="col-span-2" img="WAIR.jpg" url="https://www.womeninairobotics.de/">
                     <h1 class="font-medium">Women in AI & Robotics</h1>
                     <h2>Core Team Volunteer</h2>
-                </OrganizationCard>
-                <OrganizationCard v-for="membership in memberships" :img="membership" />
+                </CardOrg>
+                <CardOrg v-for="membership in memberships" :img="membership" />
             </div>
             <h1 class="font-medium mb-8 text-2xl underline">Volunteering</h1>
             <div class="grid gap-4 sm:grid-cols-3">
-                <GenericCard class="p-4">
+                <CardGeneric class="p-4">
                     <div class="font-medium">Sacred Heart</div>
                     <div>Sancti Spiritus, CUBA</div>
-                </GenericCard>
-                <GenericCard class="p-4">
+                </CardGeneric>
+                <CardGeneric class="p-4">
                     <div class="font-medium">L'Arche Asha Niketan</div>
                     <div>Asansol and Kolkata, INDIA</div>
-                </GenericCard>
-                <GenericCard class="p-4">
+                </CardGeneric>
+                <CardGeneric class="p-4">
                     <div class="font-medium">One World Institute</div>
                     <div>Lillehammer, NORWAY</div>
-                </GenericCard>
+                </CardGeneric>
             </div>
         </div>
     </Container>
