@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useInterval } from "@vueuse/core";
+import ContactCard from "../components/ContactCard.vue";
 
 const greetings = ref([
   "Hi,",
@@ -17,14 +18,14 @@ const index = computed(() => counter.value % greetings.value.length)
     <NavBar />
   </Container>
   <Container class="bg-white dark:bg-gray-900">
-    <div class="h-full grid gap-8 place-items-center lg:py-16 xl:grid-cols-2">
+    <div class="h-full grid gap-8 place-items-center lg:py-16">
       <div class="p-8">
         <h1 class="font-medium mb-3 tracking-tighter text-3xl">{{ greetings[index] }}</h1>
         <div class="text-xl mb-4">I'm María!</div>
         <div>
           <ul class="flex flex-col gap-1">
             <li>💡 Machine Learning Research Engineer</li>
-            <li>🎯 #NLP, #XAI and Adversarial Attacks (#TrustedAI)</li>
+            <li>🎯 #NLP, #XAI, #TrustedAI</li>
             <li>🎓 Mathematician & Physicist</li>
             <li>
               👩🏻‍💻 Text Attacks
@@ -47,7 +48,6 @@ const index = computed(() => counter.value % greetings.value.length)
           </ul>
         </div>
       </div>
-      <ContactCard />
     </div>
   </Container>
   <Container class="bg-white dark:bg-gray-900">
@@ -100,5 +100,8 @@ const index = computed(() => counter.value % greetings.value.length)
         >More Projects</router-link>
       </div>
     </div>
+  </Container>
+  <Container class="bg-white dark:bg-gray-900">
+    <ContactCard />
   </Container>
 </template>
