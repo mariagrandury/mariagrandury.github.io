@@ -17,10 +17,10 @@ const index = computed(() => counter.value % greetings.value.length)
     <NavBar />
   </Container>
   <Container class="bg-white dark:bg-gray-900">
-    <div class="h-full grid gap-8 place-items-center lg:py-32 xl:grid-cols-2">
+    <div class="h-full grid gap-8 place-items-center lg:py-16 xl:grid-cols-2">
       <div class="p-8">
         <h1 class="font-medium mb-3 tracking-tighter text-3xl">{{ greetings[index] }}</h1>
-        <div class="text-xl mb-4">I am María. Key features:</div>
+        <div class="text-xl mb-4">I'm María!</div>
         <div>
           <ul class="flex flex-col gap-1">
             <li>💡 Machine Learning Research Engineer</li>
@@ -48,6 +48,57 @@ const index = computed(() => counter.value % greetings.value.length)
         </div>
       </div>
       <ContactCard />
+    </div>
+  </Container>
+  <Container class="bg-white dark:bg-gray-900">
+    <div class="h-full grid gap-8 place-items-center lg:py-16 xl:grid-cols-2">
+      <div class="p-8">
+        <div class="text-xl mb-4">I'm currently working on</div>
+        <div class="grid py-6 gap-x-6 gap-y-3">
+          <ProjectCard
+            title="BigScience Research Workshop"
+            :tags="['NLP', 'Hugging Face']"
+            link="https://bigscience.huggingface.co/"
+          >
+            <i-whh-flower />
+            <template v-slot:description>
+              <div
+                class="text-sm text-gray-700 dark:text-white"
+              >A one-year long research workshop on large multilingual models and datasets. I'm part of the data tooling working group.</div>
+            </template>
+          </ProjectCard>
+          <ProjectCard
+            title="Course: NLP de 0 a 100 con Hugging Face"
+            :tags="['NLP', 'NLP en ES']"
+            link="https://nlp-en-es.org/nlp-de-cero-a-cien"
+          >
+            <i-emojione-monotone-hugging-face />
+            <template v-slot:description>
+              <div
+                class="text-sm text-gray-700 dark:text-white"
+              >The first NLP course from zero to hero in Spanish. Organized by NLP en ES in collaboration with Spain AI.</div>
+            </template>
+          </ProjectCard>
+          <ProjectCard
+            title="WaiACCELERATE Program"
+            :tags="['Entrepreneurship', 'Women in AI & Robotics']"
+            link="https://womeninairobotics.de"
+          >
+            <i-fluent-rocket-24-regular />
+            <template v-slot:description>
+              <div
+                class="text-sm text-gray-700 dark:text-white"
+              >A program where we provide women entrepreneurs with the tools, knowledge, mentoring and network to successfully realize their startup/business idea in the AI sector.</div>
+            </template>
+          </ProjectCard>
+        </div>
+      </div>
+      <div>
+        <router-link
+          class="border-dashed rounded-md flex font-medium border-2 border-gray-200 p-6 gap-3 items-center hover:border-transparent hover:ring-4"
+          to="/projects"
+        >More Projects</router-link>
+      </div>
     </div>
   </Container>
 </template>
