@@ -11,9 +11,9 @@ const isDark = useDark();
     </router-link>
     <div class="flex gap-6 justify-around items-center">
       <router-link to="/projects">Projects</router-link>
+      <router-link to="/talks">Talks</router-link>
       <router-link to="/skills">Skills</router-link>
-      <router-link to="/about">About</router-link>
-      <!-- Uncomment when I have a proper landing page -->
+      <!-- <router-link to="/about">About</router-link> -->
       <!-- <router-link to="/contact">Contact</router-link> -->
     </div>
     <div class="flex gap-6 justify-around items-center">
