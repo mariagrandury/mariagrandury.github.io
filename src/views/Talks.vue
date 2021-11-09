@@ -8,9 +8,7 @@
                 <div class="font-semibold tracking-tight text-4xl">Talks</div>
                 <i-fluent-chat-12-regular style="font-size: 2rem;" />
             </h1>
-            <h2
-                class="py-6"
-            >I really enjoy divulgating and I'd be happy to speak at your next event!</h2>
+            <h2 class="py-6">I'm passionate about what I do and really enjoy divulgating!</h2>
         </div>
         <div class="grid py-6 gap-x-6 gap-y-3 lg:px-64 sm:px-32">
             <CardTalk

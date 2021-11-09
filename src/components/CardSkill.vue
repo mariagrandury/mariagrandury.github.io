@@ -4,7 +4,7 @@ defineProps<{
   text: String,
   color: String,
 }>()
-                                                          </script>
+</script>
 
 <template>
   <CardGeneric class="p-6">

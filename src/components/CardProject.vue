@@ -38,7 +38,7 @@ export default defineComponent({
                 v-if="link"
                 :href="link"
                 target="_blank"
-                class="border rounded-md flex border-gray-200 p-2 self-start items-center dark:border-black dark:bg-gray-700 hover:ring"
+                class="border rounded-md flex border-gray-200 p-2 self-start items-center dark:border-black dark:bg-gray-700 hover:ring ring-accent-500"
             >
                 <i-fluent-rocket-20-regular style="font-size: 1.25rem;" />
             </a>

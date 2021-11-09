@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useInterval } from "@vueuse/core";
-import CardContact from "../components/CardContact.vue";
-import CardTalk from "../components/CardTalk.vue";
 
 const greetings = ref([
-  "Hi,",
   "Hola,",
+  "Hi,",
   "Bonjour,",
   "Hallo,",
 ])
@@ -19,10 +17,10 @@ const index = computed(() => counter.value % greetings.value.length)
     <NavBar />
   </Container>
   <Container class="bg-white dark:bg-gray-900">
-    <div class="h-full grid gap-8 place-items-center lg:py-16">
+    <div class="h-full grid gap-8 place-items-center lg:py-8">
       <div class="p-8">
-        <h1 class="font-medium mb-3 tracking-tighter text-3xl">{{ greetings[index] }}</h1>
-        <div class="text-xl mb-4">I'm María!</div>
+        <h1 class="font-medium mb-3 tracking-tighter text-5xl">{{ greetings[index] }}</h1>
+        <div class="text-4xl mb-4">I'm María Grandury!</div>
         <div>
           <ul class="flex flex-col gap-1">
             <li>💡 Machine Learning Research Engineer</li>
@@ -30,20 +28,23 @@ const index = computed(() => counter.value % greetings.value.length)
             <li>🎓 Mathematician & Physicist</li>
             <li>
               👩🏻‍💻 Text Attacks
-              <a href="//www.neurocat.ai/" class="text-accent-500">@neurocat.ai</a>
+              <a
+                href="//www.neurocat.ai/"
+                class="text-accent-500 hover:underline"
+              >@neurocat.ai</a>
             </li>
             <li>
               🚀 Founder
               <a
                 href="https://twitter.com/nlp_en_es"
-                class="text-accent-500"
+                class="text-accent-500 hover:underline"
               >@NLP_en_ES 🤗</a>
             </li>
             <li>
               ⚡ Core Team
               <a
                 href="https://twitter.com/wairobotics"
-                class="text-accent-500"
+                class="text-accent-500 hover:underline"
               >@WAIRobotics</a>
             </li>
           </ul>
@@ -52,14 +53,15 @@ const index = computed(() => counter.value % greetings.value.length)
     </div>
   </Container>
   <Container class="bg-white dark:bg-gray-900">
-    <div class="h-full grid gap-8 place-items-center lg:py-16 xl:grid-cols-2">
+    <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
       <div class="p-8">
-        <div class="text-xl mb-4">I'm currently working on</div>
+        <div class="text-3xl mb-4">I'm currently working on</div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardProject
             title="BigScience Research Workshop"
-            :tags="['NLP', 'Hugging F  ace']"
+            :tags="['NLP', 'Hugging Face']"
             link="https://bigscience.huggingface.co/"
+            color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
           >
             <i-whh-flower />
             <template v-slot:description>
@@ -72,6 +74,7 @@ const index = computed(() => counter.value % greetings.value.length)
             title="Course: NLP de 0 a 100 con Hugging Face"
             :tags="['NLP', 'NLP en ES']"
             link="https://nlp-en-es.org/nlp-de-cero-a-cien"
+            color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
           >
             <i-emojione-monotone-hugging-face />
             <template v-slot:description>
@@ -82,8 +85,9 @@ const index = computed(() => counter.value % greetings.value.length)
           </CardProject>
           <CardProject
             title="WaiACCELERATE Program"
-            :tags="['Entrepr  eneurship', 'Women in AI & Robotics']"
+            :tags="['Entrepreneurship', 'Women in AI & Robotics']"
             link="https://womeninairobotics.de"
+            color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600"
           >
             <i-fluent-rocket-24-regular />
             <template v-slot:description>
@@ -96,17 +100,17 @@ const index = computed(() => counter.value % greetings.value.length)
       </div>
       <div>
         <router-link
-          class="border-dashed rounded-md flex font-medium border-2 border-gray-200 p-6 gap-3 items-center hover:border-transparent hover:ring-4"
+          class="flex font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
           to="/projects"
         >More Projects</router-link>
       </div>
     </div>
   </Container>
   <Container class="bg-white dark:bg-gray-900">
-    <div class="h-full grid gap-8 place-items-center lg:py-16 xl:grid-cols-2">
+    <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
       <div>
         <router-link
-          class="border-dashed rounded-md flex font-medium border-2 border-gray-200 p-6 gap-3 items-center hover:border-transparent hover:ring-4"
+          class="flex font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
           to="/talks"
         >More Talks</router-link>
       </div>

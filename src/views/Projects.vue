@@ -8,16 +8,16 @@
         <div class="font-semibold tracking-tight text-4xl">Projects</div>
         <i-fluent-design-ideas-24-regular style="font-size: 2rem;" />
       </h1>
-      <h2 class="py-6">
-        I'm really interested in NLP and XAI, especially applied to Healthcare
-        and Biomedicine.
-      </h2>
+      <h2
+        class="py-6"
+      >I'm a Machine Learning Research Engineer focused on NLP, XAI and Adversarial Robustness.</h2>
     </div>
     <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
       <CardProject
         title="BigScience Research Workshop"
         :tags="['NLP', 'Hugging Face', 'Team Project']"
         link="https://bigscience.huggingface.co/"
+        color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
       >
         <i-whh-flower />
         <template v-slot:description>
@@ -30,6 +30,7 @@
         title="BERTIN Project"
         :tags="['NLP', 'Hugging Face', 'Team Project']"
         link="https://huggingface.co/bertin-project"
+        color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
       >
         <i-mdi-face-man />
         <template v-slot:description>
@@ -38,7 +39,7 @@
             <a
               target="_blank"
               href="https://huggingface.co/bertin-project/bertin-roberta-base-spanish"
-              class="text-accent-700 underline dark:text-accent-300"
+              class="text-accent-700 dark:text-accent-300 hover:underline"
             >model card.</a>
           </div>
         </template>
@@ -47,6 +48,7 @@
         title="Pre-training GPT-2, T5 & Wav2Vec2 models in Spanish"
         :tags="['NLP', 'Hugging Face', 'Team Project']"
         link="https://huggingface.co/bertin-project"
+        color="text-orange-600 bg-orange-100 dark:text-white dark:bg-orange-500"
       >
         <i-fluent-chat-12-regular />
         <template v-slot:description>
@@ -57,19 +59,19 @@
             <a
               target="_blank"
               href="https://huggingface.co/flax-community/gpt-2-spanish"
-              class="text-accent-700 underline dark:text-accent-300"
+              class="text-accent-700 dark:text-accent-300 hover:underline"
             >GPT-2 model</a>
             ,
             <a
               target="_blank"
               href="https://huggingface.co/flax-community/spanish-t5-small"
-              class="text-accent-700 underline dark:text-accent-300"
+              class="text-accent-700 dark:text-accent-300 hover:underline"
             >T5 model</a>
             and
             <a
               target="_blank"
               href="https://huggingface.co/flax-community/wav2vec2-spanish"
-              class="text-accent-700 underline dark:text-accent-300"
+              class="text-accent-700 dark:text-accent-300 hover:underline"
             >Wav2Vec2 model.</a>
           </div>
         </template>
@@ -86,25 +88,25 @@
             <a
               target="_blank"
               href="https://github.com/huggingface/datasets"
-              class="text-accent-700 underline dark:text-accent-300"
+              class="text-accent-700 dark:text-accent-300 hover:underline"
             >huggingface/datasets</a>
             library during the open-sprint organized by Hugging Face in Dec 2020. The datasets are
             <a
               target="_blank"
               href="https://huggingface.co/datasets/head_qa"
-              class="text-accent-700 underline dark:text-accent-300"
+              class="text-accent-700 dark:text-accent-300 hover:underline"
             >HEAD-QA</a>
             (a multi-choice HEAlthcare Dataset), the dataset of the
             <a
               target="_blank"
               href="https://huggingface.co/datasets/head_qa"
-              class="text-accent-700 underline dark:text-accent-300"
+              class="text-accent-700 dark:text-accent-300 hover:underline"
             >eHealth-KD</a>
             Challenge at IberLEF 2020, and the
             <a
               target="_blank"
               href="https://huggingface.co/datasets/head_qa"
-              class="text-accent-700 underline dark:text-accent-300"
+              class="text-accent-700 dark:text-accent-300 hover:underline"
             >Spanish Billion Words Corpus.</a>
           </div>
         </template>
@@ -113,6 +115,7 @@
         title="Chatbot COVID-19"
         :tags="['Conversational AI', 'Backend', 'Frontend', 'DevOps']"
         link="https://github.com/mariagrandury/chatbot-covid-backend"
+        color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600"
       >
         <i-fluent-bot-20-regular />
         <template v-slot:description>
@@ -121,7 +124,7 @@
             <a
               target="_blank"
               href="https://d3g60fts6ncstu.cloudfront.net/"
-              class="text-accent-700 underline dark:text-accent-300"
+              class="text-accent-700 dark:text-accent-300 hover:underline"
             >AURORA!</a>
           </div>
           <div class="text-sm text-gray-700 dark:text-white">
@@ -134,6 +137,7 @@
       <CardProject
         title="NN  for the study of the Higgs Boson with data from the LHC"
         :tags="['Machine Learning', 'Physics Thesis']"
+        color="text-green-900 bg-green-50 dark:text-white dark:bg-green-600"
       >
         <i-carbon-network-4 />
         <template v-slot:description>
@@ -148,6 +152,7 @@
         title="Quality Analysis of ML Models"
         :tags="['Python Package', 'AI Performance', 'AI Robustness']"
         link="https://github.com/mariagrandury/ml-model-quality-analysis"
+        color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
       >
         <i-fluent-hd-20-regular />
         <template v-slot:description>
@@ -161,6 +166,7 @@
         title="The Annotated Transformer"
         :tags="['NLP', 'Transformers', 'PyTorch', 'TensorFlow 2']"
         link="https://github.com/nlp-en-es/the-annotated-transformer"
+        color="text-blue-900 bg-blue-50 dark:text-white dark:bg-blue-600"
       >
         <i-fluent-document-search-20-regular />
         <template v-slot:description>
@@ -175,6 +181,7 @@
         title="TensorFlow Models"
         :tags="['NLP', 'Computer Vision', 'TensorFlow 2']"
         link="https://github.com/mariagrandury/tensorflow-models"
+        color="text-orange-600 bg-orange-50 dark:text-white dark:bg-orange-600"
       >
         <i-simple-icons-tensorflow />
       </CardProject>
@@ -184,16 +191,22 @@
       <CardProject
         title="Punctuation and capitalization of Speech Recognition"
         :tags="['NLP', 'Speech-to-Text']"
+        color="text-cyan-900 bg-cyan-50 dark:text-white dark:bg-cyan-600"
       >
         <i-fluent-speaker-edit-20-regular />
       </CardProject>
-      <CardProject title="Text To Image Model" :tags="['NLP', 'Computer Vision', 'BERT', 'BigGAN']">
+      <CardProject
+        title="Text To Image Model"
+        :tags="['NLP', 'Computer Vision', 'BERT', 'BigGAN']"
+        color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
+      >
         <i-fluent-image-alt-text-20-regular />
       </CardProject>
       <CardProject
         title="Image Classification Web App"
         :tags="['Computer Vision', 'TensorFlow 2', 'Flask']"
         link="https://github.com/mariagrandury/image-classification-web-app"
+        color="text-green-900 bg-green-50 dark:text-white dark:bg-green-600"
       >
         <i-fluent-tab-desktop-image-20-regular />
       </CardProject>
@@ -210,6 +223,7 @@
         title="World Development Indicators - Operation Fistula"
         :tags="['Data Visualization', 'VizForSocialGood', 'Tableau']"
         link="https://public.tableau.com/profile/maria.grandury#!/vizhome/WorldDevelopmentIndicators-OperationFistula/Dashboard"
+        color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600"
       >
         <i-fluent-people-community-20-regular />
       </CardProject>
