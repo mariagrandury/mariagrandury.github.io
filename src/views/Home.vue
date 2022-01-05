@@ -118,20 +118,20 @@ const index = computed(() => counter.value % greetings.value.length)
         <div class="text-3xl mb-4">And I'm going to speak at</div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardTalk
-            talk="Sequential Models & the Transformer Architecture"
-            event="NLP de 0 a 100 con Hugging Face, NLP en ES"
-            event_link="https://nlp-en-es.org/nlp-de-cero-a-cien"
-            image_link="https://www.spain-ai.com/wp-content/uploads/2021/08/curso_npl.jpeg"
-            recording_link="https://nlp-en-es.org/nlp-de-cero-a-cien/sesion-03"
-            :tags="['NLP', 'Sequential Models', 'Transformers', 'Demos']"
+            talk="AI The New Sexy | Podcast"
+            event
+            event_link="https://aithenewsexy.com/"
+            image_link="https://aithenewsexy.com/wp-content/uploads/2020/10/LOGO-HOME-3.png"
+            recording_link
+            :tags="['NLP', 'Career', 'NLP in Spanish']"
           >
             <template v-slot:abstract>
               <div class="text-sm text-gray-700 dark:text-white">
-                Understand all the key concepts and architectures of state-of-the-art NLP and
-                apply them to common use cases using one of the most popular libraries in the
-                field: Hugging Face. Regardless of your current knowledge, you will finish the
-                course talking about Word Embeddings, Sequential Models, Attention Mechanisms,
-                Transformers and Language Modelling.
+                AI The New Sexy is a podcast where you can find information about
+                Artificial Intelligence and its impact on everyday life and on business.
+                In this episode we interview María Grandury, founder of NLP en ES, an
+                open community for spanish-speaking professionals and researchers
+                advancing and democratizing NLP in their language.
               </div>
             </template>
           </CardTalk>
