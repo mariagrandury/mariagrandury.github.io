@@ -1,3 +1,6 @@
+<!-- TODO: Update the links so they point to my playlist on YouTube.-->
+<!-- https://www.youtube.com/watch?v=yvPLMc3-KnI&list=PLddDdy6XOPhzbVhWBOWuv3UOjOAyDioC9 -->
+
 <template>
     <Container class="bg-white dark:bg-gray-900">
         <NavBar />
@@ -12,12 +15,54 @@
         </div>
         <div class="grid py-6 gap-x-6 gap-y-3 lg:px-64 sm:px-32">
             <CardTalk
+                talk="Charla Coloquio Tecnologías del Lenguaje en la Empresa"
+                event="DiverTLes: Diversidad en Tecnologías del Lenguaje en España"
+                event_link="https://gplsi.dlsi.ua.es/pln/divertles"
+                image_link="https://pbs.twimg.com/media/FD7cQ5SXIAUwidT?format=jpg&name=900x900"
+                recording_link="https://www.youtube.com/watch?v=yvPLMc3-KnI"
+                :tags="['NLP', 'NLP in Production', 'Research']"
+            >
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        Three professionals working in NLP in a company discuss how
+                        they use NLP for real-world applications.
+                        María works in Germany at neurocat, a startup specialized in
+                        Explainable AI and Robustness that develops a tool to assess
+                        the quality and trustworthiness of any ML model.
+                        Muntsa works in France at Eloquant, a company that develops
+                        software used to extract information from text and audio to
+                        improve the customer relationship.
+                        Melania works in Spain at Adecco Outsourcing and is currently
+                        developing NLP solutions for Google products, mainly Google
+                        Assistant but also Google Maps, Google Home and GMail.
+                    </div>
+                </template>
+            </CardTalk>
+            <CardTalk
+                talk="IAs que hablan español"
+                event="Saturdays.AI Podcast"
+                event_link="https://saturdays.ai/podcast/"
+                image_link="https://saturdays.ai/wp-content/uploads/2021/02/imagenpodcast.jpg"
+                recording_link="https://www.youtube.com/watch?v=O5QkrbOrxd4"
+                :tags="['My Story', 'NLP', 'AI Regulation']"
+            >
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        Interview for the Saturdays.AI Podcast where I discuss with its
+                        founder Miguel Guerrero how I became an ML Research Engineer, what
+                        are we doing at BigScience, and how I founded NLP en ES amongst
+                        other topics like privacy, AI regulation and why most of the
+                        AI-related movies picture AI as "the bad guy".
+                    </div>
+                </template>
+            </CardTalk>
+            <CardTalk
                 talk="Sequential Models & the Transformer Architecture"
                 event="NLP de 0 a 100 con Hugging Face, NLP en ES"
                 event_link="https://nlp-en-es.org/nlp-de-cero-a-cien"
                 image_link="https://www.spain-ai.com/wp-content/uploads/2021/08/curso_npl.jpeg"
                 recording_link="https://nlp-en-es.org/nlp-de-cero-a-cien/sesion-03"
-                :tags="['NLP', 'Sequential Models', 'Transformers', 'Demos']"
+                :tags="['NLP', 'Sequential Models', 'Transformers', 'NLP Demos']"
             >
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
