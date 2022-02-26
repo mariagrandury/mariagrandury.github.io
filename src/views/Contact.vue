@@ -5,7 +5,11 @@
     <Container class="bg-[#fffd] dark:bg-[#0002]">
       <NavBar />
     </Container>
-    <Container class="bg-white dark:bg-gray-800">
+    <Container
+      class="bg-accent-500 dark:bg-gray-800"
+      style="background-image: url('https://mariagrandury.github.io/assets/map-image.png');
+      background-repeat: no-repeat; background-size: contain"
+    >
       <CardContact />
     </Container>
   </div>

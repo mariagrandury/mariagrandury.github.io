@@ -149,7 +149,4 @@ const index = computed(() => counter.value % greetings.value.length)
       </div>
     </div>
   </Container>
-  <Container class="bg-white dark:bg-gray-900">
-    <CardContact />
-  </Container>
 </template>

@@ -8,7 +8,7 @@ import Projects from "./views/Projects.vue"
 import Talks from "./views/Talks.vue"
 import Skills from "./views/Skills.vue"
 import About from "./views/About.vue"
-// import Contact from "./views/Contact.vue"
+import Contact from "./views/Contact.vue"
 
 export const createApp = ViteSSG(
     App,
@@ -19,8 +19,7 @@ export const createApp = ViteSSG(
             { path: '/talks', component: Talks },
             { path: '/skills', component: Skills },
             { path: '/about', component: About },
-            // Uncomment when I have a proper landing page
-            // { path: '/contact', component: Contact },
+            { path: '/contact', component: Contact },
         ]
     },
     // function to have custom setups

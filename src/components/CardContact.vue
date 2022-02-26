@@ -34,8 +34,8 @@ const rotationStyle = computed(() => {
         <!-- class="border-white bg-[#fff5] border-1 border-opacity-25 rounded-2xl grid p-10 absolute dark:border-black dark:bg-[#0002] dark:border-opacity-25" -->
         <!-- style="backdrop-filter: blur(20px)" -->
         <div
-            class="bg-white rounded-lg border-1 border-gray-200 shadow grid p-8 absolute overflow-hidden dark:border-black dark:bg-gray-800"
-            style="width: 540px; height: 312px;"
+            class="bg-[#fff5] rounded-lg border-1 border-gray-200 shadow grid p-8 absolute overflow-hidden dark:border-black dark:bg-[#0002]"
+            style="width: 540px; height: 312px; backdrop-filter: blur(10px)"
             :style="rotationStyle"
         >
             <!-- uncomment for blurry circles -->
@@ -53,8 +53,9 @@ const rotationStyle = computed(() => {
             ></div>-->
             <div class="grid grid-cols-[auto,max-content]">
                 <div>
-                    <h1 class="font-medium mb-1 tracking-tight text-2xl">María Grandury</h1>
-                    <h2 class="font-light text- tracking-tight">Machine Learning Research Engineer</h2>
+                    <h1 class="font-medium mb-1 text-2xl tracking-tight">María Grandury</h1>
+                    <h2 class="font-light text-lg tracking-tight">Machine Learning Research Engineer</h2>
+                    <p class="font-light text-sm tracking-tight">NLP, XAI and AI Robustness</p>
                 </div>
                 <!-- <Logo /> -->
             </div>
@@ -63,13 +64,13 @@ const rotationStyle = computed(() => {
                     <i-fluent-phone-24-regular />
                     <div>+34 681188591</div>
                 </a>
-                <a href="mailto: mariagrandury@gmail.com" class="contents">
+                <a href="mailto: mariagrandury@gmail.com" target="_blank" class="contents">
                     <i-fluent-mail-24-regular />
                     <div>mariagrandury@gmail.com</div>
                 </a>
-                <a href="https://mariagrandury.github.io" target="_blank" class="contents">
+                <a href="https://mariagrandury.com" target="_blank" class="contents">
                     <i-fluent-link-square-24-regular />
-                    <div>mariagrandury.github.io</div>
+                    <div>mariagrandury.com</div>
                 </a>
                 <a href="https://wikipedia.org/wiki/Berlin" target="_blank" class="contents">
                     <i-fluent-location-24-regular />
