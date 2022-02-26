@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6aec6947-1dc7-4e5d-bed5-641148f67f27/deploy-status)](https://app.netlify.com/sites/mariagrandury/deploys)
+
 # Personal Website
 
 Built with Vite ⚡, Vue ✌️ & Windi CSS 💨.
