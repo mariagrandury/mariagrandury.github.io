@@ -28,13 +28,13 @@ const memberships = ref([
           <a
             href="https://neurocat.ai"
             target="_blank"
-            class="text-accent-700 dark:text-accent-300 hover:underline"
+            class="text-accent-500 dark:text-accent-300 hover:underline"
           >neurocat</a>
           where I contribute to the core of
           <a
             href="https://aidkit.ai/"
             target="_blank"
-            class="text-accent-700 dark:text-accent-300 hover:underline"
+            class="text-accent-500 dark:text-accent-300 hover:underline"
           >aidkit,</a>
           an AI Quality and Trustworthiness evaluation tool.
         </h2>
@@ -42,12 +42,12 @@ const memberships = ref([
           I believe that NLP research is too focused on English and neglects the particular
           difficulties of other languages so I founded
           <a
-            href="https://nlp-en-es.org"
+            href="https://somosnlp.org"
             target="_blank"
-            class="text-accent-700 dark:text-accent-300 hover:underline"
-          >“NLP en ES 🤗”</a>
-          a community of Spanish-speaking NLP professionals accelerating the development
-          of state-of-the-art NLP in Spanish.
+            class="text-accent-500 dark:text-accent-300 hover:underline"
+          >Somos NLP</a>
+          a community of Spanish-speaking NLP professionals democratizing and accelerating
+          the development of NLP in Spanish.
         </h2>
         <h2 class="pb-12">
           I'm also very aware of the gender gap in my field and I'm part of the Core Team
@@ -55,7 +55,7 @@ const memberships = ref([
           <a
             href="https://womeninairobotics.de"
             target="_blank"
-            class="text-accent-700 dark:text-accent-300 hover:underline"
+            class="text-accent-500 dark:text-accent-300 hover:underline"
           >Women in AI & Robotics</a>
           to increase female representation and promote inclusive and responsible AI.
         </h2>
@@ -138,8 +138,8 @@ const memberships = ref([
     <div>
       <h1 class="font-medium text-2xl underline">Organisations</h1>
       <div class="grid py-8 gap-4 sm:grid-cols-4 sm:grid-rows-[auto,1fr,1fr]">
-        <CardOrg class="col-span-2" img="NLPenES.png" url="https://nlp-en-es.org/">
-          <h1 class="font-medium">NLP en ES 🤗</h1>
+        <CardOrg class="col-span-2" img="NLPenES.png" url="https://somosnlp.org/">
+          <h1 class="font-medium">Somos NLP 🤗</h1>
           <h2>Founder</h2>
         </CardOrg>
         <CardOrg class="col-span-2" img="WAIR.jpg" url="https://www.womeninairobotics.de/">

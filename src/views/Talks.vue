@@ -15,6 +15,49 @@
         </div>
         <div class="grid py-6 gap-x-6 gap-y-3 lg:px-64 sm:px-32">
             <CardTalk
+                talk="Hackathon de NLP en Español"
+                event="Somos NLP - Democratizando el NLP en español"
+                event_link="https://somosnlp.org/hackathon"
+                image_link="https://raw.githubusercontent.com/somosnlp/assets/main/images/hackathon_pln_es_3.png"
+                recording_link="https://hackathon-pln-es.eventbrite.com"
+                :tags="['NLP', 'Hackathon']"
+            >
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        <p>
+                            The democratisation of NLP in Spanish is the main goal of our community and one of
+                            the best ways to advance towards this goal is to create more NLP resources in our language.
+                            With this hackathon we encourage you to join our effort. We invite you to train and
+                            put into production a Spanish NLP model.
+                        </p>
+                        <br />
+                        <a
+                            href="https://hackathon-pln-es.eventbrite.com"
+                            target="_blank"
+                            class="text-accent-500 hover:underline"
+                        >¡Únete al mayor hackathon de PLN en español!</a>
+                    </div>
+                </template>
+            </CardTalk>
+            <CardTalk
+                talk="AI The New Sexy | Podcast"
+                event
+                event_link="https://aithenewsexy.com/"
+                image_link="https://aithenewsexy.com/wp-content/uploads/2020/10/LOGO-HOME-3.png"
+                recording_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
+                :tags="['NLP', 'Career', 'NLP in Spanish']"
+            >
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        AI The New Sexy is a podcast where you can find information about
+                        Artificial Intelligence and its impact on everyday life and on business.
+                        In this episode we interview María Grandury, founder of NLP en ES, an
+                        open community for spanish-speaking professionals and researchers
+                        advancing and democratizing NLP in their language.
+                    </div>
+                </template>
+            </CardTalk>
+            <CardTalk
                 talk="Charla Coloquio Tecnologías del Lenguaje en la Empresa"
                 event="DiverTLes: Diversidad en Tecnologías del Lenguaje en España"
                 event_link="https://gplsi.dlsi.ua.es/pln/divertles"
@@ -50,7 +93,7 @@
                     <div class="text-sm text-gray-700 dark:text-white">
                         Interview for the Saturdays.AI Podcast where I discuss with its
                         founder Miguel Guerrero how I became an ML Research Engineer, what
-                        are we doing at BigScience, and how I founded NLP en ES amongst
+                        are we doing at BigScience, and how I founded Somos NLP amongst
                         other topics like privacy, AI regulation and why most of the
                         AI-related movies picture AI as "the bad guy".
                     </div>
@@ -58,10 +101,10 @@
             </CardTalk>
             <CardTalk
                 talk="Sequential Models & the Transformer Architecture"
-                event="NLP de 0 a 100 con Hugging Face, NLP en ES"
-                event_link="https://nlp-en-es.org/nlp-de-cero-a-cien"
+                event="NLP de 0 a 100 con Hugging Face, Somos NLP"
+                event_link="https://somosnlp.org/nlp-de-cero-a-cien"
                 image_link="https://www.spain-ai.com/wp-content/uploads/2021/08/curso_npl.jpeg"
-                recording_link="https://nlp-en-es.org/nlp-de-cero-a-cien/sesion-03"
+                recording_link="https://somosnlp.org/nlp-de-cero-a-cien/sesion-03"
                 :tags="['NLP', 'Sequential Models', 'Transformers', 'NLP Demos']"
             >
                 <template v-slot:abstract>

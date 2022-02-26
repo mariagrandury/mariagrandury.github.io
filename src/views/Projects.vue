@@ -14,8 +14,21 @@
     </div>
     <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
       <CardProject
+        title="Hackathon of NLP in Spanish"
+        :tags="['NLP', 'Somos NLP']"
+        link="https://somosnlp.org/hackathon"
+        color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
+      >
+        <i-fluent-rocket-24-regular />
+        <template v-slot:description>
+          <div
+            class="text-sm text-gray-700 dark:text-white"
+          >Largest hackathon of NLP in Spanish. Organized by Somos NLP.</div>
+        </template>
+      </CardProject>
+      <CardProject
         title="BigScience Research Workshop"
-        :tags="['NLP', 'Hugging Face', 'Team Project']"
+        :tags="['NLP', 'Hugging Face', 'Research Project']"
         link="https://bigscience.huggingface.co/"
         color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
       >
@@ -23,19 +36,19 @@
         <template v-slot:description>
           <div
             class="text-sm text-gray-700 dark:text-white"
-          >BigScience is a one-year long research workshop on large multilingual models and datasets. I'm part of the data tooling working group.</div>
+          >BigScience is a one-year long international research workshop on large multilingual models and datasets. I'm part of the data tooling working group.</div>
         </template>
       </CardProject>
       <CardProject
-        title="BERTIN Project"
-        :tags="['NLP', 'Hugging Face', 'Team Project']"
+        title="BERTIN"
+        :tags="['NLP', 'Hugging Face', 'BERTIN Project']"
         link="https://huggingface.co/bertin-project"
         color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
       >
         <i-mdi-face-man />
         <template v-slot:description>
           <div class="text-sm text-gray-700 dark:text-white">
-            BERTIN is a series of RoBERTa-based models in Spanish. More detailed info can be found in this
+            BERTIN is a series of RoBERTa-based models in Spanish trained using a novel sampling technique that we call "perplexity sampling". More detailed info can be found in this
             <a
               target="_blank"
               href="https://huggingface.co/bertin-project/bertin-roberta-base-spanish"
@@ -45,15 +58,28 @@
         </template>
       </CardProject>
       <CardProject
+        title="Course: NLP de 0 a 100 con Hugging Face"
+        :tags="['NLP', 'Somos NLP']"
+        link="https://somosnlp.org/nlp-de-cero-a-cien"
+        color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
+      >
+        <i-emojione-monotone-hugging-face />
+        <template v-slot:description>
+          <div
+            class="text-sm text-gray-700 dark:text-white"
+          >The first NLP course from zero to hero in Spanish. Organized by Somos NLP in collaboration with Spain AI.</div>
+        </template>
+      </CardProject>
+      <CardProject
         title="Pre-training GPT-2, T5 & Wav2Vec2 models in Spanish"
-        :tags="['NLP', 'Hugging Face', 'Team Project']"
+        :tags="['NLP', 'Hugging Face', 'HF Hackathon']"
         link="https://huggingface.co/bertin-project"
         color="text-orange-600 bg-orange-100 dark:text-white dark:bg-orange-500"
       >
         <i-fluent-chat-12-regular />
         <template v-slot:description>
           <div class="text-sm text-gray-700 dark:text-white">
-            A series of Spanish language models trained with Flax and using TPUs
+            A series of Spanish language models trained with Flax/Jax and using TPUs
             sponsored by Google during the Flax/Jax Community Week organised
             by Hugging Face in June 2021. Here are the model cards:
             <a
@@ -77,8 +103,21 @@
         </template>
       </CardProject>
       <CardProject
+        title="WaiACCELERATE Program"
+        :tags="['Entrepreneurship', 'Women in AI & Robotics']"
+        link="https://womeninairobotics.de"
+        color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600"
+      >
+        <i-fluent-rocket-24-regular />
+        <template v-slot:description>
+          <div
+            class="text-sm text-gray-700 dark:text-white"
+          >A program where we provide women entrepreneurs with the tools, knowledge, mentoring and network to successfully realize their startup/business idea in the AI sector.</div>
+        </template>
+      </CardProject>
+      <CardProject
         title="Adding NLP datasets in Spanish"
-        :tags="['NLP', 'Hugging Face']"
+        :tags="['NLP', 'Hugging Face', 'HF Hackathon']"
         link="https://huggingface.co/datasets?languages=languages:es&multilinguality=multilinguality:monolingual"
       >
         <i-fluent-database-24-regular />
@@ -113,7 +152,7 @@
       </CardProject>
       <CardProject
         title="Chatbot COVID-19"
-        :tags="['Conversational AI', 'Backend', 'Frontend', 'DevOps']"
+        :tags="['Conversational AI', 'Backend', 'Frontend', 'DevOps', 'Math Thesis']"
         link="https://github.com/mariagrandury/chatbot-covid-backend"
         color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600"
       >
@@ -157,15 +196,15 @@
         <i-fluent-hd-20-regular />
         <template v-slot:description>
           <div class="text-sm text-gray-700 dark:text-white">
-            PyPi package to perform quality analyses on ML models.
+            PyPI package to perform quality analyses on ML models.
             It focuses on the three quality pillars: functionality, robustness and explainability.
           </div>
         </template>
       </CardProject>
       <CardProject
         title="The Annotated Transformer"
-        :tags="['NLP', 'Transformers', 'PyTorch', 'TensorFlow 2']"
-        link="https://github.com/nlp-en-es/the-annotated-transformer"
+        :tags="['NLP', 'Transformers', 'Team Project']"
+        link="https://github.com/somosnlp/the-annotated-transformer"
         color="text-blue-900 bg-blue-50 dark:text-white dark:bg-blue-600"
       >
         <i-fluent-document-search-20-regular />

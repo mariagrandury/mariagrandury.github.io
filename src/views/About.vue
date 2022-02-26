@@ -46,8 +46,8 @@ const memberships = ref(["ACM.png", "AIGuild.png", "Banda.jpg", "NovaTalent.png"
                     <a
                         target="_blank"
                         title="LinkedIn Page"
-                        href="https://www.linkedin.com/company/nlp-en-es"
-                    >NLP en Español 🤗!</a>
+                        href="https://www.linkedin.com/company/somosnlp"
+                    >Somos NLP 🤗!</a>
                 </CVItem>
                 <CVItem location="REDYTEL" title="It was a crazy year" timeline="2020">
                     I wrote my 2 theses and graduated! I developed a chatbot for
@@ -150,8 +150,8 @@ const memberships = ref(["ACM.png", "AIGuild.png", "Banda.jpg", "NovaTalent.png"
         <div>
             <h1 class="font-medium text-2xl underline">Organisations</h1>
             <div class="grid py-8 gap-4 sm:grid-cols-4 sm:grid-rows-[auto,1fr,1fr]">
-                <CardOrg class="col-span-2" img="NLPenES.png" url="https://nlp-en-es.org/">
-                    <h1 class="font-medium">NLP en ES 🤗</h1>
+                <CardOrg class="col-span-2" img="NLPenES.png" url="https://somosnlp.org/">
+                    <h1 class="font-medium">SomosNLP 🤗</h1>
                     <h2>Founder</h2>
                 </CardOrg>
                 <CardOrg class="col-span-2" img="WAIR.jpg" url="https://www.womeninairobotics.de/">
