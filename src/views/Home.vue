@@ -30,20 +30,23 @@ const index = computed(() => counter.value % greetings.value.length)
               👩🏻‍💻 Text Attacks
               <a
                 href="//www.neurocat.ai/"
+                target="_blank"
                 class="text-accent-500 hover:underline"
               >@neurocat.ai</a>
             </li>
             <li>
               🚀 Founder
               <a
-                href="https://twitter.com/nlp_en_es"
+                href="https://twitter.com/somosnlp_"
+                target="_blank"
                 class="text-accent-500 hover:underline"
-              >@NLP_en_ES 🤗</a>
+              >@SomosNLP 🤗</a>
             </li>
             <li>
               ⚡ Core Team
               <a
                 href="https://twitter.com/wairobotics"
+                target="_blank"
                 class="text-accent-500 hover:underline"
               >@WAIRobotics</a>
             </li>
@@ -98,9 +101,13 @@ const index = computed(() => counter.value % greetings.value.length)
           </CardProject>
         </div>
       </div>
-      <div>
+      <div class="flex flex-col flex-shrink gap-6">
+        <img
+          class="w-screen"
+          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/projects_undraw_freelancer_long_hair.svg"
+        />
         <router-link
-          class="flex font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
+          class="flex justify-center font-medium p-6 gap-3 text-align-center items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
           to="/projects"
         >More Projects</router-link>
       </div>
@@ -108,9 +115,12 @@ const index = computed(() => counter.value % greetings.value.length)
   </Container>
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
-      <div>
+      <div class="flex flex-col flex-shrink gap-6">
+        <img
+          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/talks_undraw_conference.svg"
+        />
         <router-link
-          class="flex font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
+          class="flex justify-center font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
           to="/talks"
         >More Talks</router-link>
       </div>
