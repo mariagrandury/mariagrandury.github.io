@@ -46,7 +46,7 @@ export default defineComponent({
                 <i-mdi-youtube style="font-size: 1.25rem;" />
             </a>
             <div class="col-start-1 col-span-full">
-                <img class="p-6" :src="image_link" />
+                <img class="p-6" :src="image_link" :alt="talk" />
 
                 <slot name="abstract"></slot>
             </div>

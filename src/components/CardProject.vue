@@ -25,7 +25,7 @@ export default defineComponent({
                 <slot></slot>
             </div>
             <div class="grid gap-3">
-                <h1>{{ title }}</h1>
+                <h2>{{ title }}</h2>
                 <div class="flex flex-wrap gap-3">
                     <div
                         v-for="(tag, index) in tags"

@@ -16,7 +16,7 @@ const memberships = ref(["ACM.png", "AIGuild.png", "Banda.jpg", "NovaTalent.png"
             <i-fluent-rocket-24-regular style="font-size: 2rem" />
         </h1>
         <div class="sm:px-32">
-            <h1 class="font-medium mb-8 text-2xl underline">Professional Experience</h1>
+            <h2 class="font-medium mb-8 text-2xl underline">Professional Experience</h2>
             <div class="grid gap-x-8 gap-y-12 md:grid-cols-[auto,1fr]">
                 <CVItem
                     location="neurocat GmbH"
@@ -148,19 +148,29 @@ const memberships = ref(["ACM.png", "AIGuild.png", "Banda.jpg", "NovaTalent.png"
             </div>
         </div>
         <div>
-            <h1 class="font-medium text-2xl underline">Organisations</h1>
+            <h2 class="font-medium text-2xl underline">Organisations</h2>
             <div class="grid py-8 gap-4 sm:grid-cols-4 sm:grid-rows-[auto,1fr,1fr]">
-                <CardOrg class="col-span-2" img="NLPenES.png" url="https://somosnlp.org/">
-                    <h1 class="font-medium">SomosNLP 🤗</h1>
-                    <h2>Founder</h2>
+                <CardOrg
+                    class="col-span-2"
+                    name="Somos NLP"
+                    img="NLPenES.png"
+                    url="https://somosnlp.org/"
+                >
+                    <h2 class="font-medium">Somos NLP 🤗</h2>
+                    <h3>Founder</h3>
                 </CardOrg>
-                <CardOrg class="col-span-2" img="WAIR.jpg" url="https://www.womeninairobotics.de/">
-                    <h1 class="font-medium">Women in AI & Robotics</h1>
-                    <h2>Core Team Volunteer</h2>
+                <CardOrg
+                    class="col-span-2"
+                    name="Women in AI & Robotics"
+                    img="WAIR.jpg"
+                    url="https://www.womeninairobotics.de/"
+                >
+                    <h2 class="font-medium">Women in AI & Robotics</h2>
+                    <h3>Core Team Volunteer</h3>
                 </CardOrg>
-                <CardOrg v-for="membership in memberships" :img="membership" />
+                <CardOrg v-for="membership in memberships" :name="membership" :img="membership" />
             </div>
-            <h1 class="font-medium mb-8 text-2xl underline">Volunteering</h1>
+            <h2 class="font-medium mb-8 text-2xl underline">Volunteering</h2>
             <div class="grid gap-4 sm:grid-cols-3">
                 <CardGeneric class="p-4">
                     <div class="font-medium">Sacred Heart</div>

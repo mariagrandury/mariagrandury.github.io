@@ -61,10 +61,10 @@ const memberships = ref([
         </h2>
       </CardGeneric>
     </div>
-    <h1 class="flex gap-2 items-center">
+    <h2 class="flex gap-2 items-center">
       <div class="font-semibold tracking-tight text-4xl">Skills</div>
       <i-fluent-color-24-regular style="font-size: 2rem;" />
-    </h1>
+    </h2>
     <div class="grid py-6 gap-6 md:grid-cols-2 lg:grid-cols-4">
       <CardSkill
         title="Programming"
@@ -136,19 +136,19 @@ const memberships = ref([
     </div>
     <!--
     <div>
-      <h1 class="font-medium text-2xl underline">Organisations</h1>
+      <h2 class="font-medium text-2xl underline">Organisations</h2>
       <div class="grid py-8 gap-4 sm:grid-cols-4 sm:grid-rows-[auto,1fr,1fr]">
         <CardOrg class="col-span-2" img="NLPenES.png" url="https://somosnlp.org/">
-          <h1 class="font-medium">Somos NLP 🤗</h1>
-          <h2>Founder</h2>
+          <h2 class="font-medium">Somos NLP 🤗</h2>
+          <h3>Founder</h3>
         </CardOrg>
         <CardOrg class="col-span-2" img="WAIR.jpg" url="https://www.womeninairobotics.de/">
-          <h1 class="font-medium">Women in AI & Robotics</h1>
-          <h2>Core Team Volunteer</h2>
+          <h2 class="font-medium">Women in AI & Robotics</h2>
+          <h3>Core Team Volunteer</h3>
         </CardOrg>
         <CardOrg v-for="membership in memberships" :img="membership" />
       </div>
-      <h1 class="font-medium mb-8 text-2xl underline">Volunteering</h1>
+      <h2 class="font-medium mb-8 text-2xl underline">Volunteering</h2>
       <div class="grid gap-4 sm:grid-cols-3">
         <CardGeneric class="p-4">
           <div class="font-medium">Sacred Heart</div>

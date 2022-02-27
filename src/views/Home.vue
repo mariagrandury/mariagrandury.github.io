@@ -110,6 +110,7 @@ const index = computed(() => counter.value % greetings.value.length)
         <img
           class="w-screen"
           src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/projects_undraw_freelancer_long_hair.svg"
+          alt="Projects"
         />
         <router-link
           class="flex justify-center place-self-center font-medium p-6 gap-3 text-align-center items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
@@ -123,6 +124,7 @@ const index = computed(() => counter.value % greetings.value.length)
       <div class="flex flex-col flex-shrink gap-12">
         <img
           src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/talks_undraw_conference.svg"
+          alt="Talks"
         />
         <router-link
           class="flex justify-center place-self-center font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
