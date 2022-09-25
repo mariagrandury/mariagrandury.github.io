@@ -14,14 +14,33 @@
             <h2 class="py-6">I'm passionate about what I do and really enjoy divulgating!</h2>
         </div>
         <div class="grid py-6 gap-x-6 gap-y-3 lg:px-64 sm:px-32">
-            <CardTalk
-                talk="Hackathon de NLP en Español"
-                event="Somos NLP - Democratizando el NLP en español"
+            <CardTalk talk="Encuentro de empresas de PLN"
+                event="Mesa Redonda - El estado del arte de la industria de PLN en nuestro país y fuera"
+                event_link="https://twitter.com/PERTE_Lengua/status/1567902042353442816?s=20&t=kR1vwhuxmGig2UrbH4WvDw"
+                image_link="https://pbs.twimg.com/media/FcJJ_XNWAAUAyv7?format=jpg&name=4096x4096"
+                :tags="['NLP', 'SOTA NLP', 'Round Table']">
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        <p>
+                            La oficina del Comisionado Especial para la Alianza por la Nueva Economía de la Lengua
+                            organiza, en colaboración con Casa Mediterráneo y la Universidad de Alicante, el primer
+                            encuentro del ecosistema de empresas de Procesamiento de Lenguaje Natural.
+                        </p>
+                        <br />
+                        <p>
+                            El PERTE de la Nueva economía de la Lengua es una oportunidad para aprovechar el potencial
+                            del español y de las lenguas cooficiales como factor de crecimiento económico y
+                            competitividad internacional en áreas como la inteligencia artificial, la traducción, el
+                            aprendizaje, la divulgación cultural, la producción audiovisual, la investigación y la
+                            ciencia.
+                        </p>
+                    </div>
+                </template>
+            </CardTalk>
+            <CardTalk talk="Hackathon de NLP en Español" event="Somos NLP - Democratizando el NLP en español"
                 event_link="https://somosnlp.org/hackathon"
                 image_link="https://raw.githubusercontent.com/somosnlp/assets/main/images/hackathon_pln_es_3.png"
-                recording_link="https://hackathon-pln-es.eventbrite.com"
-                :tags="['NLP', 'Hackathon']"
-            >
+                recording_link="https://hackathon-pln-es.eventbrite.com" :tags="['NLP', 'Hackathon']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         <p>
@@ -31,22 +50,16 @@
                             put into production a Spanish NLP model.
                         </p>
                         <br />
-                        <a
-                            href="https://hackathon-pln-es.eventbrite.com"
-                            target="_blank"
-                            class="text-accent-500 hover:underline"
-                        >¡Únete al mayor hackathon de PLN en español!</a>
+                        <a href="https://hackathon-pln-es.eventbrite.com" target="_blank"
+                            class="text-accent-500 hover:underline">¡Organizamos el mayor hackathon open-source de PLN
+                            en español!</a>
                     </div>
                 </template>
             </CardTalk>
-            <CardTalk
-                talk="AI The New Sexy | Podcast"
-                event
-                event_link="https://aithenewsexy.com/"
+            <CardTalk talk="AI The New Sexy | Podcast" event event_link="https://aithenewsexy.com/"
                 image_link="https://aithenewsexy.com/wp-content/uploads/2020/10/LOGO-HOME-3.png"
                 recording_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
-                :tags="['NLP', 'Career', 'NLP in Spanish']"
-            >
+                :tags="['NLP', 'Career', 'NLP in Spanish']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         AI The New Sexy is a podcast where you can find information about
@@ -57,14 +70,12 @@
                     </div>
                 </template>
             </CardTalk>
-            <CardTalk
-                talk="Charla Coloquio Tecnologías del Lenguaje en la Empresa"
+            <CardTalk talk="Charla Coloquio Tecnologías del Lenguaje en la Empresa"
                 event="DiverTLes: Diversidad en Tecnologías del Lenguaje en España"
                 event_link="https://gplsi.dlsi.ua.es/pln/divertles"
                 image_link="https://pbs.twimg.com/media/FD7cQ5SXIAUwidT?format=jpg&name=900x900"
                 recording_link="https://www.youtube.com/watch?v=yvPLMc3-KnI"
-                :tags="['NLP', 'NLP in Production', 'Research']"
-            >
+                :tags="['NLP', 'NLP in Production', 'Research']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         Three professionals working in NLP in a company discuss how
@@ -81,14 +92,11 @@
                     </div>
                 </template>
             </CardTalk>
-            <CardTalk
-                talk="IAs que hablan español"
-                event="Saturdays.AI Podcast"
+            <CardTalk talk="IAs que hablan español" event="Saturdays.AI Podcast"
                 event_link="https://saturdays.ai/podcast/"
                 image_link="https://saturdays.ai/wp-content/uploads/2021/02/imagenpodcast.jpg"
                 recording_link="https://www.youtube.com/watch?v=O5QkrbOrxd4"
-                :tags="['My Story', 'NLP', 'AI Regulation']"
-            >
+                :tags="['My Story', 'NLP', 'AI Regulation']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         Interview for the Saturdays.AI Podcast where I discuss with its
@@ -99,14 +107,11 @@
                     </div>
                 </template>
             </CardTalk>
-            <CardTalk
-                talk="Sequential Models & the Transformer Architecture"
-                event="NLP de 0 a 100 con Hugging Face, Somos NLP"
-                event_link="https://somosnlp.org/nlp-de-cero-a-cien"
+            <CardTalk talk="Sequential Models & the Transformer Architecture"
+                event="NLP de 0 a 100 con Hugging Face, Somos NLP" event_link="https://somosnlp.org/nlp-de-cero-a-cien"
                 image_link="https://www.spain-ai.com/wp-content/uploads/2021/08/curso_npl.jpeg"
                 recording_link="https://somosnlp.org/nlp-de-cero-a-cien/sesion-03"
-                :tags="['NLP', 'Sequential Models', 'Transformers', 'NLP Demos']"
-            >
+                :tags="['NLP', 'Sequential Models', 'Transformers', 'NLP Demos']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         Understand all the key concepts and architectures of state-of-the-art NLP and
@@ -117,14 +122,12 @@
                     </div>
                 </template>
             </CardTalk>
-            <CardTalk
-                talk="3 Engineering, Robotics & AI experts Taking Center Stage"
+            <CardTalk talk="3 Engineering, Robotics & AI experts Taking Center Stage"
                 event="Women in AI & Robotics, NASA JPL, UniBremen, DFKI"
                 event_link="https://www.eventbrite.de/e/3-engineering-robotics-ai-experts-taking-center-stage-tickets-158193696605"
                 recording_link="https://www.youtube.com/watch?v=f2f1RL3M6xc"
                 image_link="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F138319729%2F521149865225%2F1%2Foriginal.20210610-175615?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c9e5f7151f4e1ed882d042e0732ee943"
-                :tags="['Women in Robotics', 'Women Engineers']"
-            >
+                :tags="['Women in Robotics', 'Women Engineers']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         AI and Robotics go hand in hand, whether exploring space or enabling
@@ -141,14 +144,11 @@
                     </div>
                 </template>
             </CardTalk>
-            <CardTalk
-                talk="Is Your ML Model Trustworthy?"
-                event="MLOps World Conference 2021"
+            <CardTalk talk="Is Your ML Model Trustworthy?" event="MLOps World Conference 2021"
                 event_link="https://mlopsworld.com/"
                 recording_link="https://twitter.com/MLOpsWorld/status/1405179157265489927"
                 image_link="https://mlopsworld.com/wp-content/uploads/2021/02/MLOps-2021.jpg"
-                :tags="['MLOps', 'AI Robustness', 'AI Explainability']"
-            >
+                :tags="['MLOps', 'AI Robustness', 'AI Explainability']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         In recent years, Machine Learning models and architectures have become
@@ -161,14 +161,11 @@
                     </div>
                 </template>
             </CardTalk>
-            <CardTalk
-                talk="Hands-on NLP with Hugging Face"
-                event="WomenTech Global Conference 2021"
+            <CardTalk talk="Hands-on NLP with Hugging Face" event="WomenTech Global Conference 2021"
                 event_link="https://bigscience.huggingface.co/"
                 image_link="https://www.womentech.net/sites/default/files/2020-09/WomenTech%20Network%20Global%20Conference%202021%20Cover.png"
                 recording_link="https://www.womentech.net/speaker/Maria/Grandury/57995"
-                :tags="['NLP', 'Transformers', 'Hugging Face']"
-            >
+                :tags="['NLP', 'Transformers', 'Hugging Face']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         Hands-on introduction to the state-of-the-art Hugging Face NLP libraries.
@@ -180,14 +177,11 @@
                     </div>
                 </template>
             </CardTalk>
-            <CardTalk
-                talk="WAIR Kick-Off Event"
-                event="Women in AI & Robotics"
+            <CardTalk talk="WAIR Kick-Off Event" event="Women in AI & Robotics"
                 event_link="https://bigscience.huggingface.co/"
                 recording_link="https://www.youtube.com/watch?v=in5tEluYTSs"
                 image_link="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F133617035%2F521149865225%2F1%2Foriginal.20210428-092812?h=2000&w=720&auto=format%2Ccompress&q=75&sharp=10&s=26c39b82ba4b431b8f1a66d5de1dec84"
-                :tags="['Round table', 'Women in AI', 'Women in STEM']"
-            >
+                :tags="['Round table', 'Women in AI', 'Women in STEM']">
                 <i-fluent-community-20-regular />
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">

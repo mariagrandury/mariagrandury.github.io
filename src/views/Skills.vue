@@ -23,40 +23,28 @@ const memberships = ref([
       </h1>
       <CardGeneric class="px-12 m-12">
         <h2 class="pt-12">
-          I'm originally from Spain and have two degrees in Mathematics and Physics. After
+          I'm originally from Spain and hold two degrees in Mathematics and Physics. After
           graduating I moved to Berlin and I'm currently working at
-          <a
-            href="https://neurocat.ai"
-            target="_blank"
-            class="text-accent-500 dark:text-accent-300 hover:underline"
-          >neurocat</a>
+          <a href="https://neurocat.ai" target="_blank"
+            class="text-accent-500 dark:text-accent-300 hover:underline">neurocat</a>
           where I contribute to the core of
-          <a
-            href="https://aidkit.ai/"
-            target="_blank"
-            class="text-accent-500 dark:text-accent-300 hover:underline"
-          >aidkit,</a>
-          an AI Quality and Trustworthiness evaluation tool.
+          <a href="https://aidkit.ai" target="_blank"
+            class="text-accent-500 dark:text-accent-300 hover:underline">aidkit,</a>
+          an ML Quality Ops platform.
         </h2>
         <h2 class="py-2">
           I believe that NLP research is too focused on English and neglects the particular
           difficulties of other languages so I founded
-          <a
-            href="https://somosnlp.org"
-            target="_blank"
-            class="text-accent-500 dark:text-accent-300 hover:underline"
-          >Somos NLP</a>
+          <a href="https://somosnlp.org" target="_blank"
+            class="text-accent-500 dark:text-accent-300 hover:underline">Somos NLP</a>
           a community of Spanish-speaking NLP professionals democratizing and accelerating
           the development of NLP in Spanish.
         </h2>
         <h2 class="pb-12">
           I'm also very aware of the gender gap in my field and I'm part of the Core Team
           of
-          <a
-            href="https://womeninairobotics.de"
-            target="_blank"
-            class="text-accent-500 dark:text-accent-300 hover:underline"
-          >Women in AI & Robotics</a>
+          <a href="https://womeninairobotics.de" target="_blank"
+            class="text-accent-500 dark:text-accent-300 hover:underline">Women in AI & Robotics</a>
           to increase female representation and promote inclusive and responsible AI.
         </h2>
       </CardGeneric>
@@ -66,69 +54,42 @@ const memberships = ref([
       <i-fluent-color-24-regular style="font-size: 2rem;" />
     </h2>
     <div class="grid py-6 gap-6 md:grid-cols-2 lg:grid-cols-4">
-      <CardSkill
-        title="Programming"
-        text="Python: NumPy, Pandas, TensorFlow 2, Keras, Sklearn"
-        color="text-purple-600 bg-purple-50 dark:text-white dark:bg-purple-600"
-      >
+      <CardSkill title="Programming" text="Python: NumPy, Pandas, TensorFlow 2, Keras, Sklearn"
+        color="text-purple-600 bg-purple-50 dark:text-white dark:bg-purple-600">
         <i-ant-design-code-outlined />
       </CardSkill>
-      <CardSkill
-        title="Machine Learning"
-        text="ML algorithms and metrics, quality and trustworthiness"
-        color="text-blue-600 bg-blue-50 dark:text-white dark:bg-blue-600"
-      >
+      <CardSkill title="Machine Learning" text="ML algorithms and metrics, quality and trustworthiness"
+        color="text-blue-600 bg-blue-50 dark:text-white dark:bg-blue-600">
         <i-fluent-bot-20-regular />
       </CardSkill>
-      <CardSkill
-        title="Deep Learning"
-        text="DL.AI Specialization, TF Professional Developer"
-        color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
-      >
+      <CardSkill title="Deep Learning" text="DL.AI Specialization, TF Professional Developer"
+        color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
         <i-fluent-brain-circuit-20-regular />
       </CardSkill>
-      <CardSkill
-        title="Research"
-        text="XAI, AI Robustness, NLP: Text Attacks, Transformers, Sampling"
-        color="text-teal-600 bg-teal-50 dark:text-white dark:bg-teal-600"
-      >
+      <CardSkill title="Research" text="XAI, AI Robustness, NLP: Text Attacks, Transformers, Sampling"
+        color="text-teal-600 bg-teal-50 dark:text-white dark:bg-teal-600">
         <i-ant-design-experiment-outlined />
       </CardSkill>
-      <CardSkill
-        title="Math & Stats"
-        text="Double Degree in Mathematics and Physics: 5 years, 345 ECTS"
-        color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600"
-      >
+      <CardSkill title="Math & Stats" text="Double Degree in Mathematics and Physics: 5 years, 345 ECTS"
+        color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600">
         <i-ant-design-function-outlined />
       </CardSkill>
-      <CardSkill
-        title="Software Engineering"
-        text="Experience as Software Engineer, Git, Testing, Code QA, Design"
-        color="text-indigo-600 bg-indigo-50 dark:text-white dark:bg-indigo-600"
-      >
+      <CardSkill title="Software Engineering" text="Experience as Software Engineer, Git, Testing, Code QA, Design"
+        color="text-indigo-600 bg-indigo-50 dark:text-white dark:bg-indigo-600">
         <i-ant-design-code-sandbox-outlined />
       </CardSkill>
-      <CardSkill
-        title="DevOps / MLOps"
-        text="Docker, MLflow, AWS: S3, Lambda, CloudFront, Sagemaker"
-        color="text-orange-600 bg-orange-50 dark:text-white dark:bg-orange-600"
-      >
+      <CardSkill title="DevOps / MLOps" text="Docker, MLflow, AWS: S3, Lambda, CloudFront, Sagemaker"
+        color="text-orange-600 bg-orange-50 dark:text-white dark:bg-orange-600">
         <i-clarity-network-settings-line />
       </CardSkill>
-      <CardSkill
-        title="Technical Communication"
-        text="Data Visualization with Tableau"
-        color="text-red-600 bg-red-50 dark:text-white dark:bg-red-600"
-      >
+      <CardSkill title="Technical Communication" text="Data Visualization with Tableau"
+        color="text-red-600 bg-red-50 dark:text-white dark:bg-red-600">
         <i-fluent-chat-multiple-20-regular />
       </CardSkill>
     </div>
     <div class="flex my-6 justify-center">
-      <a
-        href="https://github.com/mariagrandury/mariagrandury/tree/main/Certificates"
-        target="_blank"
-        class="flex font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
-      >
+      <a href="https://github.com/mariagrandury/mariagrandury/tree/main/Certificates" target="_blank"
+        class="flex font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400">
         <i-carbon-certificate-check class="text-1.25rem" />
         <div>Check my certificates</div>
         <i-carbon-certificate-check class="text-1.25rem" />
