@@ -14,58 +14,64 @@
             <h2 class="py-6">I'm passionate about what I do and really enjoy divulgating!</h2>
         </div>
         <div class="grid py-6 gap-x-6 gap-y-3 lg:px-64 sm:px-32">
-            <CardTalk talk="Encuentro de empresas de PLN"
-                event="Mesa Redonda - El estado del arte de la industria de PLN en nuestro país y fuera"
+            <CardTalk talk="El estado del arte del PLN en España y fuera"
+                event="Primer foro del PERTE de la Nueva Economía de la Lengua"
                 event_link="https://twitter.com/PERTE_Lengua/status/1567902042353442816?s=20&t=kR1vwhuxmGig2UrbH4WvDw"
-                image_link="https://pbs.twimg.com/media/FcJJ_XNWAAUAyv7?format=jpg&name=4096x4096"
-                :tags="['NLP', 'SOTA NLP', 'Round Table']">
+                image_link="https://pbs.twimg.com/media/FduyUU0WAAA-8EB?format=jpg&name=large"
+                recording_link="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s"
+                :tags="['NLP', 'SOTA NLP', 'Round Table', '🇪🇸']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
-                        <p>
-                            La oficina del Comisionado Especial para la Alianza por la Nueva Economía de la Lengua
-                            organiza, en colaboración con Casa Mediterráneo y la Universidad de Alicante, el primer
-                            encuentro del ecosistema de empresas de Procesamiento de Lenguaje Natural.
-                        </p>
+                        El PERTE de la Nueva economía de la Lengua es una oportunidad para aprovechar el potencial
+                        del español y de las lenguas cooficiales como factor de crecimiento económico y
+                        competitividad internacional en áreas como la inteligencia artificial, la traducción, el
+                        aprendizaje, la divulgación cultural, la producción audiovisual, la investigación y la
+                        ciencia.
                         <br />
-                        <p>
-                            El PERTE de la Nueva economía de la Lengua es una oportunidad para aprovechar el potencial
-                            del español y de las lenguas cooficiales como factor de crecimiento económico y
-                            competitividad internacional en áreas como la inteligencia artificial, la traducción, el
-                            aprendizaje, la divulgación cultural, la producción audiovisual, la investigación y la
-                            ciencia.
-                        </p>
+                        <br />
+                        <a href="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=5593s" target="_blank"
+                            class="text-accent-500 hover:underline">
+                            1. ¿Cómo se puede avanzar el estado del arte del NLP en español?
+                        </a>
+                        <br />
+                        <a href="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s" target="_blank"
+                            class="text-accent-500 hover:underline">
+                            2. ¿Cuál crees que sería el proyecto más importante a nivel internacional que deberíamos
+                            implementar?
+                        </a>
                     </div>
                 </template>
             </CardTalk>
             <CardTalk talk="Hackathon de NLP en Español" event="Somos NLP - Democratizando el NLP en español"
-                event_link="https://somosnlp.org/hackathon"
+                event_link="https://somosnlp.org"
                 image_link="https://raw.githubusercontent.com/somosnlp/assets/main/images/hackathon_pln_es_3.png"
-                recording_link="https://hackathon-pln-es.eventbrite.com" :tags="['NLP', 'Hackathon']">
+                recording_link="https://hackathon-pln-es.eventbrite.com"
+                :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
-                        <p>
-                            The democratisation of NLP in Spanish is the main goal of our community and one of
-                            the best ways to advance towards this goal is to create more NLP resources in our language.
-                            With this hackathon we encourage you to join our effort. We invite you to train and
-                            put into production a Spanish NLP model.
-                        </p>
+                        The democratisation of NLP in Spanish is the main goal of our community and one of
+                        the best ways to advance towards this goal is to create more NLP resources in our language.
+                        With this hackathon we encourage you to join our effort. We invite you to train and
+                        put into production a Spanish NLP model.
                         <br />
-                        <a href="https://hackathon-pln-es.eventbrite.com" target="_blank"
+                        <br />
+                        <a href="https://somosnlp.org/hackathon" target="_blank"
                             class="text-accent-500 hover:underline">¡Organizamos el mayor hackathon open-source de PLN
                             en español!</a>
                     </div>
                 </template>
             </CardTalk>
-            <CardTalk talk="AI The New Sexy | Podcast" event event_link="https://aithenewsexy.com/"
-                image_link="https://aithenewsexy.com/wp-content/uploads/2020/10/LOGO-HOME-3.png"
+            <CardTalk talk="PLN con Somos NLP y Hugging Face" event="AI The New Sexy | Podcast"
+                event_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
+                image_link="https://m.media-amazon.com/images/I/51wYklP5UxS._SL500_.jpg"
                 recording_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
-                :tags="['NLP', 'Career', 'NLP in Spanish']">
+                :tags="['NLP in Spanish', 'Career', 'Open-Source', 'Interview', '🇪🇸']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         AI The New Sexy is a podcast where you can find information about
                         Artificial Intelligence and its impact on everyday life and on business.
-                        In this episode we interview María Grandury, founder of NLP en ES, an
-                        open community for spanish-speaking professionals and researchers
+                        In this episode we interview María Grandury, founder of Somos NLP (formerly NLP en ES),
+                        an open community for spanish-speaking professionals and researchers
                         advancing and democratizing NLP in their language.
                     </div>
                 </template>
@@ -75,7 +81,7 @@
                 event_link="https://gplsi.dlsi.ua.es/pln/divertles"
                 image_link="https://pbs.twimg.com/media/FD7cQ5SXIAUwidT?format=jpg&name=900x900"
                 recording_link="https://www.youtube.com/watch?v=yvPLMc3-KnI"
-                :tags="['NLP', 'NLP in Production', 'Research']">
+                :tags="['NLP', 'NLP in Production', 'Research', 'Round Table', '🇪🇸']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         Three professionals working in NLP in a company discuss how
@@ -96,13 +102,20 @@
                 event_link="https://saturdays.ai/podcast/"
                 image_link="https://saturdays.ai/wp-content/uploads/2021/02/imagenpodcast.jpg"
                 recording_link="https://www.youtube.com/watch?v=O5QkrbOrxd4"
-                :tags="['My Story', 'NLP', 'AI Regulation']">
+                :tags="['My Story', 'NLP', 'AI Regulation', 'Interview', '🇪🇸']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         Interview for the Saturdays.AI Podcast where I discuss with its
                         founder Miguel Guerrero how I became an ML Research Engineer, what
-                        are we doing at BigScience, and how I founded Somos NLP amongst
-                        other topics like privacy, AI regulation and why most of the
+                        are we doing at BigScience
+                        <a href="https://bigscience.huggingface.co/" target="_blank"
+                            class="text-accent-500 hover:underline">BigScience,
+                        </a>
+                        and how I founded
+                        <a href="https://somosnlp.org" target="_blank" class="text-accent-500 hover:underline">
+                            Somos NLP,
+                        </a>
+                        amongst other topics like privacy, AI regulation and why most of the
                         AI-related movies picture AI as "the bad guy".
                     </div>
                 </template>
@@ -111,7 +124,7 @@
                 event="NLP de 0 a 100 con Hugging Face, Somos NLP" event_link="https://somosnlp.org/nlp-de-cero-a-cien"
                 image_link="https://www.spain-ai.com/wp-content/uploads/2021/08/curso_npl.jpeg"
                 recording_link="https://somosnlp.org/nlp-de-cero-a-cien/sesion-03"
-                :tags="['NLP', 'Sequential Models', 'Transformers', 'NLP Demos']">
+                :tags="['NLP', 'Sequential Models', 'Transformers', 'NLP Demos', 'Course', '🇪🇸']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         Understand all the key concepts and architectures of state-of-the-art NLP and
@@ -119,6 +132,17 @@
                         field: Hugging Face. Regardless of your current knowledge, you will finish the
                         course talking about Word Embeddings, Sequential Models, Attention Mechanisms,
                         Transformers and Language Modelling.
+                        <br />
+                        <br />
+                        This course was organized by
+                        <a href="https://somosnlp.org" target="_blank" class="text-accent-500 hover:underline">
+                            Somos NLP
+                        </a>
+                        with the support of
+                        <a href="https://www.spain-ai.com/" target="_blank" class="text-accent-500 hover:underline">
+                            Spain AI.
+                        </a>
+
                     </div>
                 </template>
             </CardTalk>
@@ -127,14 +151,17 @@
                 event_link="https://www.eventbrite.de/e/3-engineering-robotics-ai-experts-taking-center-stage-tickets-158193696605"
                 recording_link="https://www.youtube.com/watch?v=f2f1RL3M6xc"
                 image_link="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F138319729%2F521149865225%2F1%2Foriginal.20210610-175615?w=800&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c9e5f7151f4e1ed882d042e0732ee943"
-                :tags="['Women in Robotics', 'Women Engineers']">
+                :tags="['Women in Robotics', 'Women Engineers', 'Round Table', '🇬🇧']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         AI and Robotics go hand in hand, whether exploring space or enabling
                         humanoid robots to walk on the Moon. As a cutting edge branch of technology,
                         having women representation in AI and Robotics is extremely important - both
                         for the progress of the field and to encourage younger generations to join
-                        in as well. Join us as our very own Maria Grandury, herself a Machine
+                        in as well.
+                        <br />
+                        <br />
+                        Join us as our very own Maria Grandury, herself a Machine
                         Learning Research Engineer, interviews Sandra Hernandez, Systems Engineer
                         at NASA JPL, and Mihaela Popescu, Researcher at University of Bremen/DFKI
                         (German Research Center for Artificial Intelligence) and Bremen Women in AI
@@ -148,7 +175,7 @@
                 event_link="https://mlopsworld.com/"
                 recording_link="https://twitter.com/MLOpsWorld/status/1405179157265489927"
                 image_link="https://mlopsworld.com/wp-content/uploads/2021/02/MLOps-2021.jpg"
-                :tags="['MLOps', 'AI Robustness', 'AI Explainability']">
+                :tags="['MLOps', 'AI Robustness', 'AI Explainability', 'Talk', '🇬🇧']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         In recent years, Machine Learning models and architectures have become
@@ -165,7 +192,7 @@
                 event_link="https://bigscience.huggingface.co/"
                 image_link="https://www.womentech.net/sites/default/files/2020-09/WomenTech%20Network%20Global%20Conference%202021%20Cover.png"
                 recording_link="https://www.womentech.net/speaker/Maria/Grandury/57995"
-                :tags="['NLP', 'Transformers', 'Hugging Face']">
+                :tags="['NLP', 'Transformers', 'Hugging Face', 'Workshop', '🇬🇧']">
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         Hands-on introduction to the state-of-the-art Hugging Face NLP libraries.
@@ -181,7 +208,7 @@
                 event_link="https://bigscience.huggingface.co/"
                 recording_link="https://www.youtube.com/watch?v=in5tEluYTSs"
                 image_link="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F133617035%2F521149865225%2F1%2Foriginal.20210428-092812?h=2000&w=720&auto=format%2Ccompress&q=75&sharp=10&s=26c39b82ba4b431b8f1a66d5de1dec84"
-                :tags="['Round table', 'Women in AI', 'Women in STEM']">
+                :tags="['Women in AI', 'Women in STEM', 'Round table', '🇬🇧']">
                 <i-fluent-community-20-regular />
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
