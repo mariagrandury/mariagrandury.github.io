@@ -23,22 +23,23 @@ const memberships = ref([
       </h1>
       <CardGeneric class="px-12 m-12">
         <h2 class="pt-12">
-          I'm originally from Spain and hold two degrees in Mathematics and Physics. After
-          graduating I moved to Berlin and I'm currently working at
+          I'm half Spanish half French and I live in Berlin.
+          I hold two degrees in Mathematics and Physics and I'm currently working at
           <a href="https://neurocat.ai" target="_blank"
             class="text-accent-500 dark:text-accent-300 hover:underline">neurocat</a>
           where I contribute to the core of
           <a href="https://aidkit.ai" target="_blank"
             class="text-accent-500 dark:text-accent-300 hover:underline">aidkit,</a>
-          an ML Quality Ops platform.
+          an ML Quality Ops platform that assess the vulnerabilities of CV & NLP models
+          thanks to adversarial attacks and explainability techniques.
         </h2>
         <h2 class="py-2">
           I believe that NLP research is too focused on English and neglects the particular
           difficulties of other languages so I founded
           <a href="https://somosnlp.org" target="_blank"
-            class="text-accent-500 dark:text-accent-300 hover:underline">Somos NLP</a>
-          a community of Spanish-speaking NLP professionals democratizing and accelerating
-          the development of NLP in Spanish.
+            class="text-accent-500 dark:text-accent-300 hover:underline">Somos NLP,</a>
+          a community of Spanish-speaking NLP professionals democratizing and advancing
+          the state-of-the-art of NLP in Spanish.
         </h2>
         <h2 class="pb-12">
           I'm also very aware of the gender gap in my field and I'm part of the Core Team
