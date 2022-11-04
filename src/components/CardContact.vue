@@ -25,19 +25,12 @@ const rotationStyle = computed(() => {
 </style> -->
 
 <template>
-    <div
-        ref="el"
-        class="h-full w-full grid relative place-items-center"
-        style="min-height: 400px; perspective: 800px;"
-    >
+    <div ref="el" class="h-full w-full grid relative place-items-center" style="min-height: 400px; perspective: 800px;">
         <!-- uncomment to use translucency -->
         <!-- class="border-white bg-[#fff5] border-1 border-opacity-25 rounded-2xl grid p-10 absolute dark:border-black dark:bg-[#0002] dark:border-opacity-25" -->
         <!-- style="backdrop-filter: blur(20px)" -->
-        <div
-            class="bg-[#fff5] rounded-lg border-1 border-gray-200 shadow grid p-8 absolute overflow-hidden dark:border-black dark:bg-[#0002]"
-            style="width: 540px; height: 312px; backdrop-filter: blur(10px)"
-            :style="rotationStyle"
-        >
+        <div class="bg-[#fff5] rounded-lg border-1 border-gray-200 shadow grid p-8 absolute overflow-hidden dark:border-black dark:bg-[#0002]"
+            style="width: 600px; height: 346px; backdrop-filter: blur(10px)" :style="rotationStyle">
             <!-- uncomment for blurry circles -->
             <!-- <div
             class="rounded-full bg-purple-300 h-32 -right-4 -bottom-3 w-32 -z-1 absolute"
@@ -78,7 +71,11 @@ const rotationStyle = computed(() => {
                 </a>
                 <a href="https://www.neurocat.ai/" target="_blank" class="contents">
                     <i-fluent-building-24-regular />
-                    <div>neurocat GmbH</div>
+                    <div>Research Engineer @neurocat</div>
+                </a>
+                <a href="https://somosnlp.org" target="_blank" class="contents">
+                    <i-fluent-rocket-24-regular />
+                    <div>Founder @Somos NLP</div>
                 </a>
             </div>
         </div>
