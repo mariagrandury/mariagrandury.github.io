@@ -30,7 +30,7 @@ const rotationStyle = computed(() => {
         <!-- class="border-white bg-[#fff5] border-1 border-opacity-25 rounded-2xl grid p-10 absolute dark:border-black dark:bg-[#0002] dark:border-opacity-25" -->
         <!-- style="backdrop-filter: blur(20px)" -->
         <div class="bg-[#fff5] rounded-lg border-1 border-gray-200 shadow grid p-8 absolute overflow-hidden dark:border-black dark:bg-[#0002]"
-            style="width: 600px; height: 346px; backdrop-filter: blur(10px)" :style="rotationStyle">
+            style="width: 540px; height: 312px; backdrop-filter: blur(10px)" :style="rotationStyle">
             <!-- uncomment for blurry circles -->
             <!-- <div
             class="rounded-full bg-purple-300 h-32 -right-4 -bottom-3 w-32 -z-1 absolute"
@@ -53,10 +53,12 @@ const rotationStyle = computed(() => {
                 <!-- <Logo /> -->
             </div>
             <div class="font-light grid gap-x-4 gap-y-1 grid-cols-[auto,1fr] items-center">
+                <!--
                 <a href="tel:+34681188591" class="contents">
                     <i-fluent-phone-24-regular />
                     <div>+34 681188591</div>
                 </a>
+                -->
                 <a href="mailto: mariagrandury@gmail.com" target="_blank" class="contents">
                     <i-fluent-mail-24-regular />
                     <div>mariagrandury@gmail.com</div>
@@ -71,11 +73,11 @@ const rotationStyle = computed(() => {
                 </a>
                 <a href="https://www.neurocat.ai/" target="_blank" class="contents">
                     <i-fluent-building-24-regular />
-                    <div>Research Engineer @neurocat</div>
+                    <div>Research Engineer @neurocat.ai</div>
                 </a>
                 <a href="https://somosnlp.org" target="_blank" class="contents">
                     <i-fluent-rocket-24-regular />
-                    <div>Founder @Somos NLP</div>
+                    <div>Founder @SomosNLP.org</div>
                 </a>
             </div>
         </div>
