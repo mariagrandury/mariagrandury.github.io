@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import CardOrg from '../components/CardOrg.vue';
+import CardExp from '../components/CardExp.vue';
 
 const memberships = ref([
     "AIGuild.png",
@@ -72,31 +73,6 @@ const memberships = ref([
                 </div>
             </div>
         </div>
-
-        <!--
-        <div>
-            <h2 class="flex gap-2 items-center">
-                <div class="font-semibold tracking-tight text-2xl">Volunteering</div>
-                <i-fluent-color-24-regular style="font-size: 2rem;" />
-            </h2>
-            <div class="sm:px-26">
-                <div class="grid gap-4 sm:grid-cols-3">
-                    <CardGeneric class="p-4">
-                        <div class="font-medium">Sacred Heart</div>
-                        <div>Sancti Spiritus, CUBA</div>
-                    </CardGeneric>
-                    <CardGeneric class="p-4">
-                        <div class="font-medium">L'Arche Asha Niketan</div>
-                        <div>Asansol and Kolkata, INDIA</div>
-                    </CardGeneric>
-                    <CardGeneric class="p-4">
-                        <div class="font-medium">One World Institute</div>
-                        <div>Lillehammer, NORWAY</div>
-                    </CardGeneric>
-                </div>
-            </div>
-        </div>
-        -->
 
     </Container>
 </template>
