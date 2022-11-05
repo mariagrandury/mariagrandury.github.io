@@ -50,31 +50,31 @@ import CardOrg from '../components/CardOrg.vue';
             <div class="sm:px-26">
                 <div class="grid py-8 gap-4 sm:grid-cols-5 sm:grid-rows-[auto,1fr]">
                     <!-- If 3 rows => grid-rows-[auto,1fr,1fr] -->
-                    <CardOrg image="SomosNLP.svg" url="https://somosnlp.org/">
+                    <CardOrg name="SomosNLP" ext="svg" url="https://somosnlp.org/">
                     </CardOrg>
-                    <CardOrg image="BERTIN.webp" url="https://huggingface.co/bertin-project">
+                    <CardOrg name="BERTIN" ext="webp" url="https://huggingface.co/bertin-project">
                     </CardOrg>
-                    <CardOrg image="BigScience.png" url="https://bigscience.huggingface.co/">
+                    <CardOrg name="BigScience" ext="png" url="https://bigscience.huggingface.co/">
                     </CardOrg>
-                    <!-- <CardOrg image="BigCode.png" url="https://www.bigcode-project.org/">
+                    <!-- <CardOrg name="BigCode" ext="png" url="https://www.bigcode-project.org/">
                     </CardOrg>
-                    <CardOrg image="EleutherAI.png" url="https://www.eleuther.ai/">
+                    <CardOrg name="EleutherAI" ext="png" url="https://www.eleuther.ai/">
                     </CardOrg> -->
-                    <CardOrg image="HF_Fellowship.png" url="https://somosnlp.org/">
+                    <CardOrg name="HF_Fellowship" ext="png" url="https://somosnlp.org/">
                     </CardOrg>
-                    <CardOrg image="NovaTalent.svg" url="https://www.novatalent.com/">
+                    <CardOrg name="NovaTalent" ext="svg" dark="yes" url="https://www.novatalent.com/">
                     </CardOrg>
-                    <CardOrg image="SpainAI.png" url="https://www.spain-ai.com/">
+                    <CardOrg name="SpainAI" ext="png" dark="yes" url="https://www.spain-ai.com/">
                     </CardOrg>
-                    <CardOrg image="SaturdaysAI.png" url="https://saturdays.ai/">
+                    <CardOrg name="SaturdaysAI" ext="png" url="https://saturdays.ai/">
                     </CardOrg>
-                    <CardOrg image="DiverTLes.png" url="https://gplsi.dlsi.ua.es/pln/divertles/">
+                    <CardOrg name="DiverTLes" ext="png" dark="yes" url="https://gplsi.dlsi.ua.es/pln/divertles/">
                     </CardOrg>
-                    <CardOrg image="WAIR.jpg" url="https://www.womeninairobotics.de/">
+                    <CardOrg name="WAIR" ext="jpg" url="https://www.womeninairobotics.de/">
                     </CardOrg>
-                    <!-- <CardOrg image="WomenTech.png" url="https://www.womentech.net/">
+                    <!-- <CardOrg image="WomenTech" ext="png" url="https://www.womentech.net/">
                     </CardOrg> -->
-                    <CardOrg image="WAI.jpeg" url="https://www.womeninai.co/">
+                    <CardOrg name="WAI" ext="jpeg" url="https://www.womeninai.co/">
                     </CardOrg>
                 </div>
             </div>
