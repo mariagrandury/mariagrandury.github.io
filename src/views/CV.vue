@@ -154,5 +154,95 @@
         </CVItem>
       </div>
     </div>
+
+    <h2 class="flex gap-2 items-center">
+      <div class="font-semibold tracking-tight text-2xl">Volunteering</div>
+      <i-fluent-color-24-regular style="font-size: 2rem;" />
+    </h2>
+    <div class="sm:px-26">
+      <div class="grid gap-4 sm:grid-cols-3">
+        <CardGeneric class="p-4">
+          <div class="font-medium">Sacred Heart</div>
+          <div>Sancti Spiritus, CUBA</div>
+        </CardGeneric>
+        <CardGeneric class="p-4">
+          <div class="font-medium">L'Arche Asha Niketan</div>
+          <div>Asansol and Kolkata, INDIA</div>
+        </CardGeneric>
+        <CardGeneric class="p-4">
+          <div class="font-medium">One World Institute</div>
+          <div>Lillehammer, NORWAY</div>
+        </CardGeneric>
+      </div>
+    </div>
+
+
+    <h2 class="flex gap-2 items-center">
+      <div class="font-semibold tracking-tight text-2xl">Life Experiences</div>
+      <i-fluent-checkbox-checked-24-regular style="font-size: 2rem;" />
+    </h2>
+    <p class="py-3">Experiences and accomplishments of my personal and professional life.</p>
+    <div class="sm:px-26">
+      <div class="grid py-8 gap-4 sm:grid-cols-2">
+        <CardExp
+          title="Got invited to speak at the first forum of the PERTE de la Nueva Economía de la Lengua (Spanish Government)"
+          link="" color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
+          <i-fluent-mic-sparkle-24-regular />
+        </CardExp>
+        <CardExp title="Became a Hugging Face Fellow" link="https://hf.co"
+          color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
+          <i-fluent-star-emphasis-24-regular />
+        </CardExp>
+        <CardExp
+          title="First paper published! - BERTIN Efficient Pre-Training of a Spanish Language Model using Perplexity Sampling"
+          link="https://arxiv.org/abs/2207.06814">
+          <i-ant-design-experiment-outlined />
+        </CardExp>
+        <CardExp title="Organized the largest open-source hackathon of NLP in Spanish"
+          link="https://somosnlp.org/hackathon">
+          <i-fluent-rocket-24-regular />
+        </CardExp>
+        <CardExp title="Finished Berlin's Half Marathon" link=""
+          color="text-green-900 bg-green-50 dark:text-white dark:bg-green-600">
+          <i-ic-round-directions-run />
+        </CardExp>
+        <CardExp title="Founded Somos NLP" link="">
+          <i-fluent-rocket-24-regular />
+        </CardExp>
+        <CardExp title="Got my first job as a Machine Learning Engineer" link="">
+          <i-fluent-brain-circuit-24-regular />
+        </CardExp>
+        <CardExp title="Did my first contribution to an open-source project, HF Datasets" link="https://hf.co/datasets">
+          <i-fluent-code-24-regular />
+        </CardExp>
+        <CardExp title="Joined the Nova Global Top Talent network" link="https://www.novatalent.com/"
+          color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
+          <i-fluent-star-emphasis-24-regular />
+        </CardExp>
+        <CardExp title="Successfully defended both my theses and became a Mathematician & Physicist" link="">
+          <i-fluent-hat-graduation-24-regular />
+        </CardExp>
+        <CardExp title="Volunteered for a month in Cuba" link=""
+          color="text-green-900 bg-green-50 dark:text-white dark:bg-green-600">
+          <i-fluent-earth-24-regular />
+        </CardExp>
+        <CardExp title="Volunteered for a month in India" link=""
+          color="text-green-900 bg-green-50 dark:text-white dark:bg-green-600">
+          <i-fluent-earth-24-regular />
+        </CardExp>
+        <CardExp title="Volunteered for a month in Norway" link=""
+          color="text-green-900 bg-green-50 dark:text-white dark:bg-green-600">
+          <i-fluent-backpack-24-regular />
+        </CardExp>
+        <CardExp title="Hiked 222km of the Saint James Way" link=""
+          color="text-green-900 bg-green-50 dark:text-white dark:bg-green-600">
+          <i-fluent-backpack-24-regular />
+        </CardExp>
+
+      </div>
+    </div>
+
+
+
   </Container>
 </template>
