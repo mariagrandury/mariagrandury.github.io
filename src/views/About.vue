@@ -1,18 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import CardOrg from '../components/CardOrg.vue';
-import CardExp from '../components/CardExp.vue';
-
-const memberships = ref([
-    "AIGuild.png",
-    "NovaTalent.png",
-    "ACM.png",
-    "VFSG.jpeg",
-    "WomenTech.png",
-    "WomenWhoCode.jpg",
-    "WomenInAI.PNG",
-    "Banda.jpg"
-])
 </script>
 
 <template>
@@ -62,14 +49,33 @@ const memberships = ref([
             <p class="py-3">Organizations and networks I'm part of or I collaborate with.</p>
             <div class="sm:px-26">
                 <div class="grid py-8 gap-4 sm:grid-cols-5 sm:grid-rows-[auto,1fr]">
-                    <!-- TODO: Add BigScience, BigCode, BERTIN, EleutherAI -->
                     <!-- If 3 rows => grid-rows-[auto,1fr,1fr] -->
-                    <CardOrg class="col-span-1" name="Somos NLP" img="NLPenES.png" url="https://somosnlp.org/">
+                    <CardOrg image="SomosNLP.svg" url="https://somosnlp.org/">
                     </CardOrg>
-                    <CardOrg class="col-span-1" name="Women in AI & Robotics" img="WAIR.jpg"
-                        url="https://www.womeninairobotics.de/">
+                    <CardOrg image="BERTIN.webp" url="https://huggingface.co/bertin-project">
                     </CardOrg>
-                    <CardOrg v-for="membership in memberships" :name="membership" :img="membership" />
+                    <CardOrg image="BigScience.png" url="https://bigscience.huggingface.co/">
+                    </CardOrg>
+                    <!-- <CardOrg image="BigCode.png" url="https://www.bigcode-project.org/">
+                    </CardOrg>
+                    <CardOrg image="EleutherAI.png" url="https://www.eleuther.ai/">
+                    </CardOrg> -->
+                    <CardOrg image="HF_Fellowship.png" url="https://somosnlp.org/">
+                    </CardOrg>
+                    <CardOrg image="NovaTalent.svg" url="https://www.novatalent.com/">
+                    </CardOrg>
+                    <CardOrg image="SpainAI.png" url="https://www.spain-ai.com/">
+                    </CardOrg>
+                    <CardOrg image="SaturdaysAI.png" url="https://saturdays.ai/">
+                    </CardOrg>
+                    <CardOrg image="DiverTLes.png" url="https://gplsi.dlsi.ua.es/pln/divertles/">
+                    </CardOrg>
+                    <CardOrg image="WAIR.jpg" url="https://www.womeninairobotics.de/">
+                    </CardOrg>
+                    <!-- <CardOrg image="WomenTech.png" url="https://www.womentech.net/">
+                    </CardOrg> -->
+                    <CardOrg image="WAI.jpeg" url="https://www.womeninai.co/">
+                    </CardOrg>
                 </div>
             </div>
         </div>
