@@ -58,7 +58,7 @@ const index = computed(() => counter.value % greetings.value.length)
       <div class="p-8">
         <div class="text-3xl mb-4">I'll be speaking at</div>
         <div class="grid py-6 gap-x-6 gap-y-3">
-          <CardTalk talk="Encuentro de empresas de PLN"
+          <CardTalkDetailed talk="Encuentro de empresas de PLN"
             event="Mesa Redonda - El estado del arte de la industria de PLN en nuestro país y fuera"
             event_link="https://twitter.com/PERTE_Lengua/status/1567902042353442816?s=20&t=kR1vwhuxmGig2UrbH4WvDw"
             image_link="https://pbs.twimg.com/media/FcJJ_XNWAAUAyv7?format=jpg&name=4096x4096"
@@ -80,7 +80,7 @@ const index = computed(() => counter.value % greetings.value.length)
                 </p>
               </div>
             </template>
-          </CardTalk>
+          </CardTalkDetailed>
         </div>
       </div>
     </div>
