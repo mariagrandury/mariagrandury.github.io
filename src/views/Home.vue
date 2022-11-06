@@ -27,7 +27,7 @@ const index = computed(() => counter.value % greetings.value.length)
             <li>🎯 #NLP, #XAI, #TrustedAI</li>
             <li>🎓 Mathematician & Physicist</li>
             <li>
-              👩🏻‍💻 Text Attacks
+              👩🏻‍💻 AI Robustness
               <a href="//www.neurocat.ai/" target="_blank" class="text-accent-500 hover:underline">@neurocat.ai</a>
             </li>
             <li>
@@ -56,28 +56,33 @@ const index = computed(() => counter.value % greetings.value.length)
           to="/talks">More Talks</router-link>
       </div>
       <div class="p-8">
-        <div class="text-3xl mb-4">I'll be speaking at</div>
+        <div class="text-3xl mb-4">I was invited to speak at</div>
         <div class="grid py-6 gap-x-6 gap-y-3">
-          <CardTalkDetailed talk="Encuentro de empresas de PLN"
-            event="Mesa Redonda - El estado del arte de la industria de PLN en nuestro país y fuera"
+          <CardTalkDetailed talk="El estado del arte de la industria de PLN en nuestro país y fuera"
+            event="Primer foro del PERTE de la Nueva Economía de la Lengua"
             event_link="https://twitter.com/PERTE_Lengua/status/1567902042353442816?s=20&t=kR1vwhuxmGig2UrbH4WvDw"
             image_link="https://pbs.twimg.com/media/FcJJ_XNWAAUAyv7?format=jpg&name=4096x4096"
+            recording_link="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s"
             :tags="['NLP', 'SOTA NLP', 'Round Table']">
             <template v-slot:abstract>
               <div class="text-sm text-gray-700 dark:text-white">
-                <p>
-                  La oficina del Comisionado Especial para la Alianza por la Nueva Economía de la Lengua
-                  organiza, en colaboración con Casa Mediterráneo y la Universidad de Alicante, el primer
-                  encuentro del ecosistema de empresas de Procesamiento de Lenguaje Natural.
-                </p>
+                El PERTE de la Nueva economía de la Lengua es una oportunidad para aprovechar el potencial
+                del español y de las lenguas cooficiales como factor de crecimiento económico y
+                competitividad internacional en áreas como la inteligencia artificial, la traducción, el
+                aprendizaje, la divulgación cultural, la producción audiovisual, la investigación y la
+                ciencia.
                 <br />
-                <p>
-                  El PERTE de la Nueva economía de la Lengua es una oportunidad para aprovechar el potencial
-                  del español y de las lenguas cooficiales como factor de crecimiento económico y
-                  competitividad internacional en áreas como la inteligencia artificial, la traducción, el
-                  aprendizaje, la divulgación cultural, la producción audiovisual, la investigación y la
-                  ciencia.
-                </p>
+                <br />
+                <a href="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=5593s" target="_blank"
+                  class="text-accent-500 hover:underline">
+                  1. ¿Cómo se puede avanzar el estado del arte del NLP en español?
+                </a>
+                <br />
+                <a href="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s" target="_blank"
+                  class="text-accent-500 hover:underline">
+                  2. ¿Cuál crees que sería el proyecto más importante a nivel internacional que deberíamos
+                  implementar?
+                </a>
               </div>
             </template>
           </CardTalkDetailed>
@@ -90,6 +95,17 @@ const index = computed(() => counter.value % greetings.value.length)
       <div class="p-8">
         <div class="text-3xl mb-4">My latest projects are</div>
         <div class="grid py-6 gap-x-6 gap-y-3">
+          <CardProject title="Hackathon of NLP in Spanish" :tags="['NLP', 'Somos NLP']"
+            link="https://somosnlp.org/hackathon" color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
+            <i-fluent-rocket-24-regular />
+            <template v-slot:description>
+              <div class="text-sm text-gray-700 dark:text-white">
+                With more than 600 participants from 39 countries, it
+                is the largest hackathon of NLP in Spanish. Organized by Somos
+                NLP and sponsored by Hugging Face, Platzi and Paperspace.
+              </div>
+            </template>
+          </CardProject>
           <CardProject title="BERTIN" :tags="['NLP', 'Hugging Face', 'BERTIN Project']"
             link="https://huggingface.co/bertin-project"
             color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
@@ -104,15 +120,6 @@ const index = computed(() => counter.value % greetings.value.length)
                 <a target="_blank" href="https://arxiv.org/abs/2207.06814"
                   class="text-accent-700 dark:text-accent-300 hover:underline">paper.</a>
               </div>
-            </template>
-          </CardProject>
-          <CardProject title="Course: NLP de 0 a 100 con Hugging Face" :tags="['NLP', 'Somos NLP']"
-            link="https://somosnlp.org/nlp-de-cero-a-cien"
-            color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
-            <i-emojione-monotone-hugging-face />
-            <template v-slot:description>
-              <div class="text-sm text-gray-700 dark:text-white">The first NLP course from zero to hero in Spanish.
-                Organized by Somos NLP in collaboration with Spain AI.</div>
             </template>
           </CardProject>
           <CardProject title="BigScience Research Workshop" :tags="['NLP', 'Hugging Face']"
