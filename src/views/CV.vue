@@ -1,3 +1,18 @@
+<script setup lang="ts">
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'María Grandury - CV',
+  meta: [
+    { name: 'description', content: 'Hello! I\'m an ML Research Engineer focused on NLP, XAI & Adversarial Robustness | Founder @SomosNLP.org | Here you can find my CV' },
+    { property: 'og:title', content: 'María Grandury - CV' },
+    { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
+    { name: 'twitter:card', content: 'María Grandury - CV' },
+    { name: 'twitter:creator', content: '@mariagrandury' },
+  ],
+})
+</script>
+
 <template>
   <Container class="bg-white dark:bg-gray-900">
     <NavBar />
