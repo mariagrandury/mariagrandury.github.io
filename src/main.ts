@@ -9,6 +9,7 @@ import Talks from "./views/Talks.vue"
 import About from "./views/About.vue"
 import Contact from "./views/Contact.vue"
 import CV from "./views/CV.vue"
+import Cookies from "./views/Cookies.vue"
 
 export const createApp = ViteSSG(
     App,
@@ -20,6 +21,7 @@ export const createApp = ViteSSG(
             { path: '/about', component: About },
             { path: '/contact', component: Contact },
             { path: '/cv', component: CV },
+            { path: '/cookie-policy', component: Cookies }
         ]
     },
     // function to have custom setups
