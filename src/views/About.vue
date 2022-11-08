@@ -25,34 +25,37 @@ useHead({
             <!-- <i-fluent-earth-24-regular style="font-size: 2rem" /> -->
             <i-fluent-rocket-24-regular style="font-size: 2rem" />
         </h1>
-        <CardGeneric class="px-12 m-12">
-            <h2 class="pt-12">
-                I'm half Spanish half French and I live in Berlin.
-                I hold two degrees in Mathematics and Physics and I'm currently working at
-                <a href="https://neurocat.ai" target="_blank"
-                    class="text-accent-500 dark:text-accent-300 hover:underline">neurocat</a>
-                where I contribute to the core of
-                <a href="https://aidkit.ai" target="_blank"
-                    class="text-accent-500 dark:text-accent-300 hover:underline">aidkit,</a>
-                an ML Quality Ops platform that assess the vulnerabilities of CV & NLP models
-                thanks to adversarial attacks and explainability techniques.
-            </h2>
-            <h2 class="py-2">
-                I believe that NLP research is too focused on English and neglects the particular
-                difficulties of other languages so I founded
-                <a href="https://somosnlp.org" target="_blank"
-                    class="text-accent-500 dark:text-accent-300 hover:underline">Somos NLP,</a>
-                a community of Spanish-speaking NLP professionals democratizing and advancing
-                the state-of-the-art of NLP in Spanish.
-            </h2>
-            <h2 class="pb-12">
-                I'm also very aware of the gender gap in my field and I'm part of the Core Team
-                of
-                <a href="https://womeninairobotics.de" target="_blank"
-                    class="text-accent-500 dark:text-accent-300 hover:underline">Women in AI & Robotics</a>
-                to increase female representation and promote inclusive and responsible AI.
-            </h2>
-        </CardGeneric>
+
+        <div class="lg:px-24 sm:px-12">
+            <CardGeneric class="px-12 my-12">
+                <h2 class="pt-12">
+                    I'm half Spanish half French and I live in Berlin.
+                    I hold two degrees in Mathematics and Physics and I'm currently working at
+                    <a href="https://neurocat.ai" target="_blank"
+                        class="text-accent-500 dark:text-accent-300 hover:underline">neurocat</a>
+                    where I contribute to the core of
+                    <a href="https://aidkit.ai" target="_blank"
+                        class="text-accent-500 dark:text-accent-300 hover:underline">aidkit,</a>
+                    an ML Quality Ops platform that assess the vulnerabilities of CV & NLP models
+                    thanks to adversarial attacks and explainability techniques.
+                </h2>
+                <h2 class="py-2">
+                    I believe that NLP research is too focused on English and neglects the particular
+                    difficulties of other languages so I founded
+                    <a href="https://somosnlp.org" target="_blank"
+                        class="text-accent-500 dark:text-accent-300 hover:underline">Somos NLP,</a>
+                    a community of Spanish-speaking NLP professionals democratizing and advancing
+                    the state-of-the-art of NLP in Spanish.
+                </h2>
+                <h2 class="pb-12">
+                    I'm also very aware of the gender gap in my field and I'm part of the Core Team
+                    of
+                    <a href="https://womeninairobotics.de" target="_blank"
+                        class="text-accent-500 dark:text-accent-300 hover:underline">Women in AI & Robotics</a>
+                    to increase female representation and promote inclusive and responsible AI.
+                </h2>
+            </CardGeneric>
+        </div>
 
         <div>
             <h2 class="flex gap-2 items-center">
@@ -60,9 +63,8 @@ useHead({
                 <i-fluent-color-24-regular style="font-size: 2rem;" />
             </h2>
             <p class="py-3">Organizations and networks I'm part of or I collaborate with.</p>
-            <div class="sm:px-26">
-                <div class="grid py-8 gap-4 sm:grid-cols-5 sm:grid-rows-[auto,1fr]">
-                    <!-- If 3 rows => grid-rows-[auto,1fr,1fr] -->
+            <div class="lg:px-24 sm:px-12">
+                <div class="grid py-8 gap-4 md:grid-cols-5 md:grid-cols[auto,1fr] sm:grid-cols-3">
                     <CardOrg name="SomosNLP" ext="svg" url="https://somosnlp.org/">
                     </CardOrg>
                     <CardOrg name="BERTIN" ext="webp" url="https://huggingface.co/bertin-project">

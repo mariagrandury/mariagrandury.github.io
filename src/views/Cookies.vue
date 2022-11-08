@@ -9,7 +9,7 @@
             <i-fluent-checkbox-checked-24-regular style="font-size: 2rem" />
         </h1>
 
-        <div class="sm:px-26">
+        <div class="lg:px-24 sm:px-12">
 
             This cookie policy (“Policy”) describes what cookies are and how and they’re being used by the
             mariagrandury.com website (“Website” or “Service”) and any of its related products and services

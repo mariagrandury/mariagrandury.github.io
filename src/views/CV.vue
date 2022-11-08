@@ -105,7 +105,7 @@ useHead({
       <div class="font-semibold tracking-tight text-4xl py-12">Professional Experience</div>
       <i-fluent-color-24-regular style="font-size: 2rem;" />
     </h2>
-    <div class="sm:px-32">
+    <div class="lg:px-24 sm:px-12">
       <div class="grid gap-x-8 gap-y-12 md:grid-cols-[auto,1fr]">
         <CVItem location="neurocat GmbH" title="I'm starting a new adventure" timeline="2021 - present">
           I've relocated to Berlin and joined
@@ -174,7 +174,7 @@ useHead({
       <div class="font-semibold tracking-tight text-2xl">Volunteering</div>
       <i-fluent-color-24-regular style="font-size: 2rem;" />
     </h2>
-    <div class="sm:px-26">
+    <div class="lg:px-24 sm:px-12">
       <div class="grid gap-4 sm:grid-cols-3">
         <CardGeneric class="p-4">
           <div class="font-medium">Sacred Heart</div>
@@ -197,7 +197,7 @@ useHead({
       <i-fluent-checkbox-checked-24-regular style="font-size: 2rem;" />
     </h2>
     <p class="py-3">Experiences and accomplishments of my personal and professional life.</p>
-    <div class="sm:px-26">
+    <div class="lg:px-24 sm:px-12">
       <div class="grid py-8 gap-4 sm:grid-cols-2">
         <CardExp
           title="Got invited to speak at the first forum of the PERTE de la Nueva Economía de la Lengua (Spanish Government)"
