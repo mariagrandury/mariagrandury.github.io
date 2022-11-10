@@ -32,19 +32,89 @@ const index = computed(() => counter.value % greetings.value.length)
             </li>
             <li>
               🚀 Founder
-              <a href="https://twitter.com/somosnlp_" target="_blank" class="text-accent-500 hover:underline">@SomosNLP
-                🤗</a>
+              <a href="https://twitter.com/somosnlp_" target="_blank"
+                class="text-accent-500 hover:underline">@SomosNLP</a>
             </li>
             <li>
-              ⚡ Core Team
-              <a href="https://twitter.com/wairobotics" target="_blank"
-                class="text-accent-500 hover:underline">@WAIRobotics</a>
+              🤗 Fellow
+              <a href="https://twitter.com/huggingface" target="_blank"
+                class="text-accent-500 hover:underline">@HuggingFace
+              </a>
+            </li>
+            <li>
+              🌸 Collab
+              <a href="https://twitter.com/BigScienceW" target="_blank"
+                class="text-accent-500 hover:underline">@BigScience
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
   </Container>
+
+  <Container class="bg-white dark:bg-gray-900">
+    <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
+      <div class="px-8">
+        <div class="text-3xl mb-4">My latest projects are</div>
+        <div class="grid py-6 gap-x-6 gap-y-3">
+          <CardProject title="Hackathon of NLP in Spanish" :tags="['NLP', 'Somos NLP']"
+            link="https://somosnlp.org/hackathon" color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
+            <i-fluent-rocket-24-regular />
+            <template v-slot:description>
+              <div class="text-sm text-gray-700 dark:text-white">
+                With more than 500 participants from 39 countries, it is the largest open-source hackathon of NLP in
+                Spanish.
+                The recorded events have already more than 5k visualizations!
+                Organized by Somos NLP and sponsored by Hugging Face, Platzi and Paperspace.
+              </div>
+            </template>
+          </CardProject>
+          <CardProject title="BERTIN" :tags="['NLP', 'Hugging Face', 'BERTIN Project']"
+            link="https://huggingface.co/bertin-project"
+            color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
+            <i-mdi-face-man />
+            <template v-slot:description>
+              <div class="text-sm text-gray-700 dark:text-white">
+                BERTIN is a series of RoBERTa-based models in Spanish trained using a novel sampling technique that we
+                call "perplexity sampling". More detailed info can be found in the
+                <a target="_blank" href="https://huggingface.co/bertin-project/bertin-roberta-base-spanish"
+                  class="text-accent-700 dark:text-accent-300 hover:underline">model card</a>
+                and the paper
+                <a target="_blank" href="https://arxiv.org/abs/2207.06814"
+                  class="text-accent-700 dark:text-accent-300 hover:underline">
+                  BERTIN: Efficient Pre-Training of a Spanish Language Model using Perplexity Sampling.
+                </a>
+              </div>
+            </template>
+          </CardProject>
+          <CardProject title="BigScience Research Workshop" :tags="['NLP', 'Hugging Face']"
+            link="https://bigscience.huggingface.co/" color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
+            <i-whh-flower />
+            <template v-slot:description>
+              <div class="text-sm text-gray-700 dark:text-white">A one-year long international research workshop on
+                large multilingual models and datasets. I was part of the data tooling working group. Here is the model
+                paper
+                <a target="_blank" href="https://arxiv.org/abs/2211.05100"
+                  class="text-accent-700 dark:text-accent-300 hover:underline">
+                  BLOOM: A 176B-Parameter Open-Access Multilingual Language Model.
+                </a>
+              </div>
+            </template>
+          </CardProject>
+        </div>
+      </div>
+      <div class="flex flex-col flex-shrink gap-12">
+        <img class="w-screen"
+          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/projects_undraw_freelancer_long_hair.svg"
+          alt="Projects" />
+        <router-link
+          class="flex justify-center place-self-center font-medium p-6 gap-3 text-align-center items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
+          to="/projects">More Projects</router-link>
+      </div>
+    </div>
+  </Container>
+
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
       <div class="flex flex-col flex-shrink gap-12">
@@ -55,7 +125,7 @@ const index = computed(() => counter.value % greetings.value.length)
           class="flex justify-center place-self-center font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
           to="/talks">More Talks</router-link>
       </div>
-      <div class="p-8">
+      <div class="px-8">
         <div class="text-3xl mb-4">I was invited to speak at</div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardTalkDetailed talk="El estado del arte de la industria de PLN en nuestro país y fuera"
@@ -87,58 +157,6 @@ const index = computed(() => counter.value % greetings.value.length)
             </template>
           </CardTalkDetailed>
         </div>
-      </div>
-    </div>
-  </Container>
-  <Container class="bg-white dark:bg-gray-900">
-    <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
-      <div class="p-8">
-        <div class="text-3xl mb-4">My latest projects are</div>
-        <div class="grid py-6 gap-x-6 gap-y-3">
-          <CardProject title="Hackathon of NLP in Spanish" :tags="['NLP', 'Somos NLP']"
-            link="https://somosnlp.org/hackathon" color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
-            <i-fluent-rocket-24-regular />
-            <template v-slot:description>
-              <div class="text-sm text-gray-700 dark:text-white">
-                With more than 600 participants from 39 countries, it
-                is the largest hackathon of NLP in Spanish. Organized by Somos
-                NLP and sponsored by Hugging Face, Platzi and Paperspace.
-              </div>
-            </template>
-          </CardProject>
-          <CardProject title="BERTIN" :tags="['NLP', 'Hugging Face', 'BERTIN Project']"
-            link="https://huggingface.co/bertin-project"
-            color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
-            <i-mdi-face-man />
-            <template v-slot:description>
-              <div class="text-sm text-gray-700 dark:text-white">
-                BERTIN is a series of RoBERTa-based models in Spanish trained using a novel sampling technique that we
-                call "perplexity sampling". More detailed info can be found in the
-                <a target="_blank" href="https://huggingface.co/bertin-project/bertin-roberta-base-spanish"
-                  class="text-accent-700 dark:text-accent-300 hover:underline">model card</a>
-                and the
-                <a target="_blank" href="https://arxiv.org/abs/2207.06814"
-                  class="text-accent-700 dark:text-accent-300 hover:underline">paper.</a>
-              </div>
-            </template>
-          </CardProject>
-          <CardProject title="BigScience Research Workshop" :tags="['NLP', 'Hugging Face']"
-            link="https://bigscience.huggingface.co/" color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
-            <i-whh-flower />
-            <template v-slot:description>
-              <div class="text-sm text-gray-700 dark:text-white">A one-year long international research workshop on
-                large multilingual models and datasets. I'm part of the data tooling working group.</div>
-            </template>
-          </CardProject>
-        </div>
-      </div>
-      <div class="flex flex-col flex-shrink gap-12">
-        <img class="w-screen"
-          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/projects_undraw_freelancer_long_hair.svg"
-          alt="Projects" />
-        <router-link
-          class="flex justify-center place-self-center font-medium p-6 gap-3 text-align-center items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
-          to="/projects">More Projects</router-link>
       </div>
     </div>
   </Container>

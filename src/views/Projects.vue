@@ -30,45 +30,59 @@ useHead({
     <div class="lg:px-24 sm:px-12">
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
         <CardProject title="Hackathon of NLP in Spanish" :tags="['NLP', 'Somos NLP']"
-          link="https://somosnlp.org/hackathon" color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
+          link="https://somosnlp.org/hackathon">
           <i-fluent-rocket-24-regular />
           <template v-slot:description>
-            <div class="text-sm text-gray-700 dark:text-white">Largest hackathon of NLP in Spanish. Organized by Somos
-              NLP.</div>
+            <div class="text-sm text-gray-700 dark:text-white">
+              With more than 500 participants from 39 countries, it is the largest open-source hackathon of NLP in
+              Spanish.
+              The recorded events have already more than 5k visualizations!
+              Organized by Somos NLP and sponsored by Hugging Face, Platzi and Paperspace.
+            </div>
           </template>
         </CardProject>
-        <CardProject title="BigScience Research Workshop" :tags="['NLP', 'Hugging Face', 'Research Project']"
+        <CardProject title="BigScience Research Workshop" :tags="['NLP', 'Hugging Face', 'Research']"
           link="https://bigscience.huggingface.co/" color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
           <i-whh-flower />
           <template v-slot:description>
-            <div class="text-sm text-gray-700 dark:text-white">BigScience is a one-year long international research
-              workshop on large multilingual models and datasets. I'm part of the data tooling working group.</div>
+            <div class="text-sm text-gray-700 dark:text-white">A one-year long international research workshop on
+              large multilingual models and datasets. I was part of the data tooling working group. Here is the model
+              paper
+              <a target="_blank" href="https://arxiv.org/abs/2211.05100"
+                class="text-accent-700 dark:text-accent-300 hover:underline">
+                BLOOM: A 176B-Parameter Open-Access Multilingual Language Model.
+              </a>
+            </div>
           </template>
         </CardProject>
-        <CardProject title="BERTIN" :tags="['NLP', 'Hugging Face', 'BERTIN Project']"
+        <CardProject title="BERTIN" :tags="['NLP', 'Hugging Face', 'Research']"
           link="https://huggingface.co/bertin-project"
-          color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
-          <i-mdi-face-man />
+          color="text-green-900 bg-green-50 dark:text-white dark:bg-green-600">
+          <i-fluent-document-settings-16-regular />
           <template v-slot:description>
             <div class="text-sm text-gray-700 dark:text-white">
               BERTIN is a series of RoBERTa-based models in Spanish trained using a novel sampling technique that we
-              call
-              "perplexity sampling". More detailed info can be found in this
+              call "perplexity sampling". More detailed info can be found in the
               <a target="_blank" href="https://huggingface.co/bertin-project/bertin-roberta-base-spanish"
                 class="text-accent-700 dark:text-accent-300 hover:underline">model card</a>
-              and the
+              and the paper
               <a target="_blank" href="https://arxiv.org/abs/2207.06814"
-                class="text-accent-700 dark:text-accent-300 hover:underline">paper.</a>
+                class="text-accent-700 dark:text-accent-300 hover:underline">
+                BERTIN: Efficient Pre-Training of a Spanish Language Model using Perplexity Sampling.
+              </a>
             </div>
           </template>
         </CardProject>
         <CardProject title="Course: NLP de 0 a 100 con Hugging Face" :tags="['NLP', 'Somos NLP']"
           link="https://somosnlp.org/nlp-de-cero-a-cien"
           color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
-          <i-emojione-monotone-hugging-face />
+          <i-fluent-lightbulb-24-regular />
           <template v-slot:description>
-            <div class="text-sm text-gray-700 dark:text-white">The first NLP course from zero to hero in Spanish.
-              Organized by Somos NLP in collaboration with Spain AI.</div>
+            <div class="text-sm text-gray-700 dark:text-white">
+              The first NLP course from zero to hero in Spanish. It's open-source and was organized
+              by Somos NLP with the support of Spain AI. I taught the classes on sequential models
+              and the Transformer architecture.
+            </div>
           </template>
         </CardProject>
         <CardProject title="Pre-training GPT-2, T5 & Wav2Vec2 models in Spanish"
