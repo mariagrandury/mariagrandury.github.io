@@ -2,10 +2,10 @@
 import { useHead } from '@vueuse/head'
 
 useHead({
-    title: 'María Grandury - Talks',
+    title: 'María Grandury - Divulgation',
     meta: [
         { name: 'description', content: 'Hello! I\'m an ML Research Engineer focused on NLP, XAI & Adversarial Robustness | Founder @SomosNLP.org | Here you can find my talks, interviews and more :)' },
-        { property: 'og:title', content: 'María Grandury - Talks' },
+        { property: 'og:title', content: 'María Grandury - Divulgation' },
         { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
         { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:site', content: '@mariagrandury' },
@@ -21,7 +21,7 @@ useHead({
     <Container class="bg-white dark:bg-gray-900">
         <div>
             <h1 class="flex gap-2 items-center">
-                <div class="font-semibold tracking-tight text-4xl">Talks & More</div>
+                <div class="font-semibold tracking-tight text-4xl">Talks, Interviews & Articles</div>
                 <i-fluent-chat-12-regular style="font-size: 2rem;" />
             </h1>
             <h2 class="py-6">I'm passionate about what I do and really enjoy divulgating!</h2>

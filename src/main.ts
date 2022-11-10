@@ -5,7 +5,7 @@ import 'virtual:windi.css'
 
 import Home from "./views/Home.vue"
 import Projects from "./views/Projects.vue"
-import Talks from "./views/Talks.vue"
+import Divulgation from "./views/Divulgation.vue"
 import About from "./views/About.vue"
 import Contact from "./views/Contact.vue"
 import CV from "./views/CV.vue"
@@ -17,7 +17,7 @@ export const createApp = ViteSSG(
         routes: [
             { path: '/', component: Home },
             { path: '/projects', component: Projects },
-            { path: '/talks', component: Talks },
+            { path: '/divulgation', component: Divulgation },
             { path: '/about', component: About },
             { path: '/contact', component: Contact },
             { path: '/cv', component: CV },
