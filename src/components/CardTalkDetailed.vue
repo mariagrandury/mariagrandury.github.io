@@ -23,7 +23,7 @@ export default defineComponent({
     <CardGeneric class="py-6 px-12">
         <div class="grid gap-3 grid-cols-[1fr,auto]">
             <div class="grid gap-3">
-                <h1 class="text-1.5rem">{{ talk }}</h1>
+                <h2 class="text-1.5rem">{{ talk }}</h2>
                 <a :href="event_link" target="_blank" class="self-start items-center hover:underline">{{ event }}</a>
                 <div class="flex flex-wrap gap-3">
                     <div v-for="(tag, index) in tags" :key="index"

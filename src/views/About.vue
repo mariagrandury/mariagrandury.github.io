@@ -4,10 +4,10 @@ import Container from '../components/Container.vue';
 import { useHead } from '@vueuse/head'
 
 useHead({
-    title: 'María Grandury - About',
+    title: 'María Grandury - About Me, Bio & Collaborations',
     meta: [
-        { name: 'description', content: 'Hello! I\'m an ML Research Engineer focused on NLP, XAI & Adversarial Robustness | Founder @SomosNLP.org | Here I share my projects, talks and interests :)' },
-        { property: 'og:title', content: 'María Grandury - About' },
+        { name: 'description', content: 'Hello! I\'m María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here are my bio and the organizations I collaborate with :)' },
+        { property: 'og:title', content: 'María Grandury - About Me, Bio & Collaborations' },
         { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
         { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:site', content: '@mariagrandury' },

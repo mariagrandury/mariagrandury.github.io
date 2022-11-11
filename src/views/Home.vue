@@ -70,7 +70,7 @@ const index = computed(() => counter.value % greetings.value.length)
               </div>
             </template>
           </CardProject>
-          <CardProject title="BERTIN" :tags="['NLP', 'Hugging Face', 'BERTIN Project']"
+          <CardProject title="BERTIN & Perplexity Sampling" :tags="['NLP', 'Hugging Face', 'BERTIN Project']"
             link="https://huggingface.co/bertin-project"
             color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
             <i-mdi-face-man />
@@ -88,13 +88,17 @@ const index = computed(() => counter.value % greetings.value.length)
               </div>
             </template>
           </CardProject>
-          <CardProject title="BigScience Research Workshop" :tags="['NLP', 'Hugging Face']"
+          <CardProject title="BigScience, ROOTS & BLOOM" :tags="['NLP', 'Hugging Face', 'Research']"
             link="https://bigscience.huggingface.co/" color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
             <i-whh-flower />
             <template v-slot:description>
               <div class="text-sm text-gray-700 dark:text-white">A one-year long international research workshop on
-                large multilingual models and datasets. I was part of the data tooling working group. Here is the model
-                paper
+                large multilingual models and datasets. We created, among other cool things,
+                <a target="_blank" href="https://arxiv.org/abs/2211.05100"
+                  class="text-accent-700 dark:text-accent-300 hover:underline">
+                  ROOTS: A 1.6TB Composite Multilingual Dataset
+                </a>
+                that was then used to train
                 <a target="_blank" href="https://arxiv.org/abs/2211.05100"
                   class="text-accent-700 dark:text-accent-300 hover:underline">
                   BLOOM: A 176B-Parameter Open-Access Multilingual Language Model.

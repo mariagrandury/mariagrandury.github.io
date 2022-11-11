@@ -2,10 +2,10 @@
 import { useHead } from '@vueuse/head'
 
 useHead({
-  title: 'María Grandury - Projects',
+  title: 'María Grandury - Open-Source NLP Research Projects',
   meta: [
-    { name: 'description', content: 'Hello! I\'m an ML Research Engineer focused on NLP, XAI & Adversarial Robustness | Founder @SomosNLP.org | Here you can find my projects, talks and more :)' },
-    { property: 'og:title', content: 'María Grandury - Projects' },
+    { name: 'description', content: 'Hello! I\'m María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here you can find my open-source NLP projects :)' },
+    { property: 'og:title', content: 'María Grandury - Open-Source NLP Research Projects' },
     { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:site', content: '@mariagrandury' },
@@ -21,7 +21,7 @@ useHead({
   <Container class="bg-white dark:bg-gray-900">
     <div>
       <h1 class="flex gap-2 items-center">
-        <div class="font-semibold tracking-tight text-4xl">Projects</div>
+        <div class="font-semibold tracking-tight text-4xl">Open-Source NLP Research Projects</div>
         <i-fluent-design-ideas-24-regular style="font-size: 2rem;" />
       </h1>
       <h2 class="py-6">I'm a Machine Learning Research Engineer focused on NLP, XAI and Adversarial Robustness.</h2>

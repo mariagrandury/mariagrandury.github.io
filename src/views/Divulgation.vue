@@ -2,10 +2,10 @@
 import { useHead } from '@vueuse/head'
 
 useHead({
-    title: 'María Grandury - Divulgation',
+    title: 'María Grandury - NLP Divulgation: Talks, Interviews & Articles',
     meta: [
-        { name: 'description', content: 'Hello! I\'m an ML Research Engineer focused on NLP, XAI & Adversarial Robustness | Founder @SomosNLP.org | Here you can find my talks, interviews and more :)' },
-        { property: 'og:title', content: 'María Grandury - Divulgation' },
+        { name: 'description', content: 'Hello! I\'m María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here you can find my talks and other divulgation content :)' },
+        { property: 'og:title', content: 'María Grandury - NLP Divulgation: Talks, Interviews & Articles' },
         { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
         { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:site', content: '@mariagrandury' },
