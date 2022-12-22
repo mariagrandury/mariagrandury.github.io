@@ -41,3 +41,9 @@ pnpm build
 * Volar (Vue language support)
 * Windi CSS Intellisense
 * Iconify IntelliSense
+
+### Git LFS & Netlify Large Media
+
+* Install [Git LFS](https://github.com/git-lfs/git-lfs/wiki/Installation#debian-and-ubuntu)
+* Install Netlify CLI: `npm install netlify-cli -g`
+* Set up [Netlify Large Media](https://docs.netlify.com/large-media/setup/)
