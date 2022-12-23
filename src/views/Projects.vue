@@ -188,51 +188,24 @@ useHead({
             </div>
           </template>
         </CardProject>
-        <CardProject title="TensorFlow Models" :tags="['NLP', 'Computer Vision', 'TensorFlow 2']"
-          link="https://github.com/mariagrandury/tensorflow-models"
-          color="text-orange-600 bg-orange-50 dark:text-white dark:bg-orange-600">
-          <i-simple-icons-tensorflow />
-        </CardProject>
-        <CardProject title="Sarcarsm Detector" :tags="['NLP', 'TensorFlow 2', 'Docker', 'Flask']">
-          <i-fluent-emoji-laugh-20-regular />
-        </CardProject>
-        <CardProject title="Punctuation and capitalization of Speech Recognition" :tags="['NLP', 'Speech-to-Text']"
-          color="text-cyan-900 bg-cyan-50 dark:text-white dark:bg-cyan-600">
-          <i-fluent-speaker-edit-20-regular />
-        </CardProject>
-        <CardProject title="Text To Image Model" :tags="['NLP', 'Computer Vision', 'BERT', 'BigGAN']"
-          color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
-          <i-fluent-image-alt-text-20-regular />
-        </CardProject>
-        <CardProject title="Image Classification Web App" :tags="['Computer Vision', 'TensorFlow 2', 'Flask']"
-          link="https://github.com/mariagrandury/image-classification-web-app"
-          color="text-green-900 bg-green-50 dark:text-white dark:bg-green-600">
-          <i-fluent-tab-desktop-image-20-regular />
-        </CardProject>
-        <!--
-      <CardProject
-        title="Viz For Social Good"
-        :tags="['Data Visualization', 'Tableau']"
-        link="https://public.tableau.com/profile/maria.grandury#!/vizhome/VizForSocialGood2021-01FondationFollereau/Dashboard"
-      >
-        <i-fluent-data-scatter-24-regular />
-      </CardProject>
-      -->
         <CardProject title="World Development Indicators - Operation Fistula"
           :tags="['Data Visualization', 'VizForSocialGood', 'Tableau']"
           link="https://public.tableau.com/profile/maria.grandury#!/vizhome/WorldDevelopmentIndicators-OperationFistula/Dashboard"
           color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600">
           <i-fluent-people-community-20-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Visualization for the #VizForSocialGood project to support the organization Operation Fistula on their
+              "mission to end fistula for every woman everywhere".
+            </div>
+          </template>
         </CardProject>
-        <!--
-      <CardProject
-        title="Pink Smile"
-        :tags="['Flask']"
-        link="https://github.com/mariagrandury/pink-smile"
-      >
-        <i-fluent-emoji-20-regular />
-      </CardProject>
-      -->
+      </div>
+      <div class="flex my-6 justify-center">
+        <a href="https://github.com/mariagrandury" target="_blank"
+          class="flex font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400">
+          <div>More on GitHub</div>
+        </a>
       </div>
     </div>
   </Container>
