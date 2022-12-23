@@ -141,7 +141,7 @@ useHead({
                     </template>
                 </CardMediaSummary>
                 <CardMediaSummary talk="Sequential Models & the Transformer Architecture"
-                    event="NLP de 0 a 100 con Hugging Face, Somos NLP"
+                    event="NLP de 0 a 100 con Hugging Face, by Somos NLP & Spain AI"
                     event_link="https://somosnlp.org/nlp-de-cero-a-cien"
                     image_link="https://www.spain-ai.com/wp-content/uploads/2021/08/curso_npl.jpeg"
                     recording_link="https://somosnlp.org/nlp-de-cero-a-cien/sesion-03"
@@ -260,6 +260,12 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
+            </div>
+            <div class="flex my-6 justify-center">
+                <a href="https://www.youtube.com/channel/UCGaFn8AWNgmtLyNi0hwvhHw" target="_blank"
+                    class="flex font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400">
+                    <div>More on YouTube</div>
+                </a>
             </div>
         </div>
     </Container>
