@@ -49,11 +49,9 @@ useHead({
                     the state-of-the-art of NLP in Spanish.
                 </h2>
                 <h2 class="pb-12">
-                    I'm also very aware of the gender gap in my field and I'm part of the Core Team
-                    of
-                    <a href="https://womeninairobotics.de" target="_blank"
-                        class="text-accent-500 dark:text-accent-300 hover:underline">Women in AI & Robotics</a>
-                    to increase female representation and promote inclusive and responsible AI.
+                    I'm also very aware of the gender gap in my field and I collaborate with several organizations &
+                    initiatives to increase female representation and promote inclusive and responsible AI (see logos
+                    below).
                 </h2>
             </CardGeneric>
         </div>
@@ -72,10 +70,10 @@ useHead({
                     </CardOrg>
                     <CardOrg name="BigScience" ext="png" url="https://bigscience.huggingface.co/">
                     </CardOrg>
-                    <!-- <CardOrg name="BigCode" ext="png" url="https://www.bigcode-project.org/">
+                    <CardOrg name="BigCode" ext="png" url="https://www.bigcode-project.org/">
                     </CardOrg>
                     <CardOrg name="EleutherAI" ext="png" url="https://www.eleuther.ai/">
-                    </CardOrg> -->
+                    </CardOrg>
                     <CardOrg name="HF_Fellowship" ext="png" url="https://somosnlp.org/">
                     </CardOrg>
                     <CardOrg name="NovaTalent" ext="svg" dark="yes" url="https://www.novatalent.com/">
@@ -84,12 +82,16 @@ useHead({
                     </CardOrg>
                     <CardOrg name="SaturdaysAI" ext="png" url="https://saturdays.ai/">
                     </CardOrg>
+                    <CardOrg name="TheGoodAI" ext="png" url="https://thegoodai.co/">
+                    </CardOrg>
                     <CardOrg name="DiverTLes" ext="png" dark="yes" url="https://gplsi.dlsi.ua.es/pln/divertles/">
                     </CardOrg>
                     <CardOrg name="WAIR" ext="jpg" url="https://www.womeninairobotics.de/">
                     </CardOrg>
-                    <!-- <CardOrg image="WomenTech" ext="png" url="https://www.womentech.net/">
-                    </CardOrg> -->
+                    <CardOrg name="WomenTech" ext="png" url="https://www.womentech.net/">
+                    </CardOrg>
+                    <CardOrg name="WomenWhoCode" ext="jpg" url="https://www.womenwhocode.com/">
+                    </CardOrg>
                     <CardOrg name="WAI" ext="jpeg" url="https://www.womeninai.co/">
                     </CardOrg>
                 </div>
