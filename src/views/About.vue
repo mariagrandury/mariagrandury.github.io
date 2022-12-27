@@ -37,7 +37,7 @@ useHead({
                     where I contribute to the core of
                     <a href="https://aidkit.ai" target="_blank"
                         class="text-accent-500 dark:text-accent-300 hover:underline">aidkit,</a>
-                    an ML Quality Ops platform that assess the vulnerabilities of CV & NLP models
+                    an ML Quality Ops platform that assesses the vulnerabilities of CV & NLP models
                     thanks to adversarial attacks and explainability techniques.
                 </h2>
                 <h2 class="py-2">
