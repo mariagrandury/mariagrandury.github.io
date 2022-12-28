@@ -31,7 +31,7 @@ useHead({
                 <CardMediaSummary talk="El estado del arte del PLN en España y fuera"
                     event="PERTE de la Nueva Economía de la Lengua"
                     event_link="https://twitter.com/PERTE_Lengua/status/1567902042353442816?s=20&t=kR1vwhuxmGig2UrbH4WvDw"
-                    image_link="public/images/events/220928_perte_sota_nlp.jfif"
+                    image_link="images/events/220928_perte_sota_nlp.jfif"
                     recording_link="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s"
                     :tags="['NLP', 'SOTA NLP', 'Round Table', '🇪🇸']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
@@ -59,7 +59,7 @@ useHead({
                 </CardMediaSummary>
                 <CardMediaSummary talk="Hackathon de NLP en Español"
                     event="Somos NLP - Democratizando el NLP en español" event_link="https://somosnlp.org"
-                    image_link="public/images/projects/hackathon_pln_es_3.png"
+                    image_link="images/projects/hackathon_pln_es_3.png"
                     recording_link="https://www.youtube.com/c/somosnlp"
                     :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
@@ -80,7 +80,7 @@ useHead({
                 </CardMediaSummary>
                 <CardMediaSummary talk="PLN con Somos NLP y Hugging Face" event="AI The New Sexy | Podcast"
                     event_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
-                    image_link="public/images/logos/AITheNewSexy.jpeg"
+                    image_link="images/logos/AITheNewSexy.jpeg"
                     recording_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
                     :tags="['NLP in Spanish', 'Career', 'Open-Source', 'Interview', '🇪🇸']">
                     <i-mdi-spotify style="font-size: 1.25rem;" />
@@ -96,8 +96,7 @@ useHead({
                 </CardMediaSummary>
                 <CardMediaSummary talk="Tecnologías del Lenguaje en la Empresa"
                     event="DiverTLes: Diversidad en Tecnologías del Lenguaje en España"
-                    event_link="https://gplsi.dlsi.ua.es/pln/divertles"
-                    image_link="public/images/events/211130_divertles.jfif"
+                    event_link="https://gplsi.dlsi.ua.es/pln/divertles" image_link="images/events/211130_divertles.jfif"
                     recording_link="https://www.youtube.com/watch?v=yvPLMc3-KnI"
                     :tags="['NLP', 'NLP in Production', 'Research', 'Round Table', '🇪🇸']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
@@ -119,7 +118,7 @@ useHead({
                 </CardMediaSummary>
                 <CardMediaSummary talk="IAs que hablan español" event="Saturdays.AI Podcast"
                     event_link="https://saturdays.ai/2022/01/27/3x07-maria-grandury-ai-que-hablan-espanol/"
-                    image_link="public/images/logos/SaturdaysAIPodcast.jpg"
+                    image_link="images/logos/SaturdaysAIPodcast.jpg"
                     recording_link="https://www.youtube.com/watch?v=O5QkrbOrxd4"
                     :tags="['My Story', 'NLP', 'AI Regulation', 'Interview', '🇪🇸']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
@@ -143,7 +142,7 @@ useHead({
                 <CardMediaSummary talk="Sequential Models & the Transformer Architecture"
                     event="NLP de 0 a 100 con Hugging Face, by Somos NLP & Spain AI"
                     event_link="https://somosnlp.org/nlp-de-cero-a-cien"
-                    image_link="public/images/events/210713_nlp_de_cero_a_cien.jpeg"
+                    image_link="images/events/210713_nlp_de_cero_a_cien.jpeg"
                     recording_link="https://somosnlp.org/nlp-de-cero-a-cien/sesion-03"
                     :tags="['NLP', 'Sequential Models', 'Transformers', 'NLP Demos', 'Course', '🇪🇸']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
@@ -171,7 +170,7 @@ useHead({
                     event="Women in AI & Robotics, NASA JPL, UniBremen, DFKI"
                     event_link="https://www.eventbrite.de/e/3-engineering-robotics-ai-experts-taking-center-stage-tickets-158193696605"
                     recording_link="https://www.youtube.com/watch?v=f2f1RL3M6xc"
-                    image_link="public/images/events/210622_wair_3_engineers.avif"
+                    image_link="images/events/210622_wair_3_engineers.avif"
                     :tags="['Women in Robotics', 'Women Engineers', 'Round Table', '🇬🇧']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
@@ -196,7 +195,7 @@ useHead({
                 <CardMediaSummary talk="Is Your ML Model Trustworthy?" event="MLOps World Conference 2021"
                     event_link="https://mlopsworld.com/"
                     recording_link="https://twitter.com/MLOpsWorld/status/1405179157265489927"
-                    image_link="public/images/events/210614_mlops_world.jpg"
+                    image_link="images/events/210614_mlops_world.jpg"
                     :tags="['MLOps', 'AI Robustness', 'AI Explainability', 'Talk', '🇬🇧']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
@@ -212,7 +211,7 @@ useHead({
                     </template>
                 </CardMediaSummary>
                 <CardMediaSummary talk="Hands-on NLP with Hugging Face" event="WomenTech Global Conference 2021"
-                    event_link="https://bigscience.huggingface.co/" image_link="public/images/events/210610_wtn.png"
+                    event_link="https://bigscience.huggingface.co/" image_link="images/events/210610_wtn.png"
                     recording_link="https://www.womentech.net/speaker/Maria/Grandury/57995"
                     :tags="['NLP', 'Transformers', 'Hugging Face', 'Workshop', '🇬🇧']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
@@ -231,7 +230,7 @@ useHead({
                     event="Women in AI & Robotics"
                     event_link="https://medium.com/womeninairobotics/inspirational-women-in-ai-85b80cb4999f"
                     recording_link="https://medium.com/womeninairobotics/inspirational-women-in-ai-85b80cb4999f"
-                    image_link="public/images/events/210308_meet_8_women.png"
+                    image_link="images/events/210308_meet_8_women.png"
                     :tags="['Women in AI', 'Women in Robotics', '🇬🇧']">
                     <i-mdi-medium style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
@@ -244,7 +243,7 @@ useHead({
                 <CardMediaSummary talk="WAIR Kick-Off Event" event="Women in AI & Robotics"
                     event_link="https://bigscience.huggingface.co/"
                     recording_link="https://www.youtube.com/watch?v=in5tEluYTSs"
-                    image_link="public/images/events/210506_wair_kick_off.avif"
+                    image_link="images/events/210506_wair_kick_off.avif"
                     :tags="['Women in AI', 'Women in STEM', 'Round table', '🇬🇧']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
