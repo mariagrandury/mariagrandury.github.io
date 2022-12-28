@@ -109,8 +109,7 @@ const index = computed(() => counter.value % greetings.value.length)
         </div>
       </div>
       <div class="flex flex-col flex-shrink gap-12">
-        <img class="w-screen"
-          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/projects_undraw_freelancer_long_hair.svg"
+        <img class="w-screen" src="public/images/illustrations/projects_undraw_freelancer_long_hair.svg"
           alt="Projects" />
         <router-link
           class="flex justify-center place-self-center font-medium p-6 gap-3 text-align-center items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
@@ -122,9 +121,7 @@ const index = computed(() => counter.value % greetings.value.length)
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
       <div class="flex flex-col flex-shrink gap-12">
-        <img
-          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/talks_undraw_conference.svg"
-          alt="Talks" />
+        <img src="public/images/illustrations/talks_undraw_conference.svg" alt="Talks" />
         <router-link
           class="flex justify-center place-self-center font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
           to="/talks">More Talks</router-link>
@@ -135,7 +132,7 @@ const index = computed(() => counter.value % greetings.value.length)
           <CardTalkDetailed talk="El estado del arte de la industria de PLN en nuestro país y fuera"
             event="Primer foro del PERTE de la Nueva Economía de la Lengua"
             event_link="https://twitter.com/PERTE_Lengua/status/1567902042353442816?s=20&t=kR1vwhuxmGig2UrbH4WvDw"
-            image_link="https://pbs.twimg.com/media/FcJJ_XNWAAUAyv7?format=jpg&name=4096x4096"
+            image_link="public/images/events/220928_perte_sota_nlp.jfif"
             recording_link="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s"
             :tags="['NLP', 'SOTA NLP', 'Round Table']">
             <template v-slot:abstract>
