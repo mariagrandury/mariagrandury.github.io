@@ -25,9 +25,7 @@ export default defineComponent({
             <div class="grid gap-3">
                 <h1 class="text-lg">{{ talk }}</h1>
                 <a :href="event_link" target="_blank"
-                    class="self-start items-center text-gray-500 text-sm hover:underline">{{
-                            event
-                    }}</a>
+                    class="self-start items-center text-gray-500 text-sm hover:underline">{{ event }}</a>
             </div>
             <a v-if="recording_link" :href="recording_link" target="_blank"
                 class="border rounded-md flex border-gray-200 p-2 self-start items-center dark:border-black dark:bg-gray-700 hover:ring">

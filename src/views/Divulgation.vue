@@ -28,8 +28,22 @@ useHead({
         </div>
         <div class="lg:px-24 sm:px-12">
             <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
+                <CardMediaSummary talk="¡A por el 2023! De dónde venimos y a dónde vamos" event="Somos NLP | Blog Post"
+                    event_link="https://somosnlp.org/blog/feliz-2023" image_link="images/logos/SomosNLP.svg"
+                    recording_link="https://somosnlp.org/blog/feliz-2023"
+                    :tags="['NLP in Spanish', 'Open-Source', '🇪🇸']">
+                    <i-mdi:fountain-pen-tip style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            Almost two years ago I was looking for resources to implement an NLP project in Spanish and
+                            I couldn't find anything. I created a Slack group with a couple of people who had
+                            encountered the same problem; I never imagined that group would become what Somos NLP is
+                            today.
+                        </div>
+                    </template>
+                </CardMediaSummary>
                 <CardMediaSummary talk="El estado del arte del PLN en España y fuera"
-                    event="PERTE de la Nueva Economía de la Lengua"
+                    event="PERTE de la Nueva Economía de la Lengua | Round Table"
                     event_link="https://twitter.com/PERTE_Lengua/status/1567902042353442816?s=20&t=kR1vwhuxmGig2UrbH4WvDw"
                     image_link="images/events/220928_perte_sota_nlp.jfif"
                     recording_link="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s"
@@ -57,15 +71,14 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
-                <CardMediaSummary talk="Hackathon de NLP en Español"
-                    event="Somos NLP - Democratizando el NLP en español" event_link="https://somosnlp.org"
-                    image_link="images/projects/hackathon_pln_es_3.png"
+                <CardMediaSummary talk="Hackathon Objetivos de Desarrollo Sostenibles" event="Somos NLP | Hackathon"
+                    event_link="https://somosnlp.org" image_link="images/projects/hackathon_pln_es_3.png"
                     recording_link="https://www.youtube.com/c/somosnlp"
                     :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            The democratisation of NLP in Spanish is the main goal of our community and one of
+                            The democratization of NLP in Spanish is the main goal of our community and one of
                             the best ways to advance towards this goal is to create more NLP resources in our language.
                             With this hackathon we encourage you to join our effort. We invite you to train and
                             put into production a Spanish NLP model.
@@ -78,7 +91,7 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
-                <CardMediaSummary talk="PLN con Somos NLP y Hugging Face" event="AI The New Sexy | Podcast"
+                <CardMediaSummary talk="PLN con Somos NLP y Hugging Face" event="AI The New Sexy | Podcast Interview"
                     event_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
                     image_link="images/logos/AITheNewSexy.jpeg"
                     recording_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
@@ -89,7 +102,7 @@ useHead({
                             AI The New Sexy is a podcast where you can find information about
                             Artificial Intelligence and its impact on everyday life and on business.
                             In this episode we interview María Grandury, founder of Somos NLP (formerly NLP en ES),
-                            an open community for spanish-speaking professionals and researchers
+                            an open community for Spanish-speaking professionals and researchers
                             advancing and democratizing NLP in their language.
                         </div>
                     </template>
@@ -116,7 +129,7 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
-                <CardMediaSummary talk="IAs que hablan español" event="Saturdays.AI Podcast"
+                <CardMediaSummary talk="IAs que hablan español" event="Saturdays.AI | Podcast Interview"
                     event_link="https://saturdays.ai/2022/01/27/3x07-maria-grandury-ai-que-hablan-espanol/"
                     image_link="images/logos/SaturdaysAIPodcast.jpg"
                     recording_link="https://www.youtube.com/watch?v=O5QkrbOrxd4"
@@ -140,7 +153,7 @@ useHead({
                     </template>
                 </CardMediaSummary>
                 <CardMediaSummary talk="Sequential Models & the Transformer Architecture"
-                    event="NLP de 0 a 100 con Hugging Face, by Somos NLP & Spain AI"
+                    event="NLP de 0 a 100 con Hugging Face | Course by Somos NLP & Spain AI"
                     event_link="https://somosnlp.org/nlp-de-cero-a-cien"
                     image_link="images/events/210713_nlp_de_cero_a_cien.jpeg"
                     recording_link="https://somosnlp.org/nlp-de-cero-a-cien/sesion-03"
@@ -167,7 +180,7 @@ useHead({
                     </template>
                 </CardMediaSummary>
                 <CardMediaSummary talk="3 Engineering, Robotics & AI experts Taking Center Stage"
-                    event="Women in AI & Robotics, NASA JPL, UniBremen, DFKI"
+                    event="Women in AI & Robotics, NASA JPL, UniBremen, DFKI | Round Table"
                     event_link="https://www.eventbrite.de/e/3-engineering-robotics-ai-experts-taking-center-stage-tickets-158193696605"
                     recording_link="https://www.youtube.com/watch?v=f2f1RL3M6xc"
                     image_link="images/events/210622_wair_3_engineers.avif"
@@ -192,7 +205,7 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
-                <CardMediaSummary talk="Is Your ML Model Trustworthy?" event="MLOps World Conference 2021"
+                <CardMediaSummary talk="Is Your ML Model Trustworthy?" event="MLOps World Conference 2021 | Workshop"
                     event_link="https://mlopsworld.com/"
                     recording_link="https://twitter.com/MLOpsWorld/status/1405179157265489927"
                     image_link="images/events/210614_mlops_world.jpg"
@@ -210,8 +223,9 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
-                <CardMediaSummary talk="Hands-on NLP with Hugging Face" event="WomenTech Global Conference 2021"
-                    event_link="https://bigscience.huggingface.co/" image_link="images/events/210610_wtn.png"
+                <CardMediaSummary talk="Hands-on NLP with Hugging Face"
+                    event="WomenTech Global Conference 2021 | Workshop" event_link="https://bigscience.huggingface.co/"
+                    image_link="images/events/210610_wtn.png"
                     recording_link="https://www.womentech.net/speaker/Maria/Grandury/57995"
                     :tags="['NLP', 'Transformers', 'Hugging Face', 'Workshop', '🇬🇧']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
@@ -227,7 +241,7 @@ useHead({
                     </template>
                 </CardMediaSummary>
                 <CardMediaSummary talk="Meet 8 International Inspirational Women on March 8"
-                    event="Women in AI & Robotics"
+                    event="Women in AI & Robotics | Blog Post"
                     event_link="https://medium.com/womeninairobotics/inspirational-women-in-ai-85b80cb4999f"
                     recording_link="https://medium.com/womeninairobotics/inspirational-women-in-ai-85b80cb4999f"
                     image_link="images/events/210308_meet_8_women.png"
@@ -240,11 +254,11 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
-                <CardMediaSummary talk="WAIR Kick-Off Event" event="Women in AI & Robotics"
+                <CardMediaSummary talk="WAIR Kick-Off Event" event="Women in AI & Robotics | Round Table"
                     event_link="https://bigscience.huggingface.co/"
                     recording_link="https://www.youtube.com/watch?v=in5tEluYTSs"
                     image_link="images/events/210506_wair_kick_off.avif"
-                    :tags="['Women in AI', 'Women in STEM', 'Round table', '🇬🇧']">
+                    :tags="['Women in AI', 'Women in STEM', 'Round Table', '🇬🇧']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">

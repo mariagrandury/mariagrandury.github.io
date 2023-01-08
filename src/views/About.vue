@@ -58,7 +58,7 @@ useHead({
 
         <div>
             <h2 class="flex gap-2 items-center">
-                <div class="font-semibold tracking-tight text-2xl">Organisations</div>
+                <div class="font-semibold tracking-tight text-2xl">Organizations</div>
                 <i-fluent-color-24-regular style="font-size: 2rem;" />
             </h2>
             <p class="py-3">Organizations and networks I'm part of or I collaborate with.</p>

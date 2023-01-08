@@ -92,7 +92,7 @@ useHead({
           <template v-slot:description>
             <div class="text-sm text-gray-700 dark:text-white">
               A series of Spanish language models trained with Flax/Jax and using TPUs
-              sponsored by Google during the Flax/Jax Community Week organised
+              sponsored by Google during the Flax/Jax Community Week organized
               by Hugging Face in June 2021. Here are the model cards:
               <a target="_blank" href="https://huggingface.co/flax-community/gpt-2-spanish"
                 class="text-accent-700 dark:text-accent-300 hover:underline">GPT-2 model</a>
