@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "antfu.vite",
+        "vue.volar",
+        "antfu.iconify",
+        "dbaeumer.vscode-eslint",
+        "voorjaar.windicss-intellisense",
+        "csstools.postcss",
+        "antfu.browse-lite"
+    ]
+}
