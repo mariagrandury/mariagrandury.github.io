@@ -29,8 +29,8 @@ useHead({
         <div class="lg:px-24 sm:px-12">
             <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
                 <CardMediaSummary talk="¡A por el 2023! De dónde venimos y a dónde vamos" event="Somos NLP | Blog Post"
-                    event_link="https://somosnlp.org/blog/feliz-2023" image_link="images/logos/SomosNLP.svg"
-                    recording_link="https://somosnlp.org/blog/feliz-2023"
+                    event_link="https://somosnlp.org/blog/a-por-el-2023" image_link="images/logos/SomosNLP.svg"
+                    recording_link="https://somosnlp.org/blog/a-por-el-2023"
                     :tags="['NLP in Spanish', 'Open-Source', '🇪🇸']">
                     <i-mdi:fountain-pen-tip style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
@@ -39,6 +39,18 @@ useHead({
                             I couldn't find anything. I created a Slack group with a couple of people who had
                             encountered the same problem; I never imagined that group would become what Somos NLP is
                             today.
+                        </div>
+                    </template>
+                </CardMediaSummary>
+                <CardMediaSummary talk="Hola María, ¿hablamos de NLP?" event="Pangea AI & Languages | Podcast Interview"
+                    event_link="https://www.youtube.com/@mariagrandury"
+                    image_link="images/events/221221_podcast_pangeanic.png"
+                    recording_link="https://www.youtube.com/@mariagrandury"
+                    :tags="['NLP in Spanish', 'Podcast', '🇪🇸']">
+                    <i-mdi-youtube style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            Podcast Pangeanic.
                         </div>
                     </template>
                 </CardMediaSummary>
