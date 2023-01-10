@@ -5,9 +5,13 @@ export default defineComponent({
     props: {
         talk: String,
         event: String,
-        event_link: { type: String, default: "", required: false },
+        event_link: {
+            type: String, default: "https://www.youtube.com/@mariagrandury", required: false
+        },
         image_link: { type: String, default: "", required: false },
-        recording_link: { type: String, default: "", required: false },
+        recording_link: {
+            type: String, default: "https://www.youtube.com/@mariagrandury", required: false
+        },
         announcement_link: { type: String, default: "", required: false },
         tags: Array,
         date: String,
