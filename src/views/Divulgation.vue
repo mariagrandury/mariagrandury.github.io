@@ -27,6 +27,25 @@ useHead({
             <h2 class="py-6">I'm passionate about what I do and really enjoy divulgating!</h2>
         </div>
         <div class="lg:px-24 sm:px-12">
+            <h2 class="py-6 text-2xl">Upcoming talk - Register now!</h2>
+            <CardMediaSummary talk="Bias detection and mitigation in Language Models"
+                event="Women Who Code CONNECT Empower 2023 | Workshop | March 2"
+                event_link="https://hopin.com/events/connect-2023/registration"
+                image_link="images/logos/WomenWhoCodeCONNECT.png"
+                recording_link="https://hopin.com/events/connect-2023/registration"
+                :tags="['Bias in NLP', 'Open-Source', '🇪🇸']">
+                <i-tabler:external-link style="font-size: 1.25rem;" />
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        Almost two years ago I was looking for resources to implement an NLP project in Spanish and
+                        I couldn't find anything. I created a Slack group with a couple of people who had
+                        encountered the same problem; I never imagined that group would become what Somos NLP is
+                        today.
+                    </div>
+                </template>
+            </CardMediaSummary>
+            <br />
+            <br />
             <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
                 <CardMediaSummary talk="¡A por el 2023! De dónde venimos y a dónde vamos" event="Somos NLP | Blog Post"
                     event_link="https://somosnlp.org/blog/a-por-el-2023" image_link="images/logos/SomosNLP.svg"
@@ -35,7 +54,8 @@ useHead({
                     <i-mdi:fountain-pen-tip style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            Almost two years ago I was looking for resources to implement an NLP project in Spanish and
+                            Almost two years ago I was looking for resources to implement an NLP project in Spanish
+                            and
                             I couldn't find anything. I created a Slack group with a couple of people who had
                             encountered the same problem; I never imagined that group would become what Somos NLP is
                             today.
@@ -63,7 +83,8 @@ useHead({
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            El PERTE de la Nueva economía de la Lengua es una oportunidad para aprovechar el potencial
+                            El PERTE de la Nueva economía de la Lengua es una oportunidad para aprovechar el
+                            potencial
                             del español y de las lenguas cooficiales como factor de crecimiento económico y
                             competitividad internacional en áreas como la inteligencia artificial, la traducción, el
                             aprendizaje, la divulgación cultural, la producción audiovisual, la investigación y la
@@ -77,7 +98,8 @@ useHead({
                             <br />
                             <a href="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s" target="_blank"
                                 class="text-accent-500 hover:underline">
-                                2. ¿Cuál crees que sería el proyecto más importante a nivel internacional que deberíamos
+                                2. ¿Cuál crees que sería el proyecto más importante a nivel internacional que
+                                deberíamos
                                 implementar?
                             </a>
                         </div>
@@ -91,13 +113,15 @@ useHead({
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
                             The democratization of NLP in Spanish is the main goal of our community and one of
-                            the best ways to advance towards this goal is to create more NLP resources in our language.
+                            the best ways to advance towards this goal is to create more NLP resources in our
+                            language.
                             With this hackathon we encourage you to join our effort. We invite you to train and
                             put into production a Spanish NLP model.
                             <br />
                             <br />
                             <a href="https://somosnlp.org/hackathon" target="_blank"
-                                class="text-accent-500 hover:underline">¡Organizamos el mayor hackathon open-source de
+                                class="text-accent-500 hover:underline">¡Organizamos el mayor hackathon open-source
+                                de
                                 PLN
                                 en español!</a>
                         </div>
