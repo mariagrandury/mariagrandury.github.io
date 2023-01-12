@@ -109,7 +109,9 @@ const index = computed(() => counter.value % greetings.value.length)
         </div>
       </div>
       <div class="flex flex-col flex-shrink gap-12">
-        <img class="w-screen" src="images/illustrations/projects_undraw_freelancer_long_hair.svg" alt="Projects" />
+        <img class="w-screen"
+          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/projects_undraw_freelancer_long_hair.svg"
+          alt="Projects" />
         <router-link
           class="flex justify-center place-self-center font-medium p-6 gap-3 text-align-center items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
           to="/projects">More Projects</router-link>
@@ -120,7 +122,9 @@ const index = computed(() => counter.value % greetings.value.length)
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
       <div class="flex flex-col flex-shrink gap-12">
-        <img src="images/illustrations/talks_undraw_conference.svg" alt="Talks" />
+        <img
+          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/talks_undraw_conference.svg"
+          alt="Talks" />
         <router-link
           class="flex justify-center place-self-center font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
           to="/talks">More Talks</router-link>
