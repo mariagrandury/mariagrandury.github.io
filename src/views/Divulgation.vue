@@ -37,16 +37,24 @@ useHead({
                 <i-tabler:external-link style="font-size: 1.25rem;" />
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
-                        Almost two years ago I was looking for resources to implement an NLP project in Spanish and
-                        I couldn't find anything. I created a Slack group with a couple of people who had
-                        encountered the same problem; I never imagined that group would become what Somos NLP is
-                        today.
+                        WomenWhoCodeCONNECT
                     </div>
                 </template>
             </CardMediaSummary>
             <br />
             <br />
             <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
+                <!-- <CardMediaSummary talk="Interview With María Grandury on Artificial Intelligence and NLP" event="Pangeanic Blog | Interview"
+                    event_link="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp" image_link="images/events/221221_podcast_pangeanic.png"
+                    recording_link="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp"
+                    :tags="['NLP in Spanish', 'Open-Source', '🇬🇧']">
+                    <i-mdi:fountain-pen-tip style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            At the young age of 25, María Grandury has already made a name for herself in the field of Artificial Intelligence in Spain.
+                        </div>
+                    </template>
+                </CardMediaSummary> -->
                 <CardMediaSummary talk="¡A por el 2023! De dónde venimos y a dónde vamos" event="Somos NLP | Blog Post"
                     event_link="https://somosnlp.org/blog/a-por-el-2023" image_link="images/logos/SomosNLP.svg"
                     recording_link="https://somosnlp.org/blog/a-por-el-2023"
@@ -54,23 +62,27 @@ useHead({
                     <i-mdi:fountain-pen-tip style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            Almost two years ago I was looking for resources to implement an NLP project in Spanish
-                            and
-                            I couldn't find anything. I created a Slack group with a couple of people who had
-                            encountered the same problem; I never imagined that group would become what Somos NLP is
-                            today.
+                            Almost two years ago I was looking for resources to implement an NLP project in Spanish and I couldn't find anything. I created a Slack group with a couple of people who had encountered the same problem; I never imagined that group would become what Somos NLP is today.
                         </div>
                     </template>
                 </CardMediaSummary>
                 <CardMediaSummary talk="Hola María, ¿hablamos de NLP?" event="Pangea AI & Languages | Podcast Interview"
                     event_link="https://www.youtube.com/@mariagrandury"
                     image_link="images/events/221221_podcast_pangeanic.png"
-                    recording_link="https://www.youtube.com/@mariagrandury"
+                    recording_link="https://open.spotify.com/episode/6uQbVuo35PvSmHkM5XffrB"
                     :tags="['NLP in Spanish', 'Podcast', '🇪🇸']">
-                    <i-mdi-youtube style="font-size: 1.25rem;" />
+                    <i-mdi-spotify style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            Podcast Pangeanic.
+                            María Grandury es muy joven pero ya se ha hecho un hueco dentro del ámbito de la Inteligencia Artificial en España. Tiene 25 años y hace solo dos, en plena pandemia, estaba finalizando sus estudios de doble grado de Matemática y Física. Durante los años de carrera tuvo la oportunidad de realizar un Erasmus en París y fue uno de sus profesores el que le brindó la ocasión de acercarse al mundo de la Inteligencia Artificial.
+                            <a href="https://blog.pangeanic.com/es/entrevista-a-mar%C3%ADa-grandury-sobre-inteligencia-artificial-y-pln" target="_blank"
+                                class="text-accent-500 hover:underline">
+                                Entrevista ES
+                            </a>
+                            <a href="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp" target="_blank"
+                                class="text-accent-500 hover:underline">
+                                Entrevista EN
+                            </a>
                         </div>
                     </template>
                 </CardMediaSummary>
@@ -83,12 +95,7 @@ useHead({
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            El PERTE de la Nueva economía de la Lengua es una oportunidad para aprovechar el
-                            potencial
-                            del español y de las lenguas cooficiales como factor de crecimiento económico y
-                            competitividad internacional en áreas como la inteligencia artificial, la traducción, el
-                            aprendizaje, la divulgación cultural, la producción audiovisual, la investigación y la
-                            ciencia.
+                            El PERTE de la Nueva economía de la Lengua es una oportunidad para aprovechar el potencial del español y de las lenguas cooficiales como factor de crecimiento económico y competitividad internacional en áreas como la inteligencia artificial, la traducción, el aprendizaje, la divulgación cultural, la producción audiovisual, la investigación y la ciencia.
                             <br />
                             <br />
                             <a href="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=5593s" target="_blank"
@@ -99,8 +106,7 @@ useHead({
                             <a href="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s" target="_blank"
                                 class="text-accent-500 hover:underline">
                                 2. ¿Cuál crees que sería el proyecto más importante a nivel internacional que
-                                deberíamos
-                                implementar?
+                                deberíamos implementar?
                             </a>
                         </div>
                     </template>
@@ -112,18 +118,12 @@ useHead({
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            The democratization of NLP in Spanish is the main goal of our community and one of
-                            the best ways to advance towards this goal is to create more NLP resources in our
-                            language.
-                            With this hackathon we encourage you to join our effort. We invite you to train and
-                            put into production a Spanish NLP model.
+                            The democratization of NLP in Spanish is the main goal of our community and one of the best ways to advance towards this goal is to create more NLP resources in our language.
+                            With this hackathon we encourage you to join our effort. We invite you to train and put into production a Spanish NLP model.
                             <br />
                             <br />
                             <a href="https://somosnlp.org/hackathon" target="_blank"
-                                class="text-accent-500 hover:underline">¡Organizamos el mayor hackathon open-source
-                                de
-                                PLN
-                                en español!</a>
+                                class="text-accent-500 hover:underline">¡Organizamos el mayor hackathon open-source de PLN en español!</a>
                         </div>
                     </template>
                 </CardMediaSummary>
@@ -135,10 +135,7 @@ useHead({
                     <i-mdi-spotify style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            AI The New Sexy is a podcast where you can find information about
-                            Artificial Intelligence and its impact on everyday life and on business.
-                            In this episode we interview María Grandury, founder of Somos NLP (formerly NLP en ES),
-                            an open community for Spanish-speaking professionals and researchers
+                            AI The New Sexy is a podcast where you can find information about Artificial Intelligence and its impact on everyday life and on business. In this episode we interview María Grandury, founder of Somos NLP (formerly NLP en ES), an open community for Spanish-speaking professionals and researchers
                             advancing and democratizing NLP in their language.
                         </div>
                     </template>
@@ -151,17 +148,9 @@ useHead({
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            Three professionals working in NLP in a company discuss how
-                            they use NLP for real-world applications.
-                            María works in Germany at neurocat, a startup specialized in
-                            Explainable AI and Robustness that develops a tool to assess
-                            the quality and trustworthiness of any ML model.
-                            Muntsa works in France at Eloquant, a company that develops
-                            software used to extract information from text and audio to
-                            improve the customer relationship.
-                            Melania works in Spain at Adecco Outsourcing and is currently
-                            developing NLP solutions for Google products, mainly Google
-                            Assistant but also Google Maps, Google Home and GMail.
+                            Three professionals working in NLP in a company discuss how they use NLP for real-world applications. María works in Germany at neurocat, a startup specialized in Explainable AI and Robustness that develops a tool to assess the quality and trustworthiness of any ML model.
+                            Muntsa works in France at Eloquant, a company that develops software used to extract information from text and audio to improve the customer relationship.
+                            Melania works in Spain at Adecco Outsourcing and is currently developing NLP solutions for Google products, mainly Google Assistant but also Google Maps, Google Home and GMail.
                         </div>
                     </template>
                 </CardMediaSummary>
@@ -173,9 +162,7 @@ useHead({
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            Interview for the Saturdays.AI Podcast where I discuss with its
-                            founder Miguel Guerrero how I became an ML Research Engineer, what
-                            are we doing at BigScience
+                            Interview for the Saturdays.AI Podcast where I discuss with its founder Miguel Guerrero how I became an ML Research Engineer, what are we doing at BigScience
                             <a href="https://bigscience.huggingface.co/" target="_blank"
                                 class="text-accent-500 hover:underline">BigScience,
                             </a>
@@ -183,8 +170,7 @@ useHead({
                             <a href="https://somosnlp.org" target="_blank" class="text-accent-500 hover:underline">
                                 Somos NLP,
                             </a>
-                            amongst other topics like privacy, AI regulation and why most of the
-                            AI-related movies picture AI as "the bad guy".
+                            amongst other topics like privacy, AI regulation and why most of the AI-related movies picture AI as "the bad guy".
                         </div>
                     </template>
                 </CardMediaSummary>
@@ -197,11 +183,7 @@ useHead({
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            Understand all the key concepts and architectures of state-of-the-art NLP and
-                            apply them to common use cases using one of the most popular libraries in the
-                            field: Hugging Face. Regardless of your current knowledge, you will finish the
-                            course talking about Word Embeddings, Sequential Models, Attention Mechanisms,
-                            Transformers and Language Modelling.
+                            Understand all the key concepts and architectures of state-of-the-art NLP and apply them to common use cases using one of the most popular libraries in the field: Hugging Face. Regardless of your current knowledge, you will finish the course talking about Word Embeddings, Sequential Models, Attention Mechanisms, Transformers and Language Modelling.
                             <br />
                             <br />
                             This course was organized by
@@ -224,20 +206,10 @@ useHead({
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            AI and Robotics go hand in hand, whether exploring space or enabling
-                            humanoid robots to walk on the Moon. As a cutting edge branch of technology,
-                            having women representation in AI and Robotics is extremely important - both
-                            for the progress of the field and to encourage younger generations to join
-                            in as well.
+                            AI and Robotics go hand in hand, whether exploring space or enabling humanoid robots to walk on the Moon. As a cutting edge branch of technology, having women representation in AI and Robotics is extremely important - both for the progress of the field and to encourage younger generations to join in as well.
                             <br />
                             <br />
-                            Join us as our very own Maria Grandury, herself a Machine
-                            Learning Research Engineer, interviews Sandra Hernandez, Systems Engineer
-                            at NASA JPL, and Mihaela Popescu, Researcher at University of Bremen/DFKI
-                            (German Research Center for Artificial Intelligence) and Bremen Women in AI
-                            & Robotics core team member. Discover their journeys into the technical
-                            world, their fascinating work at NASA and DFKI Robotics and their advice
-                            for women who wish to enter STEM related fields.
+                            Join us as our very own Maria Grandury, herself a Machine Learning Research Engineer, interviews Sandra Hernandez, Systems Engineer at NASA JPL, and Mihaela Popescu, Researcher at University of Bremen/DFKI (German Research Center for Artificial Intelligence) and Bremen Women in AI & Robotics core team member. Discover their journeys into the technical world, their fascinating work at NASA and DFKI Robotics and their advice for women who wish to enter STEM related fields.
                         </div>
                     </template>
                 </CardMediaSummary>
@@ -249,13 +221,8 @@ useHead({
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            In recent years, Machine Learning models and architectures have become
-                            increasingly complex. This growing complexity makes it more difficult to
-                            deliver high quality in terms of model performance, robustness and
-                            explainability. The introduction of automated evaluations of the
-                            trustworthiness of a model is one solution to guarantee that your clients
-                            can rely on your model’s predictions. This talk will guide you through the
-                            different AI quality pillars, their importance and how to evaluate them.
+                            In recent years, Machine Learning models and architectures have become increasingly complex. This growing complexity makes it more difficult to
+                            deliver high quality in terms of model performance, robustness and explainability. The introduction of automated evaluations of the trustworthiness of a model is one solution to guarantee that your clients can rely on your model’s predictions. This talk will guide you through the different AI quality pillars, their importance and how to evaluate them.
                         </div>
                     </template>
                 </CardMediaSummary>
@@ -267,12 +234,7 @@ useHead({
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            Hands-on introduction to the state-of-the-art Hugging Face NLP libraries.
-                            Natural Language Processing (NLP) has evolved greatly and become
-                            increasingly popular in recent years, especially since the introduction in
-                            2017 of the Transformer architecture. Thanks to the open-source Hugging
-                            Face libraries, we all have access to cutting-edge NLP models that can be
-                            easily used to address a wide range of tasks.
+                            Hands-on introduction to the state-of-the-art Hugging Face NLP libraries. Natural Language Processing (NLP) has evolved greatly and become increasingly popular in recent years, especially since the introduction in 2017 of the Transformer architecture. Thanks to the open-source Hugging Face libraries, we all have access to cutting-edge NLP models that can be easily used to address a wide range of tasks.
                         </div>
                     </template>
                 </CardMediaSummary>
@@ -285,8 +247,7 @@ useHead({
                     <i-mdi-medium style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            Blog article published on the Medium account of Women in AI & Robotics about
-                            8 international inspirational women working in the fields of AI & Robotics.
+                            Blog article published on the Medium account of Women in AI & Robotics about 8 international inspirational women working in the fields of AI & Robotics.
                         </div>
                     </template>
                 </CardMediaSummary>
@@ -298,12 +259,7 @@ useHead({
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
                         <div class="text-sm text-gray-700 dark:text-white">
-                            The field of Artificial Intelligence and Robotics is challenging
-                            and rapidly growing and yet women are under-represented. We are
-                            on a mission to change that.
-                            Come join us in this event where five of our members will talk
-                            about what motivated to enter this field, their experiences,
-                            challenges, support systems, sources of inspiration and what we
+                            The field of Artificial Intelligence and Robotics is challenging and rapidly growing and yet women are under-represented. We are on a mission to change that. Come join us in this event where five of our members will talk about what motivated to enter this field, their experiences, challenges, support systems, sources of inspiration and what we
                             do at Women in AI & Robotics.
                         </div>
                     </template>
