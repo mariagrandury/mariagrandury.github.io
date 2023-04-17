@@ -4,7 +4,7 @@ import { useHead } from '@vueuse/head'
 useHead({
   title: 'María Grandury - Open-Source NLP Research Projects',
   meta: [
-    { name: 'description', content: 'Hello! I\'m María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here you can find my open-source NLP projects :)' },
+    { name: 'description', content: 'Hello! I\'m María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here you can find my open-source NLP projects' },
     { property: 'og:title', content: 'María Grandury - Open-Source NLP Research Projects' },
     { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
     { name: 'twitter:card', content: 'summary' },
@@ -29,8 +29,54 @@ useHead({
 
     <div class="lg:px-24 sm:px-12">
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
-        <CardProject title="Hackathon of NLP in Spanish" :tags="['NLP', 'Somos NLP']"
+        <CardProject title="Hackathon Somos NLP 2023: Los LLMs hablan español" :tags="['NLP', 'Somos NLP']"
           link="https://somosnlp.org/hackathon">
+          <i-fluent-rocket-24-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Second edition of the largest open-source hackathon of NLP in
+              Spanish. This year's edition counts with +500 participants, 17 speakers, and 7 mentors. Still in progress, we'll announce the winners shortly!
+            </div>
+          </template>
+        </CardProject>
+        <CardProject title="Somos Mujeres NLP" :tags="['Women in AI', 'NLP', 'Somos NLP']"
+          link="" color="text-pink-800 bg-pink-50 dark:text-white dark:bg-pink-800">
+          <i-fluent-heart-24-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Organized two initiatives to promote both the work and research of women in NLP and also the projects that apply NLP to fight sexism.
+            </div>
+          </template>
+        </CardProject>  
+        <CardProject title="NLP Course by Hugging Face" :tags="['NLP', 'Somos NLP']"
+          link="https://huggingface.co/course/es/chapter1/1" color="text-yellow-600 bg-yellow-50 dark:text-white dark:bg-yellow-600">
+          <i-fluent-hat-graduation-24-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Contributing to the translation of the NLP Course by Hugging Face to Spanish.
+            </div>
+          </template>
+        </CardProject>  
+        <CardProject title="BigCode Project: LLMs for Code" :tags="['NLP', 'Research']"
+          link="https://www.bigcode-project.org/docs/about/mission/" color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600">
+          <i-fluent-settings-24-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Contributing to BigCode. Project in progress.
+            </div>
+          </template>
+        </CardProject> 
+        <CardProject title="Polyglot Romance" :tags="['NLP', 'Research']"
+          link="https://www.eleuther.ai/" color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600">
+          <i-fluent-speaker-24-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Contributing to EleutherAI's research project "Polyglot Romance". Project in progress.
+            </div>
+          </template>
+        </CardProject> 
+        <CardProject title="Hackathon of NLP in Spanish" :tags="['NLP', 'Somos NLP']"
+          link="https://somosnlp.org/blog/hackathon-2022">
           <i-fluent-rocket-24-regular />
           <template v-slot:description>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -114,7 +160,7 @@ useHead({
               sector.</div>
           </template>
         </CardProject>
-        <CardProject title="Adding NLP datasets in Spanish" :tags="['NLP', 'Hugging Face', 'HF Hackathon']"
+        <CardProject title="Making Spanish NLP datasets available in the HF Hub" :tags="['NLP', 'Hugging Face', 'HF Hackathon']"
           link="https://huggingface.co/datasets?languages=languages:es&multilinguality=multilinguality:monolingual">
           <i-fluent-database-24-regular />
           <template v-slot:description>
@@ -131,6 +177,17 @@ useHead({
               Challenge at IberLEF 2020, and the
               <a target="_blank" href="https://huggingface.co/datasets/head_qa"
                 class="text-accent-700 dark:text-accent-300 hover:underline">Spanish Billion Words Corpus.</a>
+            </div>
+          </template>
+        </CardProject>
+        <CardProject title="Quality Analysis of ML Models" :tags="['Python Package', 'AI Performance', 'AI Robustness']"
+          link="https://github.com/mariagrandury/ml-model-quality-analysis"
+          color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
+          <i-fluent-hd-20-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              PyPI package to perform quality analyses on ML models.
+              It focuses on the three quality pillars: functionality, robustness and explainability.
             </div>
           </template>
         </CardProject>
@@ -153,7 +210,7 @@ useHead({
             </div>
           </template>
         </CardProject>
-        <CardProject title="NN  for the study of the Higgs Boson with data from the LHC"
+        <CardProject title="Neural Network for the study of the Higgs Boson with data from the LHC (CERN)"
           :tags="['Machine Learning', 'Physics Thesis']"
           color="text-green-900 bg-green-50 dark:text-white dark:bg-green-600">
           <i-carbon-network-4 />
@@ -165,18 +222,7 @@ useHead({
             </div>
           </template>
         </CardProject>
-        <CardProject title="Quality Analysis of ML Models" :tags="['Python Package', 'AI Performance', 'AI Robustness']"
-          link="https://github.com/mariagrandury/ml-model-quality-analysis"
-          color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
-          <i-fluent-hd-20-regular />
-          <template v-slot:description>
-            <div class="text-sm text-gray-700 dark:text-white">
-              PyPI package to perform quality analyses on ML models.
-              It focuses on the three quality pillars: functionality, robustness and explainability.
-            </div>
-          </template>
-        </CardProject>
-        <CardProject title="The Annotated Transformer" :tags="['NLP', 'Transformers', 'Team Project']"
+        <!-- <CardProject title="The Annotated Transformer" :tags="['NLP', 'Transformers', 'Team Project']"
           link="https://github.com/somosnlp/the-annotated-transformer"
           color="text-blue-900 bg-blue-50 dark:text-white dark:bg-blue-600">
           <i-fluent-document-search-20-regular />
@@ -187,8 +233,8 @@ useHead({
               where the paper "Attention Is All You Need" is explained and implemented.
             </div>
           </template>
-        </CardProject>
-        <CardProject title="World Development Indicators - Operation Fistula"
+        </CardProject> -->
+        <!-- <CardProject title="World Development Indicators - Operation Fistula"
           :tags="['Data Visualization', 'VizForSocialGood', 'Tableau']"
           link="https://public.tableau.com/profile/maria.grandury#!/vizhome/WorldDevelopmentIndicators-OperationFistula/Dashboard"
           color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600">
@@ -199,7 +245,7 @@ useHead({
               "mission to end fistula for every woman everywhere".
             </div>
           </template>
-        </CardProject>
+        </CardProject> -->
       </div>
       <div class="flex my-6 justify-center">
         <a href="https://github.com/mariagrandury" target="_blank"

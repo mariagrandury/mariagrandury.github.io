@@ -32,7 +32,7 @@ const index = computed(() => counter.value % greetings.value.length)
             </li>
             <li>
               🚀 Founder
-              <a href="https://twitter.com/somosnlp_" target="_blank"
+              <a href="https://somosnlp.org" target="_blank"
                 class="text-accent-500 hover:underline">@SomosNLP</a>
             </li>
             <li>
@@ -41,12 +41,12 @@ const index = computed(() => counter.value % greetings.value.length)
                 class="text-accent-500 hover:underline">@HuggingFace
               </a>
             </li>
-            <li>
+            <!-- <li>
               🌸 Collab
               <a href="https://twitter.com/BigScienceW" target="_blank"
                 class="text-accent-500 hover:underline">@BigScience
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>

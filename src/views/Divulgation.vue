@@ -4,7 +4,7 @@ import { useHead } from '@vueuse/head'
 useHead({
     title: 'María Grandury - NLP Divulgation: Talks, Interviews & Articles',
     meta: [
-        { name: 'description', content: 'Hello! I\'m María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here you can find my talks and other divulgation content :)' },
+        { name: 'description', content: 'Hello! I\'m María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here you can find my talks and other divulgation content' },
         { property: 'og:title', content: 'María Grandury - NLP Divulgation: Talks, Interviews & Articles' },
         { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
         { name: 'twitter:card', content: 'summary' },
@@ -27,9 +27,10 @@ useHead({
             <h2 class="py-6">I'm passionate about what I do and really enjoy divulgating!</h2>
         </div>
         <div class="lg:px-24 sm:px-12">
+            <!--
             <h2 class="py-6 text-2xl">Upcoming talk - Register now!</h2>
             <CardMediaSummary talk="Bias detection and mitigation in Language Models"
-                event="Women Who Code CONNECT Empower 2023 | Workshop | March 2"
+                event="Women Who Code CONNECT Empower 2023 | Workshop"
                 event_link="https://hopin.com/events/connect-2023/registration"
                 image_link="images/logos/WomenWhoCodeCONNECT.png"
                 recording_link="https://hopin.com/events/connect-2023/registration"
@@ -43,7 +44,52 @@ useHead({
             </CardMediaSummary>
             <br />
             <br />
+            -->
             <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
+                <CardMediaSummary talk="Hackathon Somos NLP 2023: Los LLMs hablan español" event="Somos NLP | Hackathon | Organizer, Host & Speaker"
+                    event_link="https://somosnlp.org/hackathon" image_link="images/projects/230320_hackathon_llms.jpg"
+                    recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaCDc0IJpLac-3csiAepV546"
+                    :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
+                    <i-mdi-youtube style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            The democratization of NLP in Spanish is the main goal of our community and one of the best ways to advance towards this goal is to create more NLP resources in our language.
+                            With this hackathon we encourage you to join our effort. We invite you to train and put into production a Spanish NLP model.
+                            <br />
+                            <br />
+                            <a href="https://somosnlp.org/hackathon" target="_blank"
+                                class="text-accent-500 hover:underline">¡Organizamos el mayor hackathon open-source de PLN en español!</a>
+                        </div>
+                    </template>
+                </CardMediaSummary>
+                <!--
+                <CardMediaSummary talk="Customer service in times of ChatGPT"
+                event="BBVA Spark | Blog Article (Mention)"
+                event_link="https://www.bbvaspark.com/contenido/en/news/customer-service-in-times-of-chatgpt-these-startups-boost-your-business-with-conversational-ai/"
+                image_link="images/events/230314_bbva_post.jpg"
+                recording_link=""
+                :tags="['ChatGPT', '🇬🇧']">
+                <i-tabler:external-link style="font-size: 1.25rem;" />
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        Featured in a BBVA Spart Blog article
+                    </div>
+                </template>
+                </CardMediaSummary>
+                -->
+                <CardMediaSummary talk="Bias detection and mitigation in Language Models"
+                event="Women Who Code CONNECT Empower 2023 | Workshop"
+                event_link="https://hopin.com/events/connect-2023/registration"
+                image_link="images/events/230302_wwc_connect.png"
+                recording_link=""
+                :tags="['Bias in NLP', 'Open-Source', '🇪🇸']">
+                <i-tabler:external-link style="font-size: 1.25rem;" />
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        WomenWhoCodeCONNECT
+                    </div>
+                </template>
+            </CardMediaSummary>
                 <!-- <CardMediaSummary talk="Interview With María Grandury on Artificial Intelligence and NLP" event="Pangeanic Blog | Interview"
                     event_link="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp" image_link="images/events/221221_podcast_pangeanic.png"
                     recording_link="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp"
@@ -111,9 +157,9 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
-                <CardMediaSummary talk="Hackathon Objetivos de Desarrollo Sostenibles" event="Somos NLP | Hackathon"
-                    event_link="https://somosnlp.org" image_link="images/projects/hackathon_pln_es_3.png"
-                    recording_link="https://www.youtube.com/c/somosnlp"
+                <CardMediaSummary talk="Hackathon Objetivos de Desarrollo Sostenibles" event="Somos NLP | Hackathon | Organizer, Host & Speaker"
+                    event_link="https://somosnlp.org/blog/hackathon-2022" image_link="images/projects/hackathon_pln_es_3.png"
+                    recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaAbVZ2lVcycHnJ2qEDip7hG"
                     :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
                     <i-mdi-youtube style="font-size: 1.25rem;" />
                     <template v-slot:abstract>
@@ -122,7 +168,7 @@ useHead({
                             With this hackathon we encourage you to join our effort. We invite you to train and put into production a Spanish NLP model.
                             <br />
                             <br />
-                            <a href="https://somosnlp.org/hackathon" target="_blank"
+                            <a href="https://somosnlp.org/blog/hackathon-2022" target="_blank"
                                 class="text-accent-500 hover:underline">¡Organizamos el mayor hackathon open-source de PLN en español!</a>
                         </div>
                     </template>

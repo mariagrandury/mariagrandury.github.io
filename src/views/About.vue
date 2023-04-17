@@ -6,7 +6,7 @@ import { useHead } from '@vueuse/head'
 useHead({
     title: 'María Grandury - About Me, Bio & Collaborations',
     meta: [
-        { name: 'description', content: 'Hello! I\'m María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here are my bio and the organizations I collaborate with :)' },
+        { name: 'description', content: 'Hello! I\'m María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here are my bio and the organizations I collaborate with' },
         { property: 'og:title', content: 'María Grandury - About Me, Bio & Collaborations' },
         { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
         { name: 'twitter:card', content: 'summary' },
@@ -37,21 +37,18 @@ useHead({
                     where I contribute to the core of
                     <a href="https://aidkit.ai" target="_blank"
                         class="text-accent-500 dark:text-accent-300 hover:underline">aidkit,</a>
-                    an ML Quality Ops platform that assesses the vulnerabilities of CV & NLP models
-                    thanks to adversarial attacks and explainability techniques.
+                    an ML Quality Ops platform that uses adversarial attacks and explainability techniques to assess the trustworthiness of CV & NLP models.
                 </h2>
                 <h2 class="py-2">
                     I believe that NLP research is too focused on English and neglects the particular
                     difficulties of other languages so I founded
                     <a href="https://somosnlp.org" target="_blank"
                         class="text-accent-500 dark:text-accent-300 hover:underline">Somos NLP,</a>
-                    a community of Spanish-speaking NLP professionals democratizing and advancing
-                    the state-of-the-art of NLP in Spanish.
+                    the largest community of Spanish-speaking NLP professionals that aims to democratize and advance the state-of-the-art of NLP in Spanish. I'm a Hugging Face Fellow and contribute to several international open-source projects.
                 </h2>
                 <h2 class="pb-12">
-                    I'm also very aware of the gender gap in my field and I collaborate with several organizations &
-                    initiatives to increase female representation and promote inclusive and responsible AI (see logos
-                    below).
+                    I'm also very aware of the gender gap in my field and I collaborate with various organizations &
+                    initiatives to increase female representation and promote inclusive and responsible AI.
                 </h2>
             </CardGeneric>
         </div>
