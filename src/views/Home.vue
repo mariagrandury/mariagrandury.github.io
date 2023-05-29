@@ -27,13 +27,13 @@ const index = computed(() => counter.value % greetings.value.length)
             <li>🎯 #NLP, #XAI, #TrustedAI</li>
             <li>🎓 Mathematician & Physicist</li>
             <li>
-              👩🏻‍💻 AI Robustness
-              <a href="//www.neurocat.ai/" target="_blank" class="text-accent-500 hover:underline">@neurocat.ai</a>
-            </li>
-            <li>
               🚀 Founder
               <a href="https://somosnlp.org" target="_blank"
                 class="text-accent-500 hover:underline">@SomosNLP</a>
+            </li>
+            <li>
+              👩🏻‍💻 AI Robustness
+              <a href="//www.neurocat.ai/" target="_blank" class="text-accent-500 hover:underline">@neurocat.ai</a>
             </li>
             <li>
               🤗 Fellow
@@ -55,72 +55,29 @@ const index = computed(() => counter.value % greetings.value.length)
 
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
+
       <div class="px-8">
-        <div class="text-3xl mb-4">My latest projects are</div>
+        <div class="text-3xl mb-4">I was invited to speak at</div>
         <div class="grid py-6 gap-x-6 gap-y-3">
-          <CardProject title="Hackathon of NLP in Spanish" :tags="['NLP', 'Somos NLP']"
-            link="https://somosnlp.org/hackathon" color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
-            <i-fluent-rocket-24-regular />
-            <template v-slot:description>
-              <div class="text-sm text-gray-700 dark:text-white">
-                With more than 500 participants from 39 countries, it is the largest open-source hackathon of NLP in
-                Spanish.
-                The recorded events have already more than 5k visualizations!
-                Organized by Somos NLP and sponsored by Hugging Face, Platzi and Paperspace.
-              </div>
-            </template>
-          </CardProject>
-          <CardProject title="BERTIN & Perplexity Sampling" :tags="['NLP', 'Hugging Face', 'BERTIN Project']"
-            link="https://huggingface.co/bertin-project"
-            color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
-            <i-mdi-face-man />
-            <template v-slot:description>
-              <div class="text-sm text-gray-700 dark:text-white">
-                BERTIN is a series of RoBERTa-based models in Spanish trained using a novel sampling technique that we
-                call "perplexity sampling". More detailed info can be found in the
-                <a target="_blank" href="https://huggingface.co/bertin-project/bertin-roberta-base-spanish"
-                  class="text-accent-700 dark:text-accent-300 hover:underline">model card</a>
-                and the paper
-                <a target="_blank" href="https://arxiv.org/abs/2207.06814"
-                  class="text-accent-700 dark:text-accent-300 hover:underline">
-                  BERTIN: Efficient Pre-Training of a Spanish Language Model using Perplexity Sampling.
-                </a>
-              </div>
-            </template>
-          </CardProject>
-          <CardProject title="BigScience, ROOTS & BLOOM" :tags="['NLP', 'Hugging Face', 'Research']"
-            link="https://bigscience.huggingface.co/" color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
-            <i-whh-flower />
-            <template v-slot:description>
-              <div class="text-sm text-gray-700 dark:text-white">A one-year long international research workshop on
-                large multilingual models and datasets. We created, among other cool things,
-                <a target="_blank" href="https://arxiv.org/abs/2211.05100"
-                  class="text-accent-700 dark:text-accent-300 hover:underline">
-                  ROOTS: A 1.6TB Composite Multilingual Dataset
-                </a>
-                that was then used to train
-                <a target="_blank" href="https://arxiv.org/abs/2211.05100"
-                  class="text-accent-700 dark:text-accent-300 hover:underline">
-                  BLOOM: A 176B-Parameter Open-Access Multilingual Language Model.
-                </a>
-              </div>
-            </template>
-          </CardProject>
+          <CardTalkDetailed talk="IA y Español"
+                event="IE Center for the Governance of Change y Clibrain | Round Table"
+                event_link="https://www.eventbrite.com/e/entradas-inteligencia-artificial-y-espanol-637934588527"
+                image_link="images/events/230530_ia_y_espanol.jpg"
+                recording_link=""
+                :tags="['AI in Spanish', 'NLP', '🇪🇸']">
+                <i-tabler:external-link style="font-size: 1.25rem;" />
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        Acto de clausura del Hackathon organizado por IE Center for the Governance of Change y Clibrain.
+                        <br />
+                        <br />
+                        El evento incluirá una mesa redonda de expertos: Guillermo Escribano, director general del español en el mundo en el MAUEC, María Grandury, fundadora de SomosNLP.org, y Alfonso Ureña López, presidente en Sociedad Española para el Procesamiento del Lenguaje Natural (SEPLN), nos hablarán sobre la importancia del español como lengua nativa del IA, las implicaciones económicas y culturales de su uso, y la forma de paliar el actual retraso con respecto al inglés. El panel estará moderado por David Villalon, Co-Founder de Clibrain.
+                    </div>
+                </template>
+            </CardTalkDetailed>
         </div>
       </div>
-      <div class="flex flex-col flex-shrink gap-12">
-        <img class="w-screen"
-          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/projects_undraw_freelancer_long_hair.svg"
-          alt="Projects" />
-        <router-link
-          class="flex justify-center place-self-center font-medium p-6 gap-3 text-align-center items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
-          to="/projects">More Projects</router-link>
-      </div>
-    </div>
-  </Container>
 
-  <Container class="bg-white dark:bg-gray-900">
-    <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
       <div class="flex flex-col flex-shrink gap-12">
         <img
           src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/talks_undraw_conference.svg"
@@ -129,39 +86,53 @@ const index = computed(() => counter.value % greetings.value.length)
           class="flex justify-center place-self-center font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
           to="/talks">More Talks</router-link>
       </div>
-      <div class="px-8">
-        <div class="text-3xl mb-4">I was invited to speak at</div>
-        <div class="grid py-6 gap-x-6 gap-y-3">
-          <CardTalkDetailed talk="El estado del arte de la industria de PLN en nuestro país y fuera"
-            event="Primer foro del PERTE de la Nueva Economía de la Lengua"
-            event_link="https://twitter.com/PERTE_Lengua/status/1567902042353442816?s=20&t=kR1vwhuxmGig2UrbH4WvDw"
-            image_link="images/events/220928_perte_sota_nlp.jfif"
-            recording_link="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s"
-            :tags="['NLP', 'SOTA NLP', 'Round Table']">
-            <template v-slot:abstract>
-              <div class="text-sm text-gray-700 dark:text-white">
-                El PERTE de la Nueva economía de la Lengua es una oportunidad para aprovechar el potencial
-                del español y de las lenguas cooficiales como factor de crecimiento económico y
-                competitividad internacional en áreas como la inteligencia artificial, la traducción, el
-                aprendizaje, la divulgación cultural, la producción audiovisual, la investigación y la
-                ciencia.
-                <br />
-                <br />
-                <a href="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=5593s" target="_blank"
-                  class="text-accent-500 hover:underline">
-                  1. ¿Cómo se puede avanzar el estado del arte del NLP en español?
-                </a>
-                <br />
-                <a href="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s" target="_blank"
-                  class="text-accent-500 hover:underline">
-                  2. ¿Cuál crees que sería el proyecto más importante a nivel internacional que deberíamos
-                  implementar?
-                </a>
-              </div>
-            </template>
-          </CardTalkDetailed>
-        </div>
-      </div>
+
     </div>
   </Container>
+
+  <Container class="bg-white dark:bg-gray-900">
+    <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
+
+      <div class="flex flex-col flex-shrink gap-12">
+        <img class="w-screen"
+          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/projects_undraw_freelancer_long_hair.svg"
+          alt="Projects" />
+        <router-link
+          class="flex justify-center place-self-center font-medium p-6 gap-3 text-align-center items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
+          to="/projects">More Projects</router-link>
+      </div>
+
+      <div class="px-8">
+        <div class="text-3xl mb-4">My latest project is</div>
+        <div class="grid py-6 gap-x-6 gap-y-3">
+          <CardTalkDetailed talk="Hackathon Somos NLP 2023: Los LLMs hablan español" event="Somos NLP | Hackathon | Organizer, Host & Speaker"
+            event_link="https://somosnlp.org/hackathon" image_link="images/projects/230320_hackathon_llms.jpg"
+            recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaCDc0IJpLac-3csiAepV546"
+            :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
+            <i-mdi-youtube style="font-size: 1.25rem;" />
+            <template v-slot:abstract>
+                <div class="text-sm text-gray-700 dark:text-white">
+                  Second edition of the largest open-source hackathon of NLP in
+                  Spanish. This year's edition counted with +500 participants, 17 speakers, and 7 mentors.
+                  <br />
+                  Check the 
+                  <a target="_blank" href="https://twitter.com/SomosNLP_/status/1648752306978971666"
+                      class="text-accent-700 dark:text-accent-300 hover:underline">
+                      awarded projects
+                    </a>
+                    and the
+                    <a target="_blank" href="https://www.youtube.com/playlist?list=PLTA-KAy8nxaCDc0IJpLac-3csiAepV546"
+                      class="text-accent-700 dark:text-accent-300 hover:underline">
+                      recorded talks and keynotes!
+                    </a>
+                  </div>
+            </template>
+        </CardTalkDetailed>
+
+        </div>
+      </div>
+      
+    </div>
+  </Container>
+
 </template>

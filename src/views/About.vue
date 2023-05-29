@@ -61,7 +61,7 @@ useHead({
             <p class="py-3">Organizations and networks I'm part of or I collaborate with.</p>
             <div class="lg:px-24 sm:px-12">
                 <div class="grid py-8 gap-4 md:grid-cols-5 md:grid-cols[auto,1fr] sm:grid-cols-3">
-                    <CardOrg name="SomosNLP" ext="svg" url="https://somosnlp.org/">
+                    <CardOrg name="SomosNLP" ext="png" url="https://somosnlp.org/">
                     </CardOrg>
                     <CardOrg name="BERTIN" ext="webp" url="https://huggingface.co/bertin-project">
                     </CardOrg>

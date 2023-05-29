@@ -2,9 +2,9 @@
 import { useHead } from '@vueuse/head'
 
 useHead({
-  title: 'María Grandury - Open-Source NLP Research Projects',
+  title: 'María Grandury - Open-Source AI Research Projects',
   meta: [
-    { name: 'description', content: 'Hello! I\'m María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here you can find my open-source NLP projects' },
+    { name: 'description', content: 'Hello! I\'m María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here you can find my open-source AI projects' },
     { property: 'og:title', content: 'María Grandury - Open-Source NLP Research Projects' },
     { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
     { name: 'twitter:card', content: 'summary' },
@@ -35,7 +35,18 @@ useHead({
           <template v-slot:description>
             <div class="text-sm text-gray-700 dark:text-white">
               Second edition of the largest open-source hackathon of NLP in
-              Spanish. This year's edition counts with +500 participants, 17 speakers, and 7 mentors. Still in progress, we'll announce the winners shortly!
+              Spanish. This year's edition counted with +500 participants, 17 speakers, and 7 mentors.
+              <br />
+              Check the 
+              <a target="_blank" href="https://twitter.com/SomosNLP_/status/1648752306978971666"
+                  class="text-accent-700 dark:text-accent-300 hover:underline">
+                  awarded projects
+                </a>
+                and the
+                <a target="_blank" href="https://www.youtube.com/playlist?list=PLTA-KAy8nxaCDc0IJpLac-3csiAepV546"
+                  class="text-accent-700 dark:text-accent-300 hover:underline">
+                  recorded talks and keynotes!
+                </a>
             </div>
           </template>
         </CardProject>
@@ -66,7 +77,7 @@ useHead({
             </div>
           </template>
         </CardProject> 
-        <CardProject title="Polyglot Romance" :tags="['NLP', 'Research']"
+        <CardProject title="EleutherAI: Polyglot Romance" :tags="['NLP', 'Research', 'BERTIN Project']"
           link="https://www.eleuther.ai/" color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600">
           <i-fluent-speaker-24-regular />
           <template v-slot:description>
@@ -80,10 +91,16 @@ useHead({
           <i-fluent-rocket-24-regular />
           <template v-slot:description>
             <div class="text-sm text-gray-700 dark:text-white">
-              With more than 500 participants from 39 countries, it is the largest open-source hackathon of NLP in
-              Spanish.
-              The recorded events have already more than 5k visualizations!
-              Organized by Somos NLP and sponsored by Hugging Face, Platzi and Paperspace.
+              With more than 500 participants from 39 countries, it is the largest open-source hackathon of NLP in Spanish. The
+              <a target="_blank" href="https://www.youtube.com/playlist?list=PLTA-KAy8nxaAbVZ2lVcycHnJ2qEDip7hG"
+                  class="text-accent-700 dark:text-accent-300 hover:underline">
+                  recorded talks and workshops
+              </a>
+              have already more than 5k visualizations! Organized by Somos NLP and sponsored by Hugging Face, Platzi and Paperspace. Check the 
+              <a target="_blank" href="https://somosnlp.org/blog/hackathon-2022"
+                  class="text-accent-700 dark:text-accent-300 hover:underline">
+                  awarded projects!
+              </a>
             </div>
           </template>
         </CardProject>
@@ -91,34 +108,37 @@ useHead({
           link="https://bigscience.huggingface.co/" color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600">
           <i-whh-flower />
           <template v-slot:description>
-            <div class="text-sm text-gray-700 dark:text-white">A one-year long international research workshop on
-              large multilingual models and datasets. I was part of the data tooling working group. Here is the model
-              paper
-              <a target="_blank" href="https://arxiv.org/abs/2211.05100"
-                class="text-accent-700 dark:text-accent-300 hover:underline">
-                BLOOM: A 176B-Parameter Open-Access Multilingual Language Model.
-              </a>
-            </div>
-          </template>
+              <div class="text-sm text-gray-700 dark:text-white">A one-year long international research workshop on
+                large multilingual models and datasets. We created, among other cool things,
+                <a target="_blank" href="https://arxiv.org/abs/2211.05100"
+                  class="text-accent-700 dark:text-accent-300 hover:underline">
+                  ROOTS: A 1.6TB Composite Multilingual Dataset
+                </a>
+                that was then used to train
+                <a target="_blank" href="https://arxiv.org/abs/2211.05100"
+                  class="text-accent-700 dark:text-accent-300 hover:underline">
+                  BLOOM: A 176B-Parameter Open-Access Multilingual Language Model.
+                </a>
+              </div>
+            </template>
         </CardProject>
-        <CardProject title="BERTIN" :tags="['NLP', 'Hugging Face', 'Research']"
-          link="https://huggingface.co/bertin-project"
-          color="text-green-900 bg-green-50 dark:text-white dark:bg-green-600">
-          <i-fluent-document-settings-16-regular />
-          <template v-slot:description>
-            <div class="text-sm text-gray-700 dark:text-white">
-              BERTIN is a series of RoBERTa-based models in Spanish trained using a novel sampling technique that we
-              call "perplexity sampling". More detailed info can be found in the
-              <a target="_blank" href="https://huggingface.co/bertin-project/bertin-roberta-base-spanish"
-                class="text-accent-700 dark:text-accent-300 hover:underline">model card</a>
-              and the paper
-              <a target="_blank" href="https://arxiv.org/abs/2207.06814"
-                class="text-accent-700 dark:text-accent-300 hover:underline">
-                BERTIN: Efficient Pre-Training of a Spanish Language Model using Perplexity Sampling.
-              </a>
-            </div>
-          </template>
-        </CardProject>
+        <CardProject title="BERTIN Project: Perplexity Sampling" :tags="['NLP', 'Hugging Face', 'Research']"
+            link="https://huggingface.co/bertin-project"
+            color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">
+            <i-mdi-face-man />
+            <template v-slot:description>
+              <div class="text-sm text-gray-700 dark:text-white">
+                BERTIN is a series of RoBERTa-based models in Spanish trained using a novel sampling technique that we call "perplexity sampling". More detailed info can be found in the
+                <a target="_blank" href="https://huggingface.co/bertin-project/bertin-roberta-base-spanish"
+                  class="text-accent-700 dark:text-accent-300 hover:underline">model card</a>
+                and the paper
+                <a target="_blank" href="https://arxiv.org/abs/2207.06814"
+                  class="text-accent-700 dark:text-accent-300 hover:underline">
+                  BERTIN: Efficient Pre-Training of a Spanish Language Model using Perplexity Sampling.
+                </a>
+              </div>
+            </template>
+          </CardProject>
         <CardProject title="Course: NLP de 0 a 100 con Hugging Face" :tags="['NLP', 'Somos NLP']"
           link="https://somosnlp.org/nlp-de-cero-a-cien"
           color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500">

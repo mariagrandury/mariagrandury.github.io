@@ -27,24 +27,25 @@ useHead({
             <h2 class="py-6">I'm passionate about what I do and really enjoy divulgating!</h2>
         </div>
         <div class="lg:px-24 sm:px-12">
-            <!--
-            <h2 class="py-6 text-2xl">Upcoming talk - Register now!</h2>
-            <CardMediaSummary talk="Bias detection and mitigation in Language Models"
-                event="Women Who Code CONNECT Empower 2023 | Workshop"
-                event_link="https://hopin.com/events/connect-2023/registration"
-                image_link="images/logos/WomenWhoCodeCONNECT.png"
-                recording_link="https://hopin.com/events/connect-2023/registration"
-                :tags="['Bias in NLP', 'Open-Source', '🇪🇸']">
+            
+            <h2 class="py-6 text-2xl">Upcoming talk - Join us!</h2>
+            <CardMediaSummary talk="IA y Español"
+                event="IE Center for the Governance of Change y Clibrain | Round Table"
+                event_link="https://www.eventbrite.com/e/entradas-inteligencia-artificial-y-espanol-637934588527"
+                image_link="images/events/230530_ia_y_espanol.jpg"
+                recording_link=""
+                :tags="['AI in Spanish', 'NLP', '🇪🇸']">
                 <i-tabler:external-link style="font-size: 1.25rem;" />
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
-                        WomenWhoCodeCONNECT
+                        Acto de clausura del Hackathon organizado por IE Center for the Governance of Change y Clibrain.
+                        El evento incluirá una mesa redonda de expertos: Guillermo Escribano, director general del español en el mundo en el MAUEC, María Grandury, fundadora de SomosNLP.org, y Alfonso Ureña López, presidente en Sociedad Española para el Procesamiento del Lenguaje Natural (SEPLN), nos hablarán sobre la importancia del español como lengua nativa del IA, las implicaciones económicas y culturales de su uso, y la forma de paliar el actual retraso con respecto al inglés. El panel estará moderado por David Villalon, Co-Founder de Clibrain.
                     </div>
                 </template>
             </CardMediaSummary>
             <br />
             <br />
-            -->
+            
             <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
                 <CardMediaSummary talk="Hackathon Somos NLP 2023: Los LLMs hablan español" event="Somos NLP | Hackathon | Organizer, Host & Speaker"
                     event_link="https://somosnlp.org/hackathon" image_link="images/projects/230320_hackathon_llms.jpg"
@@ -132,8 +133,8 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
-                <CardMediaSummary talk="El estado del arte del PLN en España y fuera"
-                    event="PERTE de la Nueva Economía de la Lengua | Round Table"
+                <CardMediaSummary talk="El estado del arte de la industria de PLN en nuestro país y fuera" 
+                    event="Primer foro del PERTE de la Nueva Economía de la Lengua | Round Table"
                     event_link="https://twitter.com/PERTE_Lengua/status/1567902042353442816?s=20&t=kR1vwhuxmGig2UrbH4WvDw"
                     image_link="images/events/220928_perte_sota_nlp.jfif"
                     recording_link="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s"
@@ -170,6 +171,8 @@ useHead({
                             <br />
                             <a href="https://somosnlp.org/blog/hackathon-2022" target="_blank"
                                 class="text-accent-500 hover:underline">¡Organizamos el mayor hackathon open-source de PLN en español!</a>
+                            
+                            With more than 500 participants from 39 countries, it is the largest open-source hackathon of NLP in Spanish. The recorded events have already more than 5k visualizations! Organized by Somos NLP and sponsored by Hugging Face, Platzi and Paperspace.
                         </div>
                     </template>
                 </CardMediaSummary>
