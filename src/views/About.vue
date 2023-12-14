@@ -30,25 +30,38 @@ useHead({
         <div class="lg:px-24 sm:px-12">
             <CardGeneric class="px-12 my-12">
                 <h2 class="pt-12">
-                    I'm half Spanish half French and I live in Berlin.
-                    I hold two degrees in Mathematics and Physics and I'm currently working at
-                    <a href="https://neurocat.ai" target="_blank"
-                        class="text-accent-500 dark:text-accent-300 hover:underline">neurocat</a>
-                    where I contribute to the core of
-                    <a href="https://aidkit.ai" target="_blank"
-                        class="text-accent-500 dark:text-accent-300 hover:underline">aidkit,</a>
-                    an ML Quality Ops platform that uses adversarial attacks and explainability techniques to assess the trustworthiness of CV & NLP models.
+                    I'm half Spanish half French, live in Berlin, and hold two degrees in Mathematics & Physics.
+                    I'm a Machine Learning Research Engineer focused on responsible, inclusive, open-source AI, especially in Spanish.
                 </h2>
                 <h2 class="py-2">
-                    I believe that NLP research is too focused on English and neglects the particular
+                    I believe that NLP research is too focused on English and 
+                    neglects the particular
                     difficulties of other languages so I founded
                     <a href="https://somosnlp.org" target="_blank"
                         class="text-accent-500 dark:text-accent-300 hover:underline">Somos NLP,</a>
-                    the largest community of Spanish-speaking NLP professionals that aims to democratize and advance the state-of-the-art of NLP in Spanish. I'm a Hugging Face Fellow and contribute to several international open-source projects.
+                    the largest community of Spanish-speaking NLP professionals 
+                    that aims to democratize and advance the state-of-the-art 
+                    of NLP in Spanish.
+                </h2>
+                <h2 class="py-2">
+                    I'm a 
+                    <a href="https://huggingface.co/mariagrandury" target="_blank"
+                        class="text-accent-500 dark:text-accent-300 hover:underline">Hugging Face Fellow</a>
+                    and have contributed
+                    to several international NLP research projects.
+                    I'm also very aware of the gender gap in my field and I 
+                    collaborate with various organizations &
+                    initiatives to increase female representation and promote 
+                    inclusive and responsible AI.
                 </h2>
                 <h2 class="pb-12">
-                    I'm also very aware of the gender gap in my field and I collaborate with various organizations &
-                    initiatives to increase female representation and promote inclusive and responsible AI.
+                    Previously, I worked at
+                    <a href="https://clibrain.com" target="_blank"
+                        class="text-accent-500 dark:text-accent-300 hover:underline">Clibrain</a>
+                    as part of the Labs team, designing how to evaluate whether AI models truly understand and respect the rich linguistic and cultural nuances of Spanish. I also worked at 
+                    <a href="https://neurocat.ai" target="_blank"
+                        class="text-accent-500 dark:text-accent-300 hover:underline">neurocat,</a>
+                    a Berlin-based startup, where I developed explainability methods (XAI) and adversarial attacks to assess the security of ML models.
                 </h2>
             </CardGeneric>
         </div>
@@ -71,7 +84,7 @@ useHead({
                     </CardOrg>
                     <CardOrg name="EleutherAI" ext="png" url="https://www.eleuther.ai/">
                     </CardOrg>
-                    <CardOrg name="HF_Fellowship" ext="png" url="https://somosnlp.org/">
+                    <CardOrg name="HF_Fellowship" ext="png" url="https://huggingface.co/mariagrandury/">
                     </CardOrg>
                     <CardOrg name="NovaTalent" ext="svg" dark="yes" url="https://www.novatalent.com/">
                     </CardOrg>

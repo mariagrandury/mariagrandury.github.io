@@ -24,7 +24,7 @@ const index = computed(() => counter.value % greetings.value.length)
         <div>
           <ul class="flex flex-col gap-1">
             <li>💡 Machine Learning Research Engineer</li>
-            <li>🎯 #NLP, #XAI, #TrustedAI</li>
+            <li>🎯 #NLP, #ResponsibleAI, #AIinSpanish</li>
             <li>🎓 Mathematician & Physicist</li>
             <li>
               🚀 Founder
@@ -32,21 +32,11 @@ const index = computed(() => counter.value % greetings.value.length)
                 class="text-accent-500 hover:underline">@SomosNLP</a>
             </li>
             <li>
-              👩🏻‍💻 AI Robustness
-              <a href="//www.neurocat.ai/" target="_blank" class="text-accent-500 hover:underline">@neurocat.ai</a>
-            </li>
-            <li>
               🤗 Fellow
               <a href="https://twitter.com/huggingface" target="_blank"
                 class="text-accent-500 hover:underline">@HuggingFace
               </a>
             </li>
-            <!-- <li>
-              🌸 Collab
-              <a href="https://twitter.com/BigScienceW" target="_blank"
-                class="text-accent-500 hover:underline">@BigScience
-              </a>
-            </li> -->
           </ul>
         </div>
       </div>
@@ -57,7 +47,7 @@ const index = computed(() => counter.value % greetings.value.length)
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
 
       <div class="px-8">
-        <div class="text-3xl mb-4">I was invited to speak at</div>
+        <!-- <div class="text-3xl mb-4">I was invited to speak at</div> -->
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardTalkDetailed talk="IA y Español"
                 event="IE Center for the Governance of Change y Clibrain | Round Table"
@@ -103,7 +93,7 @@ const index = computed(() => counter.value % greetings.value.length)
       </div>
 
       <div class="px-8">
-        <div class="text-3xl mb-4">My latest project is</div>
+        <!-- <div class="text-3xl mb-4">My latest project is</div> -->
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardTalkDetailed talk="Hackathon Somos NLP 2023: Los LLMs hablan español" event="Somos NLP | Hackathon | Organizer, Host & Speaker"
             event_link="https://somosnlp.org/hackathon" image_link="images/projects/230320_hackathon_llms.jpg"

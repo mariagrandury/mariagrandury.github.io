@@ -25,7 +25,9 @@ useHead({
         <i-fluent-design-ideas-24-regular style="font-size: 2rem;" />
       </h1>
       <h2 class="py-6">I'm a Machine Learning Research Engineer focused on NLP, XAI and Adversarial Robustness.</h2>
+      <p class="italic">For up-to-date information follow my <a href="https://www.huggingface.co/mariagrandury/" target="_blank" class="text-accent-500 hover:underline">Hugging Face profile</a>!</p>
     </div>
+
 
     <div class="lg:px-24 sm:px-12">
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">

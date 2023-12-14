@@ -4,7 +4,7 @@ import { useHead } from '@vueuse/head'
 useHead({
   title: 'María Grandury - Contact',
   meta: [
-    { name: 'description', content: 'Hello! I\'m an ML Research Engineer focused on NLP, XAI & Adversarial Robustness | Founder @SomosNLP.org | Here you can find my contact information' },
+    { name: 'description', content: 'Hello! I\'m an ML Research Engineer focused on NLP, Responsible AI & AI in Spanish | Founder @SomosNLP.org | Here you can find my contact information' },
     { property: 'og:title', content: 'María Grandury - Contact' },
     { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
     { name: 'twitter:card', content: 'summary' },

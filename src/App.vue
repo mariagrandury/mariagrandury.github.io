@@ -5,7 +5,7 @@ import Container from './components/Container.vue';
 useHead({
   title: 'María Grandury - ML Research Engineer #NLP',
   meta: [
-    { name: 'description', content: 'Hello! I\'m an ML Research Engineer focused on NLP, XAI & Adversarial Robustness | Founder @ SomosNLP.org | Here I share my projects, talks and interests :)' },
+    { name: 'description', content: 'Hello! I\'m an ML Research Engineer focused on NLP, Responsible AI & AI in Spanish | Founder @ SomosNLP.org | Here I share my projects, talks and interests :)' },
     { property: 'og:title', content: 'María Grandury - ML Research Engineer #NLP' },
     { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
     { name: 'twitter:card', content: 'summary' },

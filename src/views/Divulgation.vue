@@ -26,8 +26,12 @@ useHead({
             </h1>
             <h2 class="py-6">I'm passionate about what I do and really enjoy divulgating!</h2>
         </div>
+        <div>
+            <p class="italic">For up-to-date information connect on <a href="https://www.linkedin.com/in/mariagrandury/" target="_blank" class="text-accent-500 hover:underline">LinkedIn</a>!</p>
+        </div>
         <div class="lg:px-24 sm:px-12">
             
+            <!-- 
             <h2 class="py-6 text-2xl">Upcoming talk - Join us!</h2>
             <CardMediaSummary talk="IA y Español"
                 event="IE Center for the Governance of Change y Clibrain | Round Table"
@@ -43,10 +47,27 @@ useHead({
                     </div>
                 </template>
             </CardMediaSummary>
-            <br />
-            <br />
+            -->
             
+            <br />
+            <br />
+           
             <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
+                <CardMediaSummary talk="IA y Español"
+                event="IE Center for the Governance of Change y Clibrain | Round Table"
+                event_link="https://www.eventbrite.com/e/entradas-inteligencia-artificial-y-espanol-637934588527"
+                image_link="images/events/230530_ia_y_espanol.jpg"
+                recording_link=""
+                :tags="['AI in Spanish', 'NLP', '🇪🇸']">
+                <i-tabler:external-link style="font-size: 1.25rem;" />
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        Acto de clausura del Hackathon organizado por IE Center for the Governance of Change y Clibrain.
+                        El evento incluirá una mesa redonda de expertos: Guillermo Escribano, director general del español en el mundo en el MAUEC, María Grandury, fundadora de SomosNLP.org, y Alfonso Ureña López, presidente en Sociedad Española para el Procesamiento del Lenguaje Natural (SEPLN), nos hablarán sobre la importancia del español como lengua nativa del IA, las implicaciones económicas y culturales de su uso, y la forma de paliar el actual retraso con respecto al inglés. El panel estará moderado por David Villalon, Co-Founder de Clibrain.
+                    </div>
+                </template>
+                </CardMediaSummary>
+
                 <CardMediaSummary talk="Hackathon Somos NLP 2023: Los LLMs hablan español" event="Somos NLP | Hackathon | Organizer, Host & Speaker"
                     event_link="https://somosnlp.org/hackathon" image_link="images/projects/230320_hackathon_llms.jpg"
                     recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaCDc0IJpLac-3csiAepV546"
