@@ -51,7 +51,77 @@ useHead({
             
             <br />
             <br />
-           
+
+            <CardMediaSummary talk="AI impact in Media & Culture"
+                event="EFE | Round Table"
+                event_link=""
+                image_link=""
+                recording_link="https://www.youtube.com/watch?v=3ezogDsebUg"
+                :tags="['Responsible AI', 'AI Risks', '🇪🇸']">
+                <i-tabler:external-link style="font-size: 1.25rem;" />
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        EFE
+                    </div>
+                </template>
+            </CardMediaSummary>
+
+            <CardMediaSummary talk="Women Entrepreneurs"
+                event="UU Prize | Round Table"
+                event_link=""
+                image_link=""
+                recording_link="https://www.youtube.com/watch?v=3ezogDsebUg"
+                :tags="['Responsible AI', 'AI Risks', '🇪🇸']">
+                <i-tabler:external-link style="font-size: 1.25rem;" />
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        Parlamento Europeo Madrid y bruselas
+                    </div>
+                </template>
+            </CardMediaSummary>
+
+            <CardMediaSummary talk="Women Entrepreneurs"
+                event="UU Prize | Round Table"
+                event_link=""
+                image_link=""
+                recording_link="https://www.youtube.com/watch?v=3ezogDsebUg"
+                :tags="['Responsible AI', 'AI Risks', '🇪🇸']">
+                <i-tabler:external-link style="font-size: 1.25rem;" />
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        DEVFEST
+                    </div>
+                </template>
+            </CardMediaSummary>
+
+            <CardMediaSummary talk="Responsibility in Generative AI"
+                event="Responsibility in AI & Robotics, IE AI & Robotics Club + OdiseIA | Keynote"
+                event_link="https://www.linkedin.com/posts/mariagrandury_trustworthyai-responsibleai-aiinspanish-activity-7128788336776744960-bgY0"
+                image_link=""
+                recording_link="https://www.linkedin.com/posts/mariagrandury_trustworthyai-responsibleai-aiinspanish-activity-7128788336776744960-bgY0"
+                :tags="['Responsible AI', '🇬🇧']">
+                <i-tabler:external-link style="font-size: 1.25rem;" />
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        AI & Robotics IE Club
+                    </div>
+                </template>
+            </CardMediaSummary>
+
+            <CardMediaSummary talk="I've trained my LM, now what?"
+                event="Summer course at the Universidad Internacional de Andalucía | Workshop"
+                event_link=""
+                image_link=""
+                recording_link=""
+                :tags="['Bias', 'Explainability', 'Open-Source', '🇪🇸']">
+                <i-tabler:external-link style="font-size: 1.25rem;" />
+                <template v-slot:abstract>
+                    <div class="text-sm text-gray-700 dark:text-white">
+                        Universidad Internacional de Andalucía
+                    </div>
+                </template>
+            </CardMediaSummary>
+
             <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
                 <CardMediaSummary talk="IA y Español"
                 event="IE Center for the Governance of Change y Clibrain | Round Table"
@@ -111,7 +181,7 @@ useHead({
                         WomenWhoCodeCONNECT
                     </div>
                 </template>
-            </CardMediaSummary>
+                </CardMediaSummary>
                 <!-- <CardMediaSummary talk="Interview With María Grandury on Artificial Intelligence and NLP" event="Pangeanic Blog | Interview"
                     event_link="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp" image_link="images/events/221221_podcast_pangeanic.png"
                     recording_link="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp"
