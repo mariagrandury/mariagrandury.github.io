@@ -48,7 +48,7 @@ const rotationStyle = computed(() => {
                 <div>
                     <h1 class="font-medium mb-1 text-2xl tracking-tight">María Grandury</h1>
                     <h2 class="font-light text-lg tracking-tight">Machine Learning Research Engineer</h2>
-                    <p class="font-light text-sm tracking-tight">NLP, XAI and AI Robustness</p>
+                    <p class="font-light text-sm tracking-tight">NLP, Responsible AI and AI in Spanish</p>
                 </div>
                 <!-- <Logo /> -->
             </div>
@@ -71,10 +71,12 @@ const rotationStyle = computed(() => {
                     <i-fluent-location-24-regular />
                     <div>Berlin, Germany</div>
                 </a>
+                <!--
                 <a href="https://www.neurocat.ai/" target="_blank" class="contents">
                     <i-fluent-building-24-regular />
                     <div>Research Engineer @neurocat.ai</div>
-                </a>
+                </a> 
+                -->
                 <a href="https://somosnlp.org" target="_blank" class="contents">
                     <i-fluent-rocket-24-regular />
                     <div>Founder @SomosNLP.org</div>

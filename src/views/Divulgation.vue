@@ -43,7 +43,7 @@ useHead({
                 <template v-slot:abstract>
                     <div class="text-sm text-gray-700 dark:text-white">
                         Acto de clausura del Hackathon organizado por IE Center for the Governance of Change y Clibrain.
-                        El evento incluirá una mesa redonda de expertos: Guillermo Escribano, director general del español en el mundo en el MAUEC, María Grandury, fundadora de SomosNLP.org, y Alfonso Ureña López, presidente en Sociedad Española para el Procesamiento del Lenguaje Natural (SEPLN), nos hablarán sobre la importancia del español como lengua nativa del IA, las implicaciones económicas y culturales de su uso, y la forma de paliar el actual retraso con respecto al inglés. El panel estará moderado por David Villalon, Co-Founder de Clibrain.
+                        El evento incluirá una mesa redonda de expertos: Guillermo Escribano, director general del español en el mundo en el MAUEC, María Grandury, fundadora de SomosNLP.org, y Alfonso Ureña López, presidente en Sociedad Española para el Procesamiento del Lenguaje Natural (SEPLN), nos hablarán sobre la importancia del español como lengua nativa del IA, las implicaciones económicas y culturales de su uso, y la forma de paliar el actual retraso con respecto al inglés. El panel estará moderado por David Villalón, Co-Founder de Clibrain.
                     </div>
                 </template>
             </CardMediaSummary>
@@ -52,93 +52,89 @@ useHead({
             <br />
             <br />
 
-            <CardMediaSummary talk="AI impact in Media & Culture"
-                event="EFE | Round Table"
-                event_link=""
-                image_link=""
-                recording_link="https://www.youtube.com/watch?v=3ezogDsebUg"
-                :tags="['Responsible AI', 'AI Risks', '🇪🇸']">
-                <i-tabler:external-link style="font-size: 1.25rem;" />
-                <template v-slot:abstract>
-                    <div class="text-sm text-gray-700 dark:text-white">
-                        EFE
-                    </div>
-                </template>
-            </CardMediaSummary>
-
-            <CardMediaSummary talk="Women Entrepreneurs"
-                event="UU Prize | Round Table"
-                event_link=""
-                image_link=""
-                recording_link="https://www.youtube.com/watch?v=3ezogDsebUg"
-                :tags="['Responsible AI', 'AI Risks', '🇪🇸']">
-                <i-tabler:external-link style="font-size: 1.25rem;" />
-                <template v-slot:abstract>
-                    <div class="text-sm text-gray-700 dark:text-white">
-                        Parlamento Europeo Madrid y bruselas
-                    </div>
-                </template>
-            </CardMediaSummary>
-
-            <CardMediaSummary talk="Women Entrepreneurs"
-                event="UU Prize | Round Table"
-                event_link=""
-                image_link=""
-                recording_link="https://www.youtube.com/watch?v=3ezogDsebUg"
-                :tags="['Responsible AI', 'AI Risks', '🇪🇸']">
-                <i-tabler:external-link style="font-size: 1.25rem;" />
-                <template v-slot:abstract>
-                    <div class="text-sm text-gray-700 dark:text-white">
-                        DEVFEST
-                    </div>
-                </template>
-            </CardMediaSummary>
-
-            <CardMediaSummary talk="Responsibility in Generative AI"
-                event="Responsibility in AI & Robotics, IE AI & Robotics Club + OdiseIA | Keynote"
-                event_link="https://www.linkedin.com/posts/mariagrandury_trustworthyai-responsibleai-aiinspanish-activity-7128788336776744960-bgY0"
-                image_link=""
-                recording_link="https://www.linkedin.com/posts/mariagrandury_trustworthyai-responsibleai-aiinspanish-activity-7128788336776744960-bgY0"
-                :tags="['Responsible AI', '🇬🇧']">
-                <i-tabler:external-link style="font-size: 1.25rem;" />
-                <template v-slot:abstract>
-                    <div class="text-sm text-gray-700 dark:text-white">
-                        AI & Robotics IE Club
-                    </div>
-                </template>
-            </CardMediaSummary>
-
-            <CardMediaSummary talk="I've trained my LM, now what?"
-                event="Summer course at the Universidad Internacional de Andalucía | Workshop"
-                event_link=""
-                image_link=""
-                recording_link=""
-                :tags="['Bias', 'Explainability', 'Open-Source', '🇪🇸']">
-                <i-tabler:external-link style="font-size: 1.25rem;" />
-                <template v-slot:abstract>
-                    <div class="text-sm text-gray-700 dark:text-white">
-                        Universidad Internacional de Andalucía
-                    </div>
-                </template>
-            </CardMediaSummary>
-
             <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
-                <CardMediaSummary talk="IA y Español"
-                event="IE Center for the Governance of Change y Clibrain | Round Table"
-                event_link="https://www.eventbrite.com/e/entradas-inteligencia-artificial-y-espanol-637934588527"
-                image_link="images/events/230530_ia_y_espanol.jpg"
-                recording_link=""
-                :tags="['AI in Spanish', 'NLP', '🇪🇸']">
-                <i-tabler:external-link style="font-size: 1.25rem;" />
-                <template v-slot:abstract>
-                    <div class="text-sm text-gray-700 dark:text-white">
-                        Acto de clausura del Hackathon organizado por IE Center for the Governance of Change y Clibrain.
-                        El evento incluirá una mesa redonda de expertos: Guillermo Escribano, director general del español en el mundo en el MAUEC, María Grandury, fundadora de SomosNLP.org, y Alfonso Ureña López, presidente en Sociedad Española para el Procesamiento del Lenguaje Natural (SEPLN), nos hablarán sobre la importancia del español como lengua nativa del IA, las implicaciones económicas y culturales de su uso, y la forma de paliar el actual retraso con respecto al inglés. El panel estará moderado por David Villalon, Co-Founder de Clibrain.
-                    </div>
-                </template>
+                <CardMediaSummary talk="The impact of Generative AI in the European creative industry"
+                    event="EFE, Panodyssey, European Commission | Round Table"
+                    event_link="https://efecomunica.efe.com/factor-humano-ia-evitar-riesgos/"
+                    image_link="images/events/231114_efe_camera.png"
+                    recording_link="https://www.youtube.com/watch?v=GdwXx3wmWBw"
+                    :tags="['Responsible AI', 'AI Risks', '🇪🇸']">
+                    <i-mdi-youtube style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            EFE
+                        </div>
+                    </template>
                 </CardMediaSummary>
-
-                <CardMediaSummary talk="Hackathon Somos NLP 2023: Los LLMs hablan español" event="Somos NLP | Hackathon | Organizer, Host & Speaker"
+                <!--
+                <CardMediaSummary talk="Women Entrepreneurs"
+                    event="UU Prize | Round Table"
+                    event_link=""
+                    image_link=""
+                    recording_link="https://www.youtube.com/watch?v=3ezogDsebUg"
+                    :tags="['Responsible AI', 'AI Risks', '🇪🇸']">
+                    <i-tabler:external-link style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            Parlamento Europeo Madrid y bruselas
+                        </div>
+                    </template>
+                </CardMediaSummary>
+                -->
+                <CardMediaSummary talk="Innovación y responsabilidad en LMs: Cómo cumplir con el EU AI Act, mitigar sesgos y reducir el impacto climático"
+                    event="Google DevFest Cloud Madrid | Workshop"
+                    event_link=""
+                    image_link="images/events/231125_devfest_cartel.png"
+                    recording_link=""
+                    :tags="['EU AI Act', 'Explainability', 'Bias', '🇪🇸']">
+                    <i-tabler:external-link style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            Google DevFest Cloud Madrid
+                        </div>
+                    </template>
+                </CardMediaSummary>
+                <CardMediaSummary talk="Responsible AI as a key driver for the future of robotics & Humanities"
+                    event="IE University Robotics & AI Club, OdiseIA | Keynote"
+                    event_link="https://www.linkedin.com/posts/mariagrandury_trustworthyai-responsibleai-aiinspanish-activity-7128788336776744960-bgY0"
+                    image_link="images/events/231024_bias_everywhere.jpg"
+                    recording_link="https://www.linkedin.com/posts/mariagrandury_trustworthyai-responsibleai-aiinspanish-activity-7128788336776744960-bgY0"
+                    :tags="['Responsible AI', '🇬🇧']">
+                    <i-tabler:external-link style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            Organized by IE University Robotics & AI Club and OdiseIA, in collaboration with IE Center for the Governance of Change, IE Arts & Humanities.
+                        </div>
+                    </template>
+                </CardMediaSummary>
+                <CardMediaSummary talk="I've trained my LM, now what?"
+                    event="Summer course at the Universidad Internacional de Andalucía | Workshop"
+                    event_link=""
+                    image_link="images/events/230822_curso_unia.jpeg"
+                    recording_link=""
+                    :tags="['Bias', 'Explainability', 'Open-Source', '🇪🇸']">
+                    <i-tabler:external-link style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            Universidad Internacional de Andalucía
+                        </div>
+                    </template>
+                </CardMediaSummary>
+                <CardMediaSummary talk="IA y Español"
+                    event="IE Center for the Governance of Change y Clibrain | Round Table"
+                    event_link="https://www.eventbrite.com/e/entradas-inteligencia-artificial-y-espanol-637934588527"
+                    image_link="images/events/230529_mesa_redonda.png"
+                    recording_link="https://www.youtube.com/live/epPXlt520Eo?si=5hm5ARxnl_QD1Dqu&t=30667"
+                    :tags="['AI in Spanish', 'NLP', '🇪🇸']">
+                    <i-mdi-youtube style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            Acto de clausura del Hackathon organizado por IE Center for the Governance of Change y Clibrain.
+                            El evento incluirá una mesa redonda de expertos: Guillermo Escribano, director general del español en el mundo en el MAUEC, María Grandury, fundadora de SomosNLP.org, y Alfonso Ureña López, presidente en Sociedad Española para el Procesamiento del Lenguaje Natural (SEPLN), nos hablarán sobre la importancia del español como lengua nativa del IA, las implicaciones económicas y culturales de su uso, y la forma de paliar el actual retraso con respecto al inglés. El panel estará moderado por David Villalon, Co-Founder de Clibrain.
+                        </div>
+                    </template>
+                </CardMediaSummary>
+                <CardMediaSummary talk="Hackathon Somos NLP 2023: Los LLMs hablan español" event="Somos NLP | Organizer, Host & Speaker"
                     event_link="https://somosnlp.org/hackathon" image_link="images/projects/230320_hackathon_llms.jpg"
                     recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaCDc0IJpLac-3csiAepV546"
                     :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
@@ -154,35 +150,33 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
-                <!--
                 <CardMediaSummary talk="Customer service in times of ChatGPT"
-                event="BBVA Spark | Blog Article (Mention)"
-                event_link="https://www.bbvaspark.com/contenido/en/news/customer-service-in-times-of-chatgpt-these-startups-boost-your-business-with-conversational-ai/"
-                image_link="images/events/230314_bbva_post.jpg"
-                recording_link=""
-                :tags="['ChatGPT', '🇬🇧']">
-                <i-tabler:external-link style="font-size: 1.25rem;" />
-                <template v-slot:abstract>
-                    <div class="text-sm text-gray-700 dark:text-white">
-                        Featured in a BBVA Spart Blog article
-                    </div>
-                </template>
+                    event="BBVA Spark | Blog Article (Mention)"
+                    event_link="https://www.bbvaspark.com/contenido/en/news/customer-service-in-times-of-chatgpt-these-startups-boost-your-business-with-conversational-ai/"
+                    image_link="images/events/230314_bbva_post.jpg"
+                    recording_link=""
+                    :tags="['ChatGPT', '🇬🇧']">
+                    <i-tabler:external-link style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            Featured in a BBVA Spart Blog article
+                        </div>
+                    </template>
                 </CardMediaSummary>
-                -->
                 <CardMediaSummary talk="Bias detection and mitigation in Language Models"
-                event="Women Who Code CONNECT Empower 2023 | Workshop"
-                event_link="https://hopin.com/events/connect-2023/registration"
-                image_link="images/events/230302_wwc_connect.png"
-                recording_link=""
-                :tags="['Bias in NLP', 'Open-Source', '🇪🇸']">
-                <i-tabler:external-link style="font-size: 1.25rem;" />
-                <template v-slot:abstract>
-                    <div class="text-sm text-gray-700 dark:text-white">
-                        WomenWhoCodeCONNECT
-                    </div>
-                </template>
+                    event="Women Who Code CONNECT Empower 2023 | Workshop"
+                    event_link="https://hopin.com/events/connect-2023/registration"
+                    image_link="images/events/230302_wwc_connect.png"
+                    recording_link=""
+                    :tags="['Bias in NLP', 'Open-Source', '🇪🇸']">
+                    <i-tabler:external-link style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            WomenWhoCodeCONNECT
+                        </div>
+                    </template>
                 </CardMediaSummary>
-                <!-- <CardMediaSummary talk="Interview With María Grandury on Artificial Intelligence and NLP" event="Pangeanic Blog | Interview"
+                <CardMediaSummary talk="Interview With María Grandury on Artificial Intelligence and NLP" event="Pangeanic Blog | Interview"
                     event_link="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp" image_link="images/events/221221_podcast_pangeanic.png"
                     recording_link="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp"
                     :tags="['NLP in Spanish', 'Open-Source', '🇬🇧']">
@@ -192,7 +186,7 @@ useHead({
                             At the young age of 25, María Grandury has already made a name for herself in the field of Artificial Intelligence in Spain.
                         </div>
                     </template>
-                </CardMediaSummary> -->
+                </CardMediaSummary>
                 <CardMediaSummary talk="¡A por el 2023! De dónde venimos y a dónde vamos" event="Somos NLP | Blog Post"
                     event_link="https://somosnlp.org/blog/a-por-el-2023" image_link="images/logos/SomosNLP.svg"
                     recording_link="https://somosnlp.org/blog/a-por-el-2023"
@@ -249,7 +243,8 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
-                <CardMediaSummary talk="Hackathon Objetivos de Desarrollo Sostenibles" event="Somos NLP | Hackathon | Organizer, Host & Speaker"
+                <CardMediaSummary talk="Hackathon Objetivos de Desarrollo Sostenibles"
+                    event="Somos NLP | Hackathon | Organizer, Host & Speaker"
                     event_link="https://somosnlp.org/blog/hackathon-2022" image_link="images/projects/hackathon_pln_es_3.png"
                     recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaAbVZ2lVcycHnJ2qEDip7hG"
                     :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
@@ -267,7 +262,8 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
-                <CardMediaSummary talk="PLN con Somos NLP y Hugging Face" event="AI The New Sexy | Podcast Interview"
+                <CardMediaSummary talk="PLN con Somos NLP y Hugging Face" 
+                    event="AI The New Sexy | Podcast Interview"
                     event_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
                     image_link="images/logos/AITheNewSexy.jpeg"
                     recording_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
@@ -353,7 +349,8 @@ useHead({
                         </div>
                     </template>
                 </CardMediaSummary>
-                <CardMediaSummary talk="Is Your ML Model Trustworthy?" event="MLOps World Conference 2021 | Workshop"
+                <CardMediaSummary talk="Is Your ML Model Trustworthy?"          
+                    event="MLOps World Conference 2021 | Workshop"
                     event_link="https://mlopsworld.com/"
                     recording_link="https://twitter.com/MLOpsWorld/status/1405179157265489927"
                     image_link="images/events/210614_mlops_world.jpg"

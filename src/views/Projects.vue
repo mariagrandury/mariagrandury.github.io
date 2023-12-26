@@ -14,6 +14,12 @@ useHead({
 })
 </script>
 
+<!-- 
+- Hackathon 2024
+- Transparency Index
+- Honest Evaluation
+-->
+
 <template>
   <Container class="bg-white dark:bg-gray-900">
     <NavBar />
