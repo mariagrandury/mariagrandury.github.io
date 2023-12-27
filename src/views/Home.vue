@@ -33,7 +33,7 @@ const index = computed(() => counter.value % greetings.value.length)
             </li>
             <li>
               🤗 Fellow
-              <a href="https://twitter.com/huggingface" target="_blank"
+              <a href="https://huggingface.co/mariagrandury" target="_blank"
                 class="text-accent-500 hover:underline">@HuggingFace
               </a>
             </li>
@@ -74,7 +74,7 @@ const index = computed(() => counter.value % greetings.value.length)
           alt="Talks" />
         <router-link
           class="flex justify-center place-self-center font-medium p-6 gap-3 items-center border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400"
-          to="/talks">More Talks</router-link>
+          to="/divulgation">More Talks</router-link>
       </div>
 
     </div>
