@@ -53,6 +53,19 @@ useHead({
             <br />
 
             <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
+                <CardMediaSummary talk="How to promote inclusive, responsible and open-source AI"
+                    event="Discovering Tech Stories #123 | Podcast Interview"
+                    event_link="https://www.youtube.com/watch?v=XYnd6Cbow7U"
+                    image_link="images/events/240131_techientrevista.jpeg"
+                    recording_link="https://www.youtube.com/watch?v=XYnd6Cbow7U"
+                    :tags="['Career', 'Open-Source', '🇪🇸']">
+                    <i-mdi-youtube style="font-size: 1.25rem;" />
+                    <template v-slot:abstract>
+                        <div class="text-sm text-gray-700 dark:text-white">
+                            Techientrevista Opground
+                        </div>
+                    </template>
+                </CardMediaSummary>
                 <CardMediaSummary talk="The impact of Generative AI in the European creative industry"
                     event="EFE, Panodyssey, European Commission | Round Table"
                     event_link="https://efecomunica.efe.com/factor-humano-ia-evitar-riesgos/"
