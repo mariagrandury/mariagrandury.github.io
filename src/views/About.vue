@@ -38,7 +38,7 @@ useHead({
                     neglects the particular
                     difficulties of other languages so I founded
                     <a href="https://somosnlp.org" target="_blank"
-                        class="text-accent-500 dark:text-accent-300 hover:underline">Somos NLP,</a>
+                        class="text-accent-500 dark:text-accent-300 hover:underline">SomosNLP,</a>
                     the largest community of Spanish-speaking NLP professionals 
                     that aims to democratize and advance the state-of-the-art 
                     of NLP in Spanish.

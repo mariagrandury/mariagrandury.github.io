@@ -228,8 +228,8 @@ useHead({
           </template>
         </CardMediaSummary>
         <CardMediaSummary
-          talk="Hackathon Somos NLP 2023: Los LLMs hablan español"
-          event="Somos NLP | Organizer, Host & Speaker"
+          talk="Hackathon SomosNLP 2023: Los LLMs hablan español"
+          event="SomosNLP | Organizer, Host & Speaker"
           event_link="https://somosnlp.org/hackathon"
           image_link="images/projects/230320_hackathon_llms.jpg"
           recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaCDc0IJpLac-3csiAepV546"
@@ -256,8 +256,8 @@ useHead({
           </template>
         </CardMediaSummary>
         <!-- <CardTalkDetailed
-          talk="Hackathon Somos NLP 2023: Los LLMs hablan español"
-          event="Somos NLP | Hackathon | Organizer, Host & Speaker"
+          talk="Hackathon SomosNLP 2023: Los LLMs hablan español"
+          event="SomosNLP | Hackathon | Organizer, Host & Speaker"
           event_link="https://somosnlp.org/hackathon"
           image_link="images/projects/230320_hackathon_llms.jpg"
           recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaCDc0IJpLac-3csiAepV546"
@@ -337,7 +337,7 @@ useHead({
         </CardMediaSummary>
         <CardMediaSummary
           talk="¡A por el 2023! De dónde venimos y a dónde vamos"
-          event="Somos NLP | Blog Post"
+          event="SomosNLP | Blog Post"
           event_link="https://somosnlp.org/blog/a-por-el-2023"
           image_link="images/logos/SomosNLP.svg"
           recording_link="https://somosnlp.org/blog/a-por-el-2023"
@@ -349,7 +349,7 @@ useHead({
               Almost two years ago I was looking for resources to implement an
               NLP project in Spanish and I couldn't find anything. I created a
               Slack group with a couple of people who had encountered the same
-              problem; I never imagined that group would become what Somos NLP
+              problem; I never imagined that group would become what SomosNLP
               is today.
             </div>
           </template>
@@ -429,7 +429,7 @@ useHead({
         </CardMediaSummary>
         <CardMediaSummary
           talk="Hackathon Objetivos de Desarrollo Sostenibles"
-          event="Somos NLP | Hackathon | Organizer, Host & Speaker"
+          event="SomosNLP | Hackathon | Organizer, Host & Speaker"
           event_link="https://somosnlp.org/blog/hackathon-2022"
           image_link="images/projects/hackathon_pln_es_3.png"
           recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaAbVZ2lVcycHnJ2qEDip7hG"
@@ -456,12 +456,12 @@ useHead({
               With more than 500 participants from 39 countries, it is the
               largest open-source hackathon of NLP in Spanish. The recorded
               events have already more than 5k visualizations! Organized by
-              Somos NLP and sponsored by Hugging Face, Platzi and Paperspace.
+              SomosNLP and sponsored by Hugging Face, Platzi and Paperspace.
             </div>
           </template>
         </CardMediaSummary>
         <CardMediaSummary
-          talk="PLN con Somos NLP y Hugging Face"
+          talk="PLN con SomosNLP y Hugging Face"
           event="AI The New Sexy | Podcast Interview"
           event_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
           image_link="images/logos/AITheNewSexy.jpeg"
@@ -474,7 +474,7 @@ useHead({
               AI The New Sexy is a podcast where you can find information about
               Artificial Intelligence and its impact on everyday life and on
               business. In this episode we interview María Grandury, founder of
-              Somos NLP (formerly NLP en ES), an open community for
+              SomosNLP (formerly NLP en ES), an open community for
               Spanish-speaking professionals and researchers advancing and
               democratizing NLP in their language.
             </div>
@@ -530,7 +530,7 @@ useHead({
                 target="_blank"
                 class="text-accent-500 hover:underline"
               >
-                Somos NLP,
+                SomosNLP,
               </a>
               amongst other topics like privacy, AI regulation and why most of
               the AI-related movies picture AI as "the bad guy".
@@ -539,7 +539,7 @@ useHead({
         </CardMediaSummary>
         <CardMediaSummary
           talk="Sequential Models & the Transformer Architecture"
-          event="NLP de 0 a 100 con Hugging Face | Course by Somos NLP & Spain AI"
+          event="NLP de 0 a 100 con Hugging Face | Course by SomosNLP & Spain AI"
           event_link="https://somosnlp.org/nlp-de-cero-a-cien"
           image_link="images/events/210713_nlp_de_cero_a_cien.jpeg"
           recording_link="https://somosnlp.org/nlp-de-cero-a-cien/sesion-03"
@@ -569,7 +569,7 @@ useHead({
                 target="_blank"
                 class="text-accent-500 hover:underline"
               >
-                Somos NLP
+                SomosNLP
               </a>
               with the support of
               <a

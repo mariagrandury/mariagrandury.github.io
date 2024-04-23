@@ -41,7 +41,7 @@ useHead({
           I believe that NLP research is too focused on English and neglects the particular
           difficulties of other languages so I founded
           <a href="https://somosnlp.org" target="_blank"
-            class="text-accent-500 dark:text-accent-300 hover:underline">Somos NLP,</a>
+            class="text-accent-500 dark:text-accent-300 hover:underline">SomosNLP,</a>
           a community of Spanish-speaking NLP professionals democratizing and advancing
           the state-of-the-art of NLP in Spanish.
         </h2>
@@ -117,7 +117,7 @@ useHead({
           and I volunteer for
           <a target="_blank" title="Company Website" href="https://www.vizforsocialgood.com/">#VizForSocialGood.</a>
           Moreover, I've recently founded the community
-          <a target="_blank" title="LinkedIn Page" href="https://www.linkedin.com/company/somosnlp">Somos NLP 🤗!</a>
+          <a target="_blank" title="LinkedIn Page" href="https://www.linkedin.com/company/somosnlp">SomosNLP 🤗!</a>
         </CVItem>
         <CVItem location="REDYTEL" title="It was a crazy year" timeline="2020">
           I wrote my 2 theses and graduated! I developed a chatbot for
@@ -222,7 +222,7 @@ useHead({
           color="text-green-900 bg-green-50 dark:text-white dark:bg-green-600">
           <i-ic-round-directions-run />
         </CardExp>
-        <CardExp title="Founded Somos NLP" link="">
+        <CardExp title="Founded SomosNLP" link="">
           <i-fluent-rocket-24-regular />
         </CardExp>
         <CardExp title="Got my first job as a Machine Learning Engineer" link="">

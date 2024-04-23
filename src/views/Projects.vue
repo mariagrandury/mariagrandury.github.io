@@ -71,8 +71,8 @@ useHead({
 
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
         <CardProject
-          title="Hackathon Somos NLP 2024: #Somos600M"
-          :tags="['NLP', 'Somos NLP']"
+          title="Hackathon SomosNLP 2024: #Somos600M"
+          :tags="['NLP', 'SomosNLP']"
           link="https://somosnlp.org/hackathon"
         >
           <i-fluent-rocket-24-regular />
@@ -131,8 +131,8 @@ useHead({
           </template>
         </CardProject>
         <CardProject
-          title="Hackathon Somos NLP 2023: Los LLMs hablan español"
-          :tags="['NLP', 'Somos NLP']"
+          title="Hackathon SomosNLP 2023: Los LLMs hablan español"
+          :tags="['NLP', 'SomosNLP']"
           link="https://somosnlp.org/hackathon"
         >
           <i-fluent-rocket-24-regular />
@@ -163,7 +163,7 @@ useHead({
         </CardProject>
         <CardProject
           title="Somos Mujeres NLP"
-          :tags="['Women in AI', 'NLP', 'Somos NLP']"
+          :tags="['Women in AI', 'NLP', 'SomosNLP']"
           link=""
           color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600"
         >
@@ -177,7 +177,7 @@ useHead({
         </CardProject>
         <CardProject
           title="NLP Course by Hugging Face"
-          :tags="['NLP', 'Somos NLP']"
+          :tags="['NLP', 'SomosNLP']"
           link="https://huggingface.co/course/es/chapter1/1"
           color="text-orange-600 bg-orange-100 dark:text-white dark:bg-orange-500"
         >
@@ -218,7 +218,7 @@ useHead({
         </CardProject>
         <CardProject
           title="Hackathon of NLP in Spanish"
-          :tags="['NLP', 'Somos NLP']"
+          :tags="['NLP', 'SomosNLP']"
           link="https://somosnlp.org/blog/hackathon-2022"
         >
           <i-fluent-rocket-24-regular />
@@ -233,7 +233,7 @@ useHead({
               >
                 recorded talks and workshops
               </a>
-              have already more than 5k visualizations! Organized by Somos NLP
+              have already more than 5k visualizations! Organized by SomosNLP
               and sponsored by Hugging Face, Platzi and Paperspace. Check the
               <a
                 target="_blank"
@@ -307,7 +307,7 @@ useHead({
         </CardProject>
         <CardProject
           title="Course: NLP de 0 a 100 con Hugging Face"
-          :tags="['NLP', 'Somos NLP']"
+          :tags="['NLP', 'SomosNLP']"
           link="https://somosnlp.org/nlp-de-cero-a-cien"
           color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
         >
@@ -315,7 +315,7 @@ useHead({
           <template v-slot:description>
             <div class="text-sm text-gray-700 dark:text-white">
               The first NLP course from zero to hero in Spanish. It's
-              open-source and was organized by Somos NLP with the support of
+              open-source and was organized by SomosNLP with the support of
               Spain AI. I taught the classes on sequential models and the
               Transformer architecture.
             </div>
