@@ -38,17 +38,17 @@ useHead({
         <i-fluent-chat-12-regular style="font-size: 2rem" />
       </h1>
       <h2 class="py-6">
-        I'm passionate about what I do and really enjoy divulgating!
+        I'm passionate about what I do and really enjoy divulgating! Reach out if you would like me to give a keynote, talk or workshop!
       </h2>
     </div>
     <div>
       <p class="italic">
-        For up-to-date information connect on
+        Last update: April 2024 | For up-to-date information check
         <a
           href="https://www.linkedin.com/in/mariagrandury/"
           target="_blank"
           class="text-accent-500 hover:underline"
-          >LinkedIn</a
+          >my LinkedIn profile</a
         >!
       </p>
     </div>

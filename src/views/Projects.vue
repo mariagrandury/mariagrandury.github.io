@@ -38,16 +38,15 @@ useHead({
         <i-fluent-design-ideas-24-regular style="font-size: 2rem" />
       </h1>
       <h2 class="py-6">
-        I'm a Machine Learning Research Engineer focused on NLP, XAI and
-        Adversarial Robustness.
+        I'm a Machine Learning Research Engineer focused on NLP, specially on data and evaluations. And I always say yes to NLP in Spanish projects!
       </h2>
       <p class="italic">
-        For up-to-date information follow my
+        Last update: April 2024 | For up-to-date information check
         <a
           href="https://www.huggingface.co/mariagrandury/"
           target="_blank"
           class="text-accent-500 hover:underline"
-          >Hugging Face profile</a
+          >my Hugging Face profile</a
         >!
       </p>
     </div>
