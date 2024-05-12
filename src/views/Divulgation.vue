@@ -38,7 +38,8 @@ useHead({
         <i-fluent-chat-12-regular style="font-size: 2rem" />
       </h1>
       <h2 class="py-6">
-        I'm passionate about what I do and really enjoy divulgating! Reach out if you would like me to give a keynote, talk or workshop!
+        I'm passionate about what I do and really enjoy divulgating! Reach out
+        if you would like me to give a keynote, talk or workshop!
       </h2>
     </div>
     <div>
@@ -73,12 +74,42 @@ useHead({
 
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
         <CardMediaSummary
+          talk="Técnicas avanzadas y aplicaciones de NLP. Alineamiento y evaluación de LLMs."
+          event="Curso de verano de IA, UNIA | 2x Workshops"
+          event_link=""
+          image_link="images/events/240819_unia.jpeg"
+          recording_link=""
+          :tags="['Summer School', 'NLP', '🇪🇸']"
+        >
+          <i-mdi-youtube style="font-size: 1.25rem" />
+          <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Curso verano
+            </div>
+          </template>
+        </CardMediaSummary>
+        <CardMediaSummary
+          talk="Cómo podemos desarrollar IA con impacto social"
+          event="Datathon contra el Bullying, Río Cuarto, Argentina | Talk"
+          event_link=""
+          image_link="images/events/240513_datathon.jpeg"
+          recording_link=""
+          :tags="['AI for Good', '🇪🇸']"
+        >
+          <i-mdi-youtube style="font-size: 1.25rem" />
+          <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Datathon Argentina
+            </div>
+          </template>
+        </CardMediaSummary>
+        <CardMediaSummary
           talk="Proyecto #Somos600M: Impulsando la diversidad lingüística en IA"
           event="Hackathon #Somos600M| Keynote"
           event_link="https://www.youtube.com/watch?v=QCNPVy3QWFs&list=PLTA-KAy8nxaASMwEUWkkTfMaDxWBxn-8J"
           image_link="images/events/240313_somos600m.png"
           recording_link="https://www.youtube.com/watch?v=QCNPVy3QWFs&list=PLTA-KAy8nxaASMwEUWkkTfMaDxWBxn-8J"
-          :tags="['Career', 'Open-Source', '🇪🇸']"
+          :tags="['NLP in Spanish', 'Open-Source', '🇪🇸']"
         >
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -349,8 +380,8 @@ useHead({
               Almost two years ago I was looking for resources to implement an
               NLP project in Spanish and I couldn't find anything. I created a
               Slack group with a couple of people who had encountered the same
-              problem; I never imagined that group would become what SomosNLP
-              is today.
+              problem; I never imagined that group would become what SomosNLP is
+              today.
             </div>
           </template>
         </CardMediaSummary>
