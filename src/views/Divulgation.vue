@@ -44,7 +44,7 @@ useHead({
     </div>
     <div>
       <p class="italic">
-        Last update: April 2024 | For up-to-date information check
+        Last update: June 2024 | For up-to-date information check
         <a
           href="https://www.linkedin.com/in/mariagrandury/"
           target="_blank"
@@ -56,26 +56,8 @@ useHead({
     <div class="lg:px-24 sm:px-12">
       <h2 class="py-6 text-2xl">Upcoming talk - Join us!</h2>
       <CardMediaSummary
-        talk="Machines that reflect us: Building AI systems responsibly"
-        event="Women in Data Science Zurich | Round Table"
-        event_link="https://www.wids.ch/"
-        image_link="images/events/240607_wids.jpeg"
-        recording_link=""
-        :tags="['Responsible AI', 'Explainable AI', '🇬🇧']"
-      >
-        <i-tabler:external-link style="font-size: 1.25rem" />
-        <template v-slot:abstract>
-          <div class="text-sm text-gray-700 dark:text-white"></div>
-        </template>
-      </CardMediaSummary>
-
-      <br />
-      <br />
-
-      <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
-        <CardMediaSummary
           talk="Técnicas avanzadas y aplicaciones de NLP. Alineamiento y evaluación de LLMs."
-          event="Curso de verano de IA, UNIA | 2x Workshops"
+          event="Curso de verano de IA, UNIA (Baeza) | 2x Workshops"
           event_link=""
           image_link="images/events/240819_unia.jpeg"
           recording_link=""
@@ -84,8 +66,37 @@ useHead({
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
-              Curso verano
+              Curso de verano
             </div>
+          </template>
+        </CardMediaSummary>
+
+      <br />
+      <br />
+
+      <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
+        <CardMediaSummary
+          talk="Machines that reflect us: Building AI systems responsibly"
+          event="Women in Data Science Zurich | Round Table TODO PIC Y CARTEL"
+          event_link="https://www.wids.ch/"
+          image_link="images/events/240607_wids.jpeg"
+          recording_link=""
+          :tags="['Responsible AI', 'Explainable AI', '🇬🇧']">
+          <i-tabler:external-link style="font-size: 1.25rem" />
+          <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white"></div>
+          </template>
+        </CardMediaSummary>
+        <CardMediaSummary
+          talk="Open-Source LLMs and the Hugging Face ecosystem"
+          event="Women in Data Science Zurich | Mentorship Session"
+          event_link="https://www.wids.ch/"
+          image_link="images/events/240607_wids.jpeg"
+          recording_link=""
+          :tags="['Open Source', 'LLMs', '🇬🇧']">
+          <i-tabler:external-link style="font-size: 1.25rem" />
+          <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white"></div>
           </template>
         </CardMediaSummary>
         <CardMediaSummary
@@ -94,8 +105,7 @@ useHead({
           event_link=""
           image_link="images/events/240513_datathon.jpeg"
           recording_link=""
-          :tags="['AI for Good', '🇪🇸']"
-        >
+          :tags="['AI for Good', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -104,13 +114,26 @@ useHead({
           </template>
         </CardMediaSummary>
         <CardMediaSummary
+          talk="La larga marcha de un grupo de voluntarios TODO TITULO"
+          event="El País | Newspaper (Featured)"
+          event_link="https://www.linkedin.com/posts/mariagrandury_la-larga-marcha-de-un-grupo-de-voluntarios-activity-7202311429297692672-F-oA"
+          image_link="images/blog/elpais_instrucciones.jpg"
+          recording_link="https://www.linkedin.com/posts/mariagrandury_la-larga-marcha-de-un-grupo-de-voluntarios-activity-7202311429297692672-F-oA"
+          :tags="['AI in Spanish', '🇪🇸']">
+          <i-mdi-newspaper style="font-size: 1.25rem" />
+          <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              El País
+            </div>
+          </template>
+        </CardMediaSummary>
+        <CardMediaSummary
           talk="Proyecto #Somos600M: Impulsando la diversidad lingüística en IA"
-          event="Hackathon #Somos600M| Keynote"
+          event="Hackathon #Somos600M | Keynote"
           event_link="https://www.youtube.com/watch?v=QCNPVy3QWFs&list=PLTA-KAy8nxaASMwEUWkkTfMaDxWBxn-8J"
           image_link="images/events/240313_somos600m.png"
           recording_link="https://www.youtube.com/watch?v=QCNPVy3QWFs&list=PLTA-KAy8nxaASMwEUWkkTfMaDxWBxn-8J"
-          :tags="['NLP in Spanish', 'Open-Source', '🇪🇸']"
-        >
+          :tags="['NLP in Spanish', 'Open-Source', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -123,9 +146,8 @@ useHead({
           event="I Congreso de IA en la Educación Superior, Universidad de Puerto Rico | Talk"
           event_link="https://adistancia.upr.edu/inteligencia_artificial/"
           image_link="images/events/240301_upr.jpeg"
-          recording_link=""
-          :tags="['Open-Source', 'Responsible AI', '🇪🇸']"
-        >
+          recording_link="TODO PIC"
+          :tags="['Open-Source', 'Responsible AI', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -150,8 +172,7 @@ useHead({
           event_link="https://www.youtube.com/watch?v=XYnd6Cbow7U"
           image_link="images/events/240131_techientrevista.jpeg"
           recording_link="https://www.youtube.com/watch?v=XYnd6Cbow7U"
-          :tags="['Career', 'Open-Source', '🇪🇸']"
-        >
+          :tags="['Career', 'Open-Source', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -165,36 +186,32 @@ useHead({
           event_link="https://efecomunica.efe.com/factor-humano-ia-evitar-riesgos/"
           image_link="images/events/231114_efe_camera.png"
           recording_link="https://www.youtube.com/watch?v=GdwXx3wmWBw"
-          :tags="['Responsible AI', 'AI Risks', '🇪🇸']"
-        >
+          :tags="['Responsible AI', 'AI Risks', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">EFE</div>
           </template>
         </CardMediaSummary>
-        <!--
-                <CardMediaSummary talk="Women Entrepreneurs"
-                    event="UU Prize | Round Table"
-                    event_link=""
-                    image_link=""
-                    recording_link="https://www.youtube.com/watch?v=3ezogDsebUg"
-                    :tags="['Responsible AI', 'AI Risks', '🇪🇸']">
-                    <i-tabler:external-link style="font-size: 1.25rem;" />
-                    <template v-slot:abstract>
-                        <div class="text-sm text-gray-700 dark:text-white">
-                            Parlamento Europeo Madrid y bruselas
-                        </div>
-                    </template>
-                </CardMediaSummary>
-                -->
+        <CardMediaSummary talk="Women Entrepreneurs"
+            event="UU Prize @ European Parliament Madrid | Round Table"
+            event_link="TODO LINK & PIC"
+            image_link=""
+            recording_link="https://www.youtube.com/watch?v=3ezogDsebUg"
+            :tags="['Responsible AI', 'Linguistic diversity', '🇪🇸']">
+            <i-tabler:external-link style="font-size: 1.25rem;" />
+            <template v-slot:abstract>
+                <div class="text-sm text-gray-700 dark:text-white">
+                    Parlamento Europeo Madrid
+                </div>
+            </template>
+        </CardMediaSummary>
         <CardMediaSummary
           talk="Innovación y responsabilidad en LMs: Cómo cumplir con el EU AI Act, mitigar sesgos y reducir el impacto climático"
           event="Google DevFest Cloud Madrid | Workshop"
           event_link=""
           image_link="images/events/231125_devfest_cartel.png"
           recording_link=""
-          :tags="['EU AI Act', 'Explainability', 'Bias', '🇪🇸']"
-        >
+          :tags="['EU AI Act', 'Explainability', 'Bias', '🇪🇸']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -208,8 +225,7 @@ useHead({
           event_link="https://www.linkedin.com/posts/mariagrandury_trustworthyai-responsibleai-aiinspanish-activity-7128788336776744960-bgY0"
           image_link="images/events/231024_bias_everywhere.jpg"
           recording_link="https://www.linkedin.com/posts/mariagrandury_trustworthyai-responsibleai-aiinspanish-activity-7128788336776744960-bgY0"
-          :tags="['Responsible AI', '🇬🇧']"
-        >
+          :tags="['Responsible AI', '🇬🇧']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -219,14 +235,26 @@ useHead({
             </div>
           </template>
         </CardMediaSummary>
+        <CardMediaSummary talk="Women Entrepreneurs"
+            event="UU Prize @ European Parliament Brussels | Round Table"
+            event_link="TODO LINK & PIC"
+            image_link=""
+            recording_link="https://www.youtube.com/watch?v=3ezogDsebUg"
+            :tags="['Responsible AI', 'Linguistic diversity', '🇪🇸']">
+            <i-tabler:external-link style="font-size: 1.25rem;" />
+            <template v-slot:abstract>
+                <div class="text-sm text-gray-700 dark:text-white">
+                    Parlamento Europeo Bruselas
+                </div>
+            </template>
+        </CardMediaSummary>
         <CardMediaSummary
           talk="I've trained my LM, now what?"
           event="Summer course at the Universidad Internacional de Andalucía | Workshop"
           event_link=""
           image_link="images/events/230822_curso_unia.jpeg"
           recording_link=""
-          :tags="['Bias', 'Explainability', 'Open-Source', '🇪🇸']"
-        >
+          :tags="['Bias', 'Explainability', 'Open-Source', '🇪🇸']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -240,8 +268,7 @@ useHead({
           event_link="https://www.eventbrite.com/e/entradas-inteligencia-artificial-y-espanol-637934588527"
           image_link="images/events/230529_mesa_redonda.png"
           recording_link="https://www.youtube.com/live/epPXlt520Eo?si=5hm5ARxnl_QD1Dqu&t=30667"
-          :tags="['AI in Spanish', 'NLP', '🇪🇸']"
-        >
+          :tags="['AI in Spanish', 'NLP', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -264,8 +291,7 @@ useHead({
           event_link="https://somosnlp.org/hackathon"
           image_link="images/projects/230320_hackathon_llms.jpg"
           recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaCDc0IJpLac-3csiAepV546"
-          :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']"
-        >
+          :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -326,12 +352,11 @@ useHead({
           event_link="https://www.bbvaspark.com/contenido/en/news/customer-service-in-times-of-chatgpt-these-startups-boost-your-business-with-conversational-ai/"
           image_link="images/events/230314_bbva_post.jpg"
           recording_link=""
-          :tags="['ChatGPT', '🇬🇧']"
-        >
-          <i-tabler:external-link style="font-size: 1.25rem" />
+          :tags="['ChatGPT', '🇬🇧']">
+          <i-mdi-newspaper style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
-              Featured in a BBVA Spart Blog article
+              BBVA Spart Blog article
             </div>
           </template>
         </CardMediaSummary>
@@ -341,8 +366,7 @@ useHead({
           event_link="https://hopin.com/events/connect-2023/registration"
           image_link="images/events/230302_wwc_connect.png"
           recording_link=""
-          :tags="['Bias in NLP', 'Open-Source', '🇪🇸']"
-        >
+          :tags="['Bias in NLP', 'Open-Source', '🇪🇸']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -356,8 +380,7 @@ useHead({
           event_link="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp"
           image_link="images/events/221221_podcast_pangeanic.png"
           recording_link="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp"
-          :tags="['NLP in Spanish', 'Open-Source', '🇬🇧']"
-        >
+          :tags="['NLP in Spanish', 'Open-Source', '🇬🇧']">
           <i-mdi:fountain-pen-tip style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -372,8 +395,7 @@ useHead({
           event_link="https://somosnlp.org/blog/a-por-el-2023"
           image_link="images/logos/SomosNLP.svg"
           recording_link="https://somosnlp.org/blog/a-por-el-2023"
-          :tags="['NLP in Spanish', 'Open-Source', '🇪🇸']"
-        >
+          :tags="['NLP in Spanish', 'Open-Source', '🇪🇸']">
           <i-mdi:fountain-pen-tip style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -391,8 +413,7 @@ useHead({
           event_link="https://www.youtube.com/@mariagrandury"
           image_link="images/events/221221_podcast_pangeanic.png"
           recording_link="https://open.spotify.com/episode/6uQbVuo35PvSmHkM5XffrB"
-          :tags="['NLP in Spanish', 'Podcast', '🇪🇸']"
-        >
+          :tags="['NLP in Spanish', 'Podcast', '🇪🇸']">
           <i-mdi-spotify style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -426,8 +447,7 @@ useHead({
           event_link="https://twitter.com/PERTE_Lengua/status/1567902042353442816?s=20&t=kR1vwhuxmGig2UrbH4WvDw"
           image_link="images/events/220928_perte_sota_nlp.jfif"
           recording_link="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s"
-          :tags="['NLP', 'SOTA NLP', 'Round Table', '🇪🇸']"
-        >
+          :tags="['NLP', 'SOTA NLP', 'Round Table', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -464,8 +484,7 @@ useHead({
           event_link="https://somosnlp.org/blog/hackathon-2022"
           image_link="images/projects/hackathon_pln_es_3.png"
           recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaAbVZ2lVcycHnJ2qEDip7hG"
-          :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']"
-        >
+          :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -497,8 +516,7 @@ useHead({
           event_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
           image_link="images/logos/AITheNewSexy.jpeg"
           recording_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
-          :tags="['NLP in Spanish', 'Career', 'Open-Source', 'Interview', '🇪🇸']"
-        >
+          :tags="['NLP in Spanish', 'Career', 'Open-Source', 'Interview', '🇪🇸']">
           <i-mdi-spotify style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -513,12 +531,11 @@ useHead({
         </CardMediaSummary>
         <CardMediaSummary
           talk="Tecnologías del Lenguaje en la Empresa"
-          event="DiverTLes: Diversidad en Tecnologías del Lenguaje en España"
+          event="DiverTLes: Diversidad en Tecnologías del Lenguaje en España | Round Table"
           event_link="https://gplsi.dlsi.ua.es/pln/divertles"
           image_link="images/events/211130_divertles.jfif"
           recording_link="https://www.youtube.com/watch?v=yvPLMc3-KnI"
-          :tags="['NLP', 'NLP in Production', 'Research', 'Round Table', '🇪🇸']"
-        >
+          :tags="['NLP', 'NLP in Production', 'Research', 'Round Table', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -541,8 +558,7 @@ useHead({
           event_link="https://saturdays.ai/2022/01/27/3x07-maria-grandury-ai-que-hablan-espanol/"
           image_link="images/logos/SaturdaysAIPodcast.jpg"
           recording_link="https://www.youtube.com/watch?v=O5QkrbOrxd4"
-          :tags="['My Story', 'NLP', 'AI Regulation', 'Interview', '🇪🇸']"
-        >
+          :tags="['My Story', 'NLP', 'AI Regulation', 'Interview', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -569,7 +585,7 @@ useHead({
           </template>
         </CardMediaSummary>
         <CardMediaSummary
-          talk="Sequential Models & the Transformer Architecture"
+          talk="II. Sequential Models"
           event="NLP de 0 a 100 con Hugging Face | Course by SomosNLP & Spain AI"
           event_link="https://somosnlp.org/nlp-de-cero-a-cien"
           image_link="images/events/210713_nlp_de_cero_a_cien.jpeg"
@@ -581,8 +597,51 @@ useHead({
             'NLP Demos',
             'Course',
             '🇪🇸',
-          ]"
-        >
+          ]">
+          <i-mdi-youtube style="font-size: 1.25rem" />
+          <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Understand all the key concepts and architectures of
+              state-of-the-art NLP and apply them to common use cases using one
+              of the most popular libraries in the field: Hugging Face.
+              Regardless of your current knowledge, you will finish the course
+              talking about Word Embeddings, Sequential Models, Attention
+              Mechanisms, Transformers and Language Modelling.
+              <br />
+              <br />
+              This course was organized by
+              <a
+                href="https://somosnlp.org"
+                target="_blank"
+                class="text-accent-500 hover:underline"
+              >
+                SomosNLP
+              </a>
+              with the support of
+              <a
+                href="https://www.spain-ai.com/"
+                target="_blank"
+                class="text-accent-500 hover:underline"
+              >
+                Spain AI.
+              </a>
+            </div>
+          </template>
+        </CardMediaSummary>
+        <CardMediaSummary
+          talk="III. The Transformer Architecture"
+          event="NLP de 0 a 100 con Hugging Face | Course by SomosNLP & Spain AI"
+          event_link="https://somosnlp.org/nlp-de-cero-a-cien"
+          image_link="images/events/210713_nlp_de_cero_a_cien.jpeg"
+          recording_link="https://somosnlp.org/nlp-de-cero-a-cien/sesion-03"
+          :tags="[
+            'NLP',
+            'Sequential Models',
+            'Transformers',
+            'NLP Demos',
+            'Course',
+            '🇪🇸',
+          ]">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -619,8 +678,7 @@ useHead({
           event_link="https://www.eventbrite.de/e/3-engineering-robotics-ai-experts-taking-center-stage-tickets-158193696605"
           recording_link="https://www.youtube.com/watch?v=f2f1RL3M6xc"
           image_link="images/events/210622_wair_3_engineers.avif"
-          :tags="['Women in Robotics', 'Women Engineers', 'Round Table', '🇬🇧']"
-        >
+          :tags="['Women in Robotics', 'Women Engineers', 'Round Table', '🇬🇧']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -648,8 +706,7 @@ useHead({
           event_link="https://mlopsworld.com/"
           recording_link="https://twitter.com/MLOpsWorld/status/1405179157265489927"
           image_link="images/events/210614_mlops_world.jpg"
-          :tags="['MLOps', 'AI Robustness', 'AI Explainability', 'Talk', '🇬🇧']"
-        >
+          :tags="['MLOps', 'AI Robustness', 'AI Explainability', 'Talk', '🇬🇧']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -670,8 +727,7 @@ useHead({
           event_link="https://bigscience.huggingface.co/"
           image_link="images/events/210610_wtn.png"
           recording_link="https://www.womentech.net/speaker/Maria/Grandury/57995"
-          :tags="['NLP', 'Transformers', 'Hugging Face', 'Workshop', '🇬🇧']"
-        >
+          :tags="['NLP', 'Transformers', 'Hugging Face', 'Workshop', '🇬🇧']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -691,8 +747,7 @@ useHead({
           event_link="https://medium.com/womeninairobotics/inspirational-women-in-ai-85b80cb4999f"
           recording_link="https://medium.com/womeninairobotics/inspirational-women-in-ai-85b80cb4999f"
           image_link="images/events/210308_meet_8_women.png"
-          :tags="['Women in AI', 'Women in Robotics', '🇬🇧']"
-        >
+          :tags="['Women in AI', 'Women in Robotics', '🇬🇧']">
           <i-mdi-medium style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -708,8 +763,7 @@ useHead({
           event_link="https://bigscience.huggingface.co/"
           recording_link="https://www.youtube.com/watch?v=in5tEluYTSs"
           image_link="images/events/210506_wair_kick_off.avif"
-          :tags="['Women in AI', 'Women in STEM', 'Round Table', '🇬🇧']"
-        >
+          :tags="['Women in AI', 'Women in STEM', 'Round Table', '🇬🇧']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">

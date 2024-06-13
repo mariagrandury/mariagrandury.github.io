@@ -123,7 +123,7 @@ const index = computed(() => counter.value % greetings.value.length);
       </div>
 
       <div class="px-8">
-        <!-- <div class="text-3xl mb-4">My latest project is</div> -->
+        <div class="text-3xl mb-4">Current projects, join us!</div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardProject
             title="SomosNLP"
@@ -151,9 +151,8 @@ const index = computed(() => counter.value % greetings.value.length);
             <i-fluent-rocket-24-regular />
             <template v-slot:description>
               <div class="text-sm text-gray-700 dark:text-white">
-                We are going to create the largest open-source instructions
-                corpus and the first open generative LLM leaderboard in Spanish
-                and other related languages. Join us!
+                We are going to create the largest open-source instruction
+                corpus and the first open generative LLM leaderboard in the languages spoken in LATAM, the Caribbean and Spain. Join us!
               </div>
             </template>
           </CardProject>

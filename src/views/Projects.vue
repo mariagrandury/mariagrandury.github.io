@@ -41,7 +41,7 @@ useHead({
         I'm a Machine Learning Research Engineer focused on NLP, specially on data and evaluations. And I always say yes to NLP in Spanish projects!
       </h2>
       <p class="italic">
-        Last update: April 2024 | For up-to-date information check
+        Last update: June 2024 | For up-to-date information check
         <a
           href="https://www.huggingface.co/mariagrandury/"
           target="_blank"
@@ -71,8 +71,63 @@ useHead({
 
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
         <CardProject
+          title="Open Leaderboard for the languages of Spain and LATAM [WIP]"
+          :tags="['LLM Evaluation', 'NLP in Spanish']"
+          link="https://somosnlp.org/somos600m"
+          color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
+        >
+          <i-fluent-rocket-24-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Open leaderboard to evaluate LLM memorization, reasoning and linguistic capabilities in the languages of Spain, LATAM and the Caribbean. Developed as part of the #Somos600M Project thanks to the donation of high-quality datasets by IIC, LenguajeNaturalAI, UPM, HiTZ, and BSC.
+              <br />
+              <b>1st of July: Leaderboard v1 live!</b>
+            </div>
+          </template>
+        </CardProject>
+        <CardProject
+          title="Validation of machine-translated evaluation datasets [WIP]"
+          :tags="['Translation', 'Bias', 'NLP in Spanish']"
+          link="https://somosnlp.org/somos600m"
+          color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600"
+        >
+          <i-fluent-rocket-24-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Community effort to validate the machine-translated Spanish versions of 3 widely-used evaluation datasets (MMLU, RAC-C, and HellaSwag) and the prompt dataset from the Data Is Better Together (DIBT) initiative. Efforts co-organized by SomosNLP, Hugging Face & Argilla.
+              <a
+                target="_blank"
+                href="TODO LINK"
+                class="text-accent-700 dark:text-accent-300 hover:underline"
+              >
+                Join us!
+              </a>
+            </div>
+          </template>
+        </CardProject>
+        <CardProject
+          title="Dataset collection campaign [WIP]"
+          :tags="['Data', 'NLP in Spanish']"
+          link="https://somosnlp.org/donatucorpus"
+          color="text-orange-600 bg-orange-100 dark:text-white dark:bg-orange-500"
+        >
+          <i-fluent-book-24-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              At SomosNLP we are collecting datasets in the languages spoken in LATAM, the Caribbean and Spain.
+              <a
+                target="_blank"
+                href="https://somosnlp.org/donatucorpus"
+                class="text-accent-700 dark:text-accent-300 hover:underline"
+              >
+                Collaborate and help us collect diverse data!
+              </a>
+            </div>
+          </template>
+        </CardProject>
+        <CardProject
           title="Hackathon SomosNLP 2024: #Somos600M"
-          :tags="['NLP', 'SomosNLP']"
+          :tags="['Instruction-tuned LLMs', 'NLP in Spanish']"
           link="https://somosnlp.org/hackathon"
         >
           <i-fluent-rocket-24-regular />
@@ -102,8 +157,8 @@ useHead({
           </template>
         </CardProject>
         <CardProject
-          title="Spanish NLP Initiatives"
-          :tags="['NLP', 'Research']"
+          title="Spanish NLP Initiatives [WIP]"
+          :tags="['NLP in Spanish']"
           link="https://huggingface.co/spaces/somosnlp/spanish-nlp-initiatives"
           color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600"
         >
@@ -125,14 +180,14 @@ useHead({
           <template v-slot:description>
             <div class="text-sm text-gray-700 dark:text-white">
               This tool allows you to self-assess the transparency of your model
-              development based on the Foundation Model Transparency Index
-              published by the Center for Research on Foundation Models.
+              development based on the Foundation Model Transparency Index 
+              (FMTI) published by the Center for Research on Foundation Models.
             </div>
           </template>
         </CardProject>
         <CardProject
           title="Hackathon SomosNLP 2023: Los LLMs hablan español"
-          :tags="['NLP', 'SomosNLP']"
+          :tags="['LLMs', 'NLP in Spanish']"
           link="https://somosnlp.org/hackathon"
         >
           <i-fluent-rocket-24-regular />
@@ -163,7 +218,7 @@ useHead({
         </CardProject>
         <CardProject
           title="Somos Mujeres NLP"
-          :tags="['Women in AI', 'NLP', 'SomosNLP']"
+          :tags="['Women in AI', 'NLP']"
           link=""
           color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600"
         >
@@ -177,7 +232,7 @@ useHead({
         </CardProject>
         <CardProject
           title="NLP Course by Hugging Face"
-          :tags="['NLP', 'SomosNLP']"
+          :tags="['NLP', 'Education']"
           link="https://huggingface.co/course/es/chapter1/1"
           color="text-orange-600 bg-orange-100 dark:text-white dark:bg-orange-500"
         >
@@ -217,8 +272,8 @@ useHead({
           </template>
         </CardProject>
         <CardProject
-          title="Hackathon of NLP in Spanish"
-          :tags="['NLP', 'SomosNLP']"
+          title="Hackathon SomosNLP 2022: NLP en Español"
+          :tags="['NLP in Spanish']"
           link="https://somosnlp.org/blog/hackathon-2022"
         >
           <i-fluent-rocket-24-regular />
@@ -307,7 +362,7 @@ useHead({
         </CardProject>
         <CardProject
           title="Course: NLP de 0 a 100 con Hugging Face"
-          :tags="['NLP', 'SomosNLP']"
+          :tags="['NLP', 'Education']"
           link="https://somosnlp.org/nlp-de-cero-a-cien"
           color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
         >
