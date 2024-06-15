@@ -76,7 +76,7 @@ useHead({
           link="https://somosnlp.org/somos600m"
           color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
         >
-          <i-fluent-rocket-24-regular />
+          <i-fluent-star-28-regular />
           <template v-slot:description>
             <div class="text-sm text-gray-700 dark:text-white">
               Open leaderboard to evaluate LLM memorization, reasoning and linguistic capabilities in the languages of Spain, LATAM and the Caribbean. Developed as part of the #Somos600M Project thanks to the donation of high-quality datasets by IIC, LenguajeNaturalAI, UPM, HiTZ, and BSC.
@@ -91,13 +91,13 @@ useHead({
           link="https://somosnlp.org/somos600m"
           color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600"
         >
-          <i-fluent-rocket-24-regular />
+          <i-fluent-checkbox-checked-24-regular />
           <template v-slot:description>
             <div class="text-sm text-gray-700 dark:text-white">
               Community effort to validate the machine-translated Spanish versions of 3 widely-used evaluation datasets (MMLU, RAC-C, and HellaSwag) and the prompt dataset from the Data Is Better Together (DIBT) initiative. Efforts co-organized by SomosNLP, Hugging Face & Argilla.
               <a
                 target="_blank"
-                href="TODO LINK"
+                href="https://huggingface.co/collections/somosnlp/creacion-de-corpus-en-comunidad-65f6715788a1b82645ba0ce2"
                 class="text-accent-700 dark:text-accent-300 hover:underline"
               >
                 Join us!

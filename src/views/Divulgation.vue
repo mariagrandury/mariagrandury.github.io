@@ -77,9 +77,9 @@ useHead({
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
         <CardMediaSummary
           talk="Machines that reflect us: Building AI systems responsibly"
-          event="Women in Data Science Zurich | Round Table TODO PIC Y CARTEL"
+          event="Women in Data Science Zurich | Round Table"
           event_link="https://www.wids.ch/"
-          image_link="images/events/240607_wids.jpeg"
+          image_link="images/events/240607_wids_pic.jpeg"
           recording_link=""
           :tags="['Responsible AI', 'Explainable AI', '🇬🇧']">
           <i-tabler:external-link style="font-size: 1.25rem" />
@@ -114,10 +114,10 @@ useHead({
           </template>
         </CardMediaSummary>
         <CardMediaSummary
-          talk="La larga marcha de un grupo de voluntarios TODO TITULO"
+          talk="La larga marcha de un grupo de voluntarios para entrenar un modelo de lenguaje hispano"
           event="El País | Newspaper (Featured)"
           event_link="https://www.linkedin.com/posts/mariagrandury_la-larga-marcha-de-un-grupo-de-voluntarios-activity-7202311429297692672-F-oA"
-          image_link="images/blog/elpais_instrucciones.jpg"
+          image_link="images/events/240512_elpais.jpg"
           recording_link="https://www.linkedin.com/posts/mariagrandury_la-larga-marcha-de-un-grupo-de-voluntarios-activity-7202311429297692672-F-oA"
           :tags="['AI in Spanish', '🇪🇸']">
           <i-mdi-newspaper style="font-size: 1.25rem" />
@@ -141,12 +141,13 @@ useHead({
             </div>
           </template>
         </CardMediaSummary>
+        <!-- TODO recording + pic speaking -->
         <CardMediaSummary
           talk="Código Abierto y Diversidad Lingüística en IA: Impulsando el Futuro del Español desde la Universidad"
           event="I Congreso de IA en la Educación Superior, Universidad de Puerto Rico | Talk"
           event_link="https://adistancia.upr.edu/inteligencia_artificial/"
           image_link="images/events/240301_upr.jpeg"
-          recording_link="TODO PIC"
+          recording_link="" 
           :tags="['Open-Source', 'Responsible AI', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -192,11 +193,12 @@ useHead({
             <div class="text-sm text-gray-700 dark:text-white">EFE</div>
           </template>
         </CardMediaSummary>
+        <!-- TODO link? https://www.youtube.com/watch?v=3ezogDsebUg -->
         <CardMediaSummary talk="Women Entrepreneurs"
             event="UU Prize @ European Parliament Madrid | Round Table"
-            event_link="TODO LINK & PIC"
-            image_link=""
-            recording_link="https://www.youtube.com/watch?v=3ezogDsebUg"
+            event_link=""
+            image_link="images/events/231101_parlamento_madrid.jpeg"
+            recording_link=""
             :tags="['Responsible AI', 'Linguistic diversity', '🇪🇸']">
             <i-tabler:external-link style="font-size: 1.25rem;" />
             <template v-slot:abstract>
@@ -205,6 +207,7 @@ useHead({
                 </div>
             </template>
         </CardMediaSummary>
+        <!-- TODO PIC Twitter -->
         <CardMediaSummary
           talk="Innovación y responsabilidad en LMs: Cómo cumplir con el EU AI Act, mitigar sesgos y reducir el impacto climático"
           event="Google DevFest Cloud Madrid | Workshop"
@@ -235,11 +238,12 @@ useHead({
             </div>
           </template>
         </CardMediaSummary>
+        <!-- TODO link? https://www.youtube.com/watch?v=3ezogDsebUg -->
         <CardMediaSummary talk="Women Entrepreneurs"
             event="UU Prize @ European Parliament Brussels | Round Table"
-            event_link="TODO LINK & PIC"
-            image_link=""
-            recording_link="https://www.youtube.com/watch?v=3ezogDsebUg"
+            event_link=""
+            image_link="images/events/230923_parlamento_bruselas.jpeg"
+            recording_link=""
             :tags="['Responsible AI', 'Linguistic diversity', '🇪🇸']">
             <i-tabler:external-link style="font-size: 1.25rem;" />
             <template v-slot:abstract>
