@@ -49,79 +49,7 @@ const index = computed(() => counter.value % greetings.value.length);
 
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
-      <div class="px-8">
-        <div class="text-3xl mb-4">Upcoming talk, join us!</div>
-        <div class="grid py-6 gap-x-6 gap-y-3">
-          <CardMediaSummary
-            talk="Machines that reflect us: Building AI systems responsibly"
-            event="Women in Data Science Zurich | Round Table"
-            event_link="https://www.wids.ch/"
-            image_link="images/events/240607_wids.jpeg"
-            recording_link=""
-            :tags="['Responsible AI', 'Explainable AI', '🇬🇧']"
-          >
-            <i-tabler:external-link style="font-size: 1.25rem" />
-            <template v-slot:abstract>
-              <div class="text-sm text-gray-700 dark:text-white"></div>
-            </template>
-          </CardMediaSummary>
-        </div>
-      </div>
-
-      <div class="flex flex-col flex-shrink gap-12">
-        <img
-          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/talks_undraw_conference.svg"
-          alt="Talks"
-        />
-        <router-link
-          class="
-            flex
-            justify-center
-            place-self-center
-            font-medium
-            p-6
-            gap-3
-            items-center
-            border-dashed
-            rounded-md
-            border-2 border-gray-200
-            hover:border-accent-400
-          "
-          to="/divulgation"
-          >More Talks</router-link
-        >
-      </div>
-    </div>
-  </Container>
-
-  <Container class="bg-white dark:bg-gray-900">
-    <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
-      <div class="flex flex-col flex-shrink gap-12">
-        <img
-          class="w-screen"
-          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/projects_undraw_freelancer_long_hair.svg"
-          alt="Projects"
-        />
-        <router-link
-          class="
-            flex
-            justify-center
-            place-self-center
-            font-medium
-            p-6
-            gap-3
-            text-align-center
-            items-center
-            border-dashed
-            rounded-md
-            border-2 border-gray-200
-            hover:border-accent-400
-          "
-          to="/projects"
-          >More Projects</router-link
-        >
-      </div>
-
+      
       <div class="px-8">
         <div class="text-3xl mb-4">Current projects, join us!</div>
         <div class="grid py-6 gap-x-6 gap-y-3">
@@ -171,6 +99,85 @@ const index = computed(() => counter.value % greetings.value.length);
           </CardTalkDetailed> -->
         </div>
       </div>
+
+      <div class="flex flex-col flex-shrink gap-12">
+        <img
+          class="w-screen"
+          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/projects_undraw_freelancer_long_hair.svg"
+          alt="Projects"
+        />
+        <router-link
+          class="
+            flex
+            justify-center
+            place-self-center
+            font-medium
+            p-6
+            gap-3
+            text-align-center
+            items-center
+            border-dashed
+            rounded-md
+            border-2 border-gray-200
+            hover:border-accent-400
+          "
+          to="/projects"
+          >More Projects</router-link
+        >
+      </div>
+
     </div>
   </Container>
+
+  <Container class="bg-white dark:bg-gray-900">
+    <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
+      
+
+      <div class="flex flex-col flex-shrink gap-12">
+        <img
+          src="https://raw.githubusercontent.com/mariagrandury/mariagrandury.github.io/legacy/assets/undraw/talks_undraw_conference.svg"
+          alt="Talks"
+        />
+        <router-link
+          class="
+            flex
+            justify-center
+            place-self-center
+            font-medium
+            p-6
+            gap-3
+            items-center
+            border-dashed
+            rounded-md
+            border-2 border-gray-200
+            hover:border-accent-400
+          "
+          to="/divulgation"
+          >More Talks</router-link
+        >
+      </div>
+
+      <div class="px-8">
+        <div class="text-3xl mb-4">Upcoming talk, join us!</div>
+        <div class="grid py-6 gap-x-6 gap-y-3">
+          <CardMediaSummary
+            talk="Machines that reflect us: Building AI systems responsibly"
+            event="Women in Data Science Zurich | Round Table"
+            event_link="https://www.wids.ch/"
+            image_link="images/events/240607_wids.jpeg"
+            recording_link=""
+            :tags="['Responsible AI', 'Explainable AI', '🇬🇧']"
+          >
+            <i-tabler:external-link style="font-size: 1.25rem" />
+            <template v-slot:abstract>
+              <div class="text-sm text-gray-700 dark:text-white"></div>
+            </template>
+          </CardMediaSummary>
+        </div>
+      </div>
+      
+    </div>
+  </Container>
+
+  
 </template>
