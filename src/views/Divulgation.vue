@@ -44,7 +44,7 @@ useHead({
     </div>
     <div>
       <p class="italic">
-        Last update: June 2024 | For up-to-date information check
+        Last update: November 2024 | For up-to-date information check
         <a
           href="https://www.linkedin.com/in/mariagrandury/"
           target="_blank"
@@ -54,7 +54,7 @@ useHead({
       </p>
     </div>
     <div class="lg:px-24 sm:px-12">
-      <h2 class="py-6 text-2xl">Upcoming talk - Join us!</h2>
+      <!-- <h2 class="py-6 text-2xl">Upcoming talk - Join us!</h2>
       <CardMediaSummary
           talk="Técnicas avanzadas y aplicaciones de NLP. Alineamiento y evaluación de LLMs."
           event="Curso de verano de IA, UNIA (Baeza) | 2x Workshops"
@@ -70,11 +70,70 @@ useHead({
             </div>
           </template>
         </CardMediaSummary>
-
+      -->
       <br />
-      <br />
+      <br /> 
 
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
+        <CardMediaSummary
+          talk="Interview with María Grandury: AI does not think, that's marketing"
+          event="Cadena SER, Radio Bierzo | Interview"
+          event_link="https://www.linkedin.com/posts/mariagrandury_mi-primera-entrevista-en-la-radio-siempre-activity-7262818610593550336-EsLS"
+          image_link="images/events/241113_entrevista_radio_bierzo.jpg"
+          recording_link="https://cadenaser.com/castillayleon/2024/11/13/maria-grandury-experta-en-ia-la-inteligencia-artificial-no-piensa-eso-es-marketing-radio-bierzo/"
+          :tags="['Radio', 'NLP', '🇪🇸']"
+        >
+          <i-mdi-youtube style="font-size: 1.25rem" />
+          <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Entrevista en Radio Bierzo
+            </div>
+          </template>
+        </CardMediaSummary>
+        <CardMediaSummary
+          talk="AI Value Chain Workshop: Fostering Responsible Innovation in Open-Source AI. Led by: Laura Galindo-Romero (Meta)"
+          event="AI Policy Summit 2024, RegHorizon & ETH | Invitation-Only Workshop"
+          event_link="https://reghorizon.com/ai-policy-summit-2024/"
+          image_link="images/events/241101_ai_policy_summit.jpg"
+          recording_link=""
+          :tags="['AI Policy', 'Open-Source', '🇪🇸']"
+        >
+          <!-- <i-mdi-youtube style="font-size: 1.25rem" /> -->
+          <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Curso de verano
+            </div>
+          </template>
+        </CardMediaSummary>
+        <CardMediaSummary
+          talk="Técnicas avanzadas y aplicaciones de NLP. Alineamiento y evaluación de LLMs."
+          event="Curso de verano de IA, UNIA (Baeza) | 2x Workshops"
+          event_link=""
+          image_link="images/events/240819_unia.jpeg"
+          recording_link=""
+          :tags="['Summer School', 'NLP', '🇪🇸']"
+        >
+          <i-mdi-youtube style="font-size: 1.25rem" />
+          <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Curso de verano
+            </div>
+          </template>
+        </CardMediaSummary>
+
+        <CardMediaSummary
+          talk="European LLM Multilingual Evaluation Expert Workshop"
+          event="European Commission & European Language Data Space | Invitation-Only Discussion"
+          event_link="https://ec.europa.eu/newsroom/lds/items/839625/en"
+          image_link="images/events/240702_european_language_data_space.jpeg"
+          recording_link=""
+          :tags="['Responsible AI', 'Explainable AI', '🇬🇧']">
+          <i-tabler:external-link style="font-size: 1.25rem" />
+          <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white"></div>
+          </template>
+        </CardMediaSummary>
+
         <CardMediaSummary
           talk="Machines that reflect us: Building AI systems responsibly"
           event="Women in Data Science Zurich | Round Table"
@@ -114,8 +173,8 @@ useHead({
           </template>
         </CardMediaSummary>
         <CardMediaSummary
-          talk="La larga marcha de un grupo de voluntarios para entrenar un modelo de lenguaje hispano"
-          event="El País | Newspaper (Featured)"
+          talk="SomosNLP: La larga marcha de un grupo de voluntarios por lograr un modelo de lenguaje hispano"
+          event="El País | Newspaper Interview"
           event_link="https://www.linkedin.com/posts/mariagrandury_la-larga-marcha-de-un-grupo-de-voluntarios-activity-7202311429297692672-F-oA"
           image_link="images/events/240512_elpais.jpg"
           recording_link="https://www.linkedin.com/posts/mariagrandury_la-larga-marcha-de-un-grupo-de-voluntarios-activity-7202311429297692672-F-oA"
