@@ -61,7 +61,7 @@ const rotationStyle = computed(() => {
                 -->
                 <a href="mailto: mariagrandury@gmail.com" target="_blank" class="contents">
                     <i-fluent-mail-24-regular />
-                    <div>mariagrandury@gmail.com</div>
+                    <div>mariagrandury AT gmail DOT com</div>
                 </a>
                 <a href="https://mariagrandury.com" target="_blank" class="contents">
                     <i-fluent-link-square-24-regular />
@@ -69,7 +69,7 @@ const rotationStyle = computed(() => {
                 </a>
                 <a href="https://wikipedia.org/wiki/Berlin" target="_blank" class="contents">
                     <i-fluent-location-24-regular />
-                    <div>Berlin, Germany</div>
+                    <div>Madrid / Berlin</div>
                 </a>
                 <!--
                 <a href="https://www.neurocat.ai/" target="_blank" class="contents">
