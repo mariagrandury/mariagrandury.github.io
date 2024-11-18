@@ -20,9 +20,10 @@ const index = computed(() => counter.value % greetings.value.length);
         <div class="text-4xl mb-4">I'm María Grandury!</div>
         <div>
           <ul class="flex flex-col gap-1">
-            <li>💡 Machine Learning Research Engineer</li>
-            <li>🎯 #NLP, #ResponsibleAI, #AIinSpanish</li>
+            <li>💡 Natural Language Processing Researcher</li>
+            <li>🎯 #ResponsibleNLP, #TrustworthyNLP, #NLPinSpanish</li>
             <li>🎓 Mathematician & Physicist</li>
+            <br>
             <li>
               🚀 Founder
               <a
@@ -41,6 +42,28 @@ const index = computed(() => counter.value % greetings.value.length);
                 >@HuggingFace
               </a>
             </li>
+            <br>
+            <li>
+              🔍 Researcher
+              <a
+                href="https://upm.es"
+                target="_blank"
+                class="text-accent-500 hover:underline"
+                >@Technical University of Madrid</a
+              >
+              #LLMEvaluation #Psycholinguistics
+            </li>
+            <li>
+              🔍 Student Researcher
+              <a
+                href="https://nlp.uned.es"
+                target="_blank"
+                class="text-accent-500 hover:underline"
+                >@National University of Distance Education</a
+              >
+              #EnglishSpanishGap
+            </li>
+            
           </ul>
         </div>
       </div>
