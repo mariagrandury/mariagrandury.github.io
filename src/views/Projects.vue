@@ -71,9 +71,9 @@ useHead({
 
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
         <CardProject
-          title="Open Leaderboard for the languages of Spain and LATAM [WIP]"
+          title="Open Leaderboard for the languages of Spain and LATAM"
           :tags="['LLM Evaluation', 'NLP in Spanish']"
-          link="https://somosnlp.org/somos600m"
+          link="https://huggingface.co/spaces/la-leaderboard/la-leaderboard"
           color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
         >
           <i-fluent-star-28-regular />
@@ -81,7 +81,7 @@ useHead({
             <div class="text-sm text-gray-700 dark:text-white">
               Open leaderboard to evaluate LLM memorization, reasoning and linguistic capabilities in the languages of Spain, LATAM and the Caribbean. Developed as part of the #Somos600M Project thanks to the donation of high-quality datasets by IIC, LenguajeNaturalAI, UPM, HiTZ, and BSC.
               <br />
-              <b>1st of July: Leaderboard v1 live!</b>
+              <b>Leaderboard v1 is live!</b>
             </div>
           </template>
         </CardProject>
