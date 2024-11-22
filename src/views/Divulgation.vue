@@ -76,6 +76,21 @@ useHead({
 
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
         <CardMediaSummary
+          talk="Lottery and Artificial Intelligence: AI cannot predict the winning ticket and it's not a matter of time"
+          event="Radio Televisión Española (RTVE) | Article (Featured)"
+          event_link="https://www.linkedin.com/posts/mariagrandury_ia-activity-7265744033543569408-mZ5l?utm_source=share&utm_medium=member_desktop"
+          image_link="images/events/241122_loteria_rtve.jpeg"
+          recording_link="https://www.rtve.es/rtve/20241122/loteria-navidad-2024-por-que-chatgpt-no-puede-predecir-ganador/16331285.shtml"
+          :tags="['Radio', 'NLP', '🇪🇸']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Artículo de Radio Televisión Española: Lotería de Navidad e Inteligencia Artificial: la IA no puede predecir el número ganador y no es cuestión de tiempo
+            </div>
+          </template>
+        </CardMediaSummary>
+        <CardMediaSummary
           talk="Interview with María Grandury: AI does not think, that's marketing"
           event="Cadena SER, Radio Bierzo | Interview"
           event_link="https://www.linkedin.com/posts/mariagrandury_mi-primera-entrevista-en-la-radio-siempre-activity-7262818610593550336-EsLS"
@@ -83,7 +98,7 @@ useHead({
           recording_link="https://cadenaser.com/castillayleon/2024/11/13/maria-grandury-experta-en-ia-la-inteligencia-artificial-no-piensa-eso-es-marketing-radio-bierzo/"
           :tags="['Radio', 'NLP', '🇪🇸']"
         >
-          <i-mdi-youtube style="font-size: 1.25rem" />
+          <i-mdi-microphone style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
               Entrevista en Radio Bierzo
