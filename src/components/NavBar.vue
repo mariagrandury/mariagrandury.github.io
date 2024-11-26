@@ -11,6 +11,7 @@ const isDark = useDark();
     </router-link>
     <div class="flex gap-6 justify-around items-center">
       <router-link class="hover:underline underline-2px underline-accent-500" to="/projects">Projects</router-link>
+      <router-link class="hover:underline underline-2px underline-accent-500" to="/research">Research</router-link>
       <router-link class="hover:underline underline-2px underline-accent-500" to="/divulgation">Divulgation
       </router-link>
       <router-link class="hover:underline underline-2px underline-accent-500" to="/about">About Me</router-link>
