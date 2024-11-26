@@ -7,7 +7,7 @@ useHead({
     {
       name: "description",
       content:
-        "Hello! I'm María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here you can find my open-source AI projects",
+        "Hello! I'm María, an NLP Researcher and the Founder @ SomosNLP.org | Here you can find my open-source AI projects",
     },
     {
       property: "og:title",
@@ -38,7 +38,7 @@ useHead({
         <i-fluent-design-ideas-24-regular style="font-size: 2rem" />
       </h1>
       <h2 class="py-6">
-        I'm a Machine Learning Research Engineer focused on NLP, specially on data and evaluations. And I always say yes to NLP in Spanish projects!
+        I'm a Natural Language Processing (NLP) Researcher passionate about increasing the representation of the linguistic and cultural diversity of the world in LMs. Wanna collaborate?
       </h2>
       <p class="italic">
         Last update: June 2024 | For up-to-date information check

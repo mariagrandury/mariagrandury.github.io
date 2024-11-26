@@ -6,7 +6,7 @@ import { useHead } from '@vueuse/head'
 useHead({
     title: 'María Grandury - About Me, Bio & Collaborations',
     meta: [
-        { name: 'description', content: 'Hello! I\'m María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here are my bio and the organizations I collaborate with' },
+        { name: 'description', content: 'Hello! I\'m María, an NLP Researcher and the Founder @ SomosNLP.org | Here are my bio and the organizations I collaborate with' },
         { property: 'og:title', content: 'María Grandury - About Me, Bio & Collaborations' },
         { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
         { name: 'twitter:card', content: 'summary' },
@@ -31,7 +31,7 @@ useHead({
             <CardGeneric class="px-12 my-12">
                 <h2 class="pt-12">
                     I'm half Spanish half French, live in Berlin, and hold two degrees in Mathematics & Physics.
-                    I'm a Machine Learning Research Engineer focused on responsible, inclusive, open-source AI, especially in Spanish.
+                    I'm a Natural Language Processing (NLP) Researcher focused on responsible, inclusive, open-source AI, especially in Spanish.
                 </h2>
                 <h2 class="py-2">
                     I believe that NLP research is too focused on English and 

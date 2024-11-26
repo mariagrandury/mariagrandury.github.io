@@ -3,10 +3,10 @@ import { useHead } from '@vueuse/head'
 import Container from './components/Container.vue';
 
 useHead({
-  title: 'María Grandury - ML Research Engineer #NLP',
+  title: 'María Grandury - NLP Researcher',
   meta: [
-    { name: 'description', content: 'Hello! I\'m an ML Research Engineer focused on NLP, Responsible AI & AI in Spanish | Founder @ SomosNLP.org | Here I share my projects, talks and interests :)' },
-    { property: 'og:title', content: 'María Grandury - ML Research Engineer #NLP' },
+    { name: 'description', content: 'Hello! I\'m an NLP Researcher, Responsible AI & AI in Spanish | Founder @ SomosNLP.org | Here I share my projects, talks and interests :)' },
+    { property: 'og:title', content: 'María Grandury - NLP Researcher' },
     { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:site', content: '@mariagrandury' },

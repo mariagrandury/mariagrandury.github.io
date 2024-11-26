@@ -7,7 +7,7 @@ useHead({
     {
       name: "description",
       content:
-        "Hello! I'm María, an ML Research Engineer focused on NLP and the Founder @ SomosNLP.org | Here you can find my talks and other divulgation content",
+        "Hello! I'm María, an NLP Researcher and the Founder @ SomosNLP.org | Here you can find my talks and other divulgation content",
     },
     {
       property: "og:title",

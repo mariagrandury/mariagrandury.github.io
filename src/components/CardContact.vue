@@ -47,8 +47,8 @@ const rotationStyle = computed(() => {
             <div class="grid grid-cols-[auto,max-content]">
                 <div>
                     <h1 class="font-medium mb-1 text-2xl tracking-tight">María Grandury</h1>
-                    <h2 class="font-light text-lg tracking-tight">Machine Learning Research Engineer</h2>
-                    <p class="font-light text-sm tracking-tight">NLP, Responsible AI and AI in Spanish</p>
+                    <h2 class="font-light text-lg tracking-tight">NLP Researcher</h2>
+                    <p class="font-light text-sm tracking-tight">LLM Evaluation, Responsible AI and AI in Spanish</p>
                 </div>
                 <!-- <Logo /> -->
             </div>
