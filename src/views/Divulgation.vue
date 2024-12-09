@@ -76,6 +76,21 @@ useHead({
 
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
         <CardMediaSummary
+          talk="Synthetic Data Generation and LLM Evaluation"
+          event="Universidad Nacional Autónoma de México (UNAM) | Bachelor's Degree in Data Science for Social Sciences and Humanities | Masterclass"
+          event_link="https://www.acatlan.unam.mx/index.php?id=1805"
+          image_link="images/events/241214_unam.png"
+          recording_link=""
+          :tags="['University', 'NLP', '🇪🇸']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Diplomado "Introducción a la Ciencia de Datos: Herramientas para el Aprendizaje Automatizado en las Ciencias Sociales y Humanidades"
+            </div>
+          </template>
+        </CardMediaSummary>
+        <CardMediaSummary
           talk="Lottery and Artificial Intelligence: AI cannot predict the winning ticket and it's not a matter of time"
           event="Radio Televisión Española (RTVE) | Article (Featured)"
           event_link="https://www.linkedin.com/posts/mariagrandury_ia-activity-7265744033543569408-mZ5l?utm_source=share&utm_medium=member_desktop"
@@ -191,7 +206,7 @@ useHead({
           talk="SomosNLP: La larga marcha de un grupo de voluntarios por lograr un modelo de lenguaje hispano"
           event="El País | Newspaper Interview"
           event_link="https://www.linkedin.com/posts/mariagrandury_la-larga-marcha-de-un-grupo-de-voluntarios-activity-7202311429297692672-F-oA"
-          image_link="images/events/240512_elpais.jpg"
+          image_link="images/events/240512_elpais_screenshot.png"
           recording_link="https://www.linkedin.com/posts/mariagrandury_la-larga-marcha-de-un-grupo-de-voluntarios-activity-7202311429297692672-F-oA"
           :tags="['AI in Spanish', '🇪🇸']">
           <i-mdi-newspaper style="font-size: 1.25rem" />
