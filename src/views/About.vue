@@ -41,7 +41,7 @@ useHead({
                         class="text-accent-500 dark:text-accent-300 hover:underline">SomosNLP,</a>
                     the largest community of Spanish-speaking NLP professionals 
                     that aims to democratize and advance the state-of-the-art 
-                    of NLP in Spanish.
+                    of NLP in the languages of Spain and LATAM.
                 </h2>
                 <h2 class="py-2">
                     I'm a 
@@ -56,11 +56,9 @@ useHead({
                 </h2>
                 <h2 class="pb-12">
                     Previously, I worked at
-                    <a href="https://clibrain.com" target="_blank"
-                        class="text-accent-500 dark:text-accent-300 hover:underline">Clibrain</a>
+                    <strong>Clibrain</strong>
                     as part of the Labs team, designing how to evaluate whether AI models truly understand and respect the rich linguistic and cultural nuances of Spanish. I also worked at 
-                    <a href="https://neurocat.ai" target="_blank"
-                        class="text-accent-500 dark:text-accent-300 hover:underline">neurocat,</a>
+                    <strong>neurocat,</strong>
                     a Berlin-based startup, where I developed explainability methods (XAI) and adversarial attacks to assess the security of ML models.
                 </h2>
             </CardGeneric>

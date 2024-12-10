@@ -41,7 +41,7 @@ useHead({
         I'm a Natural Language Processing (NLP) Researcher passionate about increasing the representation of the linguistic and cultural diversity of the world in LMs. Wanna collaborate?
       </h2>
       <p class="italic">
-        Last update: June 2024 | For up-to-date information check
+        Last update: December 2024 | For up-to-date information check
         <a
           href="https://www.huggingface.co/mariagrandury/"
           target="_blank"
@@ -79,9 +79,9 @@ useHead({
           <i-fluent-star-28-regular />
           <template v-slot:description>
             <div class="text-sm text-gray-700 dark:text-white">
-              Open leaderboard to evaluate LLM memorization, reasoning and linguistic capabilities in the languages of Spain, LATAM and the Caribbean. Developed as part of the #Somos600M Project thanks to the donation of high-quality datasets by IIC, LenguajeNaturalAI, UPM, HiTZ, and BSC.
+              Open-source leaderboard to evaluate LLM memorization, reasoning and linguistic capabilities in the languages of Spain, LATAM and the Caribbean. Developed as part of the #Somos600M Project thanks to the donation of 60 high-quality datasets by 10 research groups.
               <br />
-              <b>Leaderboard v1 is live!</b>
+              <a href="https://huggingface.co/spaces/la-leaderboard/la-leaderboard" target="_blank" class="text-accent-500 dark:text-accent-300 hover:underline">Leaderboard v1 is live!</a>
             </div>
           </template>
         </CardProject>

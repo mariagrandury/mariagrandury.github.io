@@ -44,7 +44,7 @@ useHead({
     </div>
     <div>
       <p class="italic">
-        Last update: November 2024 | For up-to-date information check
+        Last update: December 2024 | For up-to-date information check
         <a
           href="https://www.linkedin.com/in/mariagrandury/"
           target="_blank"

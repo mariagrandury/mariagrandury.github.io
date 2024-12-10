@@ -39,11 +39,11 @@ useHead({
       </h1>
       <h2 class="py-6">
         Cultural knowledge is highly relevant for an LLM to understand a language. My main interest is to gain a deeper comprehension of the capabilities and limitations of LLMs since we cannot improve what we cannot measure. 
-        At the Technical University of Madrid, we are currently doing research on LLM evaluation and psycholinguistics.
-        I would like to further explore cultural and linguistic bias evaluation and mitigation.
+        At the Technical University of Madrid, I am currently doing research on LLM evaluation and psycholinguistics.
+        I would like to further explore cultural and linguistic bias evaluation and mitigation in LLMs with a more holistic approach to language understanding, at the level of text representation and through reasoning.
       </h2>
       <p class="italic">
-        Last update: November 2024 | For up-to-date information check my
+        Last update: December 2024 | For up-to-date information check my
         <a
           href="https://scholar.google.com/citations?user=3mc_-QsAAAAJ"
           target="_blank"
