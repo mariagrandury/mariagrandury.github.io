@@ -25,6 +25,12 @@ useHead({
 });
 </script>
 
+<!--
+TODO:
+- University vs public speaking (keynotes, podcasts, interviews)
+- Get data from csv
+-->
+
 <template>
   <Container class="bg-white dark:bg-gray-900">
     <NavBar />
@@ -55,7 +61,7 @@ useHead({
     </div>
     <div class="lg:px-24 sm:px-12">
       <!-- <h2 class="py-6 text-2xl">Upcoming talk - Join us!</h2>
-      <CardMediaSummary
+      <CardMediaMini
           talk="Técnicas avanzadas y aplicaciones de NLP. Alineamiento y evaluación de LLMs."
           event="Curso de verano de IA, UNIA (Baeza) | 2x Workshops"
           event_link=""
@@ -69,19 +75,23 @@ useHead({
               Curso de verano
             </div>
           </template>
-        </CardMediaSummary>
+        </CardMediaMini>
       -->
       <br />
       <br /> 
 
-      <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
-        <CardMediaSummary
+      <div class="grid py-6 gap-x-6 gap-y-3">
+        <h3 class="text-2xl">2024</h3>
+        <CardMediaMini
           talk="Synthetic Data Generation and LLM Evaluation"
-          event="Universidad Nacional Autónoma de México (UNAM) | Bachelor's Degree in Data Science for Social Sciences and Humanities | Masterclass"
+          event="Universidad Nacional Autónoma de México (UNAM) | Bachelor's Degree in Data Science for Social Sciences and Humanities"
           event_link="https://www.acatlan.unam.mx/index.php?id=1805"
-          image_link="images/events/241214_unam.png"
+          image_link="images/events/241214_unam_header.png"
           recording_link=""
-          :tags="['University', 'NLP', '🇪🇸']"
+          language="Spanish"
+          type="Masterclass"
+          date="2024-12-14"
+          :tags="['Synthetic Data', 'LLM Evaluation']"
         >
         <i-mdi-newspaper style="font-size: 1.25rem" />
         <template v-slot:abstract>
@@ -89,14 +99,17 @@ useHead({
               Diplomado "Introducción a la Ciencia de Datos: Herramientas para el Aprendizaje Automatizado en las Ciencias Sociales y Humanidades"
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Lottery and Artificial Intelligence: AI cannot predict the winning ticket and it's not a matter of time"
-          event="Radio Televisión Española (RTVE) | Article (Featured)"
+          event="Radio Televisión Española (RTVE)"
           event_link="https://www.linkedin.com/posts/mariagrandury_ia-activity-7265744033543569408-mZ5l?utm_source=share&utm_medium=member_desktop"
           image_link="images/events/241122_loteria_rtve.jpeg"
           recording_link="https://www.rtve.es/rtve/20241122/loteria-navidad-2024-por-que-chatgpt-no-puede-predecir-ganador/16331285.shtml"
-          :tags="['Radio', 'NLP', '🇪🇸']"
+          language="Spanish"
+          type="Article (Featured)"
+          date="2024-11-22"
+          :tags="['NLP']"
         >
         <i-mdi-newspaper style="font-size: 1.25rem" />
         <template v-slot:abstract>
@@ -104,14 +117,17 @@ useHead({
               Artículo de Radio Televisión Española: Lotería de Navidad e Inteligencia Artificial: la IA no puede predecir el número ganador y no es cuestión de tiempo
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Interview with María Grandury: AI does not think, that's marketing"
-          event="Cadena SER, Radio Bierzo | Interview"
+          event="Cadena SER, Radio Bierzo"
           event_link="https://www.linkedin.com/posts/mariagrandury_mi-primera-entrevista-en-la-radio-siempre-activity-7262818610593550336-EsLS"
           image_link="images/events/241113_entrevista_radio_bierzo.jpg"
           recording_link="https://cadenaser.com/castillayleon/2024/11/13/maria-grandury-experta-en-ia-la-inteligencia-artificial-no-piensa-eso-es-marketing-radio-bierzo/"
-          :tags="['Radio', 'NLP', '🇪🇸']"
+          language="Spanish"
+          type="Interview"
+          date="2024-11-13"
+          :tags="['NLP']"
         >
           <i-mdi-microphone style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -119,14 +135,17 @@ useHead({
               Entrevista en Radio Bierzo
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="AI Value Chain Workshop: Fostering Responsible Innovation in Open-Source AI. Led by: Laura Galindo-Romero (Meta)"
           event="AI Policy Summit 2024, RegHorizon & ETH | Invitation-Only Workshop"
           event_link="https://reghorizon.com/ai-policy-summit-2024/"
           image_link="images/events/241101_ai_policy_summit.jpg"
           recording_link=""
-          :tags="['AI Policy', 'Open-Source', '🇪🇸']"
+          language="English"
+          type="Workshop"
+          date="2024-11-01"
+          :tags="['AI Policy']"
         >
           <!-- <i-mdi-youtube style="font-size: 1.25rem" /> -->
           <template v-slot:abstract>
@@ -134,14 +153,17 @@ useHead({
               Curso de verano
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Técnicas avanzadas y aplicaciones de NLP. Alineamiento y evaluación de LLMs."
-          event="Curso de verano de IA, UNIA (Baeza) | 2x Workshops"
+          event="Universidad Internacional de Andalucía | IA Summer School"
           event_link=""
           image_link="images/events/240819_unia.jpeg"
           recording_link=""
-          :tags="['Summer School', 'NLP', '🇪🇸']"
+          language="Spanish"
+          type="Masterclass"
+          date="2024-08-19"
+          :tags="['AI Alignment', 'LLM Evaluation']"
         >
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -149,65 +171,84 @@ useHead({
               Curso de verano
             </div>
           </template>
-        </CardMediaSummary>
+        </CardMediaMini>
 
-        <CardMediaSummary
+        <CardMediaMini
           talk="European LLM Multilingual Evaluation Expert Workshop"
           event="European Commission & European Language Data Space | Invitation-Only Discussion"
           event_link="https://ec.europa.eu/newsroom/lds/items/839625/en"
           image_link="images/events/240702_european_language_data_space.jpeg"
           recording_link=""
-          :tags="['Responsible AI', 'Explainable AI', '🇬🇧']">
+          language="English"
+          type="Workshop"
+          date="2024-07-02"
+          :tags="['Responsible AI', 'Explainable AI']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
-            <div class="text-sm text-gray-700 dark:text-white"></div>
+            <div class="text-sm text-gray-700 dark:text-white">
+              European LLM Multilingual Evaluation Expert Workshop
+            </div>
           </template>
-        </CardMediaSummary>
+        </CardMediaMini>
 
-        <CardMediaSummary
+        <CardMediaMini
           talk="Machines that reflect us: Building AI systems responsibly"
-          event="Women in Data Science Zurich | Round Table"
+          event="Women in Data Science Zurich"
           event_link="https://www.wids.ch/"
           image_link="images/events/240607_wids_pic.jpeg"
           recording_link=""
-          :tags="['Responsible AI', 'Explainable AI', '🇬🇧']">
+          language="English"
+          type="Round Table"
+          date="2024-06-07"
+          :tags="['Responsible AI', 'Explainable AI']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
-            <div class="text-sm text-gray-700 dark:text-white"></div>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Women in Data Science Zurich
+            </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Open-Source LLMs and the Hugging Face ecosystem"
-          event="Women in Data Science Zurich | Mentorship Session"
+          event="Women in Data Science Zurich"
           event_link="https://www.wids.ch/"
           image_link="images/events/240607_wids.jpeg"
           recording_link=""
-          :tags="['Open Source', 'LLMs', '🇬🇧']">
+          language="English"
+          type="Mentorship Session"
+          date="2024-06-07"
+          :tags="['Open Source', 'LLMs']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white"></div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Cómo podemos desarrollar IA con impacto social"
-          event="Datathon contra el Bullying, Río Cuarto, Argentina | Talk"
+          event="Datathon contra el Bullying, Río Cuarto, Argentina"
           event_link=""
           image_link="images/events/240513_datathon.jpeg"
           recording_link=""
-          :tags="['AI for Good', '🇪🇸']">
+          language="Spanish"
+          type="Keynote"
+          date="2024-05-13"
+          :tags="['AI for Good']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
               Datathon Argentina
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="SomosNLP: La larga marcha de un grupo de voluntarios por lograr un modelo de lenguaje hispano"
-          event="El País | Newspaper Interview"
+          event="El País"
           event_link="https://www.linkedin.com/posts/mariagrandury_la-larga-marcha-de-un-grupo-de-voluntarios-activity-7202311429297692672-F-oA"
           image_link="images/events/240512_elpais_screenshot.png"
           recording_link="https://www.linkedin.com/posts/mariagrandury_la-larga-marcha-de-un-grupo-de-voluntarios-activity-7202311429297692672-F-oA"
+          language="Spanish"
+          type="NewspaperInterview"
+          date="2024-05-12"
           :tags="['AI in Spanish', '🇪🇸']">
           <i-mdi-newspaper style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -215,13 +256,16 @@ useHead({
               El País
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Proyecto #Somos600M: Impulsando la diversidad lingüística en IA"
-          event="Hackathon #Somos600M | Keynote"
+          event="Hackathon #Somos600M"
           event_link="https://www.youtube.com/watch?v=QCNPVy3QWFs&list=PLTA-KAy8nxaASMwEUWkkTfMaDxWBxn-8J"
           image_link="images/events/240313_somos600m.png"
           recording_link="https://www.youtube.com/watch?v=QCNPVy3QWFs&list=PLTA-KAy8nxaASMwEUWkkTfMaDxWBxn-8J"
+          language="Spanish"
+          type="Keynote"
+          date="2024-03-13"
           :tags="['NLP in Spanish', 'Open-Source', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -229,14 +273,17 @@ useHead({
               Hackathon #Somos600M
             </div>
           </template>
-        </CardMediaSummary>
+        </CardMediaMini>
         <!-- TODO recording + pic speaking -->
-        <CardMediaSummary
+        <CardMediaMini
           talk="Código Abierto y Diversidad Lingüística en IA: Impulsando el Futuro del Español desde la Universidad"
-          event="I Congreso de IA en la Educación Superior, Universidad de Puerto Rico | Talk"
+          event="I Congreso de IA en la Educación Superior, Universidad de Puerto Rico"
           event_link="https://adistancia.upr.edu/inteligencia_artificial/"
           image_link="images/events/240301_upr.jpeg"
           recording_link="" 
+          language="Spanish"
+          type="Talk"
+          date="2024-03-01"
           :tags="['Open-Source', 'Responsible AI', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -255,13 +302,16 @@ useHead({
               significativa y responsable al desarrollo de la IA.
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="How to promote inclusive, responsible and open-source AI"
-          event="Discovering Tech Stories #123 | Podcast Interview"
+          event="Discovering Tech Stories #123"
           event_link="https://www.youtube.com/watch?v=XYnd6Cbow7U"
           image_link="images/events/240131_techientrevista.jpeg"
           recording_link="https://www.youtube.com/watch?v=XYnd6Cbow7U"
+          language="Spanish"
+          type="Podcast Interview"
+          date="2024-01-31"
           :tags="['Career', 'Open-Source', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -269,25 +319,33 @@ useHead({
               Techientrevista Opground
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <br>
+        <h3 class="text-2xl">2023</h3>
+        <CardMediaMini
           talk="The impact of Generative AI in the European creative industry"
-          event="EFE, Panodyssey, European Commission | Round Table"
+          event="EFE, Panodyssey, European Commission"
           event_link="https://efecomunica.efe.com/factor-humano-ia-evitar-riesgos/"
           image_link="images/events/231114_efe_camera.png"
           recording_link="https://www.youtube.com/watch?v=GdwXx3wmWBw"
+          language="Spanish"
+          type="Round Table"
+          date="2023-11-14"
           :tags="['Responsible AI', 'AI Risks', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">EFE</div>
           </template>
-        </CardMediaSummary>
+        </CardMediaMini>
         <!-- TODO link? https://www.youtube.com/watch?v=3ezogDsebUg -->
-        <CardMediaSummary talk="Women Entrepreneurs"
-            event="UU Prize @ European Parliament Madrid | Round Table"
+        <CardMediaMini talk="Women Entrepreneurs"
+            event="UU Prize @ European Parliament Madrid"
             event_link=""
             image_link="images/events/231101_parlamento_madrid.jpeg"
             recording_link=""
+            language="Spanish"
+            type="Round Table"
+            date="2023-11-01"
             :tags="['Responsible AI', 'Linguistic diversity', '🇪🇸']">
             <i-tabler:external-link style="font-size: 1.25rem;" />
             <template v-slot:abstract>
@@ -295,14 +353,17 @@ useHead({
                     Parlamento Europeo Madrid
                 </div>
             </template>
-        </CardMediaSummary>
+        </CardMediaMini>
         <!-- TODO PIC Twitter -->
-        <CardMediaSummary
+        <CardMediaMini
           talk="Innovación y responsabilidad en LMs: Cómo cumplir con el EU AI Act, mitigar sesgos y reducir el impacto climático"
-          event="Google DevFest Cloud Madrid | Workshop"
+          event="Google DevFest Cloud Madrid"
           event_link=""
           image_link="images/events/231125_devfest_cartel.png"
           recording_link=""
+          language="Spanish"
+          type="Workshop"
+          date="2023-11-25"
           :tags="['EU AI Act', 'Explainability', 'Bias', '🇪🇸']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -310,14 +371,18 @@ useHead({
               Google DevFest Cloud Madrid
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Responsible AI as a key driver for the future of robotics & Humanities"
-          event="IE University Robotics & AI Club, OdiseIA | Keynote"
+          event="IE University Robotics & AI Club, OdiseIA"
+          organizer="IE University Robotics & AI Club, OdiseIA"
           event_link="https://www.linkedin.com/posts/mariagrandury_trustworthyai-responsibleai-aiinspanish-activity-7128788336776744960-bgY0"
           image_link="images/events/231024_bias_everywhere.jpg"
           recording_link="https://www.linkedin.com/posts/mariagrandury_trustworthyai-responsibleai-aiinspanish-activity-7128788336776744960-bgY0"
-          :tags="['Responsible AI', '🇬🇧']">
+          language="English"
+          type="Keynote"
+          date="2023-10-24"
+          :tags="['Responsible AI']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -326,13 +391,16 @@ useHead({
               & Humanities.
             </div>
           </template>
-        </CardMediaSummary>
+        </CardMediaMini>
         <!-- TODO link? https://www.youtube.com/watch?v=3ezogDsebUg -->
-        <CardMediaSummary talk="Women Entrepreneurs"
-            event="UU Prize @ European Parliament Brussels | Round Table"
+        <CardMediaMini talk="Women Entrepreneurs"
+            event="UU Prize @ European Parliament Brussels"
             event_link=""
             image_link="images/events/230923_parlamento_bruselas.jpeg"
             recording_link=""
+            language="Spanish"
+            type="Round Table"
+            date="2023-09-23"
             :tags="['Responsible AI', 'Linguistic diversity', '🇪🇸']">
             <i-tabler:external-link style="font-size: 1.25rem;" />
             <template v-slot:abstract>
@@ -340,13 +408,17 @@ useHead({
                     Parlamento Europeo Bruselas
                 </div>
             </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="I've trained my LM, now what?"
-          event="Summer course at the Universidad Internacional de Andalucía | Workshop"
+          event="AI Summer School Universidad Internacional de Andalucía"
+          organizer="Universidad Internacional de Andalucía"
           event_link=""
           image_link="images/events/230822_curso_unia.jpeg"
           recording_link=""
+          language="Spanish"
+          type="Summer School Masterclass"
+          date="2023-08-22"
           :tags="['Bias', 'Explainability', 'Open-Source', '🇪🇸']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -354,13 +426,16 @@ useHead({
               Universidad Internacional de Andalucía
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="IA y Español"
           event="IE Center for the Governance of Change y Clibrain | Round Table"
           event_link="https://www.eventbrite.com/e/entradas-inteligencia-artificial-y-espanol-637934588527"
           image_link="images/events/230529_mesa_redonda.png"
           recording_link="https://www.youtube.com/live/epPXlt520Eo?si=5hm5ARxnl_QD1Dqu&t=30667"
+          language="Spanish"
+          type="Round Table"
+          date="2023-05-29"
           :tags="['AI in Spanish', 'NLP', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -377,13 +452,16 @@ useHead({
               estará moderado por David Villalon, Co-Founder de Clibrain.
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Hackathon SomosNLP 2023: Los LLMs hablan español"
-          event="SomosNLP | Organizer, Host & Speaker"
+          event="SomosNLP"
           event_link="https://somosnlp.org/hackathon"
           image_link="images/projects/230320_hackathon_llms.jpg"
           recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaCDc0IJpLac-3csiAepV546"
+          language="Spanish"
+          type="Organizer, Host & Speaker"
+          date="2023-03-20"
           :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -404,7 +482,7 @@ useHead({
               >
             </div>
           </template>
-        </CardMediaSummary>
+        </CardMediaMini>
         <!-- <CardTalkDetailed
           talk="Hackathon SomosNLP 2023: Los LLMs hablan español"
           event="SomosNLP | Hackathon | Organizer, Host & Speaker"
@@ -439,12 +517,15 @@ useHead({
             </div>
           </template>
         </CardTalkDetailed> -->
-        <CardMediaSummary
+        <CardMediaMini
           talk="Customer service in times of ChatGPT"
-          event="BBVA Spark | Blog Article (Featured)"
+          event="BBVA Spark"
           event_link="https://www.bbvaspark.com/contenido/en/news/customer-service-in-times-of-chatgpt-these-startups-boost-your-business-with-conversational-ai/"
           image_link="images/events/230314_bbva_post.jpg"
           recording_link=""
+          language="English"
+          type="Blog Article (Featured)"
+          date="2023-03-14"
           :tags="['ChatGPT', '🇬🇧']">
           <i-mdi-newspaper style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -452,13 +533,16 @@ useHead({
               BBVA Spart Blog article
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Bias detection and mitigation in Language Models"
-          event="Women Who Code CONNECT Empower 2023 | Workshop"
+          event="Women Who Code CONNECT Empower 2023"
           event_link="https://hopin.com/events/connect-2023/registration"
           image_link="images/events/230302_wwc_connect.png"
           recording_link=""
+          language="Spanish"
+          type="Workshop"
+          date="2023-03-02"
           :tags="['Bias in NLP', 'Open-Source', '🇪🇸']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -466,13 +550,18 @@ useHead({
               WomenWhoCodeCONNECT
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <br>
+        <h3 class="text-2xl">2022</h3>
+        <CardMediaMini
           talk="Interview With María Grandury on Artificial Intelligence and NLP"
-          event="Pangeanic Blog | Interview"
+          event="Pangeanic Blog"
           event_link="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp"
           image_link="images/events/221221_podcast_pangeanic.png"
           recording_link="https://blog.pangeanic.com/interview-with-mar%C3%ADa-grandury-on-artificial-intelligence-and-nlp"
+          language="English"
+          type="Interview"
+          date="2022-12-21"
           :tags="['NLP in Spanish', 'Open-Source', '🇬🇧']">
           <i-mdi:fountain-pen-tip style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -481,13 +570,16 @@ useHead({
               herself in the field of Artificial Intelligence in Spain.
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="¡A por el 2023! De dónde venimos y a dónde vamos"
-          event="SomosNLP | Blog Post"
+          event="SomosNLP"
           event_link="https://somosnlp.org/blog/a-por-el-2023"
           image_link="images/logos/SomosNLP.svg"
           recording_link="https://somosnlp.org/blog/a-por-el-2023"
+          language="Spanish"
+          type="Blog Post"
+          date="2022-12-21"
           :tags="['NLP in Spanish', 'Open-Source', '🇪🇸']">
           <i-mdi:fountain-pen-tip style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -499,13 +591,16 @@ useHead({
               today.
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Hola María, ¿hablamos de NLP?"
-          event="Pangea AI & Languages | Podcast Interview"
+          event="Pangea AI & Languages"
           event_link="https://www.youtube.com/@mariagrandury"
           image_link="images/events/221221_podcast_pangeanic.png"
           recording_link="https://open.spotify.com/episode/6uQbVuo35PvSmHkM5XffrB"
+          language="Spanish"
+          type="Podcast Interview"
+          date="2022-12-21"
           :tags="['NLP in Spanish', 'Podcast', '🇪🇸']">
           <i-mdi-spotify style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -533,13 +628,16 @@ useHead({
               </a>
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="El estado del arte de la industria de PLN en nuestro país y fuera"
-          event="Primer foro del PERTE de la Nueva Economía de la Lengua | Round Table"
+          event="Primer foro del PERTE de la Nueva Economía de la Lengua"
           event_link="https://twitter.com/PERTE_Lengua/status/1567902042353442816?s=20&t=kR1vwhuxmGig2UrbH4WvDw"
           image_link="images/events/220928_perte_sota_nlp.jfif"
           recording_link="https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s"
+          language="Spanish"
+          type="Round Table"
+          date="2022-09-28"
           :tags="['NLP', 'SOTA NLP', 'Round Table', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -570,8 +668,8 @@ useHead({
               </a>
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Hackathon Objetivos de Desarrollo Sostenibles"
           event="SomosNLP | Hackathon | Organizer, Host & Speaker"
           event_link="https://somosnlp.org/blog/hackathon-2022"
@@ -602,8 +700,8 @@ useHead({
               SomosNLP and sponsored by Hugging Face, Platzi and Paperspace.
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="PLN con SomosNLP y Hugging Face"
           event="AI The New Sexy | Podcast Interview"
           event_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
@@ -621,10 +719,12 @@ useHead({
               democratizing NLP in their language.
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <br>
+        <h3 class="text-2xl">2021</h3>
+        <CardMediaMini
           talk="Tecnologías del Lenguaje en la Empresa"
-          event="DiverTLes: Diversidad en Tecnologías del Lenguaje en España | Round Table"
+          event="DiverTLes: Diversidad en Tecnologías del Lenguaje en España"
           event_link="https://gplsi.dlsi.ua.es/pln/divertles"
           image_link="images/events/211130_divertles.jfif"
           recording_link="https://www.youtube.com/watch?v=yvPLMc3-KnI"
@@ -644,8 +744,8 @@ useHead({
               Google Home and GMail.
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="IAs que hablan español"
           event="Saturdays.AI | Podcast Interview"
           event_link="https://saturdays.ai/2022/01/27/3x07-maria-grandury-ai-que-hablan-espanol/"
@@ -676,8 +776,8 @@ useHead({
               the AI-related movies picture AI as "the bad guy".
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="II. Sequential Models"
           event="NLP de 0 a 100 con Hugging Face | Course by SomosNLP & Spain AI"
           event_link="https://somosnlp.org/nlp-de-cero-a-cien"
@@ -720,8 +820,8 @@ useHead({
               </a>
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="III. The Transformer Architecture"
           event="NLP de 0 a 100 con Hugging Face | Course by SomosNLP & Spain AI"
           event_link="https://somosnlp.org/nlp-de-cero-a-cien"
@@ -764,8 +864,8 @@ useHead({
               </a>
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="3 Engineering, Robotics & AI experts Taking Center Stage"
           event="Women in AI & Robotics, NASA JPL, UniBremen, DFKI | Round Table"
           event_link="https://www.eventbrite.de/e/3-engineering-robotics-ai-experts-taking-center-stage-tickets-158193696605"
@@ -792,8 +892,8 @@ useHead({
               STEM related fields.
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Is Your ML Model Trustworthy?"
           event="MLOps World Conference 2021 | Workshop"
           event_link="https://mlopsworld.com/"
@@ -813,8 +913,8 @@ useHead({
               their importance and how to evaluate them.
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Hands-on NLP with Hugging Face"
           event="WomenTech Global Conference 2021 | Workshop"
           event_link="https://bigscience.huggingface.co/"
@@ -833,8 +933,8 @@ useHead({
               range of tasks.
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="Meet 8 International Inspirational Women on March 8"
           event="Women in AI & Robotics | Blog Post"
           event_link="https://medium.com/womeninairobotics/inspirational-women-in-ai-85b80cb4999f"
@@ -849,8 +949,8 @@ useHead({
               fields of AI & Robotics.
             </div>
           </template>
-        </CardMediaSummary>
-        <CardMediaSummary
+        </CardMediaMini>
+        <CardMediaMini
           talk="WAIR Kick-Off Event"
           event="Women in AI & Robotics | Round Table"
           event_link="https://bigscience.huggingface.co/"
@@ -868,7 +968,7 @@ useHead({
               inspiration and what we do at Women in AI & Robotics.
             </div>
           </template>
-        </CardMediaSummary>
+        </CardMediaMini>
       </div>
       <div class="flex my-6 justify-center">
         <a
