@@ -12,12 +12,20 @@ const index = computed(() => counter.value % greetings.value.length);
     <NavBar />
   </Container>
   <Container class="bg-white dark:bg-gray-900">
-    <div class="h-full grid gap-8 place-items-center lg:py-8">
+    <div class="h-full grid gap-8 place-items-center lg:py-8" style="grid-template-columns: 2fr 3fr;">
       <div class="p-8">
         <h1 class="font-medium mb-3 tracking-tighter text-5xl">
           {{ greetings[index] }}
         </h1>
         <div class="text-4xl mb-4">I'm María Grandury!</div>
+        <br>
+        <img
+          class="rounded-full w-64 h-64"
+          src="/images/profile/maria_grandury.png"
+          alt="María Grandury"
+        />
+      </div>
+      <div>
         <div>
           <ul class="flex flex-col gap-1">
             <li>💡 Natural Language Processing Researcher</li>
@@ -52,6 +60,7 @@ const index = computed(() => counter.value % greetings.value.length);
                 >@Technical University of Madrid</a
               >
               #LLMEvaluation #Psycholinguistics
+              <!-- https://portalcientifico.upm.es/es/ipublic/researcher/337642 -->
             </li>
             <li>
               🔍 Student Researcher
@@ -62,6 +71,15 @@ const index = computed(() => counter.value % greetings.value.length);
                 >@National University of Distance Education</a
               >
               #EnglishSpanishGap
+            </li>
+            <br>
+            <li>
+              📣 Freelance Speaker and AI Consultant, recipient of the Spanish Transition Fund from the 
+              <a
+                href="/docs/subvencion_fondo_de_transicion_justa.pdf"
+                target="_blank"
+                class="text-accent-500 hover:underline"
+                >Ministry of Industry, Commerce, and Employment</a>.
             </li>
             
           </ul>
