@@ -83,6 +83,46 @@ TODO:
       <div class="grid py-6 gap-x-6 gap-y-3">
         <h3 class="text-2xl">2024</h3>
         <CardMediaMini
+          talk="Evaluation of Large Language Models (LLMs)"
+          organizer="Universidad Politécnica de Madrid"
+          event="Universidad Politécnica de Madrid (UPM), Entaina, IEEE - Sección España & SomosNLP"
+          event_link="https://somosnlp.org/blog/evento-eval-llm-upm"
+          image_link="images/events/241217_evaluacion_llms_upm.png"
+          recording_link=""
+          language="Spanish"
+          type="Workshop"
+          date="2024-12-17"
+          location="Madrid, Spain"
+          :tags="['Inclusive AI']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Universidad Politécnica de Madrid
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
+          talk="2024: The Year of AI"
+          organizer="Carne Cruda"
+          event="Carne Cruda | Mundos Posibles"
+          event_link="https://www.eldiario.es/carnecruda/programas/ia-no-lista-todavia_132_11909156.html"
+          image_link="images/events/241218_carne_cruda_1.png"
+          recording_link=""
+          language="Spanish"
+          type="Radio (Featured)"
+          date="2024-12-18"
+          location="Spain (Remote)"
+          :tags="['Inclusive AI']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Carne Cruda
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
           talk="Synthetic Data Generation and LLM Evaluation"
           organizer="Universidad Nacional Autónoma de México (UNAM)"
           event="Universidad Nacional Autónoma de México (UNAM) | Bachelor's Degree in Data Science for Social Sciences and Humanities"
@@ -99,6 +139,26 @@ TODO:
         <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
               Diplomado "Introducción a la Ciencia de Datos: Herramientas para el Aprendizaje Automatizado en las Ciencias Sociales y Humanidades"
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
+          talk="Open-Source Responsible AI with Hugging Face"
+          organizer="EFELIA Côte d'Azur"
+          event="EFELIA Côte d'Azur | Hackathon Soc[IA]l 2024"
+          event_link="https://univ-cotedazur.fr/efelia-cote-dazur/hackathon-social-2024-efelia-cote-dazur"
+          image_link="images/events/241130_hackathon_efelia.png"
+          recording_link=""
+          language="English"
+          type="Workshop"
+          date="2024-11-30"
+          location="Nice, France (Hybrid)"
+          :tags="['Inclusive AI']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              EFELIA Côte d'Azur
             </div>
           </template>
         </CardMediaMini>
@@ -155,7 +215,27 @@ TODO:
           <!-- <i-mdi-youtube style="font-size: 1.25rem" /> -->
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
-              Curso de verano
+              AI Policy Summit 2024
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
+          talk="The technology that makes us dream"
+          organizer="Prodigioso Volcán"
+          event="Prodigioso Volcán | IA Bajo el Volcán"
+          event_link="https://eventos.prodigiosovolcan.com/evento/iabajoelvolcan/"
+          image_link="images/events/241029_prodigioso_volcan_2.jpg"
+          recording_link=""
+          language="Spanish"
+          type="Round Table"
+          date="2024-10-29"
+          location="Madrid, Spain"
+          :tags="['Inclusive AI']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Prodigioso Volcán
             </div>
           </template>
         </CardMediaMini>
@@ -257,7 +337,7 @@ TODO:
           image_link="images/events/240512_elpais_screenshot.png"
           recording_link="https://www.linkedin.com/posts/mariagrandury_la-larga-marcha-de-un-grupo-de-voluntarios-activity-7202311429297692672-F-oA"
           language="Spanish"
-          type="NewspaperInterview"
+          type="Newspaper Interview"
           date="2024-05-12"
           location="Madrid, Spain"
           :tags="['AI in Spanish', '🇪🇸']">
