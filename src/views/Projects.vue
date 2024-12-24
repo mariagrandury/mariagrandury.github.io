@@ -38,7 +38,7 @@ useHead({
         <i-fluent-design-ideas-24-regular style="font-size: 2rem" />
       </h1>
       <h2 class="py-6">
-        I'm a Natural Language Processing (NLP) Researcher passionate about increasing the representation of the linguistic and cultural diversity of the world in LMs. Wanna collaborate?
+        I'm a Natural Language Processing (NLP) Researcher passionate about increasing the representation of the linguistic and cultural diversity of the world in language models. Do you want to collaborate?
       </h2>
       <p class="italic">
         Last update: December 2024 | For up-to-date information check
@@ -63,13 +63,24 @@ useHead({
           <div class="text-sm text-gray-700 dark:text-white">
             Did you know that we are 600 million Spanish-speaking individuals
             around the world? SomosNLP.org is an international community aiming
-            to represent in AI the linguistic diversity of the languages spoken
-            by all these persons.
+            to represent in AI the linguistic and cultural diversity of LATAM, the Caribbean and Spain by creating open-source resources.
+            <a
+                target="_blank"
+                href="https://discord.com/invite/my8w7JUxZR"
+                class="text-accent-700 dark:text-accent-300 hover:underline"
+              >
+                Join us!
+              </a>
           </div>
         </template>
       </CardProject>
 
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
+        <div class="col-span-2">
+          <br />
+          <h3 class="text-2xl">Current Projects</h3>
+          <br />
+        </div>
         <CardProject
           title="Open Leaderboard for the languages of Spain and LATAM"
           :tags="['LLM Evaluation', 'NLP in Spanish']"
@@ -86,7 +97,7 @@ useHead({
           </template>
         </CardProject>
         <CardProject
-          title="Validation of machine-translated evaluation datasets [WIP]"
+          title="Validation of machine-translated evaluation datasets"
           :tags="['Translation', 'Bias', 'NLP in Spanish']"
           link="https://somosnlp.org/somos600m"
           color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600"
@@ -106,7 +117,7 @@ useHead({
           </template>
         </CardProject>
         <CardProject
-          title="Dataset collection campaign [WIP]"
+          title="Dataset collection campaign"
           :tags="['Data', 'NLP in Spanish']"
           link="https://somosnlp.org/donatucorpus"
           color="text-orange-600 bg-orange-100 dark:text-white dark:bg-orange-500"
@@ -157,7 +168,7 @@ useHead({
           </template>
         </CardProject>
         <CardProject
-          title="Spanish NLP Initiatives [WIP]"
+          title="Spanish NLP Initiatives"
           :tags="['NLP in Spanish']"
           link="https://huggingface.co/spaces/somosnlp/spanish-nlp-initiatives"
           color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600"
@@ -170,6 +181,12 @@ useHead({
             </div>
           </template>
         </CardProject>
+
+        <div class="col-span-2">
+          <br />
+          <h3 class="text-2xl">Previous Projects</h3>
+          <br />
+        </div>
         <CardProject
           title="Transparency Self-Assessment"
           :tags="['Responsible AI']"
@@ -555,7 +572,7 @@ useHead({
       </div>
       <div class="flex my-6 justify-center">
         <a
-          href="https://github.com/mariagrandury"
+          href="https://huggingface.co/mariagrandury"
           target="_blank"
           class="
             flex
@@ -569,7 +586,7 @@ useHead({
             hover:border-accent-400
           "
         >
-          <div>More on GitHub</div>
+          <div>More on Hugging Face</div>
         </a>
       </div>
     </div>
