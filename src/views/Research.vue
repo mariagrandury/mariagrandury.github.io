@@ -74,7 +74,7 @@ useHead({
         >
           <i-fluent-star-28-regular />
           <template v-slot:description>
-            <div class="text-sm text-gray-700 dark:text-white">
+            <div class="text-sm text-gray-500 dark:text-white">
               Open leaderboard to evaluate LLM memorization, reasoning and linguistic capabilities in the languages of Spain, LATAM and the Caribbean.
             </div>
           </template>
@@ -87,7 +87,7 @@ useHead({
       <h2 class="font-semibold tracking-tight text-2xl">Published Papers</h2>
     </div>
 
-    <div class="py-6 lg:px-24 sm:px-12">
+    <div class="grid py-6 gap-y-3 lg:px-24 sm:px-12">
       <CardProject
         title="María Grandury. The #Somos600M Project: Generating NLP resources that represent the diversity of the languages from LATAM, the Caribbean, and Spain. In North American Chapter of the Association for Computational Linguistics Conference: LatinX in AI (LXAI) Research Workshop, 2024."
         :tags="['Instruction Data', 'LLM Evaluation', 'Multilingual NLP']"
@@ -96,7 +96,7 @@ useHead({
       >
         <i-fluent-rocket-24-regular />
         <template v-slot:description>
-          <div class="text-sm text-gray-700 dark:text-white">
+          <div class="text-sm text-gray-500 dark:text-white">
             We are 600 million Spanish speakers. We launched the #Somos600M Project because the diversity of the languages from LATAM, the Caribbean and Spain needs to be represented in Artificial Intelligence (AI) systems. Despite being the 7.5% of the world population, there is no open dataset to instruction-tune large language models (LLMs), nor a leaderboard to evaluate and compare them. In this paper, we present how we have created as an international open-source community the first versions of the instruction and evaluation datasets, indispensable resources for the advancement of Natural Language Processing (NLP) in our languages.
 
           </div>
@@ -111,7 +111,7 @@ useHead({
         >
           <i-fluent-checkbox-checked-24-regular />
           <template v-slot:description>
-            <div class="text-sm text-gray-700 dark:text-white">
+            <div class="text-sm text-gray-500 dark:text-white">
               Large Language Models (LLMs) have been profusely evaluated on their ability to answer questions on many topics and their performance on different natural language understanding tasks. Those tests are usually conducted in English, but most LLM users are not native English speakers. Therefore, it is of interest to analyze how LLMs understand other languages at different levels: from paragraphs to morphems. In this paper, we evaluate the performance of state-of-the-art LLMs in TELEIA, a recently released benchmark with similar questions to those of Spanish exams for foreign students, covering topics such as reading comprehension, word formation, meaning and compositional semantics, and grammar. The results show that LLMs perform well at understanding Spanish but are still far from achieving the level of a native speaker in terms of grammatical competence.
             </div>
           </template>
@@ -124,7 +124,7 @@ useHead({
         >
           <i-fluent-question-24-regular />
           <template v-slot:description>
-            <div class="text-sm text-gray-700 dark:text-white">
+            <div class="text-sm text-gray-500 dark:text-white">
               The evaluation of Large Language Models (LLMs) is a key element in their continuous improvement process and many benchmarks have been developed to assess the performance of LLMs in different tasks and topics. As LLMs become adopted worldwide, evaluating them in languages other than English is increasingly important. However, most LLM benchmarks are simply translated using an automated tool and then run in the target language. This means that the results depend not only on the LLM performance in that language but also on the quality of the translation. In this paper, we consider the case of the well-known Massive Multitask Language Understanding (MMLU) benchmark. Selected categories of the benchmark are translated into Spanish using Azure Translator and ChatGPT4 and run on ChatGPT4. Next, the results are processed to identify the test items that produce different answers in Spanish and English. Those are then analyzed manually to understand if the automatic translation caused the change. The results show that a significant fraction of the failing items can be attributed to mistakes in the translation of the benchmark. These results make a strong case for improving benchmarks in languages other than English by at least revising the translations of the items and preferably by adapting the tests to the target language by experts.
 
             </div>
@@ -139,7 +139,7 @@ useHead({
         >
           <i-whh-flower />
           <template v-slot:description>
-            <div class="text-sm text-gray-700 dark:text-white">
+            <div class="text-sm text-gray-500 dark:text-white">
               Large language models (LLMs) have been shown to be able to perform new tasks based on a few demonstrations or natural language instructions. While these capabilities have led to widespread adoption, most LLMs are developed by resource-rich organizations and are frequently kept from the public. As a step towards democratizing this powerful technology, we present BLOOM, a 176B-parameter open-access language model designed and built thanks to a collaboration of hundreds of researchers. BLOOM is a decoder-only Transformer language model that was trained on the ROOTS corpus, a dataset comprising hundreds of sources in 46 natural and 13 programming languages (59 in total). We find that BLOOM achieves competitive performance on a wide variety of benchmarks, with stronger results after undergoing multitask prompted finetuning. To facilitate future research and applications using LLMs, we publicly release our models and code under the Responsible AI License.
 
             </div>
@@ -153,7 +153,7 @@ useHead({
         >
           <i-mdi-face-man />
           <template v-slot:description>
-            <div class="text-sm text-gray-700 dark:text-white">
+            <div class="text-sm text-gray-500 dark:text-white">
               The pre-training of large language models usually requires massive amounts of resources, both in terms of computation and data. Frequently used web sources such as Common Crawl might contain enough noise to make this pretraining sub-optimal. In this work, we experiment with different sampling methods from the Spanish version of mC4, and present a novel data-centric technique which we name perplexity sampling that enables the pre-training of language models in roughly half the amount of steps and using one fifth of the data. The resulting models are comparable to the current state-of-the-art, and even achieve better results for certain tasks. Our work is proof of the versatility of Transformers, and paves the way for small teams to train their models on a limited budget.
 
             </div>
