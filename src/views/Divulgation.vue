@@ -49,7 +49,7 @@ TODO:
       </h2>
     </div>
     <div>
-      <p class="italic">
+      <p class="italic text-sm text-gray-500">
         Last update: December 2024 | For up-to-date information check
         <a
           href="https://www.linkedin.com/in/mariagrandury/"

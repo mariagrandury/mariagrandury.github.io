@@ -40,7 +40,7 @@ useHead({
       <h2 class="py-6">
         I'm a Natural Language Processing (NLP) Researcher passionate about increasing the representation of the linguistic and cultural diversity of the world in language models. Do you want to collaborate?
       </h2>
-      <p class="italic">
+      <p class="italic text-sm text-gray-500">
         Last update: December 2024 | For up-to-date information check
         <a
           href="https://www.huggingface.co/mariagrandury/"
