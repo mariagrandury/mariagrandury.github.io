@@ -84,6 +84,7 @@ TODO:
         <h3 class="text-2xl">2024</h3>
         <CardMediaMini
           talk="Synthetic Data Generation and LLM Evaluation"
+          organizer="Universidad Nacional Autónoma de México (UNAM)"
           event="Universidad Nacional Autónoma de México (UNAM) | Bachelor's Degree in Data Science for Social Sciences and Humanities"
           event_link="https://www.acatlan.unam.mx/index.php?id=1805"
           image_link="images/events/241214_unam_header.png"
@@ -91,6 +92,7 @@ TODO:
           language="Spanish"
           type="Masterclass"
           date="2024-12-14"
+          location="Mexico (Remote)"
           :tags="['Synthetic Data', 'LLM Evaluation']"
         >
         <i-mdi-newspaper style="font-size: 1.25rem" />
@@ -109,6 +111,7 @@ TODO:
           language="Spanish"
           type="Article (Featured)"
           date="2024-11-22"
+          location="Spain (Remote)"
           :tags="['NLP']"
         >
         <i-mdi-newspaper style="font-size: 1.25rem" />
@@ -127,6 +130,7 @@ TODO:
           language="Spanish"
           type="Interview"
           date="2024-11-13"
+          location="El Bierzo, Spain"
           :tags="['NLP']"
         >
           <i-mdi-microphone style="font-size: 1.25rem" />
@@ -143,8 +147,9 @@ TODO:
           image_link="images/events/241101_ai_policy_summit.jpg"
           recording_link=""
           language="English"
-          type="Workshop"
+          type="Workshop Attendee"
           date="2024-11-01"
+          location="Zurich, Switzerland"
           :tags="['AI Policy']"
         >
           <!-- <i-mdi-youtube style="font-size: 1.25rem" /> -->
@@ -156,13 +161,14 @@ TODO:
         </CardMediaMini>
         <CardMediaMini
           talk="Técnicas avanzadas y aplicaciones de NLP. Alineamiento y evaluación de LLMs."
-          event="Universidad Internacional de Andalucía | IA Summer School"
+          event="Universidad Internacional de Andalucía"
           event_link=""
           image_link="images/events/240819_unia.jpeg"
           recording_link=""
           language="Spanish"
-          type="Masterclass"
+          type="Summer School Masterclass"
           date="2024-08-19"
+          location="Baeza, Spain"
           :tags="['AI Alignment', 'LLM Evaluation']"
         >
           <i-mdi-youtube style="font-size: 1.25rem" />
@@ -182,6 +188,7 @@ TODO:
           language="English"
           type="Workshop"
           date="2024-07-02"
+          location="EU (Remote)"
           :tags="['Responsible AI', 'Explainable AI']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -200,6 +207,7 @@ TODO:
           language="English"
           type="Round Table"
           date="2024-06-07"
+          location="Zurich, Switzerland"
           :tags="['Responsible AI', 'Explainable AI']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -217,6 +225,7 @@ TODO:
           language="English"
           type="Mentorship Session"
           date="2024-06-07"
+          location="Zurich, Switzerland"
           :tags="['Open Source', 'LLMs']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -232,6 +241,7 @@ TODO:
           language="Spanish"
           type="Keynote"
           date="2024-05-13"
+          location="Río Cuarto, Argentina (Remote)"
           :tags="['AI for Good']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -249,6 +259,7 @@ TODO:
           language="Spanish"
           type="NewspaperInterview"
           date="2024-05-12"
+          location="Madrid, Spain"
           :tags="['AI in Spanish', '🇪🇸']">
           <i-mdi-newspaper style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -266,6 +277,7 @@ TODO:
           language="Spanish"
           type="Keynote"
           date="2024-03-13"
+          location="Remote"
           :tags="['NLP in Spanish', 'Open-Source', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -284,6 +296,7 @@ TODO:
           language="Spanish"
           type="Talk"
           date="2024-03-01"
+          location="San Juan, Puerto Rico"
           :tags="['Open-Source', 'Responsible AI', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -312,6 +325,7 @@ TODO:
           language="Spanish"
           type="Podcast Interview"
           date="2024-01-31"
+          location="Remote"
           :tags="['Career', 'Open-Source', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -331,6 +345,7 @@ TODO:
           language="Spanish"
           type="Round Table"
           date="2023-11-14"
+          location="Madrid, Spain"
           :tags="['Responsible AI', 'AI Risks', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -346,6 +361,7 @@ TODO:
             language="Spanish"
             type="Round Table"
             date="2023-11-01"
+            location="Madrid, Spain"
             :tags="['Responsible AI', 'Linguistic diversity', '🇪🇸']">
             <i-tabler:external-link style="font-size: 1.25rem;" />
             <template v-slot:abstract>
@@ -364,6 +380,7 @@ TODO:
           language="Spanish"
           type="Workshop"
           date="2023-11-25"
+          location="Madrid, Spain"
           :tags="['EU AI Act', 'Explainability', 'Bias', '🇪🇸']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -382,6 +399,7 @@ TODO:
           language="English"
           type="Keynote"
           date="2023-10-24"
+          location="Madrid, Spain"
           :tags="['Responsible AI']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -401,6 +419,7 @@ TODO:
             language="Spanish"
             type="Round Table"
             date="2023-09-23"
+            location="Brussels, Belgium"
             :tags="['Responsible AI', 'Linguistic diversity', '🇪🇸']">
             <i-tabler:external-link style="font-size: 1.25rem;" />
             <template v-slot:abstract>
@@ -419,6 +438,7 @@ TODO:
           language="Spanish"
           type="Summer School Masterclass"
           date="2023-08-22"
+          location="Baeza, Spain"
           :tags="['Bias', 'Explainability', 'Open-Source', '🇪🇸']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -429,13 +449,14 @@ TODO:
         </CardMediaMini>
         <CardMediaMini
           talk="IA y Español"
-          event="IE Center for the Governance of Change y Clibrain | Round Table"
+          event="IE Center for the Governance of Change y Clibrain"
           event_link="https://www.eventbrite.com/e/entradas-inteligencia-artificial-y-espanol-637934588527"
           image_link="images/events/230529_mesa_redonda.png"
           recording_link="https://www.youtube.com/live/epPXlt520Eo?si=5hm5ARxnl_QD1Dqu&t=30667"
           language="Spanish"
           type="Round Table"
           date="2023-05-29"
+          location="Madrid, Spain"
           :tags="['AI in Spanish', 'NLP', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -462,6 +483,7 @@ TODO:
           language="Spanish"
           type="Organizer, Host & Speaker"
           date="2023-03-20"
+          location="Remote"
           :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -526,6 +548,7 @@ TODO:
           language="English"
           type="Blog Article (Featured)"
           date="2023-03-14"
+          location="Remote"
           :tags="['ChatGPT', '🇬🇧']">
           <i-mdi-newspaper style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -543,6 +566,7 @@ TODO:
           language="Spanish"
           type="Workshop"
           date="2023-03-02"
+          location="Remote"
           :tags="['Bias in NLP', 'Open-Source', '🇪🇸']">
           <i-tabler:external-link style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -562,6 +586,7 @@ TODO:
           language="English"
           type="Interview"
           date="2022-12-21"
+          location="Remote"
           :tags="['NLP in Spanish', 'Open-Source', '🇬🇧']">
           <i-mdi:fountain-pen-tip style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -580,6 +605,7 @@ TODO:
           language="Spanish"
           type="Blog Post"
           date="2022-12-21"
+          location="Remote"
           :tags="['NLP in Spanish', 'Open-Source', '🇪🇸']">
           <i-mdi:fountain-pen-tip style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -601,6 +627,7 @@ TODO:
           language="Spanish"
           type="Podcast Interview"
           date="2022-12-21"
+          location="Remote"
           :tags="['NLP in Spanish', 'Podcast', '🇪🇸']">
           <i-mdi-spotify style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -638,6 +665,7 @@ TODO:
           language="Spanish"
           type="Round Table"
           date="2022-09-28"
+          location="Alicante, Spain"
           :tags="['NLP', 'SOTA NLP', 'Round Table', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -671,10 +699,14 @@ TODO:
         </CardMediaMini>
         <CardMediaMini
           talk="Hackathon Objetivos de Desarrollo Sostenibles"
-          event="SomosNLP | Hackathon | Organizer, Host & Speaker"
+          event="SomosNLP | Hackathon"
           event_link="https://somosnlp.org/blog/hackathon-2022"
           image_link="images/projects/hackathon_pln_es_3.png"
           recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaAbVZ2lVcycHnJ2qEDip7hG"
+          language="Spanish"
+          type="Hackathon Organizer, Host & Speaker"
+          date="2022-09-21"
+          location="Remote"
           :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -701,12 +733,17 @@ TODO:
             </div>
           </template>
         </CardMediaMini>
+        <!-- TODO: Check date -->
         <CardMediaMini
           talk="PLN con SomosNLP y Hugging Face"
-          event="AI The New Sexy | Podcast Interview"
+          event="AI The New Sexy"
           event_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
           image_link="images/logos/AITheNewSexy.jpeg"
           recording_link="https://open.spotify.com/episode/38Y2K2gAe8IujRZOMjv1BH?si=S8VO6ifPT4WYWLbSLr91tg"
+          language="Spanish"
+          type="Podcast Interview"
+          date="2022-09-21" 
+          location="Remote"
           :tags="['NLP in Spanish', 'Career', 'Open-Source', 'Interview', '🇪🇸']">
           <i-mdi-spotify style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -728,7 +765,11 @@ TODO:
           event_link="https://gplsi.dlsi.ua.es/pln/divertles"
           image_link="images/events/211130_divertles.jfif"
           recording_link="https://www.youtube.com/watch?v=yvPLMc3-KnI"
-          :tags="['NLP', 'NLP in Production', 'Research', 'Round Table', '🇪🇸']">
+          language="Spanish"
+          type="Round Table"
+          date="2021-11-30"
+          location="Spain (Remote)"
+          :tags="['NLP', 'NLP in Production', 'Research', 'Women in AI']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
             <div class="text-sm text-gray-700 dark:text-white">
@@ -747,10 +788,14 @@ TODO:
         </CardMediaMini>
         <CardMediaMini
           talk="IAs que hablan español"
-          event="Saturdays.AI | Podcast Interview"
+          event="Saturdays.AI"
           event_link="https://saturdays.ai/2022/01/27/3x07-maria-grandury-ai-que-hablan-espanol/"
           image_link="images/logos/SaturdaysAIPodcast.jpg"
           recording_link="https://www.youtube.com/watch?v=O5QkrbOrxd4"
+          language="Spanish"
+          type="Podcast Interview"
+          date="2022-01-27"
+          location="Remote"
           :tags="['My Story', 'NLP', 'AI Regulation', 'Interview', '🇪🇸']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -783,6 +828,10 @@ TODO:
           event_link="https://somosnlp.org/nlp-de-cero-a-cien"
           image_link="images/events/210713_nlp_de_cero_a_cien.jpeg"
           recording_link="https://somosnlp.org/nlp-de-cero-a-cien/sesion-03"
+          language="Spanish"
+          type="Course"
+          date="2021-07-13"
+          location="Remote"
           :tags="[
             'NLP',
             'Sequential Models',
@@ -827,6 +876,10 @@ TODO:
           event_link="https://somosnlp.org/nlp-de-cero-a-cien"
           image_link="images/events/210713_nlp_de_cero_a_cien.jpeg"
           recording_link="https://somosnlp.org/nlp-de-cero-a-cien/sesion-03"
+          language="Spanish"
+          type="Course"
+          date="2021-07-13"
+          location="Remote"
           :tags="[
             'NLP',
             'Sequential Models',
@@ -867,10 +920,14 @@ TODO:
         </CardMediaMini>
         <CardMediaMini
           talk="3 Engineering, Robotics & AI experts Taking Center Stage"
-          event="Women in AI & Robotics, NASA JPL, UniBremen, DFKI | Round Table"
+          event="Women in AI & Robotics, NASA JPL, UniBremen, DFKI"
           event_link="https://www.eventbrite.de/e/3-engineering-robotics-ai-experts-taking-center-stage-tickets-158193696605"
           recording_link="https://www.youtube.com/watch?v=f2f1RL3M6xc"
           image_link="images/events/210622_wair_3_engineers.avif"
+          language="English"
+          type="Round Table"
+          date="2021-06-22"
+          location="Germany (Remote)"
           :tags="['Women in Robotics', 'Women Engineers', 'Round Table', '🇬🇧']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -895,10 +952,14 @@ TODO:
         </CardMediaMini>
         <CardMediaMini
           talk="Is Your ML Model Trustworthy?"
-          event="MLOps World Conference 2021 | Workshop"
+          event="MLOps World Conference 2021"
           event_link="https://mlopsworld.com/"
           recording_link="https://twitter.com/MLOpsWorld/status/1405179157265489927"
           image_link="images/events/210614_mlops_world.jpg"
+          language="English"
+          type="Workshop"
+          date="2021-06-14"
+          location="Canada (Remote)"
           :tags="['MLOps', 'AI Robustness', 'AI Explainability', 'Talk', '🇬🇧']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -916,10 +977,14 @@ TODO:
         </CardMediaMini>
         <CardMediaMini
           talk="Hands-on NLP with Hugging Face"
-          event="WomenTech Global Conference 2021 | Workshop"
+          event="WomenTech Global Conference 2021"
           event_link="https://bigscience.huggingface.co/"
           image_link="images/events/210610_wtn.png"
           recording_link="https://www.womentech.net/speaker/Maria/Grandury/57995"
+          language="English"
+          type="Workshop"
+          date="2021-06-10"
+          location="US (Remote)"
           :tags="['NLP', 'Transformers', 'Hugging Face', 'Workshop', '🇬🇧']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -936,10 +1001,14 @@ TODO:
         </CardMediaMini>
         <CardMediaMini
           talk="Meet 8 International Inspirational Women on March 8"
-          event="Women in AI & Robotics | Blog Post"
+          event="Women in AI & Robotics"
           event_link="https://medium.com/womeninairobotics/inspirational-women-in-ai-85b80cb4999f"
           recording_link="https://medium.com/womeninairobotics/inspirational-women-in-ai-85b80cb4999f"
           image_link="images/events/210308_meet_8_women.png"
+          language="English"
+          type="Blog Post"
+          date="2021-03-08"
+          location="Germany (Remote)"
           :tags="['Women in AI', 'Women in Robotics', '🇬🇧']">
           <i-mdi-medium style="font-size: 1.25rem" />
           <template v-slot:abstract>
@@ -952,10 +1021,14 @@ TODO:
         </CardMediaMini>
         <CardMediaMini
           talk="WAIR Kick-Off Event"
-          event="Women in AI & Robotics | Round Table"
+          event="Women in AI & Robotics"
           event_link="https://bigscience.huggingface.co/"
           recording_link="https://www.youtube.com/watch?v=in5tEluYTSs"
           image_link="images/events/210506_wair_kick_off.avif"
+          language="English"
+          type="Round Table"
+          date="2021-05-06"
+          location="Germany (Remote)"
           :tags="['Women in AI', 'Women in STEM', 'Round Table', '🇬🇧']">
           <i-mdi-youtube style="font-size: 1.25rem" />
           <template v-slot:abstract>

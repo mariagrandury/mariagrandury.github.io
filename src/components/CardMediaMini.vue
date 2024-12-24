@@ -5,6 +5,7 @@ import { defineComponent } from 'vue'
 export default defineComponent({
     props: {
         talk: String,
+        organizer: { type: String, default: "", required: false },
         event: String,
         event_link: {
             type: String, default: "https://www.youtube.com/@mariagrandury", required: false
@@ -18,6 +19,7 @@ export default defineComponent({
         date: String,
         language: String,
         type: String,
+        location: String,
         color: {
             type: String,
             default: "text-accent-900 bg-accent-50 dark:text-white dark:bg-accent-600"
@@ -38,10 +40,9 @@ export default defineComponent({
                     class="self-start items-center text-gray-500 text-sm hover:underline">{{ event }}
                 </a>
                 <div class="flex flex-wrap gap-3">
-                    <div 
+                    <div v-for="(tag, index) in [type, location]" :key="index"
                         class="border rounded bg-gray-50 border-gray-100 text-sm py-0.5 px-2 select-none dark:border-black dark:bg-gray-700">
-                        {{ type }}
-                    </div>
+                        {{ tag }}</div>
                 </div>
             </div>
             <a v-if="recording_link" :href="recording_link" target="_blank"
