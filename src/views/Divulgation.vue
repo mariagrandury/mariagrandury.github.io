@@ -1125,7 +1125,7 @@ TODO:
       </div>
       <div class="flex my-6 justify-center">
         <a
-          href="https://www.youtube.com/channel/UCGaFn8AWNgmtLyNi0hwvhHw"
+          href="mailto:mariagrandury@gmail.com"
           target="_blank"
           class="
             flex
@@ -1139,7 +1139,7 @@ TODO:
             hover:border-accent-400
           "
         >
-          <div>More on YouTube</div>
+          <div>Get in contact!</div>
         </a>
       </div>
     </div>
