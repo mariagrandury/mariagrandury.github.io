@@ -59,6 +59,7 @@ useHead({
           > profiles
         !
       </p>
+      <!-- ORCID https://orcid.org/my-orcid?orcid=0009-0009-4703-3348 -->
     </div>
 
     <div class="py-6 lg:px-24 sm:px-12">
@@ -159,7 +160,72 @@ useHead({
             </div>
           </template>
         </CardProject>
-
     </div>
+
+    <div class="py-6 lg:px-24 sm:px-12">
+      <h2 class="font-semibold tracking-tight text-2xl">Masterclasses</h2>
+    </div>
+
+    <div class="grid py-6 gap-y-3 lg:px-24 sm:px-12">
+        <CardMediaMini
+          talk="Synthetic Data Generation and LLM Evaluation"
+          organizer="Universidad Nacional Autónoma de México (UNAM)"
+          event="Universidad Nacional Autónoma de México (UNAM) | Bachelor's Degree in Data Science for Social Sciences and Humanities"
+          event_link="https://www.acatlan.unam.mx/index.php?id=1805"
+          image_link="images/events/241214_unam_header.png"
+          recording_link=""
+          language="Spanish"
+          type="Masterclass"
+          date="2024-12-14"
+          location="Mexico (Remote)"
+          :tags="['Synthetic Data', 'LLM Evaluation']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Diplomado "Introducción a la Ciencia de Datos: Herramientas para el Aprendizaje Automatizado en las Ciencias Sociales y Humanidades"
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
+          talk="NLP advanced techniques and applications. LLM alignment and evaluation."
+          event="Universidad Internacional de Andalucía | Summer School 'Content Generation and Language Models'"
+          event_link=""
+          image_link="images/events/240819_unia.jpeg"
+          recording_link=""
+          language="Spanish"
+          type="Summer School Masterclass"
+          date="2024-08-19"
+          location="Baeza, Spain"
+          :tags="['AI Alignment', 'LLM Evaluation']"
+        >
+          <i-mdi-youtube style="font-size: 1.25rem" />
+          <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Curso de verano
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
+          talk="I've trained my LM, now what?"
+          event="Universidad Internacional de Andalucía | Summer School 'Applied Artificial Intelligence'"
+          organizer="Universidad Internacional de Andalucía "
+          event_link=""
+          image_link="images/events/230822_curso_unia.jpeg"
+          recording_link=""
+          language="Spanish"
+          type="Summer School Masterclass"
+          date="2023-08-22"
+          location="Baeza, Spain"
+          :tags="['Bias', 'Explainability', 'Open-Source', '🇪🇸']">
+          <i-tabler:external-link style="font-size: 1.25rem" />
+          <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Universidad Internacional de Andalucía
+            </div>
+          </template>
+        </CardMediaMini>
+        
+      </div>
   </Container>
 </template>
