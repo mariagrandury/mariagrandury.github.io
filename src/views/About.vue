@@ -30,37 +30,42 @@ useHead({
         <div class="lg:px-24 sm:px-12">
             <CardGeneric class="px-12 my-12">
                 <h2 class="pt-12">
-                    I'm half Spanish half French, live in Berlin, and hold two degrees in Mathematics & Physics.
-                    I'm a Natural Language Processing (NLP) Researcher focused on responsible, inclusive, open-source AI, especially in Spanish.
+                    🚀 I'm a dedicated to advancing responsible, inclusive, and open-source Natural Language Processing (NLP).
+                    <!-- , especially for the Spanish-speaking community. -->
                 </h2>
                 <h2 class="py-2">
-                    I believe that NLP research is too focused on English and 
-                    neglects the particular
-                    difficulties of other languages so I founded
-                    <a href="https://somosnlp.org" target="_blank"
-                        class="text-accent-500 dark:text-accent-300 hover:underline">SomosNLP,</a>
-                    the largest community of Spanish-speaking NLP professionals 
-                    that aims to democratize and advance the state-of-the-art 
-                    of NLP in the languages of Spain and LATAM.
+                    💡 I'm a Researcher at the <strong>Polytechnical University of Madrid</strong>
+                    and the founder of <a href="https://somosnlp.org" target="_blank"
+                    class="text-accent-500 dark:text-accent-300 hover:underline">SomosNLP</a>,
+                    the largest open-source community of Spanish-speaking NLP practitioners. My research focuses on evaluating the capabilities of LLMs, with a particular emphasis on linguistic and cultural biases, climate impact and psycholinguistics.
                 </h2>
                 <h2 class="py-2">
-                    I'm a 
+                    🌎 I hold 2 Degrees in Mathematics and Physics and am pursuing a Master’s in Language Technologies. For my Master's thesis,
+                     <!-- co-advised by Prof. Antoine Bosselut from EPFL and Prof. Julio Gonzalo from UNED, -->
+                    I've joined the team of the culture-aware benchmark <a href="https://arxiv.org/abs/2411.19799" target="_blank" class="text-accent-500 dark:text-accent-300 hover:underline">INCLUDE</a> to expand it to more languages, particularly from Latin America, the Caribbean, and Spain.
+                </h2>
+                <h2 class="py-2">
+                    🤗 I believe open-source drives AI development. I'm a 
                     <a href="https://huggingface.co/mariagrandury" target="_blank"
                         class="text-accent-500 dark:text-accent-300 hover:underline">Hugging Face Fellow</a>
                     and have contributed
-                    to several international NLP research projects.
-                    I'm also very aware of the gender gap in my field and I 
-                    collaborate with various organizations &
-                    initiatives to increase female representation and promote 
-                    inclusive and responsible AI.
+                    to several international NLP research projects like BigScience, FineWeb, and BERTIN.
+                    <!-- I'm also very aware of the gender gap in my field and I collaborate with various organizations & initiatives to increase female representation and promote inclusive and responsible AI.
+                    I also collaborate with groups to increase the representation in AI of women and the LGBTQ+ community.
+                    -->
+                    I enjoy giving talks and workshops and joining round tables, usually about Responsible AI.
+                </h2>
+                <h2 class="py-2">
+                    ⚡ I have 3 years of industry experience in AI startup labs. 
+                    At <strong>Clibrain</strong>
+                    I designed how to evaluate whether AI models truly understand and respect the rich linguistic and cultural nuances of Spanish.
+                    At <strong>neurocat,</strong>
+                    a Berlin-based startup, I developed explainability methods (XAI) and adversarial attacks to assess the trustworthiness of ML models.
                 </h2>
                 <h2 class="pb-12">
-                    Previously, I worked at
-                    <strong>Clibrain</strong>
-                    as part of the Labs team, designing how to evaluate whether AI models truly understand and respect the rich linguistic and cultural nuances of Spanish. I also worked at 
-                    <strong>neurocat,</strong>
-                    a Berlin-based startup, where I developed explainability methods (XAI) and adversarial attacks to assess the security of ML models.
+                    💚 Besides geeky things, I love hiking, backpacking, and dancing.
                 </h2>
+
             </CardGeneric>
         </div>
 
