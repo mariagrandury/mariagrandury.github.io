@@ -91,11 +91,59 @@ useHead({
           <template v-slot:description>
             <div class="text-sm text-gray-700 dark:text-white">
               Open-source leaderboard to evaluate LLM memorization, reasoning and linguistic capabilities in the languages of Spain, LATAM and the Caribbean. Developed as part of the #Somos600M Project thanks to the donation of 60 high-quality datasets by 10 research groups.
-              <br />
-              <a href="https://huggingface.co/spaces/la-leaderboard/la-leaderboard" target="_blank" class="text-accent-500 dark:text-accent-300 hover:underline">Leaderboard v1 is live!</a>
+              <a href="https://huggingface.co/spaces/la-leaderboard/la-leaderboard" target="_blank" class="text-accent-500 dark:text-accent-300 hover:underline">La Leaderboard is live!</a>
             </div>
           </template>
         </CardProject>
+
+        <CardProject
+          title="The INCLUDE Multicultural Benchmark"
+          :tags="['Cultural Bias', 'Multilingual NLP']"
+          link="https://arxiv.org/abs/2411.19799"
+          color="text-blue-600 bg-blue-50 dark:text-white dark:bg-blue-600"
+        >
+          <i-fluent-globe-24-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              The INCLUDE project aims to create a multicultural and multilingual benchmark. As part of my Master's thesis, I'm leading the effort to extend the <a
+                target="_blank"
+                href="https://arxiv.org/abs/2411.19799"
+                class="text-accent-700 dark:text-accent-300 hover:underline"
+              >
+                v1
+              </a> to the languages of LATAM, the Caribbean and Spain. We're looking for exams in EVERY language and welcome active participation.
+              <a
+                target="_blank"
+                href="https://somosnlp.org/blog/include"
+                class="text-accent-700 dark:text-accent-300 hover:underline"
+              >
+                Share an exam in your language!
+              </a>
+            </div>
+          </template>
+        </CardProject>
+
+        <CardProject
+          title="FineWeb-2 Annotation Campaign"
+          :tags="['Annotation', 'NLP', 'Hugging Face']"
+          link="https://somosnlp.org/blog/fineweb-2"
+          color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600"
+        >
+          <i-fluent-edit-24-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              FineWeb 2 is an annotation campaign by Hugging Face aimed at creating a high-quality multilingual dataset. I'm the Language Lead for Spanish and responsible for the other languages from LATAM, the Caribbean and Spain. The annotation consists of evaluating the educative level of texts, it's really easy and makes a huge impact.
+              <a
+                target="_blank"
+                href="https://somosnlp.org/blog/fineweb-2"
+                class="text-accent-700 dark:text-accent-300 hover:underline"
+              >
+                Join the effort!
+              </a>
+            </div>
+          </template>
+        </CardProject>
+
         <CardProject
           title="Validation of machine-translated evaluation datasets"
           :tags="['Translation', 'Bias', 'NLP in Spanish']"
@@ -136,6 +184,27 @@ useHead({
             </div>
           </template>
         </CardProject>
+        
+        <CardProject
+          title="Spanish NLP Initiatives"
+          :tags="['NLP in Spanish']"
+          link="https://huggingface.co/spaces/somosnlp/spanish-nlp-initiatives"
+          color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600"
+        >
+          <i-fluent-list-24-regular />
+          <template v-slot:description>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Discover the initiatives driving NLP advancements in Spanish and
+              other low-resource languages spoken in LatAm and Spain.
+            </div>
+          </template>
+        </CardProject>
+
+        <div class="col-span-2">
+          <br />
+          <h3 class="text-2xl">Previous Projects</h3>
+          <br />
+        </div>
         <CardProject
           title="Hackathon SomosNLP 2024: #Somos600M"
           :tags="['Instruction-tuned LLMs', 'NLP in Spanish']"
@@ -167,26 +236,7 @@ useHead({
             </div>
           </template>
         </CardProject>
-        <CardProject
-          title="Spanish NLP Initiatives"
-          :tags="['NLP in Spanish']"
-          link="https://huggingface.co/spaces/somosnlp/spanish-nlp-initiatives"
-          color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600"
-        >
-          <i-fluent-list-24-regular />
-          <template v-slot:description>
-            <div class="text-sm text-gray-700 dark:text-white">
-              Discover the initiatives driving NLP advancements in Spanish and
-              other low-resource languages spoken in LatAm and Spain.
-            </div>
-          </template>
-        </CardProject>
 
-        <div class="col-span-2">
-          <br />
-          <h3 class="text-2xl">Previous Projects</h3>
-          <br />
-        </div>
         <CardProject
           title="Transparency Self-Assessment"
           :tags="['Responsible AI']"

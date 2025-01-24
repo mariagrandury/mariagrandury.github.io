@@ -39,11 +39,11 @@ useHead({
       </h1>
       <h2 class="py-6">
         Cultural knowledge is highly relevant for an LLM to understand a language. My main interest is to gain a deeper comprehension of the capabilities and limitations of LLMs since we cannot improve what we cannot measure. 
-        At the Technical University of Madrid, I am currently doing research on LLM evaluation and psycholinguistics.
-        I would like to further explore cultural and linguistic bias evaluation and mitigation in LLMs with a more holistic approach to language understanding, at the level of text representation and through reasoning.
+        At the Technical University of Madrid, I am currently doing research on LLM evaluation, psycholinguistics and climate impact.
+        I would like to further explore cultural and linguistic bias evaluation and mitigation in LLMs with a more holistic approach to language understanding, e.g., at the text representation level or through reasoning.
       </h2>
       <p class="italic text-sm text-gray-500">
-        Last update: December 2024 | For up-to-date information check my
+        Last update: January 2025 | For up-to-date information check my
         <a
           href="https://scholar.google.com/citations?user=3mc_-QsAAAAJ"
           target="_blank"
@@ -183,6 +183,7 @@ useHead({
 
     <div class="py-6 lg:px-24 sm:px-12">
       <h2 class="font-semibold tracking-tight text-2xl">Masterclasses</h2>
+      <p class="py-6">I've always loved teaching and I'm grateful for these opportunities to share my research with the community!</p>
     </div>
 
     <div class="grid py-6 gap-y-3 lg:px-24 sm:px-12">
