@@ -1,6 +1,9 @@
 <script setup lang="ts">
 defineProps<{
   title: string;
+  authors: string;
+  venue?: string;
+  abstract?: string;
   tags: string[];
   arxiv_link?: string;
   hf_link?: string;
@@ -16,7 +19,9 @@ defineProps<{
         <component :is="icon" v-if="icon" />
       </div>
       <div class="grid gap-3">
-        <h2>{{ title }}</h2>
+        <h2 class="font-semibold">{{ title }}</h2>
+        <p class="text-sm text-gray-800 dark:text-gray-200">{{ authors }}</p>
+        <p v-if="venue" class="text-sm italic text-gray-500 dark:text-gray-400">{{ venue }}</p>
         <div class="flex flex-wrap gap-3">
           <div
             v-for="(tag, index) in tags"
@@ -45,8 +50,10 @@ defineProps<{
           <i-noto:hugging-face style="font-size: 1.25rem;" />
         </a>
       </div>
-      <div class="col-start-2 col-span-2">
-        <slot name="description"></slot>
+      <div v-if="abstract" class="col-start-2 col-span-2">
+        <div class="text-sm text-gray-500 dark:text-white">
+          {{ abstract }}
+        </div>
       </div>
     </div>
   </CardGeneric>
