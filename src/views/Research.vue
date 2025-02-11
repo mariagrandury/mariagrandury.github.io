@@ -63,20 +63,43 @@ useHead({
     </div>
 
     <div class="py-6 lg:px-24 sm:px-12">
-      <h2 class="font-semibold tracking-tight text-2xl">WIP Papers</h2>
+      <h2 class="font-semibold tracking-tight text-2xl">Papers In Review</h2>
     </div>
 
-    <div class="py-6 lg:px-24 sm:px-12">
+    <div class="grid py-6 gap-y-3 lg:px-24 sm:px-12">
       <CardPaper
-        title="María Grandury, Javier Aula-Blasco, Clémentine Fourrier, Miguel González, Gonzalo Martínez, Gonzalo Santamaría, and Alejandro Vaca. La Leaderboard: Leaderboard of Spanish varieties and official languages, 2024."
-        :tags="['LLM Evaluation', 'Multilingual NLP']"
+        title="María Grandury, Javier Aula-Blasco, Júlia Falcão, Clémentine Fourrier, Miguel González, Gonzalo Martínez, Gonzalo Santamaría, and Alejandro Vaca. La Leaderboard: A Large Language ModelLeaderboard for Spanish Varieties and Languages of Spain and Latin America."
+        :tags="['LLM Evaluation', 'Leaderboard', 'Low-Resource NLP', 'Cultural NLP']"
         hf_link="https://huggingface.co/spaces/la-leaderboard/la-leaderboard"
         color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
         icon="i-fluent-star-28-regular"
       >
         <template v-slot:description>
           <div class="text-sm text-gray-500 dark:text-white">
-            Open leaderboard to evaluate LLM memorization, reasoning and linguistic capabilities in the languages of Spain, LATAM and the Caribbean.
+          </div>
+        </template>
+      </CardPaper>
+      <CardPaper
+        title="María Grandury and Diana Galván. The Case of Spanish as a Pluricentric Language: Challenging the Monolingual Bias in NLP to Improve Cultural Adequacy of LLMs"
+        :tags="['Cultural Adequacy', 'Cultural NLP', 'Data Collection']"
+        hf_link=""
+        color="text-blue-600 bg-blue-50 dark:text-white dark:bg-blue-600"
+        icon="i-fluent-star-28-regular"
+      >
+        <template v-slot:description>
+          <div class="text-sm text-gray-500 dark:text-white">
+          </div>
+        </template>
+      </CardPaper>
+      <CardPaper
+        title="Javier Conde, Miguel González Saiz, María Grandury, Gonzalo Martínez, Pedro Reviriego, Marc Brysbaert. Psycholinguistic Word Features: a New Approach for the Evaluation of LLMs Alignment with Humans"
+        :tags="['LLMs', 'Evaluation', 'Pyscholinguistics']"
+        hf_link=""
+        color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600"
+        icon="i-fluent-star-28-regular"
+      >
+        <template v-slot:description>
+          <div class="text-sm text-gray-500 dark:text-white">
           </div>
         </template>
       </CardPaper>

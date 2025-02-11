@@ -112,16 +112,15 @@ const index = computed(() => counter.value % greetings.value.length);
           </CardProject>
 
           <CardProject
-            title="Project #Somos600M"
-            :tags="['SomosNLP']"
-            link="https://somosnlp.org/somos600m"
+            title="La Leaderboard"
+            :tags="['SomosNLP', 'Project #Somos600M']"
+            link="https://huggingface.co/spaces/la-leaderboard/la-leaderboard"
             color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
           >
             <i-fluent-rocket-24-regular />
             <template v-slot:description>
               <div class="text-sm text-gray-700 dark:text-white">
-                We are going to create the largest open-source instruction
-                corpus and the first open generative LLM leaderboard in the languages spoken in LATAM, the Caribbean and Spain. Join us!
+                We have created the first open leaderboard to evaluate LLMs in languages and language varieties from LATAM, the Caribbean and Spain. Join us!
               </div>
             </template>
           </CardProject>

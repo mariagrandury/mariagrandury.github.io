@@ -36,18 +36,18 @@ useHead({
                 <h2 class="py-2">
                     💡 I'm a Researcher at the <strong>Polytechnical University of Madrid</strong>
                     and the founder of <a href="https://somosnlp.org" target="_blank"
-                    class="text-accent-500 dark:text-accent-300 hover:underline">SomosNLP</a>,
+                    class="font-bold text-accent-500 dark:text-accent-300 hover:underline">SomosNLP</a>,
                     the largest open-source community of Spanish-speaking NLP practitioners. My research focuses on evaluating the capabilities of LLMs, with a particular emphasis on linguistic and cultural biases, climate impact and psycholinguistics.
                 </h2>
                 <h2 class="py-2">
                     🌎 I hold 2 Degrees in Mathematics and Physics and am pursuing a Master’s in Language Technologies. For my Master's thesis,
                      <!-- co-advised by Prof. Antoine Bosselut from EPFL and Prof. Julio Gonzalo from UNED, -->
-                    I've joined the team of the culture-aware benchmark <a href="https://arxiv.org/abs/2411.19799" target="_blank" class="text-accent-500 dark:text-accent-300 hover:underline">INCLUDE</a> to expand it to more languages, particularly from Latin America, the Caribbean, and Spain.
+                    I've joined the team of the culture-aware benchmark <a href="https://arxiv.org/abs/2411.19799" target="_blank" class="font-bold text-accent-500 dark:text-accent-300 hover:underline">INCLUDE</a> to expand it to more languages, particularly from Latin America, the Caribbean, and Spain.
                 </h2>
                 <h2 class="py-2">
                     🤗 I believe open-source drives AI development. I'm a 
                     <a href="https://huggingface.co/mariagrandury" target="_blank"
-                        class="text-accent-500 dark:text-accent-300 hover:underline">Hugging Face Fellow</a>
+                        class="font-bold text-accent-500 dark:text-accent-300 hover:underline">Hugging Face Fellow</a>
                     and have contributed
                     to several international NLP research projects like BigScience, FineWeb, and BERTIN.
                     <!-- I'm also very aware of the gender gap in my field and I collaborate with various organizations & initiatives to increase female representation and promote inclusive and responsible AI.
