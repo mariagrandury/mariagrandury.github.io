@@ -50,7 +50,7 @@ TODO:
     </div>
     <div>
       <p class="italic text-sm text-gray-500">
-        Last update: December 2024 | For up-to-date information check
+        Last update: October 2025 | For up-to-date information check
         <a
           href="https://www.linkedin.com/in/mariagrandury/"
           target="_blank"
@@ -81,6 +81,170 @@ TODO:
       <br /> 
 
       <div class="grid py-6 gap-x-6 gap-y-3">
+        <h3 class="text-2xl">2025</h3>
+        <CardMediaMini
+          talk="Fundamentals of NLP for small businesses"
+          organizer="Galician Supercomputing Center (CESGA)"
+          event="Galician Supercomputing Center (CESGA) | AI Hackathon EuroCC2"
+          event_link="https://cesga.es/hackathon-eurocc2-de-ia-para-pymes"
+          image_link="images/logos/CESGA_square.jpg"
+          recording_link=""
+          language="Spanish"
+          type="Workshop"
+          date="2025-09"
+          location="Spain"
+          :tags="['NLP', 'Small Business', '🇪🇸']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Galician Supercomputing Center (CESGA), 2h workshop part of the AI Hackathon EuroCC2
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
+          talk="Deep Learning for NLP"
+          organizer="National University of Asunción, Paraguay (UNA)"
+          event="National University of Asunción, Paraguay (UNA) | Diplomado en PLN e IA"
+          event_link="https://pol.una.py/extension/formacion-continua/diplomados/diplomado-en-procesamiento-de-lenguaje-natural-e-inteligencia-artificial"
+          image_link="images/logos/UNA.jpeg"
+          recording_link=""
+          language="Spanish"
+          type="Module"
+          date="2025-09"
+          location="Paraguay"
+          :tags="['Deep Learning', 'NLP', '🇵🇾']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              National University of Asunción, Paraguay (UNA), 20h undergrad module in NLP Degree
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
+          talk="Intersecciones críticas: inteligencia artificial, sesgos y subjetividades"
+          organizer="Ministerio de Cultura"
+          event="Ministerio de Cultura | XI Encuentro de Cultura y Ciudadanía"
+          event_link="https://espaciovirtual.culturayciudadania.es/programa/"
+          image_link="images/events/20250927_cartel.png"
+          recording_link=""
+          language="Spanish"
+          type="Round Table (Moderator)"
+          date="2025-09"
+          location="Barcelona, Spain"
+          :tags="['AI Bias', 'Critical AI', '🇪🇸']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Ministerio de Cultura, XI Encuentro de Cultura y Ciudadanía, round table moderator
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7378339754968387584/" target="_blank" class="text-accent-500 hover:underline">LinkedIn post</a>
+              <a href="https://culturayciudadania.cultura.gob.es/encuentro-cultura-ciudadania/2023-redirige/presentacion.html" target="_blank" class="text-accent-500 hover:underline">Presentación</a>
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
+          talk="LLM Grooming: Cómo se está intentando engañar a la IA en español"
+          organizer="Secretaría General Iberoamericana (SEGIB) & Maldita.es"
+          event="Secretaría General Iberoamericana (SEGIB) & Maldita.es | Pabellón Iberoamericano, Feria del Libro"
+          event_link="https://exteriores.gob.es/es/PoliticaExterior/Documents/250527_Programa%20Pabell%c3%b3n%20Iberoamericano.pdf"
+          image_link="images/events/20250613_cartel.png"
+          recording_link=""
+          language="Spanish"
+          type="Round Table"
+          date="2025-06"
+          location="Madrid, Spain"
+          :tags="['LLM Security', 'AI Safety', '🇪🇸']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Secretaría General Iberoamericana (SEGIB) & Maldita.es, Pabellón Iberoamericano, Feria del Libro
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
+          talk="Natural Language Processing"
+          organizer="International University of Andalucía (UNIA)"
+          event="International University of Andalucía (UNIA) | Summer School: Fundamentos de Inteligencia Artificial: Modelos Generativos y Aplicaciones Avanzadas"
+          event_link="https://unia.es/estudios-y-acceso/oferta-academica/cursos-de-verano/fundamentos-de-inteligencia-artificial-modelos-generativos-y-aplicaciones-avanzadas"
+          image_link="images/logos/UNIA_square.png"
+          recording_link=""
+          language="Spanish"
+          type="Workshop"
+          date="2025-08"
+          location="Baeza, Spain"
+          :tags="['NLP', 'Summer School', '🇪🇸']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              International University of Andalucía (UNIA), 2.5h workshop at the Summer School
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
+          talk="RLHF & Model Alignment"
+          organizer="National Center of Artificial Intelligence (CENIA)"
+          event="National Center of Artificial Intelligence (CENIA) | Diplomado de PLN"
+          event_link=""
+          image_link="images/logos/CENIA_square.jpeg"
+          recording_link=""
+          language="Spanish"
+          type="Masterclass"
+          date="2025-04"
+          location="Chile (Remote)"
+          :tags="['RLHF', 'Model Alignment', '🇪🇸']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              National Center of Artificial Intelligence (CENIA), 4h undergrad masterclass
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
+          talk="How to impulse the development of LLMs in Spanish"
+          organizer="University of Chile (UChile)"
+          event="University of Chile (UChile)"
+          event_link=""
+          image_link="images/logos/UChile_color.png"
+          recording_link=""
+          language="Spanish"
+          type="Talk"
+          date="2025-04"
+          location="Santiago de Chile, Chile"
+          :tags="['LLMs', 'Spanish', '🇨🇱']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              University of Chile (UChile), talk
+            </div>
+          </template>
+        </CardMediaMini>
+        <CardMediaMini
+          talk="Promoting inclusive NLP: Why and how to engage the community"
+          organizer="Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)"
+          event="Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)"
+          event_link=""
+          image_link="images/logos/MBZUAI.png"
+          recording_link=""
+          language="English"
+          type="Talk"
+          date="2025-02"
+          location="Abu Dhabi, UAE"
+          :tags="['Inclusive NLP', 'Community', '🇦🇪']"
+        >
+        <i-mdi-newspaper style="font-size: 1.25rem" />
+        <template v-slot:abstract>
+            <div class="text-sm text-gray-700 dark:text-white">
+              Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), talk
+            </div>
+          </template>
+        </CardMediaMini>
+        <br>
         <h3 class="text-2xl">2024</h3>
         <CardMediaMini
           talk="Evaluation of Large Language Models (LLMs)"
