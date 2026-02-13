@@ -35,6 +35,7 @@ useHead({
                 </h2>
                 <h2 class="py-2">
                     💡 I'm a Researcher at the <strong>Polytechnical University of Madrid</strong>
+                    <!-- https://portalcientifico.upm.es/es/ipublic/researcher/337642  -->
                     and the founder of <a href="https://somosnlp.org" target="_blank"
                     class="font-bold text-accent-500 dark:text-accent-300 hover:underline">SomosNLP</a>,
                     the largest open-source community of Spanish-speaking NLP practitioners. My research focuses on evaluating the capabilities of LLMs, with a particular emphasis on linguistic and cultural biases, climate impact and psycholinguistics.
@@ -67,6 +68,40 @@ useHead({
                 </h2>
 
             </CardGeneric>
+        </div>
+
+        <div class="my-12">
+            <h2 class="flex gap-2 items-center mb-8">
+                <div class="font-semibold tracking-tight text-2xl">Education</div>
+                <i-fluent-award-24-regular style="font-size: 2rem;" />
+            </h2>
+            <div class="flex flex-wrap gap-8 justify-center items-stretch">
+                <div class="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md w-56 min-w-[11rem] flex-1 max-w-xs">
+                    <img src="/images/logos/epfl.png" alt="EPFL Logo" class="h-16 mb-3" />
+                    <div class="font-semibold text-lg text-center">PhD NLP</div>
+                    <div class="text-xs text-gray-500 text-center mt-1">EPFL</div>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md w-56 min-w-[11rem] flex-1 max-w-xs">
+                    <img src="/images/logos/uned.png" alt="UNED Logo" class="h-16 mb-3" />
+                    <div class="font-semibold text-lg text-center">MSc Language Technologies</div>
+                    <div class="text-xs text-gray-500 text-center mt-1">UNED</div>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md w-44 min-w-[9rem] flex-1 max-w-xs">
+                    <img src="/images/logos/uniovi.png" alt="UniOvi Logo" class="h-14 mb-2" />
+                    <div class="font-semibold text-md text-center">BSc Mathematics</div>
+                    <div class="text-xs text-gray-500 text-center mt-1">University of Oviedo</div>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md w-44 min-w-[9rem] flex-1 max-w-xs">
+                    <img src="/images/logos/uniovi.png" alt="UniOvi Logo" class="h-14 mb-2" />
+                    <div class="font-semibold text-md text-center">BSc Physics</div>
+                    <div class="text-xs text-gray-500 text-center mt-1">University of Oviedo</div>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md w-44 min-w-[9rem] flex-1 max-w-xs">
+                    <img src="/images/logos/paris_saclay.png" alt="Paris Saclay Logo" class="h-14 mb-2" />
+                    <div class="font-semibold text-md text-center">Erasmus</div>
+                    <div class="text-xs text-gray-500 text-center mt-1">Paris-Saclay</div>
+                </div>
+            </div>
         </div>
 
         <div>

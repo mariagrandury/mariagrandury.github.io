@@ -2,7 +2,7 @@
 import { ref, computed } from "vue";
 import { useInterval } from "@vueuse/core";
 
-const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,"]);
+const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
 const index = computed(() => counter.value % greetings.value.length);
 </script>
@@ -30,7 +30,7 @@ const index = computed(() => counter.value % greetings.value.length);
           <ul class="flex flex-col gap-1">
             <li>💡 Natural Language Processing Researcher</li>
             <li>🎯 #ResponsibleNLP, #TrustworthyNLP, #NLPinSpanish</li>
-            <li>🎓 Mathematician & Physicist</li>
+            <li>🎓 Mathematician & Physicist, Master's in Language Technologies</li>
             <br>
             <li>
               🚀 Founder
