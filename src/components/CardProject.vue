@@ -13,7 +13,9 @@ export default defineComponent({
             default: "",
             required: false
         },
-        tags: Array
+        tags: Array,
+        icon: { type: String, default: "", required: false },
+        description: { type: String, default: "", required: false },
     }
 })
 </script>
@@ -22,7 +24,8 @@ export default defineComponent({
     <CardGeneric class="p-6">
         <div class="grid gap-3 grid-cols-[auto,1fr,auto]">
             <div class="rounded-md h-4rem grid text-2rem w-4rem place-items-center" :class="color">
-                <slot></slot>
+                <component v-if="icon" :is="icon" />
+                <slot v-else></slot>
             </div>
             <div class="grid gap-3">
                 <h2>{{ title }}</h2>
@@ -43,7 +46,9 @@ export default defineComponent({
                 <i-fluent-rocket-20-regular style="font-size: 1.25rem;" />
             </a>
             <div class="col-start-2 col-span-2">
-                <slot name="description"></slot>
+                <slot name="description">
+                    <div v-if="description" class="text-sm text-gray-700 dark:text-white" v-html="description"></div>
+                </slot>
             </div>
         </div>
     </CardGeneric>

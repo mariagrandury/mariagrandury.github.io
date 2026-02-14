@@ -24,6 +24,8 @@ export default defineComponent({
             type: String,
             default: "text-accent-900 bg-accent-50 dark:text-white dark:bg-accent-600"
         },
+        icon: { type: String, default: "", required: false },
+        abstract: { type: String, default: "", required: false },
     }
 })
 </script>
@@ -47,8 +49,14 @@ export default defineComponent({
             </div>
             <a v-if="recording_link" :href="recording_link" target="_blank"
                 class="border rounded-md flex border-gray-200 p-2 self-start items-center dark:border-black dark:bg-gray-700 hover:ring">
-                <slot></slot>
+                <component v-if="icon" :is="icon" style="font-size: 1.25rem" />
+                <slot v-else></slot>
             </a>
+        </div>
+        <div v-if="$slots.abstract || abstract" class="col-start-1 col-span-full mt-3">
+            <slot name="abstract">
+                <div class="text-sm text-gray-700 dark:text-white" v-html="abstract"></div>
+            </slot>
         </div>
     </CardGeneric>
 </template>
