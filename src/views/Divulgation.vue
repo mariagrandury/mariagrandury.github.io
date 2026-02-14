@@ -157,7 +157,7 @@ const eventsByYear = computed(() => {
     </div>
     <div>
       <p class="italic text-sm text-gray-500">
-        Last update: October 2025 | For up-to-date information check
+        Last update: January 2026 | For up-to-date information check
         <a
           href="https://www.linkedin.com/in/mariagrandury/"
           target="_blank"
