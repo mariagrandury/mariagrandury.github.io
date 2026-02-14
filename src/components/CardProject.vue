@@ -1,30 +1,29 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { computed } from 'vue';
+import { Icon } from '@iconify/vue';
+import { convertIconName } from '../utils/iconRegistry';
 
-export default defineComponent({
-    props: {
-        title: String,
-        color: {
-            type: String,
-            default: "text-accent-900 bg-accent-50 dark:text-white dark:bg-accent-600"
-        },
-        link: {
-            type: String,
-            default: "",
-            required: false
-        },
-        tags: Array,
-        icon: { type: String, default: "", required: false },
-        description: { type: String, default: "", required: false },
-    }
-})
+const props = defineProps<{
+    title: string;
+    color?: string;
+    link?: string;
+    tags: string[];
+    icon?: string;
+    description?: string;
+}>();
+
+// Convert icon name to Iconify format
+const iconifyIcon = computed(() => {
+    if (!props.icon) return null;
+    return convertIconName(props.icon);
+});
 </script>
 
 <template>
     <CardGeneric class="p-6">
         <div class="grid gap-3 grid-cols-[auto,1fr,auto]">
-            <div class="rounded-md h-4rem grid text-2rem w-4rem place-items-center" :class="color">
-                <component v-if="icon" :is="icon" />
+            <div class="rounded-md h-4rem grid text-2rem w-4rem place-items-center" :class="color || 'text-accent-900 bg-accent-50 dark:text-white dark:bg-accent-600'">
+                <Icon :icon="iconifyIcon" v-if="iconifyIcon" style="font-size: 2rem;" />
                 <slot v-else></slot>
             </div>
             <div class="grid gap-3">
@@ -43,7 +42,8 @@ export default defineComponent({
                 target="_blank"
                 class="border rounded-md flex border-gray-200 p-2 self-start items-center dark:border-black dark:bg-gray-700 hover:ring ring-accent-500"
             >
-                <i-fluent-rocket-20-regular style="font-size: 1.25rem;" />
+                <Icon :icon="iconifyIcon" v-if="iconifyIcon" style="font-size: 1.25rem;" />
+                <i-fluent-rocket-20-regular v-else style="font-size: 1.25rem;" />
             </a>
             <div class="col-start-2 col-span-2">
                 <slot name="description">

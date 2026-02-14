@@ -1,33 +1,32 @@
 <!-- Based on CardMediaSummary.vue -->
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { computed } from 'vue';
+import { Icon } from '@iconify/vue';
+import { convertIconName } from '../utils/iconRegistry';
 
-export default defineComponent({
-    props: {
-        talk: String,
-        organizer: { type: String, default: "", required: false },
-        event: String,
-        event_link: {
-            type: String, default: "https://www.youtube.com/@mariagrandury", required: false
-        },
-        image_link: { type: String, default: "", required: false },
-        recording_link: {
-            type: String, default: "https://www.youtube.com/@mariagrandury", required: false
-        },
-        announcement_link: { type: String, default: "", required: false },
-        tags: Array,
-        date: String,
-        language: String,
-        type: String,
-        location: String,
-        color: {
-            type: String,
-            default: "text-accent-900 bg-accent-50 dark:text-white dark:bg-accent-600"
-        },
-        icon: { type: String, default: "", required: false },
-        abstract: { type: String, default: "", required: false },
-    }
-})
+const props = defineProps<{
+    talk: string;
+    organizer?: string;
+    event: string;
+    event_link?: string;
+    image_link?: string;
+    recording_link?: string;
+    announcement_link?: string;
+    tags: string[];
+    date?: string;
+    language?: string;
+    type?: string;
+    location?: string;
+    color?: string;
+    icon?: string;
+    abstract?: string;
+}>();
+
+// Convert icon name to Iconify format
+const iconifyIcon = computed(() => {
+    if (!props.icon) return null;
+    return convertIconName(props.icon);
+});
 </script>
 
 <template>
@@ -49,7 +48,7 @@ export default defineComponent({
             </div>
             <a v-if="recording_link" :href="recording_link" target="_blank"
                 class="border rounded-md flex border-gray-200 p-2 self-start items-center dark:border-black dark:bg-gray-700 hover:ring">
-                <component v-if="icon" :is="icon" style="font-size: 1.25rem" />
+                <Icon :icon="iconifyIcon" v-if="iconifyIcon" style="font-size: 1.25rem" />
                 <slot v-else></slot>
             </a>
         </div>
