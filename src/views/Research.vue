@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref, onMounted, computed } from "vue";
 import { useHead } from "@vueuse/head";
 
 useHead({
@@ -23,6 +24,106 @@ useHead({
     { name: "twitter:creator", content: "@mariagrandury" },
   ],
 });
+
+interface Paper {
+  status: string;
+  title: string;
+  authors: string;
+  venue?: string;
+  tags: string[];
+  arxiv_link?: string;
+  hf_link?: string;
+  color: string;
+  icon?: string;
+  abstract?: string;
+}
+
+const papers = ref<Paper[]>([]);
+
+// Simple CSV parser
+function parseCSV(csvText: string): Paper[] {
+  const lines = csvText.trim().split("\n");
+  if (lines.length < 2) return [];
+
+  const headers = lines[0].split(",");
+  const data: Paper[] = [];
+
+  for (let i = 1; i < lines.length; i++) {
+    const values = parseCSVLine(lines[i]);
+    if (values.length !== headers.length) continue;
+
+    const paper: Paper = {
+      status: (values[0] || "").trim(),
+      title: (values[1] || "").trim(),
+      authors: (values[2] || "").trim(),
+      venue: values[3] ? values[3].trim() : undefined,
+      tags: values[4] ? values[4].split(",").map((tag) => tag.trim()) : [],
+      arxiv_link: values[5] ? values[5].trim() : undefined,
+      hf_link: values[6] ? values[6].trim() : undefined,
+      color: (values[7] || "").trim(),
+      icon: values[8] ? values[8].trim() : undefined,
+      abstract: values[9] ? values[9].trim() : undefined,
+    };
+
+    // Clean up empty strings
+    if (!paper.venue || paper.venue === "") delete paper.venue;
+    if (!paper.arxiv_link || paper.arxiv_link === "") delete paper.arxiv_link;
+    if (!paper.hf_link || paper.hf_link === "") delete paper.hf_link;
+    if (!paper.icon || paper.icon === "") delete paper.icon;
+    if (!paper.abstract || paper.abstract === "") delete paper.abstract;
+
+    data.push(paper);
+  }
+
+  return data;
+}
+
+// Parse CSV line handling quoted fields
+function parseCSVLine(line: string): string[] {
+  const result: string[] = [];
+  let current = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < line.length; i++) {
+    const char = line[i];
+    const nextChar = line[i + 1];
+
+    if (char === '"') {
+      if (inQuotes && nextChar === '"') {
+        current += '"';
+        i++; // Skip next quote
+      } else {
+        inQuotes = !inQuotes;
+      }
+    } else if (char === "," && !inQuotes) {
+      result.push(current);
+      current = "";
+    } else {
+      current += char;
+    }
+  }
+  result.push(current);
+
+  return result;
+}
+
+onMounted(async () => {
+  try {
+    const response = await fetch("/data/papers.csv");
+    const csvText = await response.text();
+    papers.value = parseCSV(csvText);
+  } catch (error) {
+    console.error("Error loading papers:", error);
+  }
+});
+
+const papersInReview = computed(() =>
+  papers.value.filter((paper) => paper.status === "in_review")
+);
+
+const publishedPapers = computed(() =>
+  papers.value.filter((paper) => paper.status === "published")
+);
 </script>
 
 <template>
@@ -68,28 +169,17 @@ useHead({
 
     <div class="grid py-6 gap-y-3 lg:px-24 sm:px-12">
       <CardPaper
-        title="La Leaderboard: A Large Language Model Leaderboard for Spanish Varieties and Languages of Spain and Latin America"
-        authors="María Grandury, Javier Aula-Blasco, Júlia Falcão, Clémentine Fourrier, Miguel González, Gonzalo Martínez, Gonzalo Santamaría, and Alejandro Vaca"
-        :tags="['LLM Evaluation', 'Leaderboard', 'Low-Resource NLP', 'Cultural NLP']"
-        hf_link="https://huggingface.co/spaces/la-leaderboard/la-leaderboard"
-        color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
-        icon="i-fluent-star-28-regular"
-      />
-      <CardPaper
-        title="The Case of Spanish as a Pluricentric Language: Challenging the Monolingual Bias in NLP to Improve Cultural Adequacy of LLMs"
-        authors="María Grandury and Diana Galván"
-        :tags="['Cultural Adequacy', 'Cultural NLP', 'Data Collection']"
-        hf_link=""
-        color="text-blue-600 bg-blue-50 dark:text-white dark:bg-blue-600"
-        icon="i-fluent-star-28-regular"
-      />
-      <CardPaper
-        title="Psycholinguistic Word Features: a New Approach for the Evaluation of LLMs Alignment with Humans"
-        authors="Javier Conde, Miguel González Saiz, María Grandury, Gonzalo Martínez, Pedro Reviriego and Marc Brysbaert"
-        :tags="['LLMs', 'Evaluation', 'Pyscholinguistics']"
-        hf_link=""
-        color="text-green-600 bg-green-50 dark:text-white dark:bg-green-600"
-        icon="i-fluent-star-28-regular"
+        v-for="paper in papersInReview"
+        :key="paper.title"
+        :title="paper.title"
+        :authors="paper.authors"
+        :venue="paper.venue"
+        :tags="paper.tags"
+        :arxiv_link="paper.arxiv_link"
+        :hf_link="paper.hf_link"
+        :color="paper.color"
+        :icon="paper.icon"
+        :abstract="paper.abstract"
       />
 
       <p class="py-6">... plus psycholinguistics papers coming soon!</p>
@@ -101,71 +191,17 @@ useHead({
 
     <div class="grid py-6 gap-y-3 lg:px-24 sm:px-12">
       <CardPaper
-        title="Multiple Choice Questions: Reasoning Makes Large Language Models (LLMs) More Self-Confident Even When They Are Wrong"
-        authors="Tairan Fu, Javier Conde, Gonzalo Martínez, María Grandury, Pedro Reviriego"
-        :tags="['LLM Evaluation', 'MCQA']"
-        arxiv_link="https://arxiv.org/abs/2501.09775"
-        hf_link="https://huggingface.co/papers/2501.09775"
-        color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
-        icon="i-fluent-rocket-24-regular"
-        abstract="One of the most widely used methods to evaluate LLMs are Multiple Choice Question (MCQ) tests. MCQ benchmarks enable the testing of LLM knowledge on almost any topic at scale as the results can be processed automatically. To help the LLM answer, a few examples called few shots can be included in the prompt. Moreover, the LLM can be asked to answer the question directly with the selected option or to first provide the reasoning and then the selected answer, which is known as chain of thought. In addition to checking whether the selected answer is correct, the evaluation can look at the LLM-estimated probability of its response as an indication of the confidence of the LLM in the response. In this paper, we study how the LLM confidence in its answer depends on whether the model has been asked to answer directly or to provide the reasoning before answering. The results of the evaluation of questions on a wide range of topics in seven different models show that LLMs are more confident in their answers when they provide reasoning before the answer. This occurs regardless of whether the selected answer is correct. Our hypothesis is that this behavior is due to the reasoning that modifies the probability of the selected answer, as the LLM predicts the answer based on the input question and the reasoning that supports the selection made. Therefore, LLM estimated probabilities seem to have intrinsic limitations that should be understood in order to use them in evaluation procedures. Interestingly, the same behavior has been observed in humans, for whom explaining an answer increases confidence in its correctness."
-      />
-
-      <CardPaper
-        title="Evaluating large language models with tests of spanish as a foreign language: Pass or fail?"
-        authors="Marina Mayor-Rocher, Nina Melero, Elena Merino-Gómez, María Grandury, Javier Conde, and Pedro Reviriego"
-        :tags="['LLM Evaluation', 'NLP in Spanish', 'Linguistics']"
-        arxiv_link="https://arxiv.org/abs/2409.15334"
-        hf_link="https://huggingface.co/papers/2409.15334"
-        color="text-purple-900 bg-purple-50 dark:text-white dark:bg-purple-600"
-        icon="i-fluent-checkbox-checked-24-regular"
-        abstract="Large Language Models (LLMs) have been profusely evaluated on their ability to answer questions on many topics and their performance on different natural language understanding tasks. Those tests are usually conducted in English, but most LLM users are not native English speakers. Therefore, it is of interest to analyze how LLMs understand other languages at different levels: from paragraphs to morphems. In this paper, we evaluate the performance of state-of-the-art LLMs in TELEIA, a recently released benchmark with similar questions to those of Spanish exams for foreign students, covering topics such as reading comprehension, word formation, meaning and compositional semantics, and grammar. The results show that LLMs perform well at understanding Spanish but are still far from achieving the level of a native speaker in terms of grammatical competence."
-      />
-
-      <CardPaper
-        title="The #Somos600M Project: Generating NLP resources that represent the diversity of the languages from LATAM, the Caribbean, and Spain"
-        authors="María Grandury"
-        venue="North American Chapter of the Association for Computational Linguistics Conference: LatinX in AI (LXAI) Research Workshop, 2024"
-        :tags="['Instruction Data', 'LLM Evaluation', 'Multilingual NLP']"
-        arxiv_link="https://arxiv.org/abs/2407.17479"
-        hf_link="https://huggingface.co/papers/2407.17479"
-        color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
-        icon="i-fluent-rocket-24-regular"
-        abstract="We are 600 million Spanish speakers. We launched the #Somos600M Project because the diversity of the languages from LATAM, the Caribbean and Spain needs to be represented in Artificial Intelligence (AI) systems. Despite being the 7.5% of the world population, there is no open dataset to instruction-tune large language models (LLMs), nor a leaderboard to evaluate and compare them. In this paper, we present how we have created as an international open-source community the first versions of the instruction and evaluation datasets, indispensable resources for the advancement of Natural Language Processing (NLP) in our languages."
-      />
-      
-      <CardPaper
-        title="Spanish and LLM Benchmarks: Is MMLU Lost in Translation"
-        authors="Irene Plaza, Nina Melero, Cristina del Pozo, Javier Conde, Pedro Reviriego, Marina Mayor-Rocher, and María Grandury"
-        :tags="['Translation', 'NLP in Spanish', 'LLM Evaluation']"
-        arxiv_link="https://arxiv.org/abs/2406.17789"
-        hf_link="https://huggingface.co/papers/2406.17789"
-        color="text-orange-600 bg-orange-100 dark:text-white dark:bg-orange-500"
-        icon="i-fluent-question-24-regular"
-        abstract="The evaluation of Large Language Models (LLMs) is a key element in their continuous improvement process and many benchmarks have been developed to assess the performance of LLMs in different tasks and topics. As LLMs become adopted worldwide, evaluating them in languages other than English is increasingly important. However, most LLM benchmarks are simply translated using an automated tool and then run in the target language. This means that the results depend not only on the LLM performance in that language but also on the quality of the translation. In this paper, we consider the case of the well-known Massive Multitask Language Understanding (MMLU) benchmark. Selected categories of the benchmark are translated into Spanish using Azure Translator and ChatGPT4 and run on ChatGPT4. Next, the results are processed to identify the test items that produce different answers in Spanish and English. Those are then analyzed manually to understand if the automatic translation caused the change. The results show that a significant fraction of the failing items can be attributed to mistakes in the translation of the benchmark. These results make a strong case for improving benchmarks in languages other than English by at least revising the translations of the items and preferably by adapting the tests to the target language by experts."
-      />
-
-      <CardPaper
-        title="BLOOM: A 176B-Parameter Open-Access Multilingual Language Model"
-        authors="Teven Le Scao, Angela Fan, Christopher Akiki, Ellie Pavlick, Suzana Ilić, Daniel Hesslow, Roman Castagné, Alexandra Sasha Luccioni, François Yvon, ..., María Grandury, ... and Thomas Wolf"
-        :tags="['Foundation Model', 'Multilingual NLP']"
-        arxiv_link="https://inria.hal.science/hal-03850124/"
-        hf_link="https://huggingface.co/papers/2211.05100"
-        color="text-pink-600 bg-pink-50 dark:text-white dark:bg-pink-600"
-        icon="i-whh-flower"
-        abstract="Large language models (LLMs) have been shown to be able to perform new tasks based on a few demonstrations or natural language instructions. While these capabilities have led to widespread adoption, most LLMs are developed by resource-rich organizations and are frequently kept from the public. As a step towards democratizing this powerful technology, we present BLOOM, a 176B-parameter open-access language model designed and built thanks to a collaboration of hundreds of researchers. BLOOM is a decoder-only Transformer language model that was trained on the ROOTS corpus, a dataset comprising hundreds of sources in 46 natural and 13 programming languages (59 in total). We find that BLOOM achieves competitive performance on a wide variety of benchmarks, with stronger results after undergoing multitask prompted finetuning. To facilitate future research and applications using LLMs, we publicly release our models and code under the Responsible AI License."
-      />
-
-      <CardPaper
-        title="BERTIN: Efficient Pre-Training of a Spanish Language Model using Perplexity Sampling"
-        authors="Javier De la Rosa, Eduardo G. Ponferrada, Manu Romero, Paulo Villegas, Pablo González de Prado Salas, and María Grandury"
-        venue="Procesamiento del Lenguaje Natural, 68(0), 13–23, 2022"
-        :tags="['Perplexity Sampling', 'GPU Poor', 'Foundation Model', 'NLP in Spanish']"
-        arxiv_link="http://journal.sepln.org/sepln/ojs/ojs/index.php/pln/article/view/6403"
-        hf_link="https://huggingface.co/papers/2207.06814"
-        color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
-        icon="i-mdi-face-man"
-        abstract="The pre-training of large language models usually requires massive amounts of resources, both in terms of computation and data. Frequently used web sources such as Common Crawl might contain enough noise to make this pretraining sub-optimal. In this work, we experiment with different sampling methods from the Spanish version of mC4, and present a novel data-centric technique which we name perplexity sampling that enables the pre-training of language models in roughly half the amount of steps and using one fifth of the data. The resulting models are comparable to the current state-of-the-art, and even achieve better results for certain tasks. Our work is proof of the versatility of Transformers, and paves the way for small teams to train their models on a limited budget."
+        v-for="paper in publishedPapers"
+        :key="paper.title"
+        :title="paper.title"
+        :authors="paper.authors"
+        :venue="paper.venue"
+        :tags="paper.tags"
+        :arxiv_link="paper.arxiv_link"
+        :hf_link="paper.hf_link"
+        :color="paper.color"
+        :icon="paper.icon"
+        :abstract="paper.abstract"
       />
     </div>
 
