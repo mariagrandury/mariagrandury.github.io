@@ -117,8 +117,8 @@ onMounted(async () => {
   }
 });
 
-const papersInReview = computed(() =>
-  papers.value.filter((paper) => paper.status === "in_review")
+const highlightPapers = computed(() =>
+  papers.value.filter((paper) => paper.status === "highlights")
 );
 
 const publishedPapers = computed(() =>
@@ -140,11 +140,12 @@ const publishedPapers = computed(() =>
       </h1>
       <h2 class="py-6">
         Cultural knowledge is highly relevant for an LLM to understand a language. My main interest is to gain a deeper comprehension of the capabilities and limitations of LLMs since we cannot improve what we cannot measure. 
-        At the Technical University of Madrid, I am currently doing research on LLM evaluation, psycholinguistics and climate impact.
-        I would like to further explore cultural and linguistic bias evaluation and mitigation in LLMs with a more holistic approach to language understanding, e.g., at the text representation level or through reasoning.
+        At the EPFL NLP lab, I'm currently doing research on Multilingual and Multicultural LLM Evaluation.
+        I want to explore cultural and linguistic bias evaluation and mitigation in LLMs with a holistic approach to language understanding, e.g., at the text representation level or through reasoning.
+        <!-- I also collaborate with international labs like ... -->
       </h2>
       <p class="italic text-sm text-gray-500">
-        Last update: January 2025 | For up-to-date information check my
+        Last update: January 2026 | For up-to-date information check my
         <a
           href="https://scholar.google.com/citations?user=3mc_-QsAAAAJ"
           target="_blank"
@@ -164,12 +165,12 @@ const publishedPapers = computed(() =>
     </div>
 
     <div class="py-6 lg:px-24 sm:px-12">
-      <h2 class="font-semibold tracking-tight text-2xl">Papers In Review</h2>
+      <h2 class="font-semibold tracking-tight text-2xl">Highlights</h2>
     </div>
 
     <div class="grid py-6 gap-y-3 lg:px-24 sm:px-12">
       <CardPaper
-        v-for="paper in papersInReview"
+        v-for="paper in highlightPapers"
         :key="paper.title"
         :title="paper.title"
         :authors="paper.authors"
@@ -181,8 +182,6 @@ const publishedPapers = computed(() =>
         :icon="paper.icon"
         :abstract="paper.abstract"
       />
-
-      <p class="py-6">... plus psycholinguistics papers coming soon!</p>
     </div>
 
     <div class="py-6 lg:px-24 sm:px-12">
@@ -206,7 +205,7 @@ const publishedPapers = computed(() =>
     </div>
 
     <div class="py-6 lg:px-24 sm:px-12">
-      <h2 class="font-semibold tracking-tight text-2xl">Masterclasses</h2>
+      <h2 class="font-semibold tracking-tight text-2xl">Guest Lectures</h2>
       <p class="py-6">I've always loved teaching and I'm grateful for these opportunities to share my research with the community!</p>
     </div>
 
@@ -219,7 +218,7 @@ const publishedPapers = computed(() =>
           image_link="images/events/241214_unam_header.png"
           recording_link=""
           language="Spanish"
-          type="Masterclass"
+          type="Guest Lecture"
           date="2024-12-14"
           location="Mexico (Remote)"
           :tags="['Synthetic Data', 'LLM Evaluation']"
