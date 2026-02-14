@@ -38,9 +38,8 @@ interface Event {
   date: string;
   location: string;
   tags: string[];
-  icon?: string;
   abstract?: string;
-  color?: string;
+  sm_link?: string;
 }
 
 const events = ref<Event[]>([]);
@@ -70,17 +69,15 @@ function parseCSV(csvText: string): Event[] {
       date: (values[9] || "").trim(),
       location: (values[10] || "").trim(),
       tags: values[11] ? values[11].split(",").map((tag) => tag.trim()) : [],
-      icon: (values[12] || "").trim(),
-      abstract: (values[13] || "").trim(),
-      color: (values[14] || "").trim(),
+      abstract: (values[12] || "").trim(),
+      sm_link: (values[13] || "").trim(),
     };
 
     // Clean up empty strings - set to undefined so they're not passed as props
     if (!event.organizer || event.organizer === "") delete event.organizer;
     if (!event.recording_link || event.recording_link === "") delete event.recording_link;
-    if (!event.icon || event.icon === "") delete event.icon;
     if (!event.abstract || event.abstract === "") delete event.abstract;
-    if (!event.color || event.color === "") delete event.color;
+    if (!event.sm_link || event.sm_link === "") delete event.sm_link;
 
     data.push(event);
   }
@@ -176,7 +173,7 @@ const eventsByYear = computed(() => {
       <div class="grid py-6 gap-x-6 gap-y-3">
         <template v-for="yearGroup in eventsByYear" :key="yearGroup.year">
           <h3 class="text-2xl">{{ yearGroup.year }}</h3>
-          <CardMediaMini
+        <CardMediaMini
             v-for="event in yearGroup.events"
             :key="event.talk"
             :talk="event.talk"
@@ -190,12 +187,11 @@ const eventsByYear = computed(() => {
             :date="event.date"
             :location="event.location"
             :tags="event.tags"
-            :icon="event.icon"
             :abstract="event.abstract"
-            :color="event.color"
+            :sm_link="event.sm_link"
           />
           <br v-if="yearGroup !== eventsByYear[eventsByYear.length - 1]" />
-        </template>
+          </template>
       </div>
       <!-- OLD STATIC VERSION REMOVED - Now loading from CSV -->
       <div class="flex my-6 justify-center">
@@ -220,4 +216,3 @@ const eventsByYear = computed(() => {
     </div>
   </Container>
 </template>
- 
