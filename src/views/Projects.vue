@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from "vue";
 import { useHead } from "@vueuse/head";
+import { parseProjectsCSV, type Project } from "../utils/csvParser";
 
 useHead({
   title: "María Grandury - Open-Source AI Research Projects",
@@ -25,86 +26,13 @@ useHead({
   ],
 });
 
-interface Project {
-  status: string;
-  title: string;
-  tags: string[];
-  link: string;
-  color: string;
-  icon: string;
-  description: string;
-}
-
 const projects = ref<Project[]>([]);
-
-// Simple CSV parser
-function parseCSV(csvText: string): Project[] {
-  const lines = csvText.trim().split("\n");
-  if (lines.length < 2) return [];
-
-  const headers = lines[0].split(",");
-  const data: Project[] = [];
-
-  for (let i = 1; i < lines.length; i++) {
-    const values = parseCSVLine(lines[i]);
-    if (values.length !== headers.length) continue;
-
-    const project: Project = {
-      status: (values[0] || "").trim(),
-      title: (values[1] || "").trim(),
-      tags: values[2] ? values[2].split(",").map((tag) => tag.trim()) : [],
-      link: (values[3] || "").trim(),
-      color: (values[4] || "").trim(),
-      icon: (values[5] || "").trim(),
-      description: (values[6] || "").trim(),
-    };
-
-    // Clean up empty strings
-    if (!project.link || project.link === "") project.link = "";
-    if (!project.color || project.color === "") project.color = "";
-    if (!project.icon || project.icon === "") project.icon = "";
-    if (!project.description || project.description === "") project.description = "";
-
-    data.push(project);
-  }
-
-  return data;
-}
-
-// Parse CSV line handling quoted fields
-function parseCSVLine(line: string): string[] {
-  const result: string[] = [];
-  let current = "";
-  let inQuotes = false;
-
-  for (let i = 0; i < line.length; i++) {
-    const char = line[i];
-    const nextChar = line[i + 1];
-
-    if (char === '"') {
-      if (inQuotes && nextChar === '"') {
-        current += '"';
-        i++; // Skip next quote
-      } else {
-        inQuotes = !inQuotes;
-      }
-    } else if (char === "," && !inQuotes) {
-      result.push(current);
-      current = "";
-    } else {
-      current += char;
-    }
-  }
-  result.push(current);
-
-  return result;
-}
 
 onMounted(async () => {
   try {
     const response = await fetch("/data/projects.csv");
     const csvText = await response.text();
-    projects.value = parseCSV(csvText);
+    projects.value = parseProjectsCSV(csvText);
   } catch (error) {
     console.error("Error loading projects:", error);
   }

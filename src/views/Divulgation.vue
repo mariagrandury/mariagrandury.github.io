@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from "vue";
 import { useHead } from "@vueuse/head";
+import { parseEventsCSV, type Event } from "../utils/csvParser";
 
 useHead({
   title: "María Grandury - NLP Divulgation: Talks, Interviews & Articles",
@@ -25,103 +26,13 @@ useHead({
   ],
 });
 
-interface Event {
-  year: string;
-  talk: string;
-  organizer?: string;
-  event: string;
-  event_link: string;
-  image_link?: string;
-  recording_link?: string;
-  language: string;
-  type?: string;
-  date: string;
-  location?: string;
-  tags: string[];
-  abstract?: string;
-  sm_link?: string;
-}
-
 const events = ref<Event[]>([]);
-
-// Simple CSV parser
-function parseCSV(csvText: string): Event[] {
-  const lines = csvText.trim().split("\n");
-  if (lines.length < 2) return [];
-
-  const headers = lines[0].split(",");
-  const data: Event[] = [];
-
-  for (let i = 1; i < lines.length; i++) {
-    const values = parseCSVLine(lines[i]);
-    if (values.length !== headers.length) continue;
-
-    const event: Event = {
-      year: (values[0] || "").trim(),
-      date: (values[1] || "").trim(),
-      talk: (values[2] || "").trim(),
-      organizer: (values[3] || "").trim(),
-      event: (values[4] || "").trim(),
-      event_link: (values[5] || "").trim(),
-      recording_link: (values[6] || "").trim(),
-      sm_link: (values[7] || "").trim(),
-      image_link: (values[8] || "").trim(),
-      type: (values[9] || "").trim(),
-      location: (values[10] || "").trim(),
-      language: (values[11] || "").trim(),
-      abstract: (values[12] || "").trim(),
-      tags: values[13] ? values[13].split(",").map((tag) => tag.trim()) : [],
-    };
-
-    // Clean up empty strings - set to undefined so they're not passed as props
-    if (!event.organizer || event.organizer === "") delete event.organizer;
-    if (!event.recording_link || event.recording_link === "") delete event.recording_link;
-    if (!event.abstract || event.abstract === "") delete event.abstract;
-    if (!event.sm_link || event.sm_link === "") delete event.sm_link;
-    if (!event.image_link || event.image_link === "") delete event.image_link;
-    if (!event.type || event.type === "") delete event.type;
-    if (!event.location || event.location === "") delete event.location;
-
-    data.push(event);
-  }
-
-  return data;
-}
-
-// Parse CSV line handling quoted fields
-function parseCSVLine(line: string): string[] {
-  const result: string[] = [];
-  let current = "";
-  let inQuotes = false;
-
-  for (let i = 0; i < line.length; i++) {
-    const char = line[i];
-    const nextChar = line[i + 1];
-
-    if (char === '"') {
-      if (inQuotes && nextChar === '"') {
-        current += '"';
-        i++; // Skip next quote
-      } else {
-        inQuotes = !inQuotes;
-      }
-    } else if (char === "," && !inQuotes) {
-      result.push(current);
-      current = "";
-    } else {
-      current += char;
-    }
-  }
-  result.push(current);
-
-  return result;
-}
 
 onMounted(async () => {
   try {
     const response = await fetch("/data/events.csv");
     const csvText = await response.text();
-    events.value = parseCSV(csvText);
+    events.value = parseEventsCSV(csvText);
   } catch (error) {
     console.error("Error loading events:", error);
   }

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from "vue";
 import { useHead } from "@vueuse/head";
+import { parseEventsCSV, parsePapersCSV, type Paper, type Event } from "../utils/csvParser";
 
 useHead({
   title: "María Grandury - Research Interests",
@@ -25,95 +26,22 @@ useHead({
   ],
 });
 
-interface Paper {
-  status: string;
-  title: string;
-  authors: string;
-  venue?: string;
-  tags: string[];
-  arxiv_link?: string;
-  hf_link?: string;
-  color: string;
-  icon?: string;
-  abstract?: string;
-}
-
 const papers = ref<Paper[]>([]);
+const events = ref<Event[]>([]);
 
-// Simple CSV parser
-function parseCSV(csvText: string): Paper[] {
-  const lines = csvText.trim().split("\n");
-  if (lines.length < 2) return [];
-
-  const headers = lines[0].split(",");
-  const data: Paper[] = [];
-
-  for (let i = 1; i < lines.length; i++) {
-    const values = parseCSVLine(lines[i]);
-    if (values.length !== headers.length) continue;
-
-    const paper: Paper = {
-      status: (values[0] || "").trim(),
-      title: (values[1] || "").trim(),
-      authors: (values[2] || "").trim(),
-      venue: values[3] ? values[3].trim() : undefined,
-      tags: values[4] ? values[4].split(",").map((tag) => tag.trim()) : [],
-      arxiv_link: values[5] ? values[5].trim() : undefined,
-      hf_link: values[6] ? values[6].trim() : undefined,
-      color: (values[7] || "").trim(),
-      icon: values[8] ? values[8].trim() : undefined,
-      abstract: values[9] ? values[9].trim() : undefined,
-    };
-
-    // Clean up empty strings
-    if (!paper.venue || paper.venue === "") delete paper.venue;
-    if (!paper.arxiv_link || paper.arxiv_link === "") delete paper.arxiv_link;
-    if (!paper.hf_link || paper.hf_link === "") delete paper.hf_link;
-    if (!paper.icon || paper.icon === "") delete paper.icon;
-    if (!paper.abstract || paper.abstract === "") delete paper.abstract;
-
-    data.push(paper);
-  }
-
-  return data;
-}
-
-// Parse CSV line handling quoted fields
-function parseCSVLine(line: string): string[] {
-  const result: string[] = [];
-  let current = "";
-  let inQuotes = false;
-
-  for (let i = 0; i < line.length; i++) {
-    const char = line[i];
-    const nextChar = line[i + 1];
-
-    if (char === '"') {
-      if (inQuotes && nextChar === '"') {
-        current += '"';
-        i++; // Skip next quote
-      } else {
-        inQuotes = !inQuotes;
-      }
-    } else if (char === "," && !inQuotes) {
-      result.push(current);
-      current = "";
-    } else {
-      current += char;
-    }
-  }
-  result.push(current);
-
-  return result;
-}
 
 onMounted(async () => {
   try {
-    const response = await fetch("/data/papers.csv");
-    const csvText = await response.text();
-    papers.value = parseCSV(csvText);
+    const [papersResponse, eventsResponse] = await Promise.all([
+      fetch("/data/papers.csv"),
+      fetch("/data/events.csv")
+    ]);
+    const papersText = await papersResponse.text();
+    const eventsText = await eventsResponse.text();
+    papers.value = parsePapersCSV(papersText);
+    events.value = parseEventsCSV(eventsText);
   } catch (error) {
-    console.error("Error loading papers:", error);
+    console.error("Error loading data:", error);
   }
 });
 
@@ -123,6 +51,12 @@ const highlightPapers = computed(() =>
 
 const publishedPapers = computed(() =>
   papers.value.filter((paper) => paper.status === "published")
+);
+
+const guestLectures = computed(() =>
+  events.value.filter((event) => 
+    event.type && event.type.toLowerCase().includes("lecture")
+  )
 );
 </script>
 
@@ -211,64 +145,21 @@ const publishedPapers = computed(() =>
 
     <div class="grid py-6 gap-y-3 lg:px-24 sm:px-12">
         <CardMediaMini
-          talk="Synthetic Data Generation and LLM Evaluation"
-          organizer="Universidad Nacional Autónoma de México (UNAM)"
-          event="Universidad Nacional Autónoma de México (UNAM) | Bachelor's Degree in Data Science for Social Sciences and Humanities"
-          event_link="https://www.acatlan.unam.mx/index.php?id=1805"
-          image_link="images/events/241214_unam_header.png"
-          recording_link=""
-          language="Spanish"
-          type="Guest Lecture"
-          date="2024-12-14"
-          location="Mexico (Remote)"
-          :tags="['Synthetic Data', 'LLM Evaluation']"
-        >
-        <i-mdi-newspaper style="font-size: 1.25rem" />
-        <template v-slot:abstract>
-            <div class="text-sm text-gray-700 dark:text-white">
-              Diplomado "Introducción a la Ciencia de Datos: Herramientas para el Aprendizaje Automatizado en las Ciencias Sociales y Humanidades"
-            </div>
-          </template>
-        </CardMediaMini>
-        <CardMediaMini
-          talk="NLP advanced techniques and applications. LLM alignment and evaluation."
-          event="Universidad Internacional de Andalucía | Summer School 'Content Generation and Language Models'"
-          event_link=""
-          image_link="images/events/240819_unia.jpeg"
-          recording_link=""
-          language="Spanish"
-          type="Summer School Masterclass"
-          date="2024-08-19"
-          location="Baeza, Spain"
-          :tags="['AI Alignment', 'LLM Evaluation']"
-        >
-          <i-mdi-youtube style="font-size: 1.25rem" />
-          <template v-slot:abstract>
-            <div class="text-sm text-gray-700 dark:text-white">
-              Curso de verano
-            </div>
-          </template>
-        </CardMediaMini>
-        <CardMediaMini
-          talk="I've trained my LM, now what?"
-          event="Universidad Internacional de Andalucía | Summer School 'Applied Artificial Intelligence'"
-          organizer="Universidad Internacional de Andalucía "
-          event_link=""
-          image_link="images/events/230822_curso_unia.jpeg"
-          recording_link=""
-          language="Spanish"
-          type="Summer School Masterclass"
-          date="2023-08-22"
-          location="Baeza, Spain"
-          :tags="['Bias', 'Explainability', 'Open-Source', '🇪🇸']">
-          <i-tabler:external-link style="font-size: 1.25rem" />
-          <template v-slot:abstract>
-            <div class="text-sm text-gray-700 dark:text-white">
-              Universidad Internacional de Andalucía
-            </div>
-          </template>
-        </CardMediaMini>
-        
+          v-for="lecture in guestLectures"
+          :key="lecture.talk"
+          :talk="lecture.talk"
+          :organizer="lecture.organizer"
+          :event="lecture.event"
+          :event_link="lecture.event_link"
+          :image_link="lecture.image_link"
+          :recording_link="lecture.recording_link"
+          :language="lecture.language"
+          :type="lecture.type"
+          :date="lecture.date"
+          :location="lecture.location"
+          :tags="lecture.tags"
+          :sm_link="lecture.sm_link"
+        />
       </div>
   </Container>
 </template>
