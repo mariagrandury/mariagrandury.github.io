@@ -77,27 +77,27 @@ useHead({
             </h2>
             <div class="flex flex-wrap gap-8 justify-center items-stretch">
                 <div class="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md w-56 min-w-[11rem] flex-1 max-w-xs">
-                    <img src="/images/logos/epfl.png" alt="EPFL Logo" class="h-16 mb-3" />
+                    <img src="/images/logos/EPFL_NLP.jpeg" alt="EPFL Logo" class="h-16 mb-3" />
                     <div class="font-semibold text-lg text-center">PhD NLP</div>
                     <div class="text-xs text-gray-500 text-center mt-1">EPFL</div>
                 </div>
                 <div class="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md w-56 min-w-[11rem] flex-1 max-w-xs">
-                    <img src="/images/logos/uned.png" alt="UNED Logo" class="h-16 mb-3" />
+                    <img src="/images/logos/UNED_NLP.png" alt="UNED Logo" class="h-16 mb-3" />
                     <div class="font-semibold text-lg text-center">MSc Language Technologies</div>
                     <div class="text-xs text-gray-500 text-center mt-1">UNED</div>
                 </div>
                 <div class="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md w-44 min-w-[9rem] flex-1 max-w-xs">
-                    <img src="/images/logos/uniovi.png" alt="UniOvi Logo" class="h-14 mb-2" />
+                    <img src="/images/logos/UniOvi.png" alt="UniOvi Logo" class="h-14 mb-2" />
                     <div class="font-semibold text-md text-center">BSc Mathematics</div>
                     <div class="text-xs text-gray-500 text-center mt-1">University of Oviedo</div>
                 </div>
                 <div class="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md w-44 min-w-[9rem] flex-1 max-w-xs">
-                    <img src="/images/logos/uniovi.png" alt="UniOvi Logo" class="h-14 mb-2" />
+                    <img src="/images/logos/UniOvi.png" alt="UniOvi Logo" class="h-14 mb-2" />
                     <div class="font-semibold text-md text-center">BSc Physics</div>
                     <div class="text-xs text-gray-500 text-center mt-1">University of Oviedo</div>
                 </div>
                 <div class="flex flex-col items-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-md w-44 min-w-[9rem] flex-1 max-w-xs">
-                    <img src="/images/logos/paris_saclay.png" alt="Paris Saclay Logo" class="h-14 mb-2" />
+                    <img src="/images/logos/UniParisSaclay.png" alt="Paris Saclay Logo" class="h-14 mb-2" />
                     <div class="font-semibold text-md text-center">Erasmus</div>
                     <div class="text-xs text-gray-500 text-center mt-1">Paris-Saclay</div>
                 </div>

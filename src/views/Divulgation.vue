@@ -31,12 +31,12 @@ interface Event {
   organizer?: string;
   event: string;
   event_link: string;
-  image_link: string;
+  image_link?: string;
   recording_link?: string;
   language: string;
-  type: string;
+  type?: string;
   date: string;
-  location: string;
+  location?: string;
   tags: string[];
   abstract?: string;
   sm_link?: string;
@@ -58,19 +58,19 @@ function parseCSV(csvText: string): Event[] {
 
     const event: Event = {
       year: (values[0] || "").trim(),
-      talk: (values[1] || "").trim(),
-      organizer: (values[2] || "").trim(),
-      event: (values[3] || "").trim(),
-      event_link: (values[4] || "").trim(),
-      image_link: (values[5] || "").trim(),
+      date: (values[1] || "").trim(),
+      talk: (values[2] || "").trim(),
+      organizer: (values[3] || "").trim(),
+      event: (values[4] || "").trim(),
+      event_link: (values[5] || "").trim(),
       recording_link: (values[6] || "").trim(),
-      language: (values[7] || "").trim(),
-      type: (values[8] || "").trim(),
-      date: (values[9] || "").trim(),
+      sm_link: (values[7] || "").trim(),
+      image_link: (values[8] || "").trim(),
+      type: (values[9] || "").trim(),
       location: (values[10] || "").trim(),
-      tags: values[11] ? values[11].split(",").map((tag) => tag.trim()) : [],
+      language: (values[11] || "").trim(),
       abstract: (values[12] || "").trim(),
-      sm_link: (values[13] || "").trim(),
+      tags: values[13] ? values[13].split(",").map((tag) => tag.trim()) : [],
     };
 
     // Clean up empty strings - set to undefined so they're not passed as props
@@ -78,6 +78,9 @@ function parseCSV(csvText: string): Event[] {
     if (!event.recording_link || event.recording_link === "") delete event.recording_link;
     if (!event.abstract || event.abstract === "") delete event.abstract;
     if (!event.sm_link || event.sm_link === "") delete event.sm_link;
+    if (!event.image_link || event.image_link === "") delete event.image_link;
+    if (!event.type || event.type === "") delete event.type;
+    if (!event.location || event.location === "") delete event.location;
 
     data.push(event);
   }
