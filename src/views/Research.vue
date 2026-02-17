@@ -75,7 +75,7 @@ const guestLectures = computed(() =>
       <h2 class="py-6">
         Cultural knowledge is highly relevant for an LLM to understand a language. My main interest is to gain a deeper comprehension of the capabilities and limitations of LLMs since we cannot improve what we cannot measure. 
         At the EPFL NLP lab, I'm currently doing research on Multilingual and Multicultural LLM Evaluation.
-        I want to explore cultural and linguistic bias evaluation and mitigation in LLMs with a holistic approach to language understanding, e.g., at the text representation level or through reasoning.
+        I want to explore cultural and linguistic bias evaluation and mitigation in LLMs with a holistic approach to language understanding.
         <!-- I also collaborate with international labs like ... -->
       </h2>
       <p class="italic text-sm text-gray-500">

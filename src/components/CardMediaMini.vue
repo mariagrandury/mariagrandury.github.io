@@ -66,10 +66,5 @@ const recordingIcon = computed(() => {
                 </a>
             </div>
         </div>
-        <div v-if="$slots.abstract || abstract" class="col-start-1 col-span-full mt-3">
-            <slot name="abstract">
-                <div class="text-sm text-gray-700 dark:text-white" v-html="abstract"></div>
-            </slot>
-        </div>
     </CardGeneric>
 </template>

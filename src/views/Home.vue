@@ -29,8 +29,7 @@ const index = computed(() => counter.value % greetings.value.length);
         <div>
           <ul class="flex flex-col gap-1">
             <li>💡 Natural Language Processing Researcher</li>
-            <li>🎯 #ResponsibleNLP, #TrustworthyNLP, #NLPinSpanish</li>
-            <li>🎓 Mathematician & Physicist, Master's in Language Technologies</li>
+            <li>🎯 #ResponsibleNLP, #MultilingualNLP, #LLMEvaluation</li>
             <br>
             <li>
               🚀 Founder
@@ -52,29 +51,19 @@ const index = computed(() => counter.value % greetings.value.length);
             </li>
             <br>
             <li>
-              🔍 Researcher
+              🔍 PhD Student
               <a
-                href="https://upm.es"
+                href="https://nlp.epfl.ch"
                 target="_blank"
                 class="text-accent-500 hover:underline"
-                >@Technical University of Madrid</a
+                >@EPFL NLP,</a
               >
-              #LLMEvaluation #Psycholinguistics
-              <!-- https://portalcientifico.upm.es/es/ipublic/researcher/337642 -->
+              supervised by Prof. Antoine Bosselut
             </li>
-            <li>
-              🔍 Student Researcher
-              <a
-                href="https://nlp.uned.es"
-                target="_blank"
-                class="text-accent-500 hover:underline"
-                >@National University of Distance Education</a
-              >
-              #EnglishSpanishGap
-            </li>
+            <li>🎓 Mathematician & Physicist, Master's in Language Technologies</li>
             <br>
             <li>
-              📣 Freelance Speaker and AI Consultant, recipient of the Spanish Transition Fund from the 
+              📣 Freelance Speaker and AI Advisor, recipient of the Spanish Transition Fund from the 
               <a
                 href="/docs/subvencion_fondo_de_transicion_justa.pdf"
                 target="_blank"

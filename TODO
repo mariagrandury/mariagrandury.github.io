@@ -1,17 +1,24 @@
+Bio:
+- EPFL!
+- Speaker bio in ES & EN
+
 Landing page:
 
 - Proyecto #Somos600M
 - WiDS: round table + mentorship
 - Enlace directo a SomosNLP
 - research collaborations (lista de logos, button see more), speaker collabs (lista de logos)
+- Auto highlighted projects, talk, and papers (with field in csv)
 
 Divulgación:
 
+- 2 cols, imagen en grande -> solo algunas, alternar entre CardMediaMini y CardMediaMaxi (implementar) dependiendo de si hay foto chula del evento
 - Hackathon 2024 x2 (hackathon + charlas) + equiv 2022 & 2023
 - Universidad PR: pic speaking
-- MBZUAI
+- MBZUAI (pic speaking?)
 - Mesa redonda Bcn
 - Tecnoling
+- curso UNA
 
 Proyectos:
 
@@ -31,9 +38,9 @@ Posts:
 - HF fellows announcement: https://x.com/espejelomar/status/1512052588530728966
 
 Papers:
+- Author "María Grandury" always in bold
+- Only display abstract for highlighted papers
+- Add posters?
 - Data in Brief Journal: Spanish Is Not Just One: A Dataset of Spanish Dialect Recognition for LLMs
 - Data in Brief Journal: TELEIA?
 
-Bio:
-- Me voy a EPFL!
-- MSc UNED
