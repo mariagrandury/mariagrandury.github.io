@@ -27,7 +27,7 @@ export const createApp = ViteSSG(
         ]
     },
     // function to have custom setups
-    ({ app, router, isClient }) => {
+    ({ app, router, isClient }: { app: any; router: any; isClient: boolean }) => {
         // install plugins etc.
     }
 )
