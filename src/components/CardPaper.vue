@@ -1,15 +1,23 @@
 <script setup lang="ts">
-defineProps<{
+import { computed, ref } from "vue";
+
+const props = defineProps<{
   title: string;
   authors: string;
   venue?: string;
   abstract?: string;
-  tags: string[];
   arxiv_link?: string;
   hf_link?: string;
   color: string;
   icon?: string;
 }>();
+
+const showAbstract = ref(false);
+
+const authorParts = computed(() => {
+  const targetAuthor = "María Grandury";
+  return props.authors.split(targetAuthor);
+});
 </script>
 
 <template>
@@ -20,15 +28,12 @@ defineProps<{
       </div>
       <div class="grid gap-3">
         <h2 class="font-semibold">{{ title }}</h2>
-        <p class="text-sm text-gray-800 dark:text-gray-200">{{ authors }}</p>
+        <p class="text-sm text-gray-800 dark:text-gray-200">
+          <template v-for="(part, index) in authorParts" :key="index">
+            {{ part }}<span v-if="index < authorParts.length - 1" class="underline">María Grandury</span>
+          </template>
+        </p>
         <p v-if="venue" class="text-sm italic text-gray-500 dark:text-gray-400">{{ venue }}</p>
-        <div class="flex flex-wrap gap-3">
-          <div
-            v-for="(tag, index) in tags"
-            :key="index"
-            class="border rounded bg-gray-50 border-gray-100 text-sm py-0.5 px-2 select-none dark:border-black dark:bg-gray-700"
-          >{{ tag }}</div>
-        </div>
       </div>
       <div class="flex gap-2">
         <a
@@ -36,7 +41,7 @@ defineProps<{
           :href="arxiv_link"
           target="_blank"
           class="border rounded-md flex border-gray-200 p-2 self-start items-center dark:border-black dark:bg-gray-700 hover:ring ring-accent-500"
-          title="View on arXiv"
+          title="View paper"
         >
           <i-simple-icons-arxiv style="font-size: 1.25rem;" />
         </a>
@@ -51,7 +56,14 @@ defineProps<{
         </a>
       </div>
       <div v-if="abstract" class="col-start-2 col-span-2">
-        <div class="text-sm text-gray-500 dark:text-white">
+        <button
+          type="button"
+          class="text-sm text-accent-500 hover:underline"
+          @click="showAbstract = !showAbstract"
+        >
+          {{ showAbstract ? "Hide abstract" : "Show abstract" }}
+        </button>
+        <div v-if="showAbstract" class="mt-2 text-sm text-gray-500 dark:text-white">
           {{ abstract }}
         </div>
       </div>

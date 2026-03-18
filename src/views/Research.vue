@@ -109,7 +109,6 @@ const guestLectures = computed(() =>
         :title="paper.title"
         :authors="paper.authors"
         :venue="paper.venue"
-        :tags="paper.tags"
         :arxiv_link="paper.arxiv_link"
         :hf_link="paper.hf_link"
         :color="paper.color"
@@ -129,7 +128,6 @@ const guestLectures = computed(() =>
         :title="paper.title"
         :authors="paper.authors"
         :venue="paper.venue"
-        :tags="paper.tags"
         :arxiv_link="paper.arxiv_link"
         :hf_link="paper.hf_link"
         :color="paper.color"
@@ -140,7 +138,7 @@ const guestLectures = computed(() =>
 
     <div class="py-6 lg:px-24 sm:px-12">
       <h2 class="font-semibold tracking-tight text-2xl">Guest Lectures</h2>
-      <p class="py-6">I've always loved teaching and I'm grateful for these opportunities to share my research with the community!</p>
+      <p class="py-6">I've always loved teaching and I'm grateful for these opportunities to share my experience and research with the community!</p>
     </div>
 
     <div class="grid py-6 gap-y-3 lg:px-24 sm:px-12">

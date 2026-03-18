@@ -22,7 +22,6 @@ export interface Paper {
   title: string;
   authors: string;
   venue?: string;
-  tags: string[];
   arxiv_link?: string;
   hf_link?: string;
   color: string;
