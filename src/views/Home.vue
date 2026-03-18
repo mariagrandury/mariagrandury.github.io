@@ -81,7 +81,7 @@ const index = computed(() => counter.value % greetings.value.length);
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
       
       <div class="px-8">
-        <div class="text-3xl mb-4">Current projects, join us!</div>
+        <div class="text-3xl mb-4">Highlighted projects, join us!</div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardProject
             title="SomosNLP"
@@ -187,7 +187,7 @@ const index = computed(() => counter.value % greetings.value.length);
       </div>
 
       <div class="px-8">
-        <div class="text-3xl mb-4">Upcoming talk, join us!</div>
+        <div class="text-3xl mb-4">Highlighted talks, join us!</div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardMediaSummary
             talk="Machines that reflect us: Building AI systems responsibly"

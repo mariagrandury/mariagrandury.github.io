@@ -12,7 +12,7 @@
         <div class="lg:px-24 sm:px-12">
 
             This cookie policy (“Policy”) describes what cookies are and how and they’re being used by the
-            mariagrandury.com website (“Website” or “Service”) and any of its related products and services
+            mariagrandury.ai website (“Website” or “Service”) and any of its related products and services
             (collectively, “Services”). This Policy is a legally binding agreement between you (“User”, “you” or “your”)
             and this Website operator (“Operator”, “we”, “us” or “our”). If you are entering into this agreement on
             behalf of a business or other legal entity, you represent that you have the authority to bind such entity to

@@ -53,30 +53,22 @@ const rotationStyle = computed(() => {
                 <!-- <Logo /> -->
             </div>
             <div class="font-light grid gap-x-4 gap-y-1 grid-cols-[auto,1fr] items-center">
-                <!--
-                <a href="tel:+34681188591" class="contents">
-                    <i-fluent-phone-24-regular />
-                    <div>+34 681188591</div>
-                </a>
-                -->
-                <a href="mailto: mariagrandury@gmail.com" target="_blank" class="contents">
+                <a href="" target="_blank" class="contents">
                     <i-fluent-mail-24-regular />
                     <div>mariagrandury AT gmail DOT com</div>
                 </a>
-                <a href="https://mariagrandury.com" target="_blank" class="contents">
+                <a href="https://mariagrandury.ai" target="_blank" class="contents">
                     <i-fluent-link-square-24-regular />
-                    <div>mariagrandury.com</div>
+                    <div>mariagrandury.ai</div>
                 </a>
-                <a href="https://wikipedia.org/wiki/Berlin" target="_blank" class="contents">
+                <a href="https://wikipedia.org/wiki/Lausanne" target="_blank" class="contents">
                     <i-fluent-location-24-regular />
-                    <div>Madrid / Berlin</div>
+                    <div>Lausanne (Switzerland)</div>
                 </a>
-                <!--
-                <a href="https://www.neurocat.ai/" target="_blank" class="contents">
+                <a href="https://nlp.epfl.ch/" target="_blank" class="contents">
                     <i-fluent-building-24-regular />
-                    <div>Research Engineer @neurocat.ai</div>
+                    <div>PhD Student @EPFL NLP</div>
                 </a> 
-                -->
                 <a href="https://somosnlp.org" target="_blank" class="contents">
                     <i-fluent-rocket-24-regular />
                     <div>Founder @SomosNLP.org</div>

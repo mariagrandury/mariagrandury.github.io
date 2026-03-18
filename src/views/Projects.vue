@@ -92,7 +92,7 @@ const previousProjects = computed(() =>
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
         <div class="col-span-2">
           <br />
-          <h3 class="text-2xl">Current Projects</h3>
+          <h3 class="text-2xl">Current & Recent Projects</h3>
           <br />
         </div>
         <CardProject
