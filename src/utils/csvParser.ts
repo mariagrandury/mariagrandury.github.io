@@ -22,7 +22,8 @@ export interface Paper {
   title: string;
   authors: string;
   venue?: string;
-  arxiv_link?: string;
+  tags: string[];
+  paper_link?: string;
   hf_link?: string;
   color: string;
   icon?: string;
@@ -130,7 +131,7 @@ export function parsePapersCSV(csvText: string): Paper[] {
       authors: (values[2] || "").trim(),
       venue: values[3] ? values[3].trim() : undefined,
       tags: values[4] ? values[4].split(",").map((tag) => tag.trim()) : [],
-      arxiv_link: values[5] ? values[5].trim() : undefined,
+      paper_link: values[5] ? values[5].trim() : undefined,
       hf_link: values[6] ? values[6].trim() : undefined,
       color: (values[7] || "").trim(),
       icon: values[8] ? values[8].trim() : undefined,
@@ -139,7 +140,7 @@ export function parsePapersCSV(csvText: string): Paper[] {
 
     // Clean up empty strings
     if (!paper.venue || paper.venue === "") delete paper.venue;
-    if (!paper.arxiv_link || paper.arxiv_link === "") delete paper.arxiv_link;
+    if (!paper.paper_link || paper.paper_link === "") delete paper.paper_link;
     if (!paper.hf_link || paper.hf_link === "") delete paper.hf_link;
     if (!paper.icon || paper.icon === "") delete paper.icon;
     if (!paper.abstract || paper.abstract === "") delete paper.abstract;
