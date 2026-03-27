@@ -25,6 +25,9 @@ export interface Paper {
   tags: string[];
   paper_link?: string;
   hf_link?: string;
+  linkedin_link?: string;
+  x_link?: string;
+  award?: string;
   color: string;
   icon?: string;
   abstract?: string;
@@ -113,37 +116,73 @@ export function parseEventsCSV(csvText: string): Event[] {
   return data;
 }
 
-// Parse papers CSV
+// Parse papers CSV (header row defines column order; supports legacy `arxiv_link`)
 export function parsePapersCSV(csvText: string): Paper[] {
   const lines = csvText.trim().split("\n");
   if (lines.length < 2) return [];
 
-  const headers = lines[0].split(",");
+  const headers = parseCSVLine(lines[0]).map((h) => h.trim());
+  const col = (...names: string[]) => {
+    for (const name of names) {
+      const i = headers.indexOf(name);
+      if (i >= 0) return i;
+    }
+    return -1;
+  };
+
+  const idx = {
+    status: col("status"),
+    title: col("title"),
+    authors: col("authors"),
+    venue: col("venue"),
+    tags: col("tags"),
+    paper_link: col("paper_link", "arxiv_link"),
+    hf_link: col("hf_link"),
+    linkedin_link: col("linkedin_link"),
+    x_link: col("x_link"),
+    award: col("award"),
+    color: col("color"),
+    icon: col("icon"),
+    abstract: col("abstract"),
+  };
+
+  const get = (values: string[], key: keyof typeof idx) => {
+    const i = idx[key];
+    if (i < 0) return "";
+    return (values[i] || "").trim();
+  };
+
   const data: Paper[] = [];
 
   for (let i = 1; i < lines.length; i++) {
     const values = parseCSVLine(lines[i]);
     if (values.length !== headers.length) continue;
 
+    const tagsRaw = get(values, "tags");
     const paper: Paper = {
-      status: (values[0] || "").trim(),
-      title: (values[1] || "").trim(),
-      authors: (values[2] || "").trim(),
-      venue: values[3] ? values[3].trim() : undefined,
-      tags: values[4] ? values[4].split(",").map((tag) => tag.trim()) : [],
-      paper_link: values[5] ? values[5].trim() : undefined,
-      hf_link: values[6] ? values[6].trim() : undefined,
-      color: (values[7] || "").trim(),
-      icon: values[8] ? values[8].trim() : undefined,
-      abstract: values[9] ? values[9].trim() : undefined,
+      status: get(values, "status"),
+      title: get(values, "title"),
+      authors: get(values, "authors"),
+      venue: get(values, "venue") || undefined,
+      tags: tagsRaw ? tagsRaw.split(",").map((tag) => tag.trim()) : [],
+      paper_link: get(values, "paper_link") || undefined,
+      hf_link: get(values, "hf_link") || undefined,
+      linkedin_link: get(values, "linkedin_link") || undefined,
+      x_link: get(values, "x_link") || undefined,
+      award: get(values, "award") || undefined,
+      color: get(values, "color"),
+      icon: get(values, "icon") || undefined,
+      abstract: get(values, "abstract") || undefined,
     };
 
-    // Clean up empty strings
-    if (!paper.venue || paper.venue === "") delete paper.venue;
-    if (!paper.paper_link || paper.paper_link === "") delete paper.paper_link;
-    if (!paper.hf_link || paper.hf_link === "") delete paper.hf_link;
-    if (!paper.icon || paper.icon === "") delete paper.icon;
-    if (!paper.abstract || paper.abstract === "") delete paper.abstract;
+    if (!paper.venue) delete paper.venue;
+    if (!paper.paper_link) delete paper.paper_link;
+    if (!paper.hf_link) delete paper.hf_link;
+    if (!paper.linkedin_link) delete paper.linkedin_link;
+    if (!paper.x_link) delete paper.x_link;
+    if (!paper.award) delete paper.award;
+    if (!paper.icon) delete paper.icon;
+    if (!paper.abstract) delete paper.abstract;
 
     data.push(paper);
   }

@@ -6,8 +6,11 @@ const props = defineProps<{
   authors: string;
   venue?: string;
   abstract?: string;
-  arxiv_link?: string;
+  paper_link?: string;
   hf_link?: string;
+  linkedin_link?: string;
+  x_link?: string;
+  award?: string;
   color: string;
   icon?: string;
 }>();
@@ -34,25 +37,48 @@ const authorParts = computed(() => {
           </template>
         </p>
         <p v-if="venue" class="text-sm italic text-gray-500 dark:text-gray-400">{{ venue }}</p>
+        <p v-if="award" class="text-sm text-accent-500">{{ award }}</p>
       </div>
-      <div class="flex gap-2">
+      <div class="flex flex-wrap gap-2 justify-end">
         <a
-          v-if="arxiv_link"
-          :href="arxiv_link"
+          v-if="paper_link"
+          :href="paper_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="border rounded-md flex border-gray-200 p-2 self-start items-center dark:border-black dark:bg-gray-700 hover:ring ring-accent-500"
-          title="View paper"
+          title="Paper (journal, proceedings, or arXiv)"
         >
-          <i-simple-icons-arxiv style="font-size: 1.25rem;" />
+          <i-fluent-document-24-regular style="font-size: 1.25rem;" />
         </a>
         <a
           v-if="hf_link"
           :href="hf_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="border rounded-md flex border-gray-200 p-2 self-start items-center dark:border-black dark:bg-gray-700 hover:ring ring-accent-500"
-          title="View on Hugging Face"
+          title="Hugging Face"
         >
           <i-noto:hugging-face style="font-size: 1.25rem;" />
+        </a>
+        <a
+          v-if="linkedin_link"
+          :href="linkedin_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="border rounded-md flex border-gray-200 p-2 self-start items-center dark:border-black dark:bg-gray-700 hover:ring ring-accent-500"
+          title="LinkedIn post"
+        >
+          <i-simple-icons-linkedin style="font-size: 1.25rem;" />
+        </a>
+        <a
+          v-if="x_link"
+          :href="x_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="border rounded-md flex border-gray-200 p-2 self-start items-center dark:border-black dark:bg-gray-700 hover:ring ring-accent-500"
+          title="Post on X"
+        >
+          <i-simple-icons-x style="font-size: 1.25rem;" />
         </a>
       </div>
       <div v-if="abstract" class="col-start-2 col-span-2">
@@ -69,4 +95,4 @@ const authorParts = computed(() => {
       </div>
     </div>
   </CardGeneric>
-</template> 
+</template>
