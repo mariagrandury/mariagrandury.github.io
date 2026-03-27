@@ -25,8 +25,11 @@ export interface Paper {
   tags: string[];
   paper_link?: string;
   hf_link?: string;
+  slides_link?: string;
+  poster_link?: string;
   linkedin_link?: string;
   x_link?: string;
+  github_link?: string;
   award?: string;
   color: string;
   icon?: string;
@@ -138,8 +141,11 @@ export function parsePapersCSV(csvText: string): Paper[] {
     tags: col("tags"),
     paper_link: col("paper_link", "arxiv_link"),
     hf_link: col("hf_link"),
+    slides_link: col("slides_link"),
+    poster_link: col("poster_link"),
     linkedin_link: col("linkedin_link"),
     x_link: col("x_link"),
+    github_link: col("github_link"),
     award: col("award"),
     color: col("color"),
     icon: col("icon"),
@@ -167,8 +173,11 @@ export function parsePapersCSV(csvText: string): Paper[] {
       tags: tagsRaw ? tagsRaw.split(",").map((tag) => tag.trim()) : [],
       paper_link: get(values, "paper_link") || undefined,
       hf_link: get(values, "hf_link") || undefined,
+      slides_link: get(values, "slides_link") || undefined,
+      poster_link: get(values, "poster_link") || undefined,
       linkedin_link: get(values, "linkedin_link") || undefined,
       x_link: get(values, "x_link") || undefined,
+      github_link: get(values, "github_link") || undefined,
       award: get(values, "award") || undefined,
       color: get(values, "color"),
       icon: get(values, "icon") || undefined,
@@ -178,8 +187,11 @@ export function parsePapersCSV(csvText: string): Paper[] {
     if (!paper.venue) delete paper.venue;
     if (!paper.paper_link) delete paper.paper_link;
     if (!paper.hf_link) delete paper.hf_link;
+    if (!paper.slides_link) delete paper.slides_link;
+    if (!paper.poster_link) delete paper.poster_link;
     if (!paper.linkedin_link) delete paper.linkedin_link;
     if (!paper.x_link) delete paper.x_link;
+    if (!paper.github_link) delete paper.github_link;
     if (!paper.award) delete paper.award;
     if (!paper.icon) delete paper.icon;
     if (!paper.abstract) delete paper.abstract;
