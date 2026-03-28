@@ -24,6 +24,7 @@ export interface Paper {
   venue?: string;
   tags: string[];
   paper_link?: string;
+  website_link?: string;
   hf_link?: string;
   slides_link?: string;
   poster_link?: string;
@@ -140,6 +141,7 @@ export function parsePapersCSV(csvText: string): Paper[] {
     venue: col("venue"),
     tags: col("tags"),
     paper_link: col("paper_link", "arxiv_link"),
+    website_link: col("website_link"),
     hf_link: col("hf_link"),
     slides_link: col("slides_link"),
     poster_link: col("poster_link"),
@@ -172,6 +174,7 @@ export function parsePapersCSV(csvText: string): Paper[] {
       venue: get(values, "venue") || undefined,
       tags: tagsRaw ? tagsRaw.split(",").map((tag) => tag.trim()) : [],
       paper_link: get(values, "paper_link") || undefined,
+      website_link: get(values, "website_link") || undefined,
       hf_link: get(values, "hf_link") || undefined,
       slides_link: get(values, "slides_link") || undefined,
       poster_link: get(values, "poster_link") || undefined,
@@ -186,6 +189,7 @@ export function parsePapersCSV(csvText: string): Paper[] {
 
     if (!paper.venue) delete paper.venue;
     if (!paper.paper_link) delete paper.paper_link;
+    if (!paper.website_link) delete paper.website_link;
     if (!paper.hf_link) delete paper.hf_link;
     if (!paper.slides_link) delete paper.slides_link;
     if (!paper.poster_link) delete paper.poster_link;

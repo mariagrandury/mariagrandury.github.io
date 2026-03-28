@@ -7,6 +7,7 @@ const props = defineProps<{
   venue?: string;
   abstract?: string;
   paper_link?: string;
+  website_link?: string;
   hf_link?: string;
   slides_link?: string;
   poster_link?: string;
@@ -72,6 +73,17 @@ const abstractBtnClass = computed(() =>
           >
             <i-fluent-document-24-regular class="text-[0.875rem] shrink-0" aria-hidden="true" />
             Paper
+          </a>
+          <a
+            v-if="website_link"
+            :href="website_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            :class="`${actionBtnClass} text-gray-800 dark:text-gray-200`"
+            title="Project website"
+          >
+            <i-fluent-globe-24-regular class="text-[0.875rem] shrink-0" aria-hidden="true" />
+            Website
           </a>
           <a
             v-if="hf_link"
