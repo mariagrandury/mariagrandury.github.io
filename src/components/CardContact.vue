@@ -48,14 +48,14 @@ const rotationStyle = computed(() => {
                 <div>
                     <h1 class="font-medium mb-1 text-2xl tracking-tight">María Grandury</h1>
                     <h2 class="font-light text-lg tracking-tight">NLP Researcher</h2>
-                    <p class="font-light text-sm tracking-tight">LLM Evaluation, Responsible AI and AI in Spanish</p>
+                    <p class="font-light text-sm tracking-tight">LLM Evaluation, Multilingual NLP, Responsible AI</p>
                 </div>
                 <!-- <Logo /> -->
             </div>
             <div class="font-light grid gap-x-4 gap-y-1 grid-cols-[auto,1fr] items-center">
                 <a href="" target="_blank" class="contents">
                     <i-fluent-mail-24-regular />
-                    <div>mariagrandury AT gmail DOT com</div>
+                    <div>maria.grandury AT epfl DOT ch / somosnlp DOT org</div>
                 </a>
                 <a href="https://mariagrandury.ai" target="_blank" class="contents">
                     <i-fluent-link-square-24-regular />
