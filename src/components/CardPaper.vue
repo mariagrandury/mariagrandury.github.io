@@ -17,9 +17,10 @@ const props = defineProps<{
   award?: string;
   color: string;
   icon?: string;
+  openAbstractByDefault?: boolean;
 }>();
 
-const showAbstract = ref(false);
+const showAbstract = ref(Boolean(props.openAbstractByDefault));
 
 const authorParts = computed(() => {
   const targetAuthor = "María Grandury";

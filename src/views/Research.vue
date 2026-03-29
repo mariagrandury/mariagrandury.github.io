@@ -79,7 +79,7 @@ const guestLectures = computed(() =>
         <!-- I also collaborate with international labs like ... -->
       </h2>
       <p class="italic text-sm text-gray-500">
-        Last update: January 2026 | For up-to-date information check my
+        Last update: March 2026 | For up-to-date information check my
         <a
           href="https://scholar.google.com/citations?user=3mc_-QsAAAAJ"
           target="_blank"
@@ -97,6 +97,7 @@ const guestLectures = computed(() =>
       </p>
       <!-- ORCID https://orcid.org/my-orcid?orcid=0009-0009-4703-3348 -->
     </div>
+
 
     <div class="py-6 lg:px-24 sm:px-12">
       <h2 class="font-semibold tracking-tight text-2xl">Highlights</h2>
@@ -121,6 +122,7 @@ const guestLectures = computed(() =>
         :color="paper.color"
         :icon="paper.icon"
         :abstract="paper.abstract"
+        :openAbstractByDefault="true"
       />
     </div>
 
@@ -173,5 +175,28 @@ const guestLectures = computed(() =>
           :sm_link="lecture.sm_link"
         />
       </div>
+
+    <div class="py-6 lg:px-24 sm:px-12">
+      <h2 class="font-semibold tracking-tight text-2xl">Community Service</h2>
+      <div class="grid gap-4 py-4 md:grid-cols-2">
+        <CardGeneric class="p-5">
+          <h3 class="font-semibold mb-2">Reviewer</h3>
+          <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-200">
+            <li>Journal Royal Society Open Science, 2026</li>
+            <li>Simposio LANLP: Bridging Latin American NLP, 2026</li>
+            <li>Workshop EXIST: sEXism Identification in Social neTworks, 2025</li>
+            <!-- https://clef2025.clef-initiative.eu/index.php?page=Pages/Labs/EXIST.html -->
+          </ul>
+        </CardGeneric>
+        <CardGeneric class="p-5">
+          <h3 class="font-semibold mb-2">Diversity & Inclusion</h3>
+          <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-200">
+            <li>Diversity & Inclusion Chair at EACL 2026</li>
+            <li>Birds-of-a-Feather (BoF) organizer at ACL 2025</li>
+            <li>Birds-of-a-Feather (BoF) organizer at COLM 2025</li>
+          </ul>
+        </CardGeneric>
+      </div>
+    </div>
   </Container>
 </template>
