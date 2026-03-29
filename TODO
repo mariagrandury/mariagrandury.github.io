@@ -1,24 +1,55 @@
-Bio:
-- EPFL!
-- Speaker bio in ES & EN
+## AUTO
+
+About Me:
+- Update bio: I'm a PhD student at EPFL!
+- Speaker bio in ES & EN (add little button on the bottom right of the bio card to switch)
+- Organizations -> when hovering over the logo of an organization, show the name, the type of affiliation (core member, volunteer, etc.) and the dates
+- Before Organizations, add a section with "Affiliations" -> list of logos with "ML Engineer", "PhD Student", etc. and the dates
 
 Landing page:
 
-- Proyecto #Somos600M
-- WiDS: round table + mentorship
-- Enlace directo a SomosNLP
-- research collaborations (lista de logos, button see more), speaker collabs (lista de logos)
-- Auto highlighted projects, talk, and papers (with field in csv)
+- New section for SomosNLP: One side "¿Hablas español y te gustaría ayudar a adecuar los sistemas de IA a tu lengua y cultura? ¡Únete a SomosNLP!" / Other side SomosNLP logo and button with link to SomosNLP website
+- New section "Research": with list of highlighted papers
+- New section "Collaborations": row of "Research collaborations" (lista de logos, logos en gris, button see more that redirect to Research page), and row of "Speaker collaborations" (lista de logos, logos en gris, button see more that redirect to Speaker page)
+- Auto highlighted projects, talk, and papers (reading from field in csv)
 
 Divulgación:
 
 - 2 cols, imagen en grande -> solo algunas, alternar entre CardMediaMini y CardMediaMaxi (implementar) dependiendo de si hay foto chula del evento
+
+Papers:
+
+- by default display abstract for highlighted papers
+
+
+Research:
+
+- add section "Reviewer": EXIST, LANLP, journal Royal Society Open Science
+- add section "Volunteer":
+    - EACL D&I
+    - BoF ACL 2025 and COLM 2025
+- guest lecture: add UNA paraguay 2025 (25h)
+- guest lecture: specify Chile was 2025 and 2026
+
+
+## MANUAL
+
+Divulgación:
+
 - Hackathon 2024 x2 (hackathon + charlas) + equiv 2022 & 2023
 - Universidad PR: pic speaking
 - MBZUAI (pic speaking?)
-- Mesa redonda Bcn
+- Mesa redonda Bcn (mismo día que Cultura IX)
 - Tecnoling
 - curso UNA
+- Keynote y mesa redonda Talent Arena 2026
+- eventos de junio Apertus?
+- evento ministerio?
+
+Papers:
+
+- Data in Brief Journal: Spanish Is Not Just One: A Dataset of Spanish Dialect Recognition for LLMs
+- Data in Brief Journal: TELEIA?
 
 Proyectos:
 
@@ -36,19 +67,6 @@ Posts:
 - Post EU AI Act: https://www.linkedin.com/feed/update/urn:li:activity:7113464513537974273/
 - Post HF event https://www.linkedin.com/feed/update/urn:li:activity:7117545694533451776/
 - HF fellows announcement: https://x.com/espejelomar/status/1512052588530728966
-
-Papers:
-- Author "María Grandury" always in bold
-- Only display abstract for highlighted papers
-- Add posters?
-- Data in Brief Journal: Spanish Is Not Just One: A Dataset of Spanish Dialect Recognition for LLMs
-- Data in Brief Journal: TELEIA?
-- SM announcements?
-    - https://www.linkedin.com/posts/luc-rocher_is-there-a-scientific-crisis-in-ai-evaluations-activity-7391431439478624256-sFos
-
-Research:
-- reviewer for EXIST, LANLP, journal
-- ACL D&I
 
 Posts:
 - highlight / wrap relevant SM posts:
