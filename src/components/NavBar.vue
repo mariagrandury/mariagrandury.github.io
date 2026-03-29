@@ -18,14 +18,11 @@ const isDark = useDark();
       <router-link class="hover:underline underline-2px underline-accent-500" to="/contact">Contact</router-link>
     </div>
     <div class="flex gap-6 justify-around items-center">
-      <a href="https://twitter.com/mariagrandury" target="_blank" class="content hover:text-accent-500">
+      <a href="https://x.com/mariagrandury" target="_blank" class="content hover:text-accent-500">
         <i-uil-twitter />
       </a>
       <a href="https://linkedin.com/in/mariagrandury/" target="_blank" class="contents hover:text-accent-500">
         <i-uil-linkedin />
-      </a>
-      <a href="https://github.com/mariagrandury" target="_blank" class="contents hover:text-accent-500">
-        <i-uil-github />
       </a>
       <div class="contents select-none">
         <i-uil-sun @click="isDark = true" class="cursor-pointer hover:text-accent-500" v-show="!isDark" />

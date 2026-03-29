@@ -59,7 +59,7 @@ const previousProjects = computed(() =>
     <div>
       <h1 class="flex gap-2 items-center">
         <div class="font-semibold tracking-tight text-4xl">
-          Open-Source NLP Research Projects
+          Open-Source NLP Projects
         </div>
         <i-fluent-design-ideas-24-regular style="font-size: 2rem" />
       </h1>

@@ -28,11 +28,13 @@ useHead({
         <i-fluent-chat-12-regular style="font-size: 2rem" />
       </h1>
       <h2 class="py-6">
-        Please feel free to reach out for questions about my research, interest in collaborating, and invitations to speak at events!
+        Please feel free to reach out for questions about my research and interest in collaborating. 
+        <br>
+        Of course, I'm also open to invitations to speak about responsible, inclusive and open-source NLP!
         <br>
         <br>
         <p class="italic text-sm text-gray-500">
-        For motivated students doing a Master's at <strong>EPFL</strong> OR interested in a (remote) internship at <strong>SomosNLP</strong>, I'm very happy to supervise/host you! Please take into account that we have limited capacity each semester so make sure to reach out early!
+        For motivated students doing a Master's at <strong>EPFL</strong> OR interested in a (remote) internship at <strong>SomosNLP</strong>: I'm very happy to supervise/host you! Please take into account that we have limited capacity each semester so make sure to reach out early!
         </p>
       </h2>
     </div>
