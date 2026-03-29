@@ -38,7 +38,7 @@ useHead({
     </div>
     </Container>
     <Container class="bg-accent-500 dark:bg-gray-800" style="background-image: url('https://mariagrandury.github.io/assets/map-image.png');
-      background-repeat: no-repeat; background-size: contain">
+      background-repeat: no-repeat; background-size: contain; background-position: center;">
       <CardContact />
     </Container>
   </div>
