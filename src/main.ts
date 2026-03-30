@@ -16,6 +16,7 @@ import Award from "./views/Award.vue"
 export const createApp = ViteSSG(
     App,
     {
+        scrollBehavior: () => ({ top: 0 }),
         routes: [
             { path: '/', component: Home },
             { path: '/projects', component: Projects },
