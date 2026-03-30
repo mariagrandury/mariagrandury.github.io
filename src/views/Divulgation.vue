@@ -2,6 +2,7 @@
 import { ref, onMounted, computed } from "vue";
 import { useHead } from "@vueuse/head";
 import { parseEventsCSV, type Event } from "../utils/csvParser";
+import { useLanguage } from "../composables/useLanguage";
 
 useHead({
   title: "María Grandury - NLP Divulgation: Talks, Interviews & Articles",
@@ -27,6 +28,7 @@ useHead({
 });
 
 const events = ref<Event[]>([]);
+const { lang } = useLanguage();
 
 onMounted(async () => {
   try {
@@ -60,17 +62,20 @@ const eventsByYear = computed(() => {
     <div>
       <h1 class="flex gap-2 items-center">
         <div class="font-semibold tracking-tight text-4xl">
-          Talks, Interviews & Media
+          {{ lang === 'en' ? 'Talks, Interviews & Media' : 'Charlas, Entrevistas y Medios' }}
         </div>
         <i-fluent-chat-12-regular style="font-size: 2rem" />
       </h1>
-      <h2 class="py-6">
+      <h2 class="py-6" v-if="lang === 'en'">
         I'm passionate about what I do and really enjoy divulgating! Reach out
         if you would like me to give a keynote, talk or workshop!
       </h2>
+      <h2 class="py-6" v-else>
+        Me encanta lo que hago y disfruto mucho divulgando. Contáctame si quieres que imparta una keynote, charla o taller.
+      </h2>
     </div>
     <div>
-      <p class="italic text-sm text-gray-500">
+      <p class="italic text-sm text-gray-500" v-if="lang === 'en'">
         Last update: January 2026 | For up-to-date information check
         <a
           href="https://www.linkedin.com/in/mariagrandury/"
@@ -79,10 +84,19 @@ const eventsByYear = computed(() => {
           >my LinkedIn profile</a
         >!
       </p>
+      <p class="italic text-sm text-gray-500" v-else>
+        Última actualización: enero 2026 | Para información actualizada consulta
+        <a
+          href="https://www.linkedin.com/in/mariagrandury/"
+          target="_blank"
+          class="text-accent-500 hover:underline"
+          >mi perfil de LinkedIn</a
+        >.
+      </p>
     </div>
     <div class="lg:px-24 sm:px-12">
       <br />
-      <br /> 
+      <br />
 
       <div class="grid py-6 gap-x-6 gap-y-3">
         <template v-for="yearGroup in eventsByYear" :key="yearGroup.year">
@@ -107,7 +121,7 @@ const eventsByYear = computed(() => {
           <br v-if="yearGroup !== eventsByYear[eventsByYear.length - 1]" />
           </template>
       </div>
-      <!-- OLD STATIC VERSION REMOVED - Now loading from CSV -->
+
       <div class="flex my-6 justify-center">
         <a
           href="mailto:mariagrandury@gmail.com"
@@ -124,7 +138,7 @@ const eventsByYear = computed(() => {
             hover:border-accent-400
           "
         >
-          <div>Get in contact!</div>
+          <div>{{ lang === 'en' ? 'Get in contact!' : '¡Contáctame!' }}</div>
         </a>
       </div>
     </div>

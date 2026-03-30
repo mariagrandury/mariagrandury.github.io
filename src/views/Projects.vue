@@ -2,6 +2,7 @@
 import { ref, onMounted, computed } from "vue";
 import { useHead } from "@vueuse/head";
 import { parseProjectsCSV, type Project } from "../utils/csvParser";
+import { useLanguage } from "../composables/useLanguage";
 
 useHead({
   title: "María Grandury - Open-Source AI Research Projects",
@@ -27,6 +28,7 @@ useHead({
 });
 
 const projects = ref<Project[]>([]);
+const { lang } = useLanguage();
 
 onMounted(async () => {
   try {
@@ -59,14 +61,17 @@ const previousProjects = computed(() =>
     <div>
       <h1 class="flex gap-2 items-center">
         <div class="font-semibold tracking-tight text-4xl">
-          Open-Source NLP Projects
+          {{ lang === 'en' ? 'Open-Source NLP Projects' : 'Proyectos de Código Abierto de PLN' }}
         </div>
         <i-fluent-design-ideas-24-regular style="font-size: 2rem" />
       </h1>
-      <h2 class="py-6">
+      <h2 class="py-6" v-if="lang === 'en'">
         I'm a Natural Language Processing (NLP) Researcher passionate about increasing the representation of the linguistic and cultural diversity of the world in language models. Do you want to collaborate?
       </h2>
-      <p class="italic text-sm text-gray-500">
+      <h2 class="py-6" v-else>
+        Soy una investigadora en Procesamiento del Lenguaje Natural (PLN) con la misión mejorar la representación de la diversidad lingüística y cultural del mundo en los modelos de lenguaje. ¿Quieres colaborar?
+      </h2>
+      <p class="italic text-sm text-gray-500" v-if="lang === 'en'">
         Last update: July 2025 | For up-to-date information check
         <a
           href="https://www.huggingface.co/mariagrandury/"
@@ -74,6 +79,15 @@ const previousProjects = computed(() =>
           class="text-accent-500 hover:underline"
           >my Hugging Face profile</a
         >!
+      </p>
+      <p class="italic text-sm text-gray-500" v-else>
+        Última actualización: julio 2025 | Para información actualizada consulta
+        <a
+          href="https://www.huggingface.co/mariagrandury/"
+          target="_blank"
+          class="text-accent-500 hover:underline"
+          >mi perfil de Hugging Face</a
+        >.
       </p>
     </div>
 
@@ -92,7 +106,9 @@ const previousProjects = computed(() =>
       <div class="grid py-6 gap-x-6 gap-y-3 lg:grid-cols-2">
         <div class="col-span-2">
           <br />
-          <h3 class="text-2xl">Current & Recent Projects</h3>
+          <h3 class="text-2xl">
+            {{ lang === 'en' ? 'Current & Recent Projects' : 'Proyectos Actuales y Recientes' }}
+          </h3>
           <br />
         </div>
         <CardProject
@@ -108,7 +124,9 @@ const previousProjects = computed(() =>
 
         <div class="col-span-2">
           <br />
-          <h3 class="text-2xl">Previous Projects</h3>
+          <h3 class="text-2xl">
+            {{ lang === 'en' ? 'Previous Projects' : 'Proyectos Anteriores' }}
+          </h3>
           <br />
         </div>
         <CardProject
@@ -139,7 +157,7 @@ const previousProjects = computed(() =>
             hover:border-accent-400
           "
         >
-          <div>More on Hugging Face</div>
+          <div>{{ lang === 'en' ? 'More on Hugging Face' : 'Más en Hugging Face' }}</div>
         </a>
       </div>
     </div>

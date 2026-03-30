@@ -4,6 +4,7 @@ import CardOrg from '../components/CardOrg.vue';
 import Container from '../components/Container.vue';
 import { useHead } from '@vueuse/head'
 import { parseEntitiesCSV, type Entity } from '../utils/csvParser';
+import { useLanguage } from '../composables/useLanguage';
 
 useHead({
     title: 'María Grandury - About Me, Bio & Collaborations',
@@ -17,8 +18,7 @@ useHead({
     ],
 })
 
-const bioLanguage = ref<'en' | 'es'>('en');
-const nextBioLanguageLabel = computed(() => (bioLanguage.value === 'en' ? 'ES' : 'EN'));
+const { lang } = useLanguage();
 
 const entities = ref<Entity[]>([]);
 
@@ -42,14 +42,16 @@ const organizationEntities = computed(() => entities.value.filter((entity) => en
     </Container>
     <Container>
         <h1 class="flex mb-12 gap-2 items-center">
-            <div class="font-semibold tracking-tight text-4xl">About Me</div>
+            <div class="font-semibold tracking-tight text-4xl">
+                {{ lang === 'en' ? 'About Me' : 'Sobre Mí' }}
+            </div>
             <!-- <i-fluent-earth-24-regular style="font-size: 2rem" /> -->
             <i-fluent-rocket-24-regular style="font-size: 2rem" />
         </h1>
 
         <div class="lg:px-24 sm:px-12">
-            <CardGeneric class="relative px-12 my-12">
-                <template v-if="bioLanguage === 'en'">
+            <CardGeneric class="px-12 my-12">
+                <template v-if="lang === 'en'">
                 <h2 class="pt-12">
                     🚀 I'm dedicated to advancing responsible, inclusive, and open-source Natural Language Processing (NLP).
                 </h2>
@@ -67,14 +69,11 @@ const organizationEntities = computed(() => entities.value.filter((entity) => en
                     <a href="https://huggingface.co/mariagrandury" target="_blank"
                         class="font-bold text-accent-500 dark:text-accent-300 hover:underline">Hugging Face Fellow</a>
                     and have contributed to projects like BigScience, FineWeb and BERTIN.
-                    <!-- I'm also very aware of the gender gap in my field and I collaborate with various organizations & initiatives to increase female representation and promote inclusive and responsible AI.
-                    I also collaborate with groups to increase the representation in AI of women and the LGBTQ+ community.
-                    -->
                     I enjoy giving talks and workshops and joining round tables, usually about Responsible AI.
                 </h2>
-            
+
                 <h2 class="py-2">
-                    ⚡ I have 3 years of industry experience in AI startup labs. 
+                    ⚡ I have 3 years of industry experience in AI startup labs.
                     At <strong>Clibrain</strong>
                     I designed how to evaluate whether AI models truly understand and respect the rich linguistic and cultural nuances of Spanish.
                     At <strong>neurocat,</strong>
@@ -114,20 +113,14 @@ const organizationEntities = computed(() => entities.value.filter((entity) => en
                         💚 Además de todo lo friki, me encanta hacer rutas, viajar con mi mochila y bailar.
                     </h2>
                 </template>
-
-                <button
-                    type="button"
-                    class="absolute bottom-6 right-6 border border-gray-200 rounded-md px-3 py-1 text-xs hover:ring ring-accent-500 dark:border-gray-700"
-                    @click="bioLanguage = bioLanguage === 'en' ? 'es' : 'en'"
-                >
-                    {{ nextBioLanguageLabel }}
-                </button>
             </CardGeneric>
         </div>
 
         <div class="my-12">
             <h2 class="flex gap-2 items-center mb-8">
-                <div class="font-semibold tracking-tight text-2xl">Education</div>
+                <div class="font-semibold tracking-tight text-2xl">
+                    {{ lang === 'en' ? 'Education' : 'Educación' }}
+                </div>
                 <span style="font-size: 1.5rem;"><i-fluent-book-24-regular /></span>
             </h2>
             <div class="grid py-8 gap-4 md:grid-cols-5 sm:grid-cols-2">
@@ -147,7 +140,9 @@ const organizationEntities = computed(() => entities.value.filter((entity) => en
 
         <div class="my-12">
             <h2 class="flex gap-2 items-center mb-8">
-                <div class="font-semibold tracking-tight text-2xl">Affiliations</div>
+                <div class="font-semibold tracking-tight text-2xl">
+                    {{ lang === 'en' ? 'Affiliations' : 'Afiliaciones' }}
+                </div>
                 <i-fluent-people-team-24-regular style="font-size: 2rem;" />
             </h2>
             <div class="grid py-8 gap-4 md:grid-cols-3 sm:grid-cols-2">
@@ -167,10 +162,16 @@ const organizationEntities = computed(() => entities.value.filter((entity) => en
 
         <div>
             <h2 class="flex gap-2 items-center">
-                <div class="font-semibold tracking-tight text-2xl">Organizations</div>
+                <div class="font-semibold tracking-tight text-2xl">
+                    {{ lang === 'en' ? 'Organizations' : 'Organizaciones' }}
+                </div>
                 <i-fluent-color-24-regular style="font-size: 2rem;" />
             </h2>
-            <p class="py-3">Organizations and networks I'm part of or I collaborate with.</p>
+            <p class="py-3">
+                {{ lang === 'en'
+                    ? "Organizations and networks I'm part of or I collaborate with."
+                    : 'Organizaciones y redes de las que formo parte o con las que colaboro.' }}
+            </p>
             <div class="lg:px-24 sm:px-12">
                 <div class="grid py-8 gap-4 md:grid-cols-5 sm:grid-cols-3">
                     <CardOrg

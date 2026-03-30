@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useInterval } from "@vueuse/core";
+import { useLanguage } from "../composables/useLanguage";
 
 const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
 const index = computed(() => counter.value % greetings.value.length);
+
+const { lang } = useLanguage();
 </script>
 
 <template>
@@ -17,7 +20,9 @@ const index = computed(() => counter.value % greetings.value.length);
         <h1 class="font-medium mb-3 tracking-tighter text-5xl">
           {{ greetings[index] }}
         </h1>
-        <div class="text-4xl mb-4">I'm María Grandury!</div>
+        <div class="text-4xl mb-4">
+          {{ lang === 'en' ? "I'm María Grandury!" : "soy María Grandury" }}
+        </div>
         <br>
         <img
           class="rounded-full w-64 h-64"
@@ -28,11 +33,13 @@ const index = computed(() => counter.value % greetings.value.length);
       <div>
         <div>
           <ul class="flex flex-col gap-1">
-            <li>💡 Natural Language Processing Researcher</li>
+            <li>
+              {{ lang === 'en' ? '💡 Natural Language Processing Researcher' : '💡 Investigadora en Procesamiento del Lenguaje Natural' }}
+            </li>
             <li>🎯 #ResponsibleNLP, #MultilingualNLP, #LLMEvaluation</li>
             <br>
             <li>
-              🚀 Founder
+              {{ lang === 'en' ? '🚀 Founder' : '🚀 Fundadora' }}
               <a
                 href="https://somosnlp.org"
                 target="_blank"
@@ -51,26 +58,29 @@ const index = computed(() => counter.value % greetings.value.length);
             </li>
             <br>
             <li>
-              🔍 PhD Student
+              {{ lang === 'en' ? '🔍 PhD Student' : '🔍 Doctoranda' }}
               <a
                 href="https://nlp.epfl.ch"
                 target="_blank"
                 class="text-accent-500 hover:underline"
                 >@EPFL NLP,</a
               >
-              supervised by Prof. Antoine Bosselut
+              {{ lang === 'en' ? 'supervised by Prof. Antoine Bosselut' : 'supervisada por el Prof. Antoine Bosselut' }}
             </li>
-            <li>🎓 Mathematician & Physicist, Master's in Language Technologies</li>
+            <li>
+              {{ lang === 'en' ? "🎓 Mathematician & Physicist, Master's in Language Technologies" : '🎓 Matemática y Física, Máster en Tecnologías del Lenguaje' }}
+            </li>
             <br>
             <li>
-              📣 Freelance Speaker and AI Advisor, recipient of the Spanish Transition Fund from the 
+              {{ lang === 'en'
+                ? '📣 Freelance Speaker and AI Advisor, recipient of the Spanish Transition Fund from the'
+                : '📣 Autónoma, ponente y asesora de IA, beneficiaria del Fondo de Transición Justa del' }}
               <a
                 href="/docs/subvencion_fondo_de_transicion_justa.pdf"
                 target="_blank"
                 class="text-accent-500 hover:underline"
-                >Ministry of Industry, Commerce, and Employment</a>.
+                >{{ lang === 'en' ? 'Ministry of Industry, Commerce, and Employment' : 'Ministerio de Industria, Comercio y Empleo' }}</a>.
             </li>
-            
           </ul>
         </div>
       </div>
@@ -79,9 +89,11 @@ const index = computed(() => counter.value % greetings.value.length);
 
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
-      
+
       <div class="px-8">
-        <div class="text-3xl mb-4">Highlighted projects, join us!</div>
+        <div class="text-3xl mb-4">
+          {{ lang === 'en' ? 'Highlighted projects, join us!' : 'Proyectos destacados, ¡únete!' }}
+        </div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardProject
             title="SomosNLP"
@@ -92,10 +104,9 @@ const index = computed(() => counter.value % greetings.value.length);
             <i-fluent-heart-20-regular />
             <template v-slot:description>
               <div class="text-sm text-gray-700 dark:text-white">
-                Did you know that we are 600 million Spanish-speaking
-                individuals around the world? SomosNLP.org is an international
-                community aiming to represent in AI the linguistic diversity of
-                the languages spoken by all these persons.
+                {{ lang === 'en'
+                  ? 'Did you know that we are 600 million Spanish-speaking individuals around the world? SomosNLP.org is an international community aiming to represent in AI the linguistic diversity of the languages spoken by all these persons.'
+                  : '¿Sabías que somos 600 millones de hispanohablantes en el mundo? SomosNLP.org es una comunidad internacional que busca representar en la IA la diversidad lingüística de todos estos idiomas.' }}
               </div>
             </template>
           </CardProject>
@@ -109,23 +120,12 @@ const index = computed(() => counter.value % greetings.value.length);
             <i-fluent-rocket-24-regular />
             <template v-slot:description>
               <div class="text-sm text-gray-700 dark:text-white">
-                We have created the first open leaderboard to evaluate LLMs in languages and language varieties from LATAM, the Caribbean and Spain. Join us!
+                {{ lang === 'en'
+                  ? 'We have created the first open leaderboard to evaluate LLMs in languages and language varieties from LATAM, the Caribbean and Spain. Join us!'
+                  : 'Hemos creado la primera leaderboard abierta para evaluar LLMs en lenguas y variedades lingüísticas de LATAM, el Caribe y España. ¡Únete!' }}
               </div>
             </template>
           </CardProject>
-
-          <!-- <CardTalkDetailed
-            talk="Proyecto #Somos600M: Diversidad lingüística en IA"
-            event_link="https://somosnlp.org/somos600m"
-            image_link="images/projects/240301_somos600m.jpg"
-            recording_link="https://www.youtube.com/playlist?list=PLTA-KAy8nxaASMwEUWkkTfMaDxWBxn-8J"
-            :tags="['NLP in Spanish', 'Open-Source', 'Hackathon', '🇪🇸']"
-          >
-            <i-mdi-youtube style="font-size: 1.25rem" />
-            <template v-slot:abstract>
-              <div class="text-sm text-gray-700 dark:text-white"></div>
-            </template>
-          </CardTalkDetailed> -->
         </div>
       </div>
 
@@ -151,7 +151,7 @@ const index = computed(() => counter.value % greetings.value.length);
             hover:border-accent-400
           "
           to="/projects"
-          >More Projects</router-link
+          >{{ lang === 'en' ? 'More Projects' : 'Más Proyectos' }}</router-link
         >
       </div>
 
@@ -160,7 +160,7 @@ const index = computed(() => counter.value % greetings.value.length);
 
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
-      
+
 
       <div class="flex flex-col flex-shrink gap-12">
         <img
@@ -182,12 +182,14 @@ const index = computed(() => counter.value % greetings.value.length);
             hover:border-accent-400
           "
           to="/divulgation"
-          >More Talks</router-link
+          >{{ lang === 'en' ? 'More Talks' : 'Más Charlas' }}</router-link
         >
       </div>
 
       <div class="px-8">
-        <div class="text-3xl mb-4">Highlighted talks, join us!</div>
+        <div class="text-3xl mb-4">
+          {{ lang === 'en' ? 'Highlighted talks, join us!' : 'Charlas destacadas, ¡únete!' }}
+        </div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardMediaSummary
             talk="Machines that reflect us: Building AI systems responsibly"
@@ -204,7 +206,7 @@ const index = computed(() => counter.value % greetings.value.length);
           </CardMediaSummary>
         </div>
       </div>
-      
+
     </div>
   </Container>
 
@@ -212,28 +214,31 @@ const index = computed(() => counter.value % greetings.value.length);
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
 
       <div class="px-8">
-        <div class="text-3xl mb-4">Awards and Funding</div>
-        <div class="grid py-6 gap-x-6 gap-y-3">        <div
-          class="
-            border-2 
-            border-gray-200 
-            rounded-md 
-            bg-white 
-            dark:bg-gray-900 
-            p-4 
-            flex 
-            justify-center 
-            items-center
-            shadow-sm
-          "
-        >
-          <img
-            src="public/images/awards/2024_fondo_transicion_justa.png"
-            alt="Fondo de transición justa"
-            class="max-w-xs rounded"
-          />
+        <div class="text-3xl mb-4">
+          {{ lang === 'en' ? 'Awards and funding, thank you!' : 'Premios y financiación, ¡gracias!' }}
         </div>
-      </div>
+        <div class="grid py-6 gap-x-6 gap-y-3">
+          <div
+            class="
+              border-2
+              border-gray-200
+              rounded-md
+              bg-white
+              dark:bg-gray-900
+              p-4
+              flex
+              justify-center
+              items-center
+              shadow-sm
+            "
+          >
+            <img
+              src="public/images/awards/2024_fondo_transicion_justa.png"
+              alt="Fondo de transición justa"
+              class="max-w-xs rounded"
+            />
+          </div>
+        </div>
       </div>
 
       <div class="px-8 flex flex-col justify-center items-center h-full">
@@ -252,11 +257,11 @@ const index = computed(() => counter.value % greetings.value.length);
             hover:border-accent-400
           "
           to="/about"
-        >More About Me</router-link>
+        >{{ lang === 'en' ? 'More About Me' : 'Más Sobre Mí' }}</router-link>
       </div>
-      
+
     </div>
   </Container>
 
-  
+
 </template>
