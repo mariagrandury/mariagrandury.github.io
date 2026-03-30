@@ -1,13 +1,29 @@
 <script setup lang="ts">
-import { ref, computed } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useInterval } from "@vueuse/core";
 import { useLanguage } from "../composables/useLanguage";
+import { parsePapersCSV, type Paper } from "../utils/csvParser";
 
 const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
 const index = computed(() => counter.value % greetings.value.length);
 
 const { lang } = useLanguage();
+
+const papers = ref<Paper[]>([]);
+
+onMounted(async () => {
+  try {
+    const response = await fetch("/data/papers.csv");
+    papers.value = parsePapersCSV(await response.text());
+  } catch (error) {
+    console.error("Error loading papers:", error);
+  }
+});
+
+const highlightPapers = computed(() =>
+  papers.value.filter((paper) => paper.status === "highlights")
+);
 </script>
 
 <template>
@@ -211,6 +227,58 @@ const { lang } = useLanguage();
   </Container>
 
   <Container class="bg-white dark:bg-gray-900">
+    <div class="h-full grid gap-8 place-items-center lg:py-8">
+
+      <div class="px-8 w-full">
+        <div class="text-3xl mb-4">
+          {{ lang === 'en' ? 'Highlighted papers' : 'Artículos destacados' }}
+        </div>
+        <div class="grid py-6 gap-y-3">
+          <CardPaper
+            v-for="paper in highlightPapers"
+            :key="paper.title"
+            :title="paper.title"
+            :authors="paper.authors"
+            :venue="paper.venue"
+            :paper_link="paper.paper_link"
+            :website_link="paper.website_link"
+            :hf_link="paper.hf_link"
+            :slides_link="paper.slides_link"
+            :poster_link="paper.poster_link"
+            :github_link="paper.github_link"
+            :linkedin_link="paper.linkedin_link"
+            :x_link="paper.x_link"
+            :award="paper.award"
+            :color="paper.color"
+            :icon="paper.icon"
+            :abstract="paper.abstract"
+          />
+        </div>
+      </div>
+
+      <div class="px-8 flex flex-col justify-center items-center h-full">
+        <router-link
+          class="
+            flex
+            justify-center
+            place-self-center
+            font-medium
+            p-6
+            gap-3
+            items-center
+            border-dashed
+            rounded-md
+            border-2 border-gray-200
+            hover:border-accent-400
+          "
+          to="/research"
+        >{{ lang === 'en' ? 'More Research' : 'Más Investigación' }}</router-link>
+      </div>
+
+    </div>
+  </Container>
+
+  <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
 
       <div class="px-8">
@@ -233,7 +301,7 @@ const { lang } = useLanguage();
             "
           >
             <img
-              src="public/images/awards/2024_fondo_transicion_justa.png"
+              src="/images/awards/2024_fondo_transicion_justa.png"
               alt="Fondo de transición justa"
               class="max-w-xs rounded"
             />
