@@ -283,7 +283,7 @@ const highlightPapers = computed(() =>
 
       <div class="px-8">
         <div class="text-3xl mb-4">
-          {{ lang === 'en' ? 'Funding and awards, thank you!' : 'Financiación y reconocimientos, ¡gracias!' }}
+          {{ lang === 'en' ? 'Funding and awards' : 'Financiación y reconocimientos' }}
         </div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <div
@@ -345,7 +345,7 @@ const highlightPapers = computed(() =>
             hover:border-accent-400
           "
           to="/about"
-        >{{ lang === 'en' ? 'More About Me' : 'Más Sobre Mí' }}</router-link>
+        >{{ lang === 'en' ? 'Full Bio' : 'Ver Biografía' }}</router-link>
       </div>
 
     </div>

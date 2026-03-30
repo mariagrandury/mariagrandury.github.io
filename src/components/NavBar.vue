@@ -22,7 +22,7 @@ const { lang, toggleLanguage } = useLanguage();
         {{ lang === 'en' ? 'Projects' : 'Proyectos' }}
       </router-link>
       <router-link class="hover:underline underline-2px underline-accent-500" to="/about">
-        {{ lang === 'en' ? 'About Me' : 'Sobre Mí' }}
+        {{ lang === 'en' ? 'Bio' : 'Biografía' }}
       </router-link>
       <router-link class="hover:underline underline-2px underline-accent-500" to="/contact">
         {{ lang === 'en' ? 'Contact' : 'Contacto' }}
@@ -30,7 +30,7 @@ const { lang, toggleLanguage } = useLanguage();
     </div>
     <div class="flex gap-6 justify-around items-center">
       <a href="https://x.com/mariagrandury" target="_blank" class="content hover:text-accent-500">
-        <i-uil-twitter />
+        <i-codicon-twitter />
       </a>
       <a href="https://linkedin.com/in/mariagrandury/" target="_blank" class="contents hover:text-accent-500">
         <i-uil-linkedin />
@@ -38,7 +38,7 @@ const { lang, toggleLanguage } = useLanguage();
       <button
         @click="toggleLanguage"
         class="cursor-pointer hover:text-accent-500 text-sm font-medium select-none"
-      >
+      > <i-dashicons-translation />
         {{ lang === 'en' ? 'ES' : 'EN' }}
       </button>
       <div class="contents select-none">
