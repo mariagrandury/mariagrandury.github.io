@@ -4,18 +4,17 @@ La IA es una herramienta potente y va a estar presente en el día a día de gran
 
 ## Fundadora de SomosNLP.org
 
-- +2000 miembros Discord
+- 2k+ miembros Discord
 - 5 ediciones del hackathon internacional
 - 1ª comunidad open-source iberoamericana de PLN
-- Featured en "El País"
-- N bases de datos en español generadas
-- N modelos en español entrenados
+- * Featured en "El País"
+- N recursos abiertos generados
+- X descargas de los recursos
 - N eventos gratuitos organizados
-- Funding: SEDIA, UNED, UPM
 - 1er curso abierto de PLN en español
 - X personas asistentes BoF at ACL, COLM, NeurIPS, EACL
 - 100% voluntario, asoc. sin ánimo de lucro
-- X descargas de los recursos
+- * Funding: SEDIA, UNED, UPM
 
 ## Divulgadora de IA Responsable
 
@@ -24,7 +23,7 @@ La IA es una herramienta potente y va a estar presente en el día a día de gran
 - 17 mesas redondas
 - 10 instituciones organizadoras inc. MBZUAI
 - 10 países de instituciones organizadoras
-- Temas: IA responsable, importancia del PLN multilingüe
+- * Temas: IA responsable, importancia del PLN multilingüe
 
 ## Profesora de Universidad
 
@@ -32,13 +31,13 @@ La IA es una herramienta potente y va a estar presente en el día a día de gran
 - 3 universidades
 - 3 países
 - N alumnes
-- Temas: Alineamiento con preferencias humanas, evaluación de LLMs
+- * Temas: Alineamiento con preferencias humanas, evaluación de LLMs
 
 ## Dinamizadora Open-Source
 
-- Dirección General de IA de España e ISDEFE: licitación de X euros como dinamizadora técnica de IA
-- Co-organizadora del Desafío ALIA
-- Experta de IA para la Unión Europea
+- * Dirección General de IA de España e ISDEFE: licitación de X euros como dinamizadora técnica de IA
+- * Co-organizadora del Desafío ALIA
+- * Experta de IA para la Unión Europea
 - 1ª Hugging Face Fellow
 - 4 modelos open-source: LATAM-GPT, Apertus, BLOOM, BERTIN
 
@@ -54,15 +53,15 @@ La IA es una herramienta potente y va a estar presente en el día a día de gran
 - 4 países
 - 4 lenguas
 - 32 co-autores
-- A+: categoría de la conferencia del paper (ACL Main 2025, X% acceptance rate)
-- +7000 visitas a la web
+- A+ categoría de la conferencia del paper (ACL Main 2025, X% acceptance rate)
+- 7k+ visitas a la web
 - X horas de computación donadas por el BSC
 
 ## Promotora de Diversidad e Inclusión
 
-- D&I Chair @European ACL (Xh)
-- Birds-of-a-Feather session organizer at ACL & COLM 2025
-- Co-organizadora LANLP
+- * D&I Chair @European ACL (Xh)
+- * Birds-of-a-Feather session organizer at ACL & COLM 2025
+- * Co-organizadora LANLP
 
 ## Investigadora de IA
 
@@ -79,10 +78,10 @@ La IA es una herramienta potente y va a estar presente en el día a día de gran
 
 ## Matemática, Física y Científica Computacional
 
-- Estudiante de doctorado en NLP EPFL (Suiza)
-- EPFL: Top 15-30 rankings mundiales, % acceptance rate PhD CS
-- EPFL NLP: 46 papers en los 2 últimos años
-- Master en Tecnologías de la Lengua, UNED, 2024-2025
-- 9.8: Nota de la tesis de máster "título"
-- Doble Grado de Matemáticas y Física, UniOviedo, 2015-2020
+- * Estudiante de doctorado en NLP EPFL (Suiza)
+- * EPFL: Top 15-30 rankings mundiales, % acceptance rate PhD CS
+- * EPFL NLP: 46 papers en los 2 últimos años
+- * Master en Tecnologías de la Lengua, UNED, 2024-2025
+- * 9.8: Nota de la tesis de máster "título"
+- * Doble Grado de Matemáticas y Física, UniOviedo, 2015-2020
 

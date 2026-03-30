@@ -15,100 +15,52 @@ useHead({
 })
 
 // ── DATA ────────────────────────────────────────────────────────────────────
-const BIO = {
-  name:    'María Grandury',
-  roles:   'Investigadora · Fundadora · Divulgadora',
-  mission: 'Democratizar el acceso a la IA responsable, abierta y multicultural',
 
-  sections: [
-    {
-      title: 'Fundadora de SomosNLP',
-      logo:  '/images/logos/SomosNLP.png',
-      logos: ['/images/logos/SEDIA.png', '/images/logos/UNED_NLP.png', '/images/logos/UPM.jpeg'],
-      items: [
-        { num: '+2K', numSize: 'lg', text: 'miembros en la comunidad Discord' },
-        { num: '5',   numSize: 'lg', text: 'ediciones del hackathon internacional' },
-        { num: '1ª',  numSize: 'sm', text: '<b>comunidad open-source iberoamericana</b> de PLN' },
-        { num: '1º',  numSize: 'sm', text: 'curso abierto de PLN en español' },
-        { num: '★',   numSize: 'sm', text: 'Featured en <b>El País</b> · Funding: SEDIA, UNED, UPM · Asoc. sin ánimo de lucro' },
-      ],
-    },
-    {
-      title: 'Divulgadora de IA Responsable',
-      items: [
-        { num: '50',  numSize: 'lg', text: 'eventos en total' },
-        { num: '14',  numSize: 'lg', text: 'charlas y talleres' },
-        { num: '17',  numSize: 'lg', text: 'mesas redondas' },
-        { num: '10',  numSize: 'lg', text: 'países de instituciones organizadoras (inc. <b>MBZUAI</b>)' },
-        { num: '◈',   numSize: 'sm', text: 'Temas: IA responsable · PLN multilingüe' },
-      ],
-    },
-    {
-      title: 'Profesora de Universidad',
-      logos: ['/images/logos/UNED_NLP.png', '/images/logos/UPM.jpeg'],
-      items: [
-        { num: '3', numSize: 'lg', text: 'universidades' },
-        { num: '3', numSize: 'lg', text: 'países' },
-        { num: '◈', numSize: 'sm', text: 'Alineamiento con preferencias humanas' },
-        { num: '◈', numSize: 'sm', text: 'Evaluación de LLMs' },
-      ],
-    },
-    {
-      title: 'Dinamizadora Open-Source',
-      items: [
-        { num: '4',  numSize: 'lg', text: 'modelos open-source: <b>LATAM-GPT, Apertus, BLOOM, BERTIN</b>' },
-        { num: '1ª', numSize: 'sm', text: '<b>Hugging Face Fellow</b>' },
-        { num: '◈',  numSize: 'sm', text: 'Experta de IA para la <b>Unión Europea</b>' },
-        { num: '◈',  numSize: 'sm', text: 'Co-organizadora del <b>Desafío ALIA</b>' },
-        { num: '◈',  numSize: 'sm', text: 'DGIA e ISDEFE: dinamizadora técnica de IA' },
-      ],
-    },
-    {
-      title: 'Ingeniera de ML',
-      items: [
-        { num: '3', numSize: 'lg', text: 'años de experiencia profesional' },
-        { num: '2', numSize: 'lg', text: 'startups de IA (<b>Berlín</b> y <b>Madrid</b>)' },
-      ],
-    },
-    {
-      title: 'Líder de "La Leaderboard"',
-      logos: ['/images/logos/ACL_name.jpeg'],
-      items: [
-        { num: '13',  numSize: 'lg', text: 'grupos de investigación colaboradores' },
-        { num: '32',  numSize: 'lg', text: 'co-autores · <b>4 países</b>' },
-        { num: 'A+',  numSize: 'sm', text: '<b>ACL Main 2025</b> (categoría de conferencia)' },
-        { num: '+7K', numSize: 'lg', text: 'visitas al paper' },
-        { num: '◈',   numSize: 'sm', text: 'Horas de computación donadas por el <b>BSC</b>' },
-      ],
-    },
-    {
-      title: 'Diversity & Inclusion Advocate',
-      logo: '/images/logos/ACL_name.jpeg',
-      items: [
-        { num: '◈', numSize: 'sm', text: '<b>D&amp;I Chair</b> @ European ACL' },
-        { num: '◈', numSize: 'sm', text: 'Birds-of-a-Feather organizer at <b>ACL &amp; COLM 2025</b>' },
-        { num: '◈', numSize: 'sm', text: 'Co-organizadora <b>LANLP</b>' },
-      ],
-    },
-    {
-      title: 'Investigadora de IA',
-      logo: '/images/logos/EPFL_NLP.jpeg',
-      items: [
-        { num: '◈',  numSize: 'sm', text: 'Doctoranda NLP en <b>EPFL</b> (Top 15–30 mundial)' },
-        { num: '17', numSize: 'lg', text: 'papers publicados' },
-        { num: '9.8',numSize: 'lg', text: 'nota en la tesis de máster' },
-        { num: '◈',  numSize: 'sm', text: 'Colaboraciones: <b>Cambridge · MIT · Oxford</b>' },
-      ],
-    },
-    {
-      title: 'Matemática y Física',
-      items: [
-        { num: '◈', numSize: 'sm', text: '<b>Doble Grado</b> en Matemáticas y Física' },
-        { num: '◈', numSize: 'sm', text: 'Universidad de Oviedo <b>2015–2020</b>' },
-      ],
-    },
-  ],
+interface Item    { num: string; text: string; tooltip?: string[] }
+interface Section { title: string; logo?: string; logos?: string[]; items: Item[] }
+interface Bio     { name: string; roles: string; mission: string; sections: Section[] }
+
+function parseMarkdown(md: string): Bio {
+  const lines = md.split('\n')
+  const name    = 'María Grandury'
+  const mission = (lines.find(l => l.startsWith('mission:')) ?? '').replace('mission:', '').trim()
+  const roles   = (lines.find(l => l.startsWith('roles:'))   ?? '').replace('roles:',   '').trim()
+  const sections: Section[] = []
+  let current: Section | null = null
+  for (const line of lines) {
+    if (line.startsWith('## ')) {
+      if (current) sections.push(current)
+      current = { title: line.slice(3).trim(), items: [] }
+      continue
+    }
+    if (!current) continue
+    if (line.startsWith('logo:'))  { current.logo  = line.slice(5).trim(); continue }
+    if (line.startsWith('logos:')) { current.logos = line.slice(6).split(',').map(s => s.trim()).filter(Boolean); continue }
+    if (/^  - /.test(line)) {
+      const last = current.items[current.items.length - 1]
+      if (last) { if (!last.tooltip) last.tooltip = []; last.tooltip.push(line.replace(/^  - /, '').trim()) }
+      continue
+    }
+    if (line.startsWith('- ')) {
+      const content = line.slice(2).trim()
+      const spaceIdx = content.indexOf(' ')
+      const num  = spaceIdx === -1 ? content : content.slice(0, spaceIdx)
+      const text = spaceIdx === -1 ? '' : content.slice(spaceIdx + 1).trim()
+      current.items.push({ num, text })
+    }
+  }
+  if (current) sections.push(current)
+  return { name, roles, mission, sections }
 }
+
+const BIO = ref<Bio>({ name: 'María Grandury', roles: '', mission: '', sections: [] })
+
+onMounted(async () => {
+  try {
+    const res = await fetch('/data/award_proposal_0.md')
+    BIO.value = parseMarkdown(await res.text())
+  } catch (e) { console.error('Error loading award_proposal_0.md', e) }
+})
 
 // ── RESPONSIVE SCALE ────────────────────────────────────────────────────────
 // A3 landscape at 96 dpi: 420mm × 297mm → 1587 × 1123 px
@@ -170,7 +122,7 @@ const canvasStyle = computed(() => ({
           </div>
           <ul class="aw-items">
             <li v-for="(item, i) in section.items" :key="i" class="aw-item">
-              <span :class="item.numSize === 'lg' ? 'aw-num-lg' : 'aw-num-sm'">{{ item.num }}</span>
+              <span class="aw-num-sm">{{ item.num }}</span>
               <!-- eslint-disable-next-line vue/no-v-html -->
               <span class="aw-txt" v-html="item.text" />
             </li>
