@@ -8,7 +8,8 @@ logo: /images/logos/SomosNLP.png
 logos: /images/logos/SEDIA.png, /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
 
 - 2k+ miembros Discord
-- 5 ediciones del hackathon internacional
+- 5 ediciones del hackathon internacional, temas ODS ONU
+- 500+ registros de 20+ países por edición
 - 1ª <a href="https://somosnlp.org" target="_blank"><b>comunidad open-source iberoamericana de PLN</b></a>
 - * Featured en "El País"
 - N recursos abiertos generados
@@ -18,6 +19,7 @@ logos: /images/logos/SEDIA.png, /images/logos/UNED_NLP.png, /images/logos/UPM.jp
 - X personas asistentes BoF at ACL, COLM, NeurIPS, EACL
 - 100% voluntario, asoc. sin ánimo de lucro
 - * Funding: SEDIA, UNED, UPM
+- * Apoyo de <b>Hugging Face · Cohere · Mistral · UPM · UNED</b>
 
 ## Divulgadora de IA Responsable
 
@@ -42,17 +44,21 @@ logos: /images/logos/SEDIA.png, /images/logos/UNED_NLP.png, /images/logos/UPM.jp
     - 🇪🇺 UE
 - * Temas: IA responsable, importancia del PLN multilingüe
 - ◈ Página de <a href="https://es.wikipedia.org/wiki/Mar%C3%ADa_Grandury" target="_blank"><b>Wikipedia</b></a> (ES)
-- ◈ <b>El País · RTVE · Cadena SER</b>
+- ◈ <b>El País · RTVE · Cadena SER · Carne Cruda · BBVA</b>
 - ◈ <b>Gala COTEC</b> · <b>Nova Talent</b>
 - ◈ <b>ESTALMAT</b> (Real Academia de Ciencias)
+ 
 
 ## Profesora de Universidad
 
 logos: /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
 
 - N horas impartidas
-- 3 universidades
-- 3 países
+- 4 universidades, 4 países
+    - Universidad de Baeza (España), 2022-2025
+    - Centro Nacional de IA (CENIA, Chile), 2025-2026
+    - Universidad Nacional de Asunción (Paraguay), 2025
+    - Universidad Nacional Autónoma de México (México), 2025    
 - N alumnes
 - * Temas: Alineamiento con preferencias humanas, evaluación de LLMs
 
@@ -63,6 +69,10 @@ logos: /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
 - * Experta de IA para la Unión Europea
 - 1ª <a href="https://huggingface.co/mariagrandury" target="_blank"><b>Hugging Face Fellow</b></a>
 - 4 modelos open-source: LATAM-GPT, Apertus, BLOOM, BERTIN
+    - Apertus: equipo evaluación, 2025-presente
+    - LATAM-GPT: equipos datos y evaluación, 2024-presente
+    - BLOOM 176B (BigScience): equipo datos, 2022
+    - BERTIN: core team, 2022
 - ◈ Receptora del <a href="/docs/subvencion_fondo_de_transicion_justa.pdf" target="_blank"><b>Fondo de Transición Justa</b></a> del Gobierno español
 
 ## Ingeniera de ML
@@ -72,14 +82,16 @@ logos: /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
 
 ## Líder de "La Leaderboard"
 
-- 1er ranking abierto de LLMs en español
+- 1er ranking abierto de LLMs iberoamericano
 - 13 grupos de investigación colaboradores
 - 4 países
-- 4 lenguas
 - 32 co-autores
 - 66 conjuntos de evaluación
+- 4 lenguas (ESP, CAT, EUS, GAL)
 - 50 modelos evaluados
-- A+ categoría de la conferencia del paper (ACL Main 2025, X% acceptance rate)
+- A+ <b>ACL Main 2025</b>: top venue mundial de PLN
+    - A+ categoría de la conferencia del paper
+    - ACL Main 2025, X% ratio de aceptación
 - 7k+ visitas a la web
 - X horas de computación donadas por el BSC
 
@@ -119,6 +131,7 @@ logo: /images/logos/EPFL_NLP.jpeg
 - * EPFL: Top 15-30 rankings mundiales, % acceptance rate PhD CS
 - * EPFL NLP: 46 papers en los 2 últimos años
 - * Master en Tecnologías de la Lengua, UNED, 2024-2025
-- * 9.8: Nota de la tesis de máster "título"
-- * Doble Grado de Matemáticas y Física, UniOviedo, 2015-2020
-
+- * 9.8 Nota de la tesis de máster "Evaluación multicultural de LLMs"
+- * 2 Grados en Matemáticas y Física, UniOviedo, 2015-2020
+- * Erasmus en Université Paris-Saclay, 2018-2019
+- ◈ <b>ESTALMAT</b> (Real Academia de Ciencias)
