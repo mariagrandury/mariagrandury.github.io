@@ -1,11 +1,5 @@
 ## AUTO
 
-About Me:
-- Update bio: I'm a PhD student at EPFL!
-- Speaker bio in ES & EN (add little button on the bottom right of the bio card to switch)
-- Organizations -> when hovering over the logo of an organization, show the name, the type of affiliation (core member, volunteer, etc.) and the dates
-- Before Organizations, add a section with "Affiliations" -> list of logos with "ML Engineer", "PhD Student", etc. and the dates
-
 Landing page:
 
 - New section for SomosNLP: One side "¿Hablas español y te gustaría ayudar a adecuar los sistemas de IA a tu lengua y cultura? ¡Únete a SomosNLP!" / Other side SomosNLP logo and button with link to SomosNLP website
@@ -13,20 +7,11 @@ Landing page:
 - New section "Collaborations": row of "Research collaborations" (lista de logos, logos en gris, button see more that redirect to Research page), and row of "Speaker collaborations" (lista de logos, logos en gris, button see more that redirect to Speaker page)
 - Auto highlighted projects, talk, and papers (reading from field in csv)
 
-
-Papers:
-
-- by default display abstract for highlighted papers
-
-
 Research:
 
-- add section "Reviewer": EXIST, LANLP, journal Royal Society Open Science
-- add section "Volunteer":
-    - EACL D&I
-    - BoF ACL 2025 and COLM 2025
-- guest lecture: add UNA paraguay 2025 (25h)
-- guest lecture: specify Chile was 2025 and 2026
+- add years to guest lectures
+    - UNA paraguay 2025 (25h)
+    - Chile was 2025 and 2026
 
 
 ## MANUAL

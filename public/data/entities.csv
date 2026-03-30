@@ -1,0 +1,27 @@
+type,name,title,year_start,year_end,logo,url
+education,EPFL,PhD NLP,2026,present,/images/logos/EPFL_NLP.jpeg,https://nlp.epfl.ch
+education,UNED,MSc Language Technologies,2024,2025,/images/logos/UNED_NLP.png,https://www.uned.es
+education,University of Oviedo,BSc Mathematics,2015,2020,/images/logos/UniOvi.png,https://www.uniovi.es
+education,University of Oviedo,BSc Physics,2015,2020,/images/logos/UniOvi.png,https://www.uniovi.es
+education,Paris-Saclay,Erasmus,2018,2019,/images/logos/UniParisSaclay.png,https://www.universite-paris-saclay.fr
+affiliation,EPFL NLP,PhD Student,2026,present,/images/logos/EPFL_NLP.jpeg,https://nlp.epfl.ch
+affiliation,SomosNLP,Founder,2021,present,/images/logos/SomosNLP.png,https://somosnlp.org
+affiliation,UPM GING,Researcher,2024,2025,/images/logos/UPM.jpeg,
+,UNED NLP,Research Collaborator,2025,present,/images/logos/UNED_NLP.png,https://www.uned.es
+affiliation,Clibrain,ML Research Engineer,2023,2023,,
+affiliation,neurocat.ai,ML Engineer,2021,2023,,
+org,Hugging Face,Fellow,2022,present,/images/logos/HF_Fellowship.png,https://huggingface.co/mariagrandury
+org,BERTIN,Contributor,2021,present,/images/logos/BERTIN.webp,https://huggingface.co/bertin-project
+org,SEPLN,Member,2025,present,/images/logos/SEPLN.png
+org,BigScience,Research Collaborator,2021,2022,/images/logos/BigScience.png,https://bigscience.huggingface.co
+org,BigCode,Research Collaborator,2022,2022,/images/logos/BigCode.png,https://www.bigcode-project.org
+org,EleutherAI,Research Collaborator,2022,2022,/images/logos/EleutherAI.png,https://www.eleuther.ai
+org,NovaTalent,Member,2020,present,/images/logos/NovaTalent.svg,https://www.novatalent.com
+org,SpainAI,Collaborator,2021,present,/images/logos/SpainAI.png,https://www.spain-ai.com
+org,SaturdaysAI,Collaborator,2021,present,/images/logos/SaturdaysAI.png,https://saturdays.ai
+org,TheGoodAI,Member,2022,present,/images/logos/TheGoodAI.png,https://thegoodai.co
+org,DiverTLes,Speaker & Member,2021,present,/images/logos/DiverTLes.png,https://gplsi.dlsi.ua.es/pln/divertles
+org,Women in AI & Robotics,Core Member,2021,2023,/images/logos/WAIR.jpg,https://www.womeninairobotics.de
+org,WomenTech,Speaker & Member,2021,2023,/images/logos/WomenTech.png,https://www.womentech.net
+org,Women Who Code,Speaker & Member,2021,2023,/images/logos/WomenWhoCode.jpg,https://www.womenwhocode.com
+org,Women in AI,Core Member,2021,2023,/images/logos/WAI.jpeg,https://www.womeninai.co

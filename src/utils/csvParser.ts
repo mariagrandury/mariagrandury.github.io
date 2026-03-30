@@ -47,6 +47,16 @@ export interface Project {
   description: string;
 }
 
+export interface Entity {
+  type: string;
+  name: string;
+  title: string;
+  year_start: string;
+  year_end?: string;
+  logo: string;
+  url?: string;
+}
+
 // Parse CSV line handling quoted fields
 export function parseCSVLine(line: string): string[] {
   const result: string[] = [];
@@ -235,6 +245,51 @@ export function parseProjectsCSV(csvText: string): Project[] {
     if (!project.description || project.description === "") project.description = "";
 
     data.push(project);
+  }
+
+  return data;
+}
+
+// Parse entities CSV (About page)
+export function parseEntitiesCSV(csvText: string): Entity[] {
+  const lines = csvText.trim().split("\n");
+  if (lines.length < 2) return [];
+
+  const headers = parseCSVLine(lines[0]).map((h) => h.trim());
+  const col = (name: string) => headers.indexOf(name);
+  const idx = {
+    type: col("type"),
+    name: col("name"),
+    title: col("title"),
+    year_start: col("year_start"),
+    year_end: col("year_end"),
+    logo: col("logo"),
+    url: col("url"),
+  };
+
+  const get = (values: string[], index: number) => {
+    if (index < 0) return "";
+    return (values[index] || "").trim();
+  };
+
+  const data: Entity[] = [];
+  for (let i = 1; i < lines.length; i++) {
+    const values = parseCSVLine(lines[i]);
+    if (values.length !== headers.length) continue;
+
+    const entity: Entity = {
+      type: get(values, idx.type),
+      name: get(values, idx.name),
+      title: get(values, idx.title),
+      year_start: get(values, idx.year_start),
+      year_end: get(values, idx.year_end) || undefined,
+      logo: get(values, idx.logo),
+      url: get(values, idx.url) || undefined,
+    };
+
+    if (!entity.year_end) delete entity.year_end;
+    if (!entity.url) delete entity.url;
+    data.push(entity);
   }
 
   return data;
