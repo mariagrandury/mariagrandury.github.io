@@ -128,17 +128,20 @@ const canvasStyle = computed(() => ({
       <!-- BOTTOM BAR -->
       <div class="aw-bottom-bar">
         <div class="aw-bottom-stripe" />
-        <a href="https://mariagrandury.ai" class="aw-link">mariagrandury.ai</a>
-        <span class="aw-sep">·</span>
+        <a href="https://mariagrandury.ai/forbes30u30" class="aw-link">Versión interactiva: mariagrandury.ai/forbes30u30</a>
+        <span class="aw-sep"> </span>
+        <span class="aw-sep"> </span>
+        <span class="aw-sep"> </span>
+        <span class="aw-sep"> </span>
+        <span class="aw-sep"> </span>
         <a href="https://linkedin.com/in/mariagrandury" class="aw-link">LinkedIn</a>
         <span class="aw-sep">·</span>
-        <a href="https://scholar.google.es/citations?user=3mc_-QsAAAAJ" class="aw-link">Scholar</a>
-        <span class="aw-sep">·</span>
-        <a href="https://github.com/mariagrandury" class="aw-link">GitHub</a>
+        <a href="https://x.com/mariagrandury" class="aw-link">X</a>
         <span class="aw-sep">·</span>
         <a href="https://huggingface.co/mariagrandury" class="aw-link">Hugging Face</a>
+        <span class="aw-sep">·</span>
+        <a href="https://scholar.google.es/citations?user=3mc_-QsAAAAJ" class="aw-link">Scholar</a>
       </div>
-
     </div>
   </div>
 </template>
