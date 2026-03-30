@@ -208,5 +208,55 @@ const index = computed(() => counter.value % greetings.value.length);
     </div>
   </Container>
 
+  <Container class="bg-white dark:bg-gray-900">
+    <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
+
+      <div class="px-8">
+        <div class="text-3xl mb-4">Awards and Funding</div>
+        <div class="grid py-6 gap-x-6 gap-y-3">        <div
+          class="
+            border-2 
+            border-gray-200 
+            rounded-md 
+            bg-white 
+            dark:bg-gray-900 
+            p-4 
+            flex 
+            justify-center 
+            items-center
+            shadow-sm
+          "
+        >
+          <img
+            src="public/images/awards/2024_fondo_transicion_justa.png"
+            alt="Fondo de transición justa"
+            class="max-w-xs rounded"
+          />
+        </div>
+      </div>
+      </div>
+
+      <div class="px-8 flex flex-col justify-center items-center h-full">
+        <router-link
+          class="
+            flex
+            justify-center
+            place-self-center
+            font-medium
+            p-6
+            gap-3
+            items-center
+            border-dashed
+            rounded-md
+            border-2 border-gray-200
+            hover:border-accent-400
+          "
+          to="/about"
+        >More About Me</router-link>
+      </div>
+      
+    </div>
+  </Container>
+
   
 </template>
