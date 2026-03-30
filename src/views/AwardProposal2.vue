@@ -3,10 +3,10 @@ import { useHead } from '@vueuse/head'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 
 useHead({
-  title: 'María Grandury — Award One-Pager (B)',
+  title: 'María Grandury',
   meta: [
     { name: 'description', content: 'María Grandury: NLP Researcher at EPFL, Founder of SomosNLP, AI Speaker — Three Pillars' },
-    { property: 'og:title', content: 'María Grandury — Award One-Pager' },
+    { property: 'og:title', content: 'María Grandury' },
     { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
   ],
 })
@@ -57,9 +57,9 @@ const PILLARS = ref<Pillar[]>([])
 
 onMounted(async () => {
   try {
-    const res = await fetch('/data/award_proposal_2.md')
+    const res = await fetch('/data/bio_categories.md')
     PILLARS.value = parseMarkdown(await res.text())
-  } catch (e) { console.error('Error loading award_proposal_2.md', e) }
+  } catch (e) { console.error('Error loading content', e) }
 })
 
 // ── RESPONSIVE SCALE ────────────────────────────────────────────────────────
@@ -93,10 +93,10 @@ const canvasStyle = computed(() => ({
           <img src="/images/profile/maria_grandury.png" class="aw-photo" alt="María Grandury" />
           <div>
             <div class="aw-name">María Grandury</div>
-            <div class="aw-roles">Researcher · Founder · Speaker</div>
+            <div class="aw-roles">Fundadora · Investigadora · Divulgadora</div>
           </div>
         </div>
-        <div class="aw-mission">Democratizing responsible, open, and multicultural AI</div>
+        <div class="aw-mission">Democratizar el acceso a la IA responsable, abierta y multicultural</div>
       </div>
 
       <!-- THREE PILLARS -->

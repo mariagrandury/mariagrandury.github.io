@@ -4,10 +4,10 @@ La IA es una herramienta potente y va a estar presente en el día a día de gran
 
 ## Fundadora de SomosNLP.org
 
-- 2k+ miembros Discord
-
-logo: /images/logos/SomosNLP.png
-logos: /images/logos/SEDIA.png, /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
+accent: #007E75
+metric: 2K+ Miembros
+subMetrics: 5 hackathons · 7+ universidades · 4 modelos open-source
+logos: /images/logos/SomosNLP.png, /images/logos/HF_Fellowship.png, /images/logos/SEDIA.png, /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
 
 ### Community Lead
 
@@ -25,7 +25,26 @@ logos: /images/logos/SEDIA.png, /images/logos/UNED_NLP.png, /images/logos/UPM.jp
 - X descargas de los recursos
 - N eventos gratuitos organizados
 
+### Dinamizadora Open-Source
+
+- * Dirección General de IA de España e ISDEFE: licitación de X euros como dinamizadora técnica de IA
+- * Co-organizadora del Desafío ALIA
+- * Experta de IA para la Unión Europea
+- 1ª <a href="https://huggingface.co/mariagrandury" target="_blank"><b>Hugging Face Fellow</b></a>
+- 4 modelos open-source: LATAM-GPT, Apertus, BLOOM, BERTIN
+    - Apertus: equipo evaluación, 2025-presente
+    - LATAM-GPT: equipos datos y evaluación, 2024-presente
+    - BLOOM 176B (BigScience): equipo datos, 2022
+    - BERTIN: core team, 2022
+- ◈ Receptora del <a href="/docs/subvencion_fondo_de_transicion_justa.pdf" target="_blank"><b>Fondo de Transición Justa</b></a> del Gobierno español
+
+
 ## Investigadora de IA Multicultural
+
+accent: #005E70
+metric: 17 Artículos
+subMetrics: 5 venues top · 32 co-autores · 13 grupos de investigación · 4 países
+logos: /images/logos/EPFL_NLP.jpeg, /images/logos/ACL_name.jpeg, /images/logos/UNED_NLP.png
 
 ### Líder de "La Leaderboard"
 
@@ -64,18 +83,6 @@ logos: /images/logos/SEDIA.png, /images/logos/UNED_NLP.png, /images/logos/UPM.jp
     - (*) primera autora
 - X instituciones colaboradoras, inc. Cambridge, MIT, Oxford
 
-### Dinamizadora Open-Source
-
-- * Dirección General de IA de España e ISDEFE: licitación de X euros como dinamizadora técnica de IA
-- * Co-organizadora del Desafío ALIA
-- * Experta de IA para la Unión Europea
-- 1ª <a href="https://huggingface.co/mariagrandury" target="_blank"><b>Hugging Face Fellow</b></a>
-- 4 modelos open-source: LATAM-GPT, Apertus, BLOOM, BERTIN
-    - Apertus: equipo evaluación, 2025-presente
-    - LATAM-GPT: equipos datos y evaluación, 2024-presente
-    - BLOOM 176B (BigScience): equipo datos, 2022
-    - BERTIN: core team, 2022
-- ◈ Receptora del <a href="/docs/subvencion_fondo_de_transicion_justa.pdf" target="_blank"><b>Fondo de Transición Justa</b></a> del Gobierno español
 
 ### Ingeniera de IA
 
@@ -101,7 +108,10 @@ logo: /images/logos/EPFL_NLP.jpeg
 
 ## Concienciadora
 
-- 50+ eventos en total
+accent: #003D55
+metric: 50+ Eventos
+subMetrics: 14 países · 7K+ visitas al artículo · 1 artículo Spotlight
+logos: /images/logos/SEDIA.png
 
 ### Divulgadora de IA Responsable
 
@@ -132,15 +142,15 @@ logo: /images/logos/EPFL_NLP.jpeg
 logos: /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
 
 - 300+ estudiantes
-- N horas impartidas
+- 40 horas impartidas
 - 4 universidades, 4 países
     - Universidad de Baeza (España), 2022-2025
     - Centro Nacional de IA (CENIA, Chile), 2025-2026
     - Universidad Nacional de Asunción (Paraguay), 2025
     - Universidad Nacional Autónoma de México (México), 2025    
-- * Temas: Alineamiento con preferencias humanas, evaluación de LLMs
+- Temas: Alineamiento con preferencias humanas, evaluación de LLMs
 
-## Promotora de Diversidad e Inclusión
+### Promotora de Diversidad e Inclusión
 
 - * Diversity & Inclusion Chair @European ACL (Xh)
 - * Co-organizadora de Birds-of-a-Feather en ACL & COLM 2025
