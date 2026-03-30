@@ -5,6 +5,7 @@ import { useLanguage } from "../composables/useLanguage";
 import { parsePapersCSV, type Paper } from "../utils/csvParser";
 import profileImg from "../../public/images/profile/maria_grandury.png";
 import awardImg from "../../public/images/awards/2024_fondo_transicion_justa.png";
+import hfFellowImg from "../../public/images/awards/2026_hf_fellow.png";
 
 const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
@@ -285,7 +286,7 @@ const highlightPapers = computed(() =>
 
       <div class="px-8">
         <div class="text-3xl mb-4">
-          {{ lang === 'en' ? 'Awards and funding, thank you!' : 'Premios y financiación, ¡gracias!' }}
+          {{ lang === 'en' ? 'Funding and awards, thank you!' : 'Financiación y reconocimientos, ¡gracias!' }}
         </div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <div
@@ -311,7 +312,27 @@ const highlightPapers = computed(() =>
         </div>
       </div>
 
-      <div class="px-8 flex flex-col justify-center items-center h-full">
+      <div class="px-8 flex flex-col justify-center items-center gap-6 h-full">
+        <div
+          class="
+            border-2
+            border-gray-200
+            rounded-md
+            bg-white
+            dark:bg-gray-900
+            p-4
+            flex
+            justify-center
+            items-center
+            shadow-sm
+          "
+        >
+          <img
+            :src="hfFellowImg"
+            alt="Hugging Face Fellow 2026"
+            class="max-w-xs rounded"
+          />
+        </div>
         <router-link
           class="
             flex
