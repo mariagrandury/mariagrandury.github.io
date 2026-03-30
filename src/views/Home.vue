@@ -3,9 +3,6 @@ import { ref, computed, onMounted } from "vue";
 import { useInterval } from "@vueuse/core";
 import { useLanguage } from "../composables/useLanguage";
 import { parsePapersCSV, type Paper } from "../utils/csvParser";
-import profileImg from "/images/profile/maria_grandury.png";
-import awardImg from "/images/awards/2024_fondo_transicion_justa.png";
-import hfFellowImg from "/images/awards/2026_hf_fellow.png";
 
 const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
@@ -45,7 +42,7 @@ const highlightPapers = computed(() =>
         <br>
         <img
           class="rounded-full w-64 h-64"
-          :src="profileImg"
+          src="https://mariagrandury.ai/images/profile/maria_grandury.png"
           alt="María Grandury"
         />
       </div>
@@ -304,7 +301,7 @@ const highlightPapers = computed(() =>
             "
           >
             <img
-              :src="awardImg"
+              src="https://mariagrandury.ai/images/awards/2024_fondo_transicion_justa.png"
               alt="Fondo de transición justa"
               class="max-w-xs rounded"
             />
@@ -328,7 +325,7 @@ const highlightPapers = computed(() =>
           "
         >
           <img
-            :src="hfFellowImg"
+            src="https://mariagrandury.ai/images/awards/2026_hf_fellow.png"
             alt="Hugging Face Fellow 2026"
             class="max-w-xs rounded"
           />
