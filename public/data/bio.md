@@ -4,6 +4,9 @@ La IA es una herramienta potente y va a estar presente en el día a día de gran
 
 ## Fundadora de SomosNLP.org
 
+logo: /images/logos/SomosNLP.png
+logos: /images/logos/SEDIA.png, /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
+
 - 2k+ miembros Discord
 - 5 ediciones del hackathon internacional
 - 1ª comunidad open-source iberoamericana de PLN
@@ -21,11 +24,13 @@ La IA es una herramienta potente y va a estar presente en el día a día de gran
 - 50 eventos en total
 - 14 charlas y talleres
 - 17 mesas redondas
-- 10 instituciones organizadoras inc. MBZUAI
+- 10 instituciones organizadoras (inc. MBZUAI)
 - 10 países de instituciones organizadoras
 - * Temas: IA responsable, importancia del PLN multilingüe
 
 ## Profesora de Universidad
+
+logos: /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
 
 - N horas impartidas
 - 3 universidades
@@ -38,7 +43,7 @@ La IA es una herramienta potente y va a estar presente en el día a día de gran
 - * Dirección General de IA de España e ISDEFE: licitación de X euros como dinamizadora técnica de IA
 - * Co-organizadora del Desafío ALIA
 - * Experta de IA para la Unión Europea
-- 1ª Hugging Face Fellow
+- 1ª <b>Hugging Face Fellow</b>
 - 4 modelos open-source: LATAM-GPT, Apertus, BLOOM, BERTIN
 
 ## Ingeniera de ML
@@ -61,7 +66,7 @@ La IA es una herramienta potente y va a estar presente en el día a día de gran
 
 - * D&I Chair @European ACL (Xh)
 - * Birds-of-a-Feather session organizer at ACL & COLM 2025
-- * Co-organizadora LANLP
+- * Co-organizadora Workshop Latin American NLP @LREC 2026
 
 ## Investigadora de IA
 
@@ -77,6 +82,8 @@ La IA es una herramienta potente y va a estar presente en el día a día de gran
 - X instituciones colaboradoras, inc. Cambridge, MIT, Oxford
 
 ## Matemática, Física y Científica Computacional
+
+logo: /images/logos/EPFL_NLP.jpeg
 
 - * Estudiante de doctorado en NLP EPFL (Suiza)
 - * EPFL: Top 15-30 rankings mundiales, % acceptance rate PhD CS
