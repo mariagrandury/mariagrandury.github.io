@@ -11,7 +11,13 @@ import About from "./views/About.vue"
 import Contact from "./views/Contact.vue"
 import CV from "./views/CV.vue"
 import Cookies from "./views/Cookies.vue"
-import Award from "./views/Award.vue"
+import Forbes30u30 from "./views/Forbes30u30.vue"
+import AwardProposal0 from "./views/AwardProposal0.vue"
+import AwardProposal1 from "./views/AwardProposal1.vue"
+import AwardProposal2 from "./views/AwardProposal2.vue"
+import AwardProposal3 from "./views/AwardProposal3.vue"
+import AwardProposalB from "./views/AwardProposalB.vue"
+import AwardProposalC from "./views/AwardProposalC.vue"
 
 export const createApp = ViteSSG(
     App,
@@ -26,7 +32,13 @@ export const createApp = ViteSSG(
             { path: '/contact', component: Contact },
             { path: '/cv', component: CV },
             { path: '/cookie-policy', component: Cookies },
-            { path: '/award', component: Award },
+            { path: '/forbes30u30', component: Forbes30u30 },
+            { path: '/award/0', component: AwardProposal0 },
+            { path: '/award/1', component: AwardProposal1 },
+            { path: '/award/2', component: AwardProposal2 },
+            { path: '/award/3', component: AwardProposal3 },
+            { path: '/award/b', component: AwardProposalB },
+            { path: '/award/c', component: AwardProposalC },
         ]
     },
     // function to have custom setups
