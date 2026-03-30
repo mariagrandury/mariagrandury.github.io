@@ -3,9 +3,9 @@ import { ref, computed, onMounted } from "vue";
 import { useInterval } from "@vueuse/core";
 import { useLanguage } from "../composables/useLanguage";
 import { parsePapersCSV, type Paper } from "../utils/csvParser";
-import profileImg from "../../public/images/profile/maria_grandury.png";
-import awardImg from "../../public/images/awards/2024_fondo_transicion_justa.png";
-import hfFellowImg from "../../public/images/awards/2026_hf_fellow.png";
+import profileImg from "/images/profile/maria_grandury.png";
+import awardImg from "/images/awards/2024_fondo_transicion_justa.png";
+import hfFellowImg from "/images/awards/2026_hf_fellow.png";
 
 const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
