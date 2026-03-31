@@ -57,9 +57,9 @@ function parseMarkdown(md: string): Pillar[] {
       currentSection = { subtitle: line.slice(4).trim(), items: [] }
       continue
     }
-    if (currentSection && line.startsWith('  - ')) {
+    if (currentSection && /^\s+- /.test(line)) {
       const last = currentSection.items[currentSection.items.length - 1]
-      if (last) { if (!last.tooltip) last.tooltip = []; last.tooltip.push(line.slice(4).trim()) }
+      if (last) { if (!last.tooltip) last.tooltip = []; last.tooltip.push(line.replace(/^\s+- /, '').trim()) }
       continue
     }
     if (currentSection && line.startsWith('- ')) {
@@ -84,19 +84,29 @@ const CANVAS_W = 1587
 const CANVAS_H = 1123
 const scale = ref(1)
 
-const updateScale = () => { scale.value = window.innerWidth / CANVAS_W }
+const updateScale = () => {
+  scale.value = Math.min(
+    window.innerWidth  / CANVAS_W,
+    window.innerHeight / CANVAS_H,
+  )
+}
 onMounted(() => { updateScale(); window.addEventListener('resize', updateScale) })
 onUnmounted(() => { window.removeEventListener('resize', updateScale) })
 
 const wrapperStyle = computed(() => ({
-  height: `${CANVAS_H * scale.value}px`,
+  width: '100vw',
+  height: '100dvh',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   overflow: 'hidden',
 }))
 const canvasStyle = computed(() => ({
   transform: `scale(${scale.value})`,
-  transformOrigin: 'top left',
+  transformOrigin: 'center center',
   width: `${CANVAS_W}px`,
   height: `${CANVAS_H}px`,
+  flexShrink: '0',
 }))
 </script>
 
