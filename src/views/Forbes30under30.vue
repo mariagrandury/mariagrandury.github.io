@@ -13,7 +13,8 @@ useHead({
 
 // ── DATA ────────────────────────────────────────────────────────────────────
 
-interface SubSection { subtitle: string; items: string[]; logos?: string[]; logosSize?: 'sm' | 'lg' }
+interface SectionItem { text: string; tooltip?: string[] }
+interface SubSection { subtitle: string; items: SectionItem[]; logos?: string[]; logosSize?: 'sm' | 'lg' }
 interface Pillar { title: string; accent: string; metric: { num: string; label: string }; subMetrics: string; sections: SubSection[] }
 
 function parseMarkdown(md: string): Pillar[] {
@@ -56,8 +57,13 @@ function parseMarkdown(md: string): Pillar[] {
       currentSection = { subtitle: line.slice(4).trim(), items: [] }
       continue
     }
+    if (currentSection && line.startsWith('  - ')) {
+      const last = currentSection.items[currentSection.items.length - 1]
+      if (last) { if (!last.tooltip) last.tooltip = []; last.tooltip.push(line.slice(4).trim()) }
+      continue
+    }
     if (currentSection && line.startsWith('- ')) {
-      currentSection.items.push(line.slice(2).trim())
+      currentSection.items.push({ text: line.slice(2).trim() })
     }
   }
   pushPillar()
@@ -125,8 +131,15 @@ const canvasStyle = computed(() => ({
             <div v-for="s in p.sections" :key="s.subtitle" class="aw-section">
               <div class="aw-section-title">{{ s.subtitle }}</div>
               <ul class="aw-section-list">
-                <!-- eslint-disable-next-line vue/no-v-html -->
-                <li v-for="(item, i) in s.items" :key="i" v-html="item" />
+                <li v-for="(item, i) in s.items" :key="i" :class="item.tooltip ? 'aw-has-tooltip' : ''">
+                  <!-- eslint-disable-next-line vue/no-v-html -->
+                  <span v-html="item.text" />
+                  <span v-if="item.tooltip" class="aw-tip-icon" aria-hidden="true">ⓘ</span>
+                  <span v-if="item.tooltip" class="aw-tooltip">
+                    <!-- eslint-disable-next-line vue/no-v-html -->
+                    <span v-for="line in item.tooltip" :key="line" class="aw-tooltip-line" v-html="line" />
+                  </span>
+                </li>
               </ul>
               <div v-if="s.logos?.length" :class="['aw-section-logos', s.logosSize === 'lg' ? 'aw-section-logos-lg' : 'aw-section-logos-sm']">
                 <img v-for="l in s.logos" :key="l" :src="l" alt="" />
@@ -171,6 +184,7 @@ const canvasStyle = computed(() => ({
     transform: none !important;
     overflow: hidden !important;
   }
+  .aw-tip-icon, .aw-tooltip { display: none !important; }
 }
 </style>
 
@@ -329,6 +343,22 @@ const canvasStyle = computed(() => ({
 :deep(.aw-section-list b) { color: #1A2A3A; font-weight: 600; }
 :deep(.aw-section-list a) { color: #00918A; text-decoration: none; }
 :deep(.aw-section-list a:hover) { text-decoration: underline; }
+
+.aw-has-tooltip { cursor: help; position: relative; }
+.aw-tip-icon { font-size: 10px; color: #00918A; margin-left: 3px; vertical-align: super; line-height: 1; flex-shrink: 0; }
+.aw-tooltip {
+  display: none;
+  position: absolute; bottom: calc(100% + 6px); left: 0;
+  background: #fff; border: 1.5px solid #00C9B1; border-radius: 8px;
+  padding: 10px 14px; min-width: 260px; max-width: 460px;
+  z-index: 200; box-shadow: 0 6px 24px rgba(0,0,0,0.14);
+  flex-direction: column; gap: 3px;
+}
+.aw-has-tooltip:hover .aw-tooltip { display: flex; }
+.aw-tooltip-line { font-size: 12px; color: #1A2A3A; line-height: 1.45; white-space: nowrap; }
+.aw-tooltip-line::before { content: '›  '; color: #00C9B1; font-weight: 700; }
+:deep(.aw-tooltip-line a) { color: #00918A; text-decoration: none; }
+:deep(.aw-tooltip-line a:hover) { text-decoration: underline; }
 
 /* ── LOGOS ── */
 .aw-section-logos {
