@@ -1,8 +1,6 @@
-# Democratizar el acceso a la IA responsable, abierta y multicultural
+# Democratizar el acceso a una IA responsable, abierta y multicultural
 
-
-El éxito se contagia y espero que la conciencia de la necesidad de una IA responsable, inclusiva y multicultural también. Quiero contagiarla con mi labor interdisciplinar como fundadora de la mayor comunidad de IA iberoamericana, investigadora de IA multilingüe y divulgadora de IA responsable.
-
+El éxito se contagia y espero que también lo haga la conciencia sobre la necesidad de una IA responsable, inclusiva y multicultural. Por eso trabajo como fundadora de la mayor comunidad iberoamericana de IA abierta, como investigadora doctoral en IA multilingüe y como divulgadora de IA responsable para que esta visión llegue a más personas y se convierta en una realidad.
 
 ## Fundadora de SomosNLP.org
 

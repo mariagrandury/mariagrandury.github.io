@@ -68,7 +68,7 @@ const PILLARS = ref<Pillar[]>([])
 
 onMounted(async () => {
   try {
-    const res = await fetch('/data/bio_categories.md')
+    const res = await fetch('/data/bio.md')
     PILLARS.value = parseMarkdown(await res.text())
   } catch (e) { console.error('Error loading content', e) }
 })

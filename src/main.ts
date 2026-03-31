@@ -11,8 +11,7 @@ import About from "./views/About.vue"
 import Contact from "./views/Contact.vue"
 import CV from "./views/CV.vue"
 import Cookies from "./views/Cookies.vue"
-// import Forbes30u30 from "./views/Forbes30u30.vue"
-import AwardProposal2 from "./views/AwardProposal2.vue"
+import Forbes30under30 from "./views/Forbes30under30.vue"
 
 export const createApp = ViteSSG(
     App,
@@ -27,8 +26,7 @@ export const createApp = ViteSSG(
             { path: '/contact', component: Contact },
             { path: '/cv', component: CV },
             { path: '/cookie-policy', component: Cookies },
-            // { path: '/forbes30u30', component: Forbes30u30 },
-            { path: '/award/2', component: AwardProposal2 },
+            { path: '/forbes30under30', component: Forbes30under30 },
         ]
     },
     // function to have custom setups
