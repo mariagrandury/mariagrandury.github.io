@@ -139,7 +139,7 @@ const canvasStyle = computed(() => ({
       <!-- BOTTOM BAR -->
       <div class="aw-bottom-bar">
         <div class="aw-bottom-stripe" />
-        <a href="https://mariagrandury.ai/forbes30u30" class="aw-link">Versión interactiva: mariagrandury.ai/forbes30u30</a>
+        <a href="https://mariagrandury.ai/forbes30under30" class="aw-link">Versión interactiva: mariagrandury.ai/forbes30under30</a>
         <span class="aw-sep"> </span>
         <span class="aw-sep"> </span>
         <span class="aw-sep"> </span>

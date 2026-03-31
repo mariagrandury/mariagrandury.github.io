@@ -1,16 +1,14 @@
 # Democratizar el acceso a la IA responsable, abierta y multicultural
 
-La IA es una herramienta potente y va a estar presente en el día a día de gran parte de la población. DEBE ser abierta y estar adaptada a cada contexto cultural.
 
 El éxito se contagia y espero que la conciencia de la necesidad de una IA responsable, inclusiva y multicultural también. Quiero contagiarla con mi labor interdisciplinar como fundadora de la mayor comunidad de IA iberoamericana, investigadora de IA multilingüe y divulgadora de IA responsable.
 
-Todas las actividades de las secciones con asterisco son altruistas, excepto el punto de la licitación de la Secretaría de Estado de DIA y un tercio de las ponencias.
 
 ## Fundadora de SomosNLP.org
 
 accent: #007E75
 metric: 2K+ Miembros de la comunidad
-<!-- subMetrics: 5 hackathons · 7+ universidades · 4 modelos open-source -->
+subMetrics: Nuestra misión es acercar la IA a 860M de hablantes de español y portugués. SomosNLP surgió a principios de 2021 para mitigar la falta de recursos de IA en español, incluso antes del primer proyecto estatal. Desde entonces, con el apoyo desinteresado de muchas personas, la comunidad ha evolucionado hasta ser reconocida internacionalmente.
 
 ### Líder de la mayor comunidad iberoamericana *
 
@@ -39,7 +37,7 @@ logos-lg: https://mariagrandury.ai/images/logos/SomosNLP.png, https://mariagrand
 
 ### Dinamizadora Open-Source *
 
-- <b>Dirección General de IA de España</b> e ISDEFE: ganadora de una licitación como dinamizadora técnica de IA
+- <b>Secretaría de Estado de Digitalización e IA</b> (SEDIA) e ISDEFE: adjudicada una licitación como dinamizadora técnica de IA, 2026
 - Co-organizadora del Desafío ALIA @Talent Arena 2026
 - 1ª <a href="https://huggingface.co/mariagrandury" target="_blank"><b>Hugging Face Fellow</b></a> por contribuciones a la comunidad OS
 - Experta de IA abierta para encuestas de la Unión Europea
@@ -51,14 +49,14 @@ logos-lg: https://mariagrandury.ai/images/logos/SomosNLP.png, https://mariagrand
 - "Language Ambassador" de 4 iniciativas de recolección de datos
 - Colaboración con el proyecto <a href="https://odesia.uned.es/" target="_blank">ODESIA</a> de la SEDIA
 
-logos-sm: /images/logos/UE_SEDIA.png
+logos-sm: /images/logos/SEDIA.png, /images/logos/EuropeanCommission.jpg
 
 
 ## Investigadora de IA Multicultural
 
 accent: #005E70
 metric: 17 artículos publicados
-<!-- subMetrics: 5 venues top · 32 co-autores · 13 grupos de investigación · 4 países -->
+subMetrics: La IA es una herramienta potente que va a estar presente en el día a día de gran parte de la población. DEBE estar a disposición de la comunidad (código abierto) y estar adaptada al contexto cultural donde se va a desplegar. Decidí empezar un PhD para identificar los sesgos lingüísticos y culturales de la IA y poder tener un impacto directo en su mitigación.
 
 ### Líder de "La Leaderboard" *
 
@@ -68,7 +66,7 @@ metric: 17 artículos publicados
     - ACL Main 2025, X% ratio de aceptación
 - 24 co-autores, 11 grupos de investigación, 4 países
 - 66 conjuntos de evaluación recolectados, 4 lenguas oficiales de ES
-- 70 modelos de lenguaje evaluados
+- 70 LLMs ("Large Language Models") evaluados
 - 1000h de computación donadas por el <a href="https://www.bsc.es/es/marenostrum/marenostrum" target="_blank">Bcn Supercomp. Center</a>
 
 ### Investigadora de IA
@@ -122,14 +120,12 @@ logos-sm: /images/logos/EPFL_NLP.jpeg, /images/logos/UPM.jpeg, /images/logos/UNE
 
 accent: #003D55
 metric: 100h de ponencias y docencia
-<!-- subMetrics: 14 países · 7K+ visitas al artículo -->
-logos: /images/logos/SEDIA.png
+subMetrics: Al igual que me parece importante investigar y avanzar el estado del arte, creo que es esencial difundir el conocimiento a todos los niveles de la sociedad. El cambio que vamos a vivir es muy real y quiero ayudar a la mayor cantidad de personas posible a participar activamente. Solo así podremos evolucionar de manera responsable e inclusiva.
 
 ### Ponente *
 
 logos-lg: https://mariagrandury.ai/images/events/231114_efe_camera.png, https://mariagrandury.ai/images/events/230529_mesa_redonda.png
 
-- Temas: IA responsable, importancia del PLN multilingüe
 - <a href="https://mariagrandury.ai/divulgation" target="_blank">40+ charlas, talleres técnicos y mesas redondas</a>
 - 30+ instituciones organizadoras (inc. <b>Secretaría de Estado de Digitalización e IA · Secretaría General de Iberoamérica · Ministerio de Cultura · Centro de Supercomputación de Galicia</b>)
 - 14 países de instituciones organizadoras (inc. CH, UAE, PR, CL)
@@ -150,7 +146,7 @@ logos-lg: https://mariagrandury.ai/images/events/231114_efe_camera.png, https://
 ### Profesora de Universidad
 
 - Temas: Alineamiento de LLMs con preferencias humanas, desarrollo de LLMs multiculturales, evaluación de LLMs, IA ética
-- 40 horas de docencia impartidas
+- 40 horas de docencia impartidas, 300+ estudiantes
 - 4 universidades, 4 países (ES, CL, PY, MX)
     - 🇵🇾 Paraguay
     - 🇲🇽 México
@@ -158,14 +154,18 @@ logos-lg: https://mariagrandury.ai/images/events/231114_efe_camera.png, https://
     - Centro Nacional de IA (CENIA, Chile), 2025-2026
     - Universidad Nacional de Asunción (Paraguay), 2025
     - Universidad Nacional Autónoma de México (México), 2025    
-- 300+ estudiantes
 
 ### Promotora de Diversidad e Inclusión *
-
-logos-lg: /images/logos/forbes30under30.png
 
 - <b>Co-chair de Diversidad e Inclusión</b> en <a href="https://2026.eacl.org/committees/organization/" target="_blank">EACL 2026</a>
 - Co-organizadora de Birds-of-a-Feather en ACL & COLM 2025
 - Co-organizadora del simposio <b>Bridging Latin American NLP</b>
     - @LREC 2026
     - https://sites.google.com/view/lanlp2026/
+
+### ¡Gracias!
+
+logos-sm: /images/logos/forbes30under30.png
+
+- Todas las actividades de las secciones con asterisco <b>*</b> son altruistas, excepto la licitación de la SEDIA y 30% de las ponencias.
+- Creo profundamente en la importancia de desarrollar sistemas de IA abiertos y adecuados a cada contexto cultural, agradezco la oportunidad de difundir iniciativas relacionadas en el marco de
