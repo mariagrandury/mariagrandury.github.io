@@ -117,7 +117,7 @@ const canvasStyle = computed(() => ({
       <!-- HEADER -->
       <div class="aw-header">
         <div class="aw-header-left">
-          <img src="/images/profile/maria_grandury.png" class="aw-photo" alt="María Grandury" />
+          <img src="https://mariagrandury.ai/images/profile/maria_grandury.png" class="aw-photo" alt="María Grandury" />
           <div>
             <div class="aw-name">María Grandury</div>
             <div class="aw-roles">Fundadora · Investigadora · Divulgadora</div>
