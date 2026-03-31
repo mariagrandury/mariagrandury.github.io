@@ -293,12 +293,13 @@ const canvasStyle = computed(() => ({
   margin-bottom: 0;
 }
 .aw-section-title {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   color: #00918A;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 .aw-section-list {
   list-style: none;
@@ -308,7 +309,7 @@ const canvasStyle = computed(() => ({
   gap: 3px;
 }
 .aw-section-list li {
-  font-size: 12.5px;
+  font-size: 14.5px;
   color: #4A6070;
   line-height: 1.4;
   padding-left: 10px;

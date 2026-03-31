@@ -2,71 +2,75 @@
 
 La IA es una herramienta potente y va a estar presente en el día a día de gran parte de la población. DEBE ser abierta y estar adaptada a cada contexto cultural.
 
+El éxito se contagia y espero que la conciencia de la necesidad de una IA responsable, inclusiva y multicultural también. Quiero contagiarla con mi labor interdisciplinar como fundadora de la mayor comunidad de IA iberoamericana, investigadora de IA multilingüe y divulgadora de IA responsable.
+
+Todas las actividades de las secciones con asterisco son altruistas, excepto el punto de la licitación de la Secretaría de Estado de DIA y un tercio de las ponencias.
+
 ## Fundadora de SomosNLP.org
 
 accent: #007E75
-metric: 2K+ Miembros
-subMetrics: 5 hackathons · 7+ universidades · 4 modelos open-source
+metric: 2K+ Miembros de la comunidad
+<!-- subMetrics: 5 hackathons · 7+ universidades · 4 modelos open-source -->
 logos: /images/logos/SomosNLP.png, /images/logos/HF_Fellowship.png, /images/logos/SEDIA.png, /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
 
-### Mayor comunidad iberoamericana de PLN
+### Líder de la mayor comunidad iberoamericana *
 
-- 1ª <a href="https://somosnlp.org" target="_blank"><b>comunidad open-source iberoamericana de PLN</b></a>
-- Featured en "El País"
+- 1ª y mayor <a href="https://somosnlp.org" target="_blank"><b>comunidad open-source iberoamericana de PLN</b></a>
+- Artículo dedicado en <a href="https://elpais.com/tecnologia/2024-05-10/la-larga-marcha-de-un-grupo-de-voluntarios-por-lograr-un-chatgpt-hispano-un-modelo-entrenado-en-espanol-seria-increible.html" target="_blank"><b>El País</b></a>
 - 1er <a href="https://somosnlp.org/nlp-de-cero-a-cien" target="_blank">curso abierto de PLN en español</a>
-- 100 asistentes a eventos organizados en conferencias top: ACL, COLM, NeurIPS, EACL
-- 100% voluntario, asoc. sin ánimo de lucro
+- 50+ <a href="https://somosnlp.org/eventos" target="_blank">charlas y talleres gratuitos</a>
+- 100 asistentes a eventos org en 4 <a href="https://somosnlp.org/conferencias" target="_blank">conferencias internacionales</a>
+    - ACL, COLM, NeurIPS, EACL
+<!-- todo website -->
+- 100% voluntario, asociación sin ánimo de lucro
+
+### Org del mayor hackathon iberoamericano * 
+
+- <b>5 ediciones</b> del <a href="https://somosnlp.org/hackathon" target="_blank"> Hackathon SomosNLP</a>, 2021-2026
+- 500 registros de 20 países por edición
+- <b>400 bases de datos, modelos y apps de código abierto generadas</b> 
+    - X descargas de los recursos
+- Proyectos de temática libre relacionada con los ODS de la ONU
+- Abierto a perfiles de todos los niveles (apoyo a principiantes)
+- Inscripción gratuita y organización altruista
 - Apoyo de <b>Hugging Face · Cohere · Mistral · UPM · UNED</b>
 
-### Mayor hackathon iberoamericano de PLN
+### Dinamizadora Open-Source *
 
-- 5 ediciones del hackathon internacional
-- 500+ registros de 20+ países por edición
-- 400+ recursos abiertos generados
-    - X descargas de los recursos
-- 50+ charlas y talleres gratuitos
-- Temática libre relacionada con ODS ONU
-- Abierto a perfiles de todos los niveles
-
-### Dinamizadora Open-Source
-
-- Dirección General de IA de España e ISDEFE: ganadora de una licitación como dinamizadora técnica de IA
+- <b>Dirección General de IA de España</b> e ISDEFE: ganadora de una licitación como dinamizadora técnica de IA
 - Co-organizadora del Desafío ALIA @Talent Arena 2026
 - 1ª <a href="https://huggingface.co/mariagrandury" target="_blank"><b>Hugging Face Fellow</b></a>
-- Experta de IA para la Unión Europea
-- Equipo de 4 modelos de IA abiertos y multilingües: Apertus, LATAM-GPT, BLOOM, BERTIN
+- Experta de IA abierta para encuestas de la Unión Europea
+- Colaboración en el desarrollo de 4 LLMs abiertos y multilingües: Apertus, LATAM-GPT, BLOOM, BERTIN
     - Apertus: equipo evaluación, 2025-presente
     - LATAM-GPT: equipos datos y evaluación, 2024-presente
     - BLOOM 176B (BigScience): equipo datos, 2022
     - BERTIN: core team, 2022
-- Autónoma receptora del <a href="/docs/subvencion_fondo_de_transicion_justa.pdf" target="_blank"><b>Fondo de Transición Justa</b></a>
+- "Language Ambassador" para 4 iniciativas de recolección de datos
 
 
 ## Investigadora de IA Multicultural
 
 accent: #005E70
-metric: 17 Artículos
-subMetrics: 5 venues top · 32 co-autores · 13 grupos de investigación · 4 países
+metric: 17 artículos publicados
+<!-- subMetrics: 5 venues top · 32 co-autores · 13 grupos de investigación · 4 países -->
 logos: /images/logos/EPFL_NLP.jpeg, /images/logos/ACL_name.jpeg, /images/logos/UNED_NLP.png
 
-### Líder de "La Leaderboard"
+### Líder de "La Leaderboard" *
 
-- 1er <a href="https://huggingface.co/spaces/la-leaderboard/la-leaderboard" target="_blank"><b>ranking abierto de LLMs iberoamericano</b></a>
-- 13 grupos de investigación colaboradores
-- 4 países
-- 32 co-autores
-- 66 conjuntos de evaluación
-- 4 lenguas (ESP, CAT, EUS, GAL)
-- 50 modelos evaluados
-- <a href="https://aclanthology.org/2025.acl-long.1561/" target="_blank"><b>Paper aceptado en ACL Main 2025</b></a>: top venue mundial de PLN
-    - A+ categoría de la conferencia del paper
+- <a href="https://huggingface.co/spaces/la-leaderboard/la-leaderboard" target="_blank"><b>1er ranking abierto de LLMs iberoamericano</b></a>
+- <a href="https://aclanthology.org/2025.acl-long.1561/" target="_blank"><b>Artículo aceptado en ACL Main 2025</b></a> (20% tasa de aceptación)
+    - A+ categoría de la conferencia del artículo
     - ACL Main 2025, X% ratio de aceptación
-- 7k+ visitas a la web
-- 1000 horas de computación donadas por el BSC
+- 24 co-autores, 11 grupos de investigación, 4 países
+- 66 conjuntos de evaluación recolectados
+- 4 lenguas (español, catalán, euskera, gallego)
+- 70 modelos de lenguaje evaluados
+- 1000h de computación donadas por el <a href="https://www.bsc.es/es/marenostrum/marenostrum" target="_blank">Bcn Supercomp. Center</a>
 
 ### Investigadora de IA
 
-- 17 papers publicados
+- <a href="https://www.semanticscholar.org/author/Mar%C3%ADa-Grandury/2176184513" target="_blank">17 artículos publicados</a>
     - La Leaderboard (*), ACL Main 2025
     - Case of Spanish (*), COLM 2025 Spotlight ★
     - Measuring What Matters, NeurIPS 2025
@@ -85,22 +89,22 @@ logos: /images/logos/EPFL_NLP.jpeg, /images/logos/ACL_name.jpeg, /images/logos/U
     - BERTIN, SEPLN 2022
     - (*) primera autora
 - 30+ instituciones colaboradoras, inc. Cambridge, MIT, Oxford
+- <a href="https://melt-workshop.github.io/papers" target="_blank">Spotlight paper @COLM-MELT 2025</a> (top 12%): <i>"The Case of Spanish as a Pluricentric Language: Challenging the Monolingual Bias in NLP to Improve Cultural Adequacy of LLMs"</i>
+- Colaboración con el proyecto <a href="https://odesia.uned.es/" target="_blank">ODESIA</a> de la SEDIA
 
+### PhD en Ciencias de la Computación
+
+- Estudiante de doctorado @EPFL NLP (Suiza), 2026
+- EPFL: Top 15-30 mundial, 7% tasa de aceptación
+    - EPFL NLP: 46 artículos en los 2 últimos años
+- Master en Tecnologías de la Lengua, UNED, 2024-2025
+- Tesis de máster "Evaluación Multicultural de LLMs", 9.8
 
 ### Ingeniera de IA
 
-- 3 años de experiencia
-- 2 startups de IA (Berlín y Madrid)
-
-### Doctoranda en Ciencias de la Computación
-
-logo: /images/logos/EPFL_NLP.jpeg
-
-- Estudiante de doctorado en NLP EPFL (Suiza)
-- EPFL: Top 15-30 rankings mundiales, % acceptance rate PhD CS
-- EPFL NLP: 46 papers en los 2 últimos años
-- Master en Tecnologías de la Lengua, UNED, 2024-2025
-- 9.8 Nota de la tesis de máster "Evaluación multicultural de LLMs"
+- 3 años de experiencia, 2021-2023
+- 2 startups: Berlín (AI Safety) y Madrid (IA Multilingüe)
+- 65k€/año: salario 3 años después de graduación, dejé la industria para dedicarme a tiempo completo a SomosNLP y la investigación
 
 ### Matemática y Física 
 
@@ -109,53 +113,49 @@ logo: /images/logos/EPFL_NLP.jpeg
 - ESTALMAT (Real Academia de Ciencias)
 <!-- - ESTALMAT: Estimulación del Talento Matemático (Real Academia de Ciencias), 2011-2015 -->
 
-## Concienciadora
+## Divulgadora de IA Responsable
 
 accent: #003D55
-metric: 50+ Eventos
-subMetrics: 14 países · 7K+ visitas al artículo
+metric: 100h de ponencias y docencia
+<!-- subMetrics: 14 países · 7K+ visitas al artículo -->
 logos: /images/logos/SEDIA.png
 
-### Divulgadora de IA Responsable
+### Ponente *
 
-- 14 charlas y talleres
-- 17 mesas redondas
-- 10 instituciones organizadoras (inc. MBZUAI)
+- Temas: IA responsable, importancia del PLN multilingüe
+- 30+ charlas, talleres técnicos y mesas redondas
+- 10 instituciones organizadoras (inc. <b>Secretarías de Estado de Digitalización e IA y de Iberoamérica</b>)
 - 14 países de instituciones organizadoras
     - 🇪🇸 España
     - 🇫🇷 Francia
-    - 🇨🇭 Suiza
     - 🇦🇪 EAU
     - 🇨🇱 Chile
-    - 🇵🇾 Paraguay
-    - 🇲🇽 México
     - 🇵🇷 Puerto Rico
     - 🇦🇷 Argentina
     - 🇩🇪 Alemania
     - 🇺🇸 EE.UU.
     - 🇨🇦 Canadá
-    - 🇧🇪 Bélgica
-    - 🇪🇺 UE
-- Temas: IA responsable, importancia del PLN multilingüe
-- Página de <a href="https://es.wikipedia.org/wiki/Mar%C3%ADa_Grandury" target="_blank"><b>Wikipedia</b></a> (ES)
-- Entrevistada en <b>El País</b>
-- Mencionada en <b>RTVE · Cadena SER · Carne Cruda · BBVA</b>
+<!-- - Página de <a href="https://es.wikipedia.org/wiki/Mar%C3%ADa_Grandury" target="_blank"><b>Wikipedia</b></a> (ES) -->
+- Entrevistada en <b>Carne Cruda, Cadena SER</b> (radio) y <b>RTVE</b> (prensa)
+- Autónoma receptora del <a href="/docs/subvencion_fondo_de_transicion_justa.pdf" target="_blank"><b>Fondo de Transición Justa</b></a>
 
 ### Profesora de Universidad
 
 logos: /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
 
-- 300+ estudiantes
-- 40 horas impartidas
-- 4 universidades, 4 países
+- Temas: Alineamiento de LLMs con preferencias humanas, evaluación de LLMs, IA ética, desarrollo de LLMs multilingües
+- 40 horas de docencia impartidas
+- 4 universidades, 4 países (ES, CL, PY, MX)
+    - 🇵🇾 Paraguay
+    - 🇲🇽 México
     - Universidad de Baeza (España), 2022-2025
     - Centro Nacional de IA (CENIA, Chile), 2025-2026
     - Universidad Nacional de Asunción (Paraguay), 2025
     - Universidad Nacional Autónoma de México (México), 2025    
-- Temas: Alineamiento con preferencias humanas, evaluación de LLMs
+- 300+ estudiantes
 
-### Promotora de Diversidad e Inclusión
+### Promotora de Diversidad e Inclusión *
 
-- Diversity & Inclusion Chair @European ACL 2026
+- <b>Co-chair de Diversidad e Inclusión</b> en <a href="https://2026.eacl.org/committees/organization/" target="_blank">EACL 2026</a>
 - Co-organizadora de Birds-of-a-Feather en ACL & COLM 2025
 - Co-organizadora del taller Latin American NLP @LREC 2026
