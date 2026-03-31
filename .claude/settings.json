@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/mariagrandury/Projects/mariagrandury/mariagrandury.github.io/**)",
+      "Bash(python3:*)",
+      "Bash(python3-c \"import json; data=json.load\\(open\\(''/Users/mariagrandury/Projects/mariagrandury/mariagrandury.github.io/node_modules/@iconify/json/json/mdi.json''\\)\\); print\\(data.get\\(''info'', {}\\).get\\(''version'',''?''\\)\\); icons=[k for k in data[''icons''].keys\\(\\) if ''x'' in k.lower\\(\\) and \\(''brand'' in k.lower\\(\\) or ''twitter'' in k.lower\\(\\) or k==''x''\\)]; print\\(''\\\\n''.join\\(icons\\)\\)\")",
+      "Bash(for f:*)",
+      "Bash(do python3:*)",
+      "Bash(done)"
+    ]
+  }
+}
