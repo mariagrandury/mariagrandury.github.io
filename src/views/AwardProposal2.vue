@@ -13,8 +13,8 @@ useHead({
 
 // ── DATA ────────────────────────────────────────────────────────────────────
 
-interface SubSection { subtitle: string; items: string[] }
-interface Pillar { title: string; accent: string; metric: { num: string; label: string }; subMetrics: string; sections: SubSection[]; logos: string[] }
+interface SubSection { subtitle: string; items: string[]; logos?: string[]; logosSize?: 'sm' | 'lg' }
+interface Pillar { title: string; accent: string; metric: { num: string; label: string }; subMetrics: string; sections: SubSection[] }
 
 function parseMarkdown(md: string): Pillar[] {
   const lines = md.split('\n')
@@ -28,7 +28,7 @@ function parseMarkdown(md: string): Pillar[] {
   for (const line of lines) {
     if (line.startsWith('## ')) {
       pushPillar()
-      current = { title: line.slice(3).trim(), accent: '', metric: { num: '', label: '' }, subMetrics: '', sections: [], logos: [] }
+      current = { title: line.slice(3).trim(), accent: '', metric: { num: '', label: '' }, subMetrics: '', sections: [] }
       continue
     }
     if (!current) continue
@@ -39,7 +39,18 @@ function parseMarkdown(md: string): Pillar[] {
       continue
     }
     if (line.startsWith('subMetrics:')) { current.subMetrics = line.slice(11).trim(); continue }
-    if (line.startsWith('logos:'))      { current.logos = line.slice(6).split(',').map(s => s.trim()).filter(Boolean); continue }
+    if (line.startsWith('logos-sm:')) {
+      if (currentSection) { currentSection.logos = line.slice(9).split(',').map(s => s.trim()).filter(Boolean); currentSection.logosSize = 'sm' }
+      continue
+    }
+    if (line.startsWith('logos-lg:')) {
+      if (currentSection) { currentSection.logos = line.slice(9).split(',').map(s => s.trim()).filter(Boolean); currentSection.logosSize = 'lg' }
+      continue
+    }
+    if (line.startsWith('logos:')) {
+      if (currentSection) { currentSection.logos = line.slice(6).split(',').map(s => s.trim()).filter(Boolean); currentSection.logosSize = 'sm' }
+      continue
+    }
     if (line.startsWith('### ')) {
       pushSection()
       currentSection = { subtitle: line.slice(4).trim(), items: [] }
@@ -117,9 +128,9 @@ const canvasStyle = computed(() => ({
                 <!-- eslint-disable-next-line vue/no-v-html -->
                 <li v-for="(item, i) in s.items" :key="i" v-html="item" />
               </ul>
-            </div>
-            <div v-if="p.logos?.length" class="aw-pillar-logos">
-              <img v-for="l in p.logos" :key="l" :src="l" alt="" />
+              <div v-if="s.logos?.length" :class="['aw-section-logos', s.logosSize === 'lg' ? 'aw-section-logos-lg' : 'aw-section-logos-sm']">
+                <img v-for="l in s.logos" :key="l" :src="l" alt="" />
+              </div>
             </div>
           </div>
         </div>
@@ -320,20 +331,22 @@ const canvasStyle = computed(() => ({
 :deep(.aw-section-list a:hover) { text-decoration: underline; }
 
 /* ── LOGOS ── */
-.aw-pillar-logos {
+.aw-section-logos {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: auto;
-  padding-top: 8px;
-  border-top: 1px solid #E8F0F0;
+  justify-content: center;
+  gap: 12px;
+  margin: 8px auto 0;
 }
-.aw-pillar-logos img {
-  height: 20px;
-  width: auto; max-width: 72px;
+.aw-section-logos img {
+  width: auto;
   object-fit: contain;
-  opacity: 0.7;
+  opacity: 0.9;
+  border-radius: 8px;
+  margin-top: 8px;
 }
+.aw-section-logos-sm img { height: 60px; }
+.aw-section-logos-lg img { height: 100px; }
 
 /* ── BOTTOM BAR ── */
 .aw-bottom-bar {

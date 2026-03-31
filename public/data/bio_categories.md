@@ -11,20 +11,21 @@ Todas las actividades de las secciones con asterisco son altruistas, excepto el 
 accent: #007E75
 metric: 2K+ Miembros de la comunidad
 <!-- subMetrics: 5 hackathons · 7+ universidades · 4 modelos open-source -->
-logos: /images/logos/SomosNLP.png, /images/logos/HF_Fellowship.png, /images/logos/SEDIA.png, /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
 
 ### Líder de la mayor comunidad iberoamericana *
 
 - 1ª y mayor <a href="https://somosnlp.org" target="_blank"><b>comunidad open-source iberoamericana de PLN</b></a>
 - Artículo dedicado en <a href="https://elpais.com/tecnologia/2024-05-10/la-larga-marcha-de-un-grupo-de-voluntarios-por-lograr-un-chatgpt-hispano-un-modelo-entrenado-en-espanol-seria-increible.html" target="_blank"><b>El País</b></a>
 - 1er <a href="https://somosnlp.org/nlp-de-cero-a-cien" target="_blank">curso abierto de PLN en español</a>
-- 50+ <a href="https://somosnlp.org/eventos" target="_blank">charlas y talleres gratuitos</a>
+- 50+ <a href="https://somosnlp.org/eventos" target="_blank">charlas y talleres gratuitos</a> en español
 - 100 asistentes a eventos org en 4 <a href="https://somosnlp.org/conferencias" target="_blank">conferencias internacionales</a>
     - ACL, COLM, NeurIPS, EACL
 <!-- todo website -->
 - 100% voluntario, asociación sin ánimo de lucro
 
 ### Org del mayor hackathon iberoamericano * 
+
+logos-lg: https://mariagrandury.ai/images/logos/SomosNLP.png, https://mariagrandury.ai/images/projects/hackathon_mapa_asistentes.png
 
 - <b>5 ediciones</b> del <a href="https://somosnlp.org/hackathon" target="_blank"> Hackathon SomosNLP</a>, 2021-2026
 - 500 registros de 20 países por edición (inscripción gratuita)
@@ -35,18 +36,22 @@ logos: /images/logos/SomosNLP.png, /images/logos/HF_Fellowship.png, /images/logo
 <!-- - Inscripción gratuita y organización altruista -->
 - Apoyo de <b>Hugging Face · Cohere · Mistral · UPM · UNED</b>
 
+
 ### Dinamizadora Open-Source *
 
 - <b>Dirección General de IA de España</b> e ISDEFE: ganadora de una licitación como dinamizadora técnica de IA
 - Co-organizadora del Desafío ALIA @Talent Arena 2026
-- 1ª <a href="https://huggingface.co/mariagrandury" target="_blank"><b>Hugging Face Fellow</b></a>
+- 1ª <a href="https://huggingface.co/mariagrandury" target="_blank"><b>Hugging Face Fellow</b></a> por contribuciones a la comunidad OS
 - Experta de IA abierta para encuestas de la Unión Europea
-- Colaboración en el desarrollo de 4 LLMs abiertos y multilingües: Apertus, LATAM-GPT, BLOOM, BERTIN
+- Contribución a 4 LLMs OS: Apertus, LATAM-GPT, BLOOM, BERTIN
     - Apertus: equipo evaluación, 2025-presente
     - LATAM-GPT: equipos datos y evaluación, 2024-presente
     - BLOOM 176B (BigScience): equipo datos, 2022
     - BERTIN: core team, 2022
-- "Language Ambassador" para 4 iniciativas de recolección de datos
+- "Language Ambassador" de 4 iniciativas de recolección de datos
+- Colaboración con el proyecto <a href="https://odesia.uned.es/" target="_blank">ODESIA</a> de la SEDIA
+
+logos-sm: /images/logos/UE_SEDIA.png
 
 
 ## Investigadora de IA Multicultural
@@ -54,21 +59,22 @@ logos: /images/logos/SomosNLP.png, /images/logos/HF_Fellowship.png, /images/logo
 accent: #005E70
 metric: 17 artículos publicados
 <!-- subMetrics: 5 venues top · 32 co-autores · 13 grupos de investigación · 4 países -->
-logos: /images/logos/EPFL_NLP.jpeg, /images/logos/ACL_name.jpeg, /images/logos/UNED_NLP.png
 
 ### Líder de "La Leaderboard" *
 
-- <a href="https://huggingface.co/spaces/la-leaderboard/la-leaderboard" target="_blank"><b>1er ranking abierto de LLMs iberoamericano</b></a>
+- <a href="https://huggingface.co/spaces/la-leaderboard/la-leaderboard" target="_blank"><b>1er ranking abierto de LLMs iberoamericano,</b></a> 7k+ visitas
 - <a href="https://aclanthology.org/2025.acl-long.1561/" target="_blank"><b>Artículo aceptado en ACL Main 2025</b></a> (20% tasa de aceptación)
     - A+ categoría de la conferencia del artículo
     - ACL Main 2025, X% ratio de aceptación
 - 24 co-autores, 11 grupos de investigación, 4 países
-- 66 conjuntos de evaluación recolectados
-- 4 lenguas (español, catalán, euskera, gallego)
+- 66 conjuntos de evaluación recolectados, 4 lenguas oficiales de ES
 - 70 modelos de lenguaje evaluados
 - 1000h de computación donadas por el <a href="https://www.bsc.es/es/marenostrum/marenostrum" target="_blank">Bcn Supercomp. Center</a>
 
 ### Investigadora de IA
+
+logos-sm: /images/logos/EPFL_NLP.jpeg, /images/logos/UPM.jpeg, /images/logos/UNED_NLP.png, /images/logos/UniCambridge_square.png, /images/logos/BSC.png, /images/logos/HiTZ.png
+
 
 - <a href="https://www.semanticscholar.org/author/Mar%C3%ADa-Grandury/2176184513" target="_blank">17 artículos publicados</a>
     - La Leaderboard (*), ACL Main 2025
@@ -90,7 +96,6 @@ logos: /images/logos/EPFL_NLP.jpeg, /images/logos/ACL_name.jpeg, /images/logos/U
     - (*) primera autora
 - 30+ instituciones colaboradoras, inc. Cambridge, MIT, Oxford
 - <a href="https://melt-workshop.github.io/papers" target="_blank">Spotlight paper @COLM-MELT 2025</a> (top 12%): <i>"The Case of Spanish as a Pluricentric Language: Challenging the Monolingual Bias in NLP to Improve Cultural Adequacy of LLMs"</i>
-- Colaboración con el proyecto <a href="https://odesia.uned.es/" target="_blank">ODESIA</a> de la SEDIA
 
 ### PhD en Ciencias de la Computación
 
@@ -108,7 +113,7 @@ logos: /images/logos/EPFL_NLP.jpeg, /images/logos/ACL_name.jpeg, /images/logos/U
 
 ### Matemática y Física 
 
-- 2 Grados en Matemáticas y Física, UniOviedo, 2015-2020
+- 2 Grados en Matemáticas y Física, Oviedo, 2015-2020
 - Erasmus en Université Paris-Saclay, 2018-2019
 - ESTALMAT (Real Academia de Ciencias), 2010-2015
 <!-- - ESTALMAT: Estimulación del Talento Matemático (Real Academia de Ciencias), 2011-2015 -->
@@ -121,6 +126,8 @@ metric: 100h de ponencias y docencia
 logos: /images/logos/SEDIA.png
 
 ### Ponente *
+
+logos-lg: https://mariagrandury.ai/images/events/231114_efe_camera.png, https://mariagrandury.ai/images/events/230529_mesa_redonda.png
 
 - Temas: IA responsable, importancia del PLN multilingüe
 - <a href="https://mariagrandury.ai/divulgation" target="_blank">40+ charlas, talleres técnicos y mesas redondas</a>
@@ -154,6 +161,8 @@ logos: /images/logos/SEDIA.png
 - 300+ estudiantes
 
 ### Promotora de Diversidad e Inclusión *
+
+logos-lg: /images/logos/forbes30under30.png
 
 - <b>Co-chair de Diversidad e Inclusión</b> en <a href="https://2026.eacl.org/committees/organization/" target="_blank">EACL 2026</a>
 - Co-organizadora de Birds-of-a-Feather en ACL & COLM 2025
