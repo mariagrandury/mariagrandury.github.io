@@ -107,7 +107,7 @@ const canvasStyle = computed(() => ({
             <div class="aw-roles">Fundadora · Investigadora · Divulgadora</div>
           </div>
         </div>
-        <div class="aw-mission">Democratizar el acceso a la IA responsable, abierta y multicultural</div>
+        <div class="aw-mission">Democratizar el acceso a una IA responsable, abierta y multicultural</div>
       </div>
 
       <!-- THREE PILLARS -->
@@ -225,7 +225,7 @@ const canvasStyle = computed(() => ({
   font-weight: 800;
   color: #fff;
   text-align: right;
-  max-width: 620px;
+  max-width: 800px;
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
@@ -257,7 +257,7 @@ const canvasStyle = computed(() => ({
   font-weight: 800;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
 }
 .aw-pillar-body {
   background: #fff;
