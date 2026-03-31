@@ -144,10 +144,12 @@ const canvasStyle = computed(() => ({
                 <li v-for="(item, i) in s.items" :key="i" :class="item.tooltip ? 'aw-has-tooltip' : ''">
                   <!-- eslint-disable-next-line vue/no-v-html -->
                   <span v-html="item.text" />
-                  <span v-if="item.tooltip" class="aw-tip-icon" aria-hidden="true">ⓘ</span>
-                  <span v-if="item.tooltip" class="aw-tooltip">
-                    <!-- eslint-disable-next-line vue/no-v-html -->
-                    <span v-for="line in item.tooltip" :key="line" class="aw-tooltip-line" v-html="line" />
+                  <span v-if="item.tooltip" class="aw-tip-wrapper">
+                    <span class="aw-tip-icon" aria-hidden="true">ⓘ</span>
+                    <span class="aw-tooltip">
+                      <!-- eslint-disable-next-line vue/no-v-html -->
+                      <span v-for="line in item.tooltip" :key="line" class="aw-tooltip-line" v-html="line" />
+                    </span>
                   </span>
                 </li>
               </ul>
@@ -267,7 +269,7 @@ const canvasStyle = computed(() => ({
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 .aw-pillar-head {
@@ -275,6 +277,7 @@ const canvasStyle = computed(() => ({
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  border-radius: 8px 8px 0 0;
 }
 .aw-pillar-title {
   font-size: 16px;
@@ -289,7 +292,8 @@ const canvasStyle = computed(() => ({
   padding: 14px 18px 12px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
+  border-radius: 0 0 8px 8px;
 }
 .aw-pillar-metric {
   display: flex;
@@ -354,17 +358,20 @@ const canvasStyle = computed(() => ({
 :deep(.aw-section-list a) { color: #00918A; text-decoration: none; }
 :deep(.aw-section-list a:hover) { text-decoration: underline; }
 
-.aw-has-tooltip { cursor: help; position: relative; }
-.aw-tip-icon { font-size: 10px; color: #00918A; margin-left: 3px; vertical-align: super; line-height: 1; flex-shrink: 0; }
+.aw-has-tooltip { cursor: help; }
+.aw-tip-wrapper { position: relative; display: inline; }
+.aw-tip-icon { font-size: 10px; color: #00918A; margin-left: 3px; vertical-align: super; line-height: 1; cursor: help; }
 .aw-tooltip {
   display: none;
-  position: absolute; bottom: calc(100% + 6px); left: 0;
+  position: absolute; top: 0; left: calc(100% + 4px);
   background: #fff; border: 1.5px solid #00C9B1; border-radius: 8px;
   padding: 10px 14px; min-width: 260px; max-width: 460px;
   z-index: 200; box-shadow: 0 6px 24px rgba(0,0,0,0.14);
   flex-direction: column; gap: 3px;
 }
-.aw-has-tooltip:hover .aw-tooltip { display: flex; }
+.aw-tip-wrapper:hover .aw-tooltip { display: flex; }
+/* Flip tooltip to the left for the last pillar */
+.aw-pillar:last-child .aw-tooltip { left: auto; right: calc(100% + 4px); }
 .aw-tooltip-line { font-size: 12px; color: #1A2A3A; line-height: 1.45; white-space: nowrap; }
 .aw-tooltip-line::before { content: '›  '; color: #00C9B1; font-weight: 700; }
 :deep(.aw-tooltip-line a) { color: #00918A; text-decoration: none; }
