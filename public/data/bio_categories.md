@@ -27,12 +27,12 @@ logos: /images/logos/SomosNLP.png, /images/logos/HF_Fellowship.png, /images/logo
 ### Org del mayor hackathon iberoamericano * 
 
 - <b>5 ediciones</b> del <a href="https://somosnlp.org/hackathon" target="_blank"> Hackathon SomosNLP</a>, 2021-2026
-- 500 registros de 20 países por edición
+- 500 registros de 20 países por edición (inscripción gratuita)
 - <b>400 bases de datos, modelos y apps de código abierto generadas</b> 
     - X descargas de los recursos
 - Proyectos de temática libre relacionada con los ODS de la ONU
 - Abierto a perfiles de todos los niveles (apoyo a principiantes)
-- Inscripción gratuita y organización altruista
+<!-- - Inscripción gratuita y organización altruista -->
 - Apoyo de <b>Hugging Face · Cohere · Mistral · UPM · UNED</b>
 
 ### Dinamizadora Open-Source *
@@ -94,11 +94,11 @@ logos: /images/logos/EPFL_NLP.jpeg, /images/logos/ACL_name.jpeg, /images/logos/U
 
 ### PhD en Ciencias de la Computación
 
-- Estudiante de doctorado @EPFL NLP (Suiza), 2026
-- EPFL: Top 15-30 mundial, 7% tasa de aceptación
+- <b>Estudiante de doctorado</b> @EPFL NLP, 2026
+- EPFL: Top 15-30 mundial, <b>7%</b> tasa de aceptación
     - EPFL NLP: 46 artículos en los 2 últimos años
 - Master en Tecnologías de la Lengua, UNED, 2024-2025
-- Tesis de máster "Evaluación Multicultural de LLMs", 9.8
+- Tesis de máster sobre evaluación multicultural de LLMs: 9.8
 
 ### Ingeniera de IA
 
@@ -110,7 +110,7 @@ logos: /images/logos/EPFL_NLP.jpeg, /images/logos/ACL_name.jpeg, /images/logos/U
 
 - 2 Grados en Matemáticas y Física, UniOviedo, 2015-2020
 - Erasmus en Université Paris-Saclay, 2018-2019
-- ESTALMAT (Real Academia de Ciencias)
+- ESTALMAT (Real Academia de Ciencias), 2010-2015
 <!-- - ESTALMAT: Estimulación del Talento Matemático (Real Academia de Ciencias), 2011-2015 -->
 
 ## Divulgadora de IA Responsable
@@ -123,11 +123,12 @@ logos: /images/logos/SEDIA.png
 ### Ponente *
 
 - Temas: IA responsable, importancia del PLN multilingüe
-- 30+ charlas, talleres técnicos y mesas redondas
-- 10 instituciones organizadoras (inc. <b>Secretarías de Estado de Digitalización e IA y de Iberoamérica</b>)
-- 14 países de instituciones organizadoras
+- <a href="https://mariagrandury.ai/divulgation" target="_blank">40+ charlas, talleres técnicos y mesas redondas</a>
+- 30+ instituciones organizadoras (inc. <b>Secretaría de Estado de Digitalización e IA · Secretaría General de Iberoamérica · Ministerio de Cultura · Centro de Supercomputación de Galicia</b>)
+- 14 países de instituciones organizadoras (inc. CH, UAE, PR, CL)
     - 🇪🇸 España
     - 🇫🇷 Francia
+    - 🇨🇭 Suiza
     - 🇦🇪 EAU
     - 🇨🇱 Chile
     - 🇵🇷 Puerto Rico
@@ -137,13 +138,11 @@ logos: /images/logos/SEDIA.png
     - 🇨🇦 Canadá
 <!-- - Página de <a href="https://es.wikipedia.org/wiki/Mar%C3%ADa_Grandury" target="_blank"><b>Wikipedia</b></a> (ES) -->
 - Entrevistada en <b>Carne Cruda, Cadena SER</b> (radio) y <b>RTVE</b> (prensa)
-- Autónoma receptora del <a href="/docs/subvencion_fondo_de_transicion_justa.pdf" target="_blank"><b>Fondo de Transición Justa</b></a>
+- Autónoma receptora del <a href="https://mariagrandury.ai/docs/subvencion_fondo_de_transicion_justa.pdf" target="_blank"><b>Fondo de Transición Justa</b></a> de España
 
 ### Profesora de Universidad
 
-logos: /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
-
-- Temas: Alineamiento de LLMs con preferencias humanas, evaluación de LLMs, IA ética, desarrollo de LLMs multilingües
+- Temas: Alineamiento de LLMs con preferencias humanas, desarrollo de LLMs multiculturales, evaluación de LLMs, IA ética
 - 40 horas de docencia impartidas
 - 4 universidades, 4 países (ES, CL, PY, MX)
     - 🇵🇾 Paraguay
@@ -158,4 +157,6 @@ logos: /images/logos/UNED_NLP.png, /images/logos/UPM.jpeg
 
 - <b>Co-chair de Diversidad e Inclusión</b> en <a href="https://2026.eacl.org/committees/organization/" target="_blank">EACL 2026</a>
 - Co-organizadora de Birds-of-a-Feather en ACL & COLM 2025
-- Co-organizadora del taller Latin American NLP @LREC 2026
+- Co-organizadora del simposio <b>Bridging Latin American NLP</b>
+    - @LREC 2026
+    - https://sites.google.com/view/lanlp2026/
