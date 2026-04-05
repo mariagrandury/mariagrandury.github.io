@@ -2,7 +2,7 @@
 import { ref, computed, onMounted } from "vue";
 import { useInterval } from "@vueuse/core";
 import { useLanguage } from "../composables/useLanguage";
-import { parsePapersCSV, type Paper } from "../utils/csvParser";
+import { parsePapersCSV, parseEntitiesCSV, type Paper, type Entity } from "../utils/csvParser";
 
 const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
@@ -11,18 +11,31 @@ const index = computed(() => counter.value % greetings.value.length);
 const { lang } = useLanguage();
 
 const papers = ref<Paper[]>([]);
+const entities = ref<Entity[]>([]);
 
 onMounted(async () => {
   try {
-    const response = await fetch("/data/papers.csv");
-    papers.value = parsePapersCSV(await response.text());
+    const [papersResponse, entitiesResponse] = await Promise.all([
+      fetch("/data/papers.csv"),
+      fetch("/data/entities.csv"),
+    ]);
+    papers.value = parsePapersCSV(await papersResponse.text());
+    entities.value = parseEntitiesCSV(await entitiesResponse.text());
   } catch (error) {
-    console.error("Error loading papers:", error);
+    console.error("Error loading data:", error);
   }
 });
 
 const highlightPapers = computed(() =>
   papers.value.filter((paper) => paper.status === "highlights")
+);
+
+const researchCollabs = computed(() =>
+  entities.value.filter((e) => e.section === "research" && e.logo)
+);
+
+const speakerCollabs = computed(() =>
+  entities.value.filter((e) => e.section === "speaker" && e.logo)
 );
 </script>
 
@@ -273,6 +286,62 @@ const highlightPapers = computed(() =>
           "
           to="/research"
         >{{ lang === 'en' ? 'More Research' : 'Más Investigación' }}</router-link>
+      </div>
+
+    </div>
+  </Container>
+
+  <Container class="bg-white dark:bg-gray-900">
+    <div class="h-full grid gap-8 place-items-center lg:py-8">
+
+      <div class="px-8 w-full">
+        <div class="text-3xl mb-4">
+          {{ lang === 'en' ? 'Research collaborations' : 'Colaboraciones de investigación' }}
+        </div>
+        <div class="flex flex-wrap gap-6 py-4 items-center">
+          <a
+            v-for="entity in researchCollabs"
+            :key="entity.name"
+            :href="entity.url || '#'"
+            :target="entity.url ? '_blank' : '_self'"
+            :title="entity.name"
+            class="flex items-center justify-center p-2 rounded hover:opacity-100 transition-opacity"
+            style="filter: grayscale(1); opacity: 0.7;"
+            onmouseover="this.style.filter='grayscale(0)'; this.style.opacity='1';"
+            onmouseout="this.style.filter='grayscale(1)'; this.style.opacity='0.7';"
+          >
+            <img :src="entity.logo" :alt="entity.name" class="max-h-12 max-w-28 object-contain" />
+          </a>
+        </div>
+        <router-link
+          class="inline-flex items-center gap-2 mt-2 font-medium text-sm border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400 px-4 py-2"
+          to="/research"
+        >{{ lang === 'en' ? 'See more' : 'Ver más' }}</router-link>
+      </div>
+
+      <div class="px-8 w-full">
+        <div class="text-3xl mb-4">
+          {{ lang === 'en' ? 'Speaker collaborations' : 'Colaboraciones como ponente' }}
+        </div>
+        <div class="flex flex-wrap gap-6 py-4 items-center">
+          <a
+            v-for="entity in speakerCollabs"
+            :key="entity.name"
+            :href="entity.url || '#'"
+            :target="entity.url ? '_blank' : '_self'"
+            :title="entity.name"
+            class="flex items-center justify-center p-2 rounded hover:opacity-100 transition-opacity"
+            style="filter: grayscale(1); opacity: 0.7;"
+            onmouseover="this.style.filter='grayscale(0)'; this.style.opacity='1';"
+            onmouseout="this.style.filter='grayscale(1)'; this.style.opacity='0.7';"
+          >
+            <img :src="entity.logo" :alt="entity.name" class="max-h-12 max-w-28 object-contain" />
+          </a>
+        </div>
+        <router-link
+          class="inline-flex items-center gap-2 mt-2 font-medium text-sm border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400 px-4 py-2"
+          to="/divulgation"
+        >{{ lang === 'en' ? 'See more' : 'Ver más' }}</router-link>
       </div>
 
     </div>
