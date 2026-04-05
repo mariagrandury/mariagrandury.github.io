@@ -20,6 +20,12 @@ const props = defineProps<{
     abstract?: string;
 }>();
 
+// Extract year from date string (e.g. "2025-04" → "2025")
+const year = computed(() => {
+    if (!props.date) return null;
+    return props.date.substring(0, 4);
+});
+
 // Determine recording icon based on event type
 const recordingIcon = computed(() => {
     if (!props.type) return 'mdi:youtube';
@@ -43,7 +49,7 @@ const recordingIcon = computed(() => {
                 <h1 class="text-lg">{{ talk }}</h1>
                 <div class="text-gray-500 text-sm">{{ event }}</div>
                 <div class="flex flex-wrap gap-3">
-                    <div v-for="(tag, index) in [type, location]" :key="index"
+                    <div v-for="(tag, index) in [year, type, location].filter(Boolean)" :key="index"
                         class="border rounded bg-gray-50 border-gray-100 text-sm py-0.5 px-2 select-none dark:border-black dark:bg-gray-700">
                         {{ tag }}</div>
                 </div>
