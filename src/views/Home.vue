@@ -2,7 +2,7 @@
 import { ref, computed, onMounted } from "vue";
 import { useInterval } from "@vueuse/core";
 import { useLanguage } from "../composables/useLanguage";
-import { parsePapersCSV, type Paper } from "../utils/csvParser";
+import { parsePapersCSV, parseProjectsCSV, type Paper, type Project } from "../utils/csvParser";
 
 const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
@@ -11,18 +11,27 @@ const index = computed(() => counter.value % greetings.value.length);
 const { lang } = useLanguage();
 
 const papers = ref<Paper[]>([]);
+const projects = ref<Project[]>([]);
 
 onMounted(async () => {
   try {
-    const response = await fetch("/data/papers.csv");
-    papers.value = parsePapersCSV(await response.text());
+    const [papersResponse, projectsResponse] = await Promise.all([
+      fetch("/data/papers.csv"),
+      fetch("/data/projects.csv"),
+    ]);
+    papers.value = parsePapersCSV(await papersResponse.text());
+    projects.value = parseProjectsCSV(await projectsResponse.text());
   } catch (error) {
-    console.error("Error loading papers:", error);
+    console.error("Error loading data:", error);
   }
 });
 
 const highlightPapers = computed(() =>
   papers.value.filter((paper) => paper.status === "highlights")
+);
+
+const featuredProjects = computed(() =>
+  projects.value.filter((project) => project.status === "featured")
 );
 </script>
 
@@ -103,6 +112,35 @@ const highlightPapers = computed(() =>
     </div>
   </Container>
 
+  <Container class="bg-yellow-50 dark:bg-yellow-900">
+    <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
+      <div class="px-8">
+        <div class="text-2xl font-medium mb-6">
+          {{ lang === 'en'
+            ? 'Do you speak Spanish and would you like to help adapt AI systems to your language and culture?'
+            : '¿Hablas español y te gustaría ayudar a adecuar los sistemas de IA a tu lengua y cultura?' }}
+        </div>
+        <a
+          href="https://somosnlp.org"
+          target="_blank"
+          class="inline-flex items-center gap-3 font-semibold px-6 py-3 rounded-md bg-yellow-500 hover:bg-yellow-400 text-white dark:bg-yellow-600 dark:hover:bg-yellow-500 transition-colors"
+        >
+          {{ lang === 'en' ? 'Join SomosNLP!' : '¡Únete a SomosNLP!' }}
+          <i-fluent-arrow-right-24-regular style="font-size: 1.25rem" />
+        </a>
+      </div>
+      <div class="flex justify-center items-center px-8">
+        <a href="https://somosnlp.org" target="_blank">
+          <img
+            src="/images/logos/SomosNLP.svg"
+            alt="SomosNLP"
+            class="max-w-xs w-full"
+          />
+        </a>
+      </div>
+    </div>
+  </Container>
+
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
 
@@ -112,36 +150,15 @@ const highlightPapers = computed(() =>
         </div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardProject
-            title="SomosNLP"
-            :tags="['My 💛 project']"
-            link="https://somosnlp.org"
-            color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
-          >
-            <i-fluent-heart-20-regular />
-            <template v-slot:description>
-              <div class="text-sm text-gray-700 dark:text-white">
-                {{ lang === 'en'
-                  ? 'Did you know that we are 600 million Spanish-speaking individuals around the world? SomosNLP.org is an international community aiming to represent in AI the linguistic diversity of the languages spoken by all these persons.'
-                  : '¿Sabías que somos 600 millones de hispanohablantes en el mundo? SomosNLP.org es una comunidad internacional que busca representar en la IA la diversidad lingüística de todos estos idiomas.' }}
-              </div>
-            </template>
-          </CardProject>
-
-          <CardProject
-            title="La Leaderboard"
-            :tags="['SomosNLP', 'Project #Somos600M']"
-            link="https://huggingface.co/spaces/la-leaderboard/la-leaderboard"
-            color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
-          >
-            <i-fluent-rocket-24-regular />
-            <template v-slot:description>
-              <div class="text-sm text-gray-700 dark:text-white">
-                {{ lang === 'en'
-                  ? 'We have created the first open leaderboard to evaluate LLMs in languages and language varieties from LATAM, the Caribbean and Spain. Join us!'
-                  : 'Hemos creado la primera leaderboard abierta para evaluar LLMs en lenguas y variedades lingüísticas de LATAM, el Caribe y España. ¡Únete!' }}
-              </div>
-            </template>
-          </CardProject>
+            v-for="project in featuredProjects"
+            :key="project.title"
+            :title="project.title"
+            :tags="project.tags"
+            :link="project.link"
+            :color="project.color"
+            :icon="project.icon"
+            :description="project.description"
+          />
         </div>
       </div>
 
