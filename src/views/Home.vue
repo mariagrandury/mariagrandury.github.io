@@ -2,7 +2,7 @@
 import { ref, computed, onMounted } from "vue";
 import { useInterval } from "@vueuse/core";
 import { useLanguage } from "../composables/useLanguage";
-import { parsePapersCSV, type Paper } from "../utils/csvParser";
+import { parsePapersCSV, parseEventsCSV, type Paper, type Event } from "../utils/csvParser";
 
 const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
@@ -11,18 +11,27 @@ const index = computed(() => counter.value % greetings.value.length);
 const { lang } = useLanguage();
 
 const papers = ref<Paper[]>([]);
+const events = ref<Event[]>([]);
 
 onMounted(async () => {
   try {
-    const response = await fetch("/data/papers.csv");
-    papers.value = parsePapersCSV(await response.text());
+    const [papersResponse, eventsResponse] = await Promise.all([
+      fetch("/data/papers.csv"),
+      fetch("/data/events.csv"),
+    ]);
+    papers.value = parsePapersCSV(await papersResponse.text());
+    events.value = parseEventsCSV(await eventsResponse.text());
   } catch (error) {
-    console.error("Error loading papers:", error);
+    console.error("Error loading data:", error);
   }
 });
 
 const highlightPapers = computed(() =>
   papers.value.filter((paper) => paper.status === "highlights")
+);
+
+const highlightTalks = computed(() =>
+  events.value.filter((event) => event.status === "highlights")
 );
 </script>
 
@@ -208,17 +217,16 @@ const highlightPapers = computed(() =>
         </div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardMediaSummary
-            talk="Machines that reflect us: Building AI systems responsibly"
-            event="Women in Data Science Zurich | Round Table"
-            event_link="https://www.wids.ch/"
-            image_link="images/events/240607_wids.jpeg"
-            recording_link=""
-            :tags="['Responsible AI', 'Explainable AI', '🇬🇧']"
+            v-for="talk in highlightTalks"
+            :key="talk.talk"
+            :talk="talk.talk"
+            :event="talk.event"
+            :event_link="talk.event_link"
+            :image_link="talk.image_link"
+            :recording_link="talk.recording_link"
+            :tags="talk.tags"
           >
             <i-tabler:external-link style="font-size: 1.25rem" />
-            <template v-slot:abstract>
-              <div class="text-sm text-gray-700 dark:text-white"></div>
-            </template>
           </CardMediaSummary>
         </div>
       </div>
