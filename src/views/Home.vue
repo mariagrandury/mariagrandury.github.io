@@ -112,7 +112,7 @@ const featuredProjects = computed(() =>
     </div>
   </Container>
 
-  <Container class="bg-yellow-50 dark:bg-yellow-900">
+  <Container class="bg-yellow-50 dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
       <div class="px-8">
         <div class="text-2xl font-medium mb-6">
