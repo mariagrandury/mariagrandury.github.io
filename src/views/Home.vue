@@ -292,13 +292,18 @@ const speakerCollabs = computed(() =>
   </Container>
 
   <Container class="bg-white dark:bg-gray-900">
-    <div class="h-full grid gap-8 place-items-center lg:py-8">
+    <div class="lg:py-8">
 
-      <div class="px-8 w-full">
-        <div class="text-3xl mb-4">
-          {{ lang === 'en' ? 'Research collaborations' : 'Colaboraciones de investigación' }}
+      <div class="text-3xl mb-8">
+        {{ lang === 'en' ? 'Collaborations' : 'Colaboraciones' }}
+      </div>
+
+      <!-- Research collaborations -->
+      <div class="mb-10">
+        <div class="text-xl font-medium text-right text-gray-500 dark:text-gray-400 mb-4">
+          {{ lang === 'en' ? '... as researcher' : '... como investigadora' }}
         </div>
-        <div class="flex flex-wrap gap-6 py-4 items-center">
+        <div class="flex flex-wrap gap-6 py-4 justify-center items-center">
           <a
             v-for="entity in researchCollabs"
             :key="entity.name"
@@ -313,17 +318,20 @@ const speakerCollabs = computed(() =>
             <img :src="entity.logo" :alt="entity.name" class="max-h-12 max-w-28 object-contain" />
           </a>
         </div>
-        <router-link
-          class="inline-flex items-center gap-2 mt-2 font-medium text-sm border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400 px-4 py-2"
-          to="/research"
-        >{{ lang === 'en' ? 'See more' : 'Ver más' }}</router-link>
+        <div class="flex justify-center mt-4">
+          <router-link
+            class="inline-flex items-center gap-2 font-medium text-sm border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400 px-4 py-2"
+            to="/research"
+          >{{ lang === 'en' ? 'See more' : 'Ver más' }}</router-link>
+        </div>
       </div>
 
-      <div class="px-8 w-full">
-        <div class="text-3xl mb-4">
-          {{ lang === 'en' ? 'Speaker collaborations' : 'Colaboraciones como ponente' }}
+      <!-- Speaker collaborations -->
+      <div>
+        <div class="text-xl font-medium text-right text-gray-500 dark:text-gray-400 mb-4">
+          {{ lang === 'en' ? '... as speaker' : '... como ponente' }}
         </div>
-        <div class="flex flex-wrap gap-6 py-4 items-center">
+        <div class="flex flex-wrap gap-6 py-4 justify-center items-center">
           <a
             v-for="entity in speakerCollabs"
             :key="entity.name"
@@ -338,10 +346,12 @@ const speakerCollabs = computed(() =>
             <img :src="entity.logo" :alt="entity.name" class="max-h-12 max-w-28 object-contain" />
           </a>
         </div>
-        <router-link
-          class="inline-flex items-center gap-2 mt-2 font-medium text-sm border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400 px-4 py-2"
-          to="/divulgation"
-        >{{ lang === 'en' ? 'See more' : 'Ver más' }}</router-link>
+        <div class="flex justify-center mt-4">
+          <router-link
+            class="inline-flex items-center gap-2 font-medium text-sm border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400 px-4 py-2"
+            to="/divulgation"
+          >{{ lang === 'en' ? 'See more' : 'Ver más' }}</router-link>
+        </div>
       </div>
 
     </div>
