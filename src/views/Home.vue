@@ -128,7 +128,7 @@ const highlightTalks = computed(() =>
         <a
           href="https://somosnlp.org"
           target="_blank"
-          class="inline-flex items-center gap-3 font-semibold px-6 py-3 rounded-md bg-yellow-500 hover:bg-yellow-400 text-white dark:bg-yellow-600 dark:hover:bg-yellow-500 transition-colors"
+          class="inline-flex items-center gap-3 font-semibold px-6 py-3 rounded-md bg-yellow-500 hover:bg-yellow-400 text-white dark:bg-yellow-500 dark:hover:bg-yellow-400 transition-colors"
         >
           {{ lang === 'en' ? 'Join SomosNLP.org!' : '¡Únete a SomosNLP.org!' }}
           <i-fluent-arrow-right-24-regular style="font-size: 1.25rem" />
