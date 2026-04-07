@@ -118,7 +118,7 @@ const featuredProjects = computed(() =>
         <div class="text-2xl font-medium mb-6">
           {{ lang === 'en'
             ? 'Do you speak Spanish or Portuguese? Would you like to help adapt AI systems to your language and culture?'
-            : '¿Hablas español y te gustaría ayudar a adecuar los sistemas de IA a tu lengua y cultura?' }}
+            : '¿Hablas español o portugués? ¿Te gustaría ayudar a adecuar los sistemas de IA a tu lengua y cultura?' }}
         </div>
         <a
           href="https://somosnlp.org"
