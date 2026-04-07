@@ -1,6 +1,7 @@
 // Shared CSV parsing utilities
 
 export interface Event {
+  status?: string;
   year: string;
   date: string;
   talk: string;
@@ -86,43 +87,70 @@ export function parseCSVLine(line: string): string[] {
   return result;
 }
 
-// Parse events CSV
+// Parse events CSV (header row defines column order)
 export function parseEventsCSV(csvText: string): Event[] {
   const lines = csvText.trim().split("\n");
   if (lines.length < 2) return [];
 
-  const headers = lines[0].split(",");
+  const headers = parseCSVLine(lines[0]).map((h) => h.trim());
+  const col = (name: string) => headers.indexOf(name);
+  const idx = {
+    status: col("status"),
+    year: col("year"),
+    date: col("date"),
+    talk: col("talk"),
+    organizer: col("organizer"),
+    event: col("event"),
+    event_link: col("event_link"),
+    recording_link: col("recording_link"),
+    sm_link: col("sm_link"),
+    image_link: col("image_link"),
+    type: col("type"),
+    location: col("location"),
+    language: col("language"),
+    abstract: col("abstract"),
+    tags: col("tags"),
+  };
+
+  const get = (values: string[], index: number) => {
+    if (index < 0) return "";
+    return (values[index] || "").trim();
+  };
+
   const data: Event[] = [];
 
   for (let i = 1; i < lines.length; i++) {
     const values = parseCSVLine(lines[i]);
-    if (values.length !== headers.length) continue;
+    if (values.length < headers.length - 1) continue;
 
+    const tagsRaw = get(values, idx.tags);
     const event: Event = {
-      year: (values[0] || "").trim(),
-      date: (values[1] || "").trim(),
-      talk: (values[2] || "").trim(),
-      organizer: (values[3] || "").trim(),
-      event: (values[4] || "").trim(),
-      event_link: (values[5] || "").trim(),
-      recording_link: (values[6] || "").trim(),
-      sm_link: (values[7] || "").trim(),
-      image_link: (values[8] || "").trim(),
-      type: (values[9] || "").trim(),
-      location: (values[10] || "").trim(),
-      language: (values[11] || "").trim(),
-      abstract: (values[12] || "").trim(),
-      tags: values[13] ? values[13].split(",").map((tag) => tag.trim()) : [],
+      status: get(values, idx.status) || undefined,
+      year: get(values, idx.year),
+      date: get(values, idx.date),
+      talk: get(values, idx.talk),
+      organizer: get(values, idx.organizer) || undefined,
+      event: get(values, idx.event),
+      event_link: get(values, idx.event_link),
+      recording_link: get(values, idx.recording_link) || undefined,
+      sm_link: get(values, idx.sm_link) || undefined,
+      image_link: get(values, idx.image_link) || undefined,
+      type: get(values, idx.type) || undefined,
+      location: get(values, idx.location) || undefined,
+      language: get(values, idx.language),
+      abstract: get(values, idx.abstract) || undefined,
+      tags: tagsRaw ? tagsRaw.split(",").map((tag) => tag.trim()) : [],
     };
 
-    // Clean up empty strings - set to undefined so they're not passed as props
-    if (!event.organizer || event.organizer === "") delete event.organizer;
-    if (!event.recording_link || event.recording_link === "") delete event.recording_link;
-    if (!event.abstract || event.abstract === "") delete event.abstract;
-    if (!event.sm_link || event.sm_link === "") delete event.sm_link;
-    if (!event.image_link || event.image_link === "") delete event.image_link;
-    if (!event.type || event.type === "") delete event.type;
-    if (!event.location || event.location === "") delete event.location;
+    // Clean up undefined fields
+    if (!event.status) delete event.status;
+    if (!event.organizer) delete event.organizer;
+    if (!event.recording_link) delete event.recording_link;
+    if (!event.abstract) delete event.abstract;
+    if (!event.sm_link) delete event.sm_link;
+    if (!event.image_link) delete event.image_link;
+    if (!event.type) delete event.type;
+    if (!event.location) delete event.location;
 
     data.push(event);
   }
