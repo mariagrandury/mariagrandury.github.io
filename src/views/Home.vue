@@ -2,7 +2,7 @@
 import { ref, computed, onMounted } from "vue";
 import { useInterval } from "@vueuse/core";
 import { useLanguage } from "../composables/useLanguage";
-import { parsePapersCSV, parseEventsCSV, type Paper, type Project, type Event } from "../utils/csvParser";
+import { parsePapersCSV, parseEventsCSV, parseProjectsCSV, type Paper, type Project, type Event } from "../utils/csvParser";
 
 const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
