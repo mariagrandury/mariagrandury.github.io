@@ -126,6 +126,35 @@ const speakerCollabs = computed(() =>
     </div>
   </Container>
 
+  <Container class="bg-yellow-50 dark:bg-gray-900">
+    <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
+      <div class="px-8">
+        <div class="text-2xl font-medium mb-6">
+          {{ lang === 'en'
+            ? 'Do you speak Spanish or Portuguese? Would you like to help adapt AI systems to your language and culture?'
+            : '¿Hablas español o portugués? ¿Te gustaría ayudar a adecuar los sistemas de IA a tu lengua y cultura?' }}
+        </div>
+        <a
+          href="https://somosnlp.org"
+          target="_blank"
+          class="inline-flex items-center gap-3 font-semibold px-6 py-3 rounded-md bg-yellow-500 hover:bg-yellow-400 text-white dark:bg-yellow-500 dark:hover:bg-yellow-400 transition-colors"
+        >
+          {{ lang === 'en' ? 'Join SomosNLP.org!' : '¡Únete a SomosNLP.org!' }}
+          <i-fluent-arrow-right-24-regular style="font-size: 1.25rem" />
+        </a>
+      </div>
+      <div class="flex justify-center items-center px-8">
+        <a href="https://somosnlp.org" target="_blank">
+          <img
+            src="/images/logos/SomosNLP.svg"
+            alt="SomosNLP"
+            class="max-w-xs w-full"
+          />
+        </a>
+      </div>
+    </div>
+  </Container>
+
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
 
