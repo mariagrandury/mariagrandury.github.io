@@ -7,11 +7,6 @@ Landing page:
 - New section "Collaborations": row of "Research collaborations" (lista de logos, logos en gris, button see more that redirect to Research page), and row of "Speaker collaborations" (lista de logos, logos en gris, button see more that redirect to Speaker page)
 - Auto highlighted projects, talk, and papers (reading from field in csv)
 
-Research:
-
-- add years to guest lectures
-    - UNA paraguay 2025 (25h)
-    - Chile was 2025 and 2026
 
 
 ## MANUAL
