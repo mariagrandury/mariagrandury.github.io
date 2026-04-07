@@ -2,7 +2,7 @@
 import { ref, computed, onMounted } from "vue";
 import { useInterval } from "@vueuse/core";
 import { useLanguage } from "../composables/useLanguage";
-import { parsePapersCSV, parseEntitiesCSV, type Paper, type Entity } from "../utils/csvParser";
+import { parsePapersCSV, parseEventsCSV, parseProjectsCSV, parseEntitiesCSV, type Paper, type Project, type Event, type Entity } from "../utils/csvParser";
 
 const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
@@ -11,15 +11,21 @@ const index = computed(() => counter.value % greetings.value.length);
 const { lang } = useLanguage();
 
 const papers = ref<Paper[]>([]);
+const projects = ref<Project[]>([]);
+const events = ref<Event[]>([]);
 const entities = ref<Entity[]>([]);
 
 onMounted(async () => {
   try {
-    const [papersResponse, entitiesResponse] = await Promise.all([
+    const [papersResponse, projectsResponse, eventsResponse, entitiesResponse] = await Promise.all([
       fetch("/data/papers.csv"),
+      fetch("/data/projects.csv"),
+      fetch("/data/events.csv"),
       fetch("/data/entities.csv"),
     ]);
     papers.value = parsePapersCSV(await papersResponse.text());
+    projects.value = parseProjectsCSV(await projectsResponse.text());
+    events.value = parseEventsCSV(await eventsResponse.text());
     entities.value = parseEntitiesCSV(await entitiesResponse.text());
   } catch (error) {
     console.error("Error loading data:", error);
@@ -29,11 +35,15 @@ onMounted(async () => {
 const highlightPapers = computed(() =>
   papers.value.filter((paper) => paper.status === "highlights")
 );
-
+const featuredProjects = computed(() =>
+  projects.value.filter((project) => project.status === "featured")
+);
+const highlightTalks = computed(() =>
+  events.value.filter((event) => event.status === "highlights")
+);
 const researchCollabs = computed(() =>
   entities.value.filter((e) => e.section === "research" && e.logo)
 );
-
 const speakerCollabs = computed(() =>
   entities.value.filter((e) => e.section === "speaker" && e.logo)
 );
@@ -125,36 +135,15 @@ const speakerCollabs = computed(() =>
         </div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardProject
-            title="SomosNLP"
-            :tags="['My 💛 project']"
-            link="https://somosnlp.org"
-            color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
-          >
-            <i-fluent-heart-20-regular />
-            <template v-slot:description>
-              <div class="text-sm text-gray-700 dark:text-white">
-                {{ lang === 'en'
-                  ? 'Did you know that we are 600 million Spanish-speaking individuals around the world? SomosNLP.org is an international community aiming to represent in AI the linguistic diversity of the languages spoken by all these persons.'
-                  : '¿Sabías que somos 600 millones de hispanohablantes en el mundo? SomosNLP.org es una comunidad internacional que busca representar en la IA la diversidad lingüística de todos estos idiomas.' }}
-              </div>
-            </template>
-          </CardProject>
-
-          <CardProject
-            title="La Leaderboard"
-            :tags="['SomosNLP', 'Project #Somos600M']"
-            link="https://huggingface.co/spaces/la-leaderboard/la-leaderboard"
-            color="text-yellow-600 bg-yellow-100 dark:text-white dark:bg-yellow-500"
-          >
-            <i-fluent-rocket-24-regular />
-            <template v-slot:description>
-              <div class="text-sm text-gray-700 dark:text-white">
-                {{ lang === 'en'
-                  ? 'We have created the first open leaderboard to evaluate LLMs in languages and language varieties from LATAM, the Caribbean and Spain. Join us!'
-                  : 'Hemos creado la primera leaderboard abierta para evaluar LLMs en lenguas y variedades lingüísticas de LATAM, el Caribe y España. ¡Únete!' }}
-              </div>
-            </template>
-          </CardProject>
+            v-for="project in featuredProjects"
+            :key="project.title"
+            :title="project.title"
+            :tags="project.tags"
+            :link="project.link"
+            :color="project.color"
+            :icon="project.icon"
+            :description="project.description"
+          />
         </div>
       </div>
 
@@ -221,17 +210,16 @@ const speakerCollabs = computed(() =>
         </div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <CardMediaSummary
-            talk="Machines that reflect us: Building AI systems responsibly"
-            event="Women in Data Science Zurich | Round Table"
-            event_link="https://www.wids.ch/"
-            image_link="images/events/240607_wids.jpeg"
-            recording_link=""
-            :tags="['Responsible AI', 'Explainable AI', '🇬🇧']"
+            v-for="talk in highlightTalks"
+            :key="talk.talk"
+            :talk="talk.talk"
+            :event="talk.event"
+            :event_link="talk.event_link"
+            :image_link="talk.image_link"
+            :recording_link="talk.recording_link"
+            :tags="talk.tags"
           >
             <i-tabler:external-link style="font-size: 1.25rem" />
-            <template v-slot:abstract>
-              <div class="text-sm text-gray-700 dark:text-white"></div>
-            </template>
           </CardMediaSummary>
         </div>
       </div>
