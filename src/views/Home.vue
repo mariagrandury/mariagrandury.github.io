@@ -103,6 +103,42 @@ const highlightPapers = computed(() =>
     </div>
   </Container>
 
+  <Container class="bg-yellow-50 dark:bg-yellow-900">
+    <div class="h-full grid gap-8 place-items-center lg:py-12 xl:grid-cols-2">
+
+      <div class="px-8">
+        <div class="text-3xl font-semibold mb-6 text-yellow-700 dark:text-yellow-300">
+          {{ lang === 'en'
+            ? 'Do you speak Spanish and want to help adapt AI systems to your language and culture?'
+            : '¿Hablas español y te gustaría ayudar a adecuar los sistemas de IA a tu lengua y cultura?' }}
+        </div>
+        <p class="text-lg mb-6 text-gray-700 dark:text-gray-200">
+          {{ lang === 'en'
+            ? 'Join SomosNLP, the international community dedicated to advancing NLP in Spanish and other Ibero-American languages!'
+            : '¡Únete a SomosNLP, la comunidad internacional dedicada a impulsar el PLN en español y otras lenguas iberoamericanas!' }}
+        </p>
+        <a
+          href="https://somosnlp.org"
+          target="_blank"
+          class="inline-block px-6 py-3 rounded-md font-semibold text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
+        >
+          {{ lang === 'en' ? '🚀 Join SomosNLP' : '🚀 Únete a SomosNLP' }}
+        </a>
+      </div>
+
+      <div class="flex flex-col items-center gap-6 px-8">
+        <a href="https://somosnlp.org" target="_blank">
+          <img
+            src="/images/logos/SomosNLP.svg"
+            alt="SomosNLP"
+            class="max-w-xs w-full"
+          />
+        </a>
+      </div>
+
+    </div>
+  </Container>
+
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
 
