@@ -38,6 +38,9 @@ const featuredProjects = computed(() =>
 const highlightTalks = computed(() =>
   events.value.filter((event) => event.status === "highlights")
 );
+const recentEvents = computed(() =>
+  events.value.slice(0, 6)
+);
 </script>
 
 <template>
@@ -215,6 +218,50 @@ const highlightTalks = computed(() =>
         </div>
       </div>
 
+    </div>
+  </Container>
+
+  <Container class="bg-white dark:bg-gray-900">
+    <div class="h-full lg:py-8 px-8">
+      <div class="text-3xl mb-4">
+        {{ lang === 'en' ? 'Latest Activity' : 'Actividad Reciente' }}
+      </div>
+      <div class="grid py-6 gap-x-6 gap-y-3 xl:grid-cols-2">
+        <CardMediaMini
+          v-for="event in recentEvents"
+          :key="event.talk + event.date"
+          :talk="event.talk"
+          :organizer="event.organizer"
+          :event="event.event"
+          :event_link="event.event_link"
+          :image_link="event.image_link"
+          :recording_link="event.recording_link"
+          :language="event.language"
+          :type="event.type"
+          :date="event.date"
+          :location="event.location"
+          :tags="event.tags"
+          :sm_link="event.sm_link"
+        />
+      </div>
+      <div class="flex justify-center mt-2 mb-6">
+        <router-link
+          class="
+            flex
+            justify-center
+            place-self-center
+            font-medium
+            p-6
+            gap-3
+            items-center
+            border-dashed
+            rounded-md
+            border-2 border-gray-200
+            hover:border-accent-400
+          "
+          to="/divulgation"
+        >{{ lang === 'en' ? 'All Activities' : 'Todas las Actividades' }}</router-link>
+      </div>
     </div>
   </Container>
 
