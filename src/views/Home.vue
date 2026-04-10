@@ -2,7 +2,7 @@
 import { ref, computed, onMounted } from "vue";
 import { useInterval } from "@vueuse/core";
 import { useLanguage } from "../composables/useLanguage";
-import { parsePapersCSV, parseEventsCSV, parseProjectsCSV, type Paper, type Project, type Event } from "../utils/csvParser";
+import { parsePapersCSV, parseEventsCSV, parseProjectsCSV, parseEntitiesCSV, type Paper, type Project, type Event, type Entity } from "../utils/csvParser";
 
 const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
@@ -13,17 +13,20 @@ const { lang } = useLanguage();
 const papers = ref<Paper[]>([]);
 const projects = ref<Project[]>([]);
 const events = ref<Event[]>([]);
+const entities = ref<Entity[]>([]);
 
 onMounted(async () => {
   try {
-    const [papersResponse, projectsResponse, eventsResponse] = await Promise.all([
+    const [papersResponse, projectsResponse, eventsResponse, entitiesResponse] = await Promise.all([
       fetch("/data/papers.csv"),
       fetch("/data/projects.csv"),
       fetch("/data/events.csv"),
+      fetch("/data/entities.csv"),
     ]);
     papers.value = parsePapersCSV(await papersResponse.text());
     projects.value = parseProjectsCSV(await projectsResponse.text());
     events.value = parseEventsCSV(await eventsResponse.text());
+    entities.value = parseEntitiesCSV(await entitiesResponse.text());
   } catch (error) {
     console.error("Error loading data:", error);
   }
@@ -37,6 +40,12 @@ const featuredProjects = computed(() =>
 );
 const highlightTalks = computed(() =>
   events.value.filter((event) => event.status === "highlights")
+);
+const researchCollabs = computed(() =>
+  entities.value.filter((e) => e.section === "research" && e.logo)
+);
+const speakerCollabs = computed(() =>
+  entities.value.filter((e) => e.section === "speaker" && e.logo)
 );
 </script>
 
@@ -218,36 +227,65 @@ const highlightTalks = computed(() =>
     </div>
   </Container>
 
-  <!-- # REVIEW how to add this
-  <Container class="bg-yellow-50 dark:bg-gray-900">
-    <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
-      <div class="px-8">
-        <div class="text-2xl font-medium mb-6">
-          {{ lang === 'en'
-            ? 'Do you speak Spanish or Portuguese? Would you like to help adapt AI systems to your language and culture?'
-            : '¿Hablas español o portugués? ¿Te gustaría ayudar a adecuar los sistemas de IA a tu lengua y cultura?' }}
+  <Container class="bg-white dark:bg-gray-900">
+    <div class="lg:py-8">
+
+      <div class="text-3xl mb-8">
+        {{ lang === 'en' ? 'Collaborations' : 'Colaboraciones' }}
+      </div>
+
+      <!-- Research collaborations -->
+      <div class="mb-10" v-if="researchCollabs.length > 0">
+        <div class="text-xl font-medium text-right text-gray-500 dark:text-gray-400 mb-4">
+          {{ lang === 'en' ? '... as researcher' : '... como investigadora' }}
         </div>
-        <a
-          href="https://somosnlp.org"
-          target="_blank"
-          class="inline-flex items-center gap-3 font-semibold px-6 py-3 rounded-md bg-yellow-500 hover:bg-yellow-400 text-white dark:bg-yellow-500 dark:hover:bg-yellow-400 transition-colors"
-        >
-          {{ lang === 'en' ? 'Join SomosNLP.org!' : '¡Únete a SomosNLP.org!' }}
-          <i-fluent-arrow-right-24-regular style="font-size: 1.25rem" />
-        </a>
+        <div class="flex flex-wrap gap-6 py-4 justify-center items-center">
+          <a
+            v-for="entity in researchCollabs"
+            :key="entity.name"
+            :href="entity.url || '#'"
+            :target="entity.url ? '_blank' : '_self'"
+            :title="entity.name"
+            class="flex items-center justify-center p-2 rounded transition-all duration-200 hover:opacity-100 grayscale opacity-60 hover:grayscale-0"
+          >
+            <img :src="entity.logo" :alt="entity.name" class="max-h-12 max-w-28 object-contain" />
+          </a>
+        </div>
+        <div class="flex justify-center mt-4">
+          <router-link
+            class="inline-flex items-center gap-2 font-medium text-sm border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400 px-4 py-2"
+            to="/research"
+          >{{ lang === 'en' ? 'See more' : 'Ver más' }}</router-link>
+        </div>
       </div>
-      <div class="flex justify-center items-center px-8">
-        <a href="https://somosnlp.org" target="_blank">
-          <img
-            src="/images/logos/SomosNLP.svg"
-            alt="SomosNLP"
-            class="max-w-xs w-full"
-          />
-        </a>
+
+      <!-- Speaker collaborations -->
+      <div v-if="speakerCollabs.length > 0">
+        <div class="text-xl font-medium text-right text-gray-500 dark:text-gray-400 mb-4">
+          {{ lang === 'en' ? '... as speaker' : '... como ponente' }}
+        </div>
+        <div class="flex flex-wrap gap-6 py-4 justify-center items-center">
+          <a
+            v-for="entity in speakerCollabs"
+            :key="entity.name"
+            :href="entity.url || '#'"
+            :target="entity.url ? '_blank' : '_self'"
+            :title="entity.name"
+            class="flex items-center justify-center p-2 rounded transition-all duration-200 hover:opacity-100 grayscale opacity-60 hover:grayscale-0"
+          >
+            <img :src="entity.logo" :alt="entity.name" class="max-h-12 max-w-28 object-contain" />
+          </a>
+        </div>
+        <div class="flex justify-center mt-4">
+          <router-link
+            class="inline-flex items-center gap-2 font-medium text-sm border-dashed rounded-md border-2 border-gray-200 hover:border-accent-400 px-4 py-2"
+            to="/divulgation"
+          >{{ lang === 'en' ? 'See more' : 'Ver más' }}</router-link>
+        </div>
       </div>
+
     </div>
   </Container>
-  -->
 
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8">

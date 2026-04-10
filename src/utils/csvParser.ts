@@ -56,6 +56,7 @@ export interface Entity {
   year_end?: string;
   logo: string;
   url?: string;
+  section?: string;
 }
 
 // Parse CSV line handling quoted fields
@@ -293,6 +294,7 @@ export function parseEntitiesCSV(csvText: string): Entity[] {
     year_end: col("year_end"),
     logo: col("logo"),
     url: col("url"),
+    section: col("section"),
   };
 
   const get = (values: string[], index: number) => {
@@ -313,10 +315,12 @@ export function parseEntitiesCSV(csvText: string): Entity[] {
       year_end: get(values, idx.year_end) || undefined,
       logo: get(values, idx.logo),
       url: get(values, idx.url) || undefined,
+      section: get(values, idx.section) || undefined,
     };
 
     if (!entity.year_end) delete entity.year_end;
     if (!entity.url) delete entity.url;
+    if (!entity.section) delete entity.section;
     data.push(entity);
   }
 
