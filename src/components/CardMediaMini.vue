@@ -46,6 +46,9 @@ const recordingIcon = computed(() => {
                     <div v-for="(tag, index) in [type, location]" :key="index"
                         class="border rounded bg-gray-50 border-gray-100 text-sm py-0.5 px-2 select-none dark:border-black dark:bg-gray-700">
                         {{ tag }}</div>
+                    <div v-if="date"
+                        class="border rounded bg-gray-50 border-gray-100 text-sm py-0.5 px-2 select-none dark:border-black dark:bg-gray-700">
+                        {{ date.slice(0, 4) }}</div>
                 </div>
             </div>
             <div class="flex flex-row gap-2 self-start">
