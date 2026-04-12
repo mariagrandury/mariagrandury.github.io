@@ -2,10 +2,7 @@
 
 Landing page:
 
-- New section for SomosNLP: One side "¿Hablas español y te gustaría ayudar a adecuar los sistemas de IA a tu lengua y cultura? ¡Únete a SomosNLP!" / Other side SomosNLP logo and button with link to SomosNLP website
 - New section "Research": with list of highlighted papers
-- New section "Collaborations": row of "Research collaborations" (lista de logos, logos en gris, button see more that redirect to Research page), and row of "Speaker collaborations" (lista de logos, logos en gris, button see more that redirect to Speaker page)
-- Auto highlighted projects, talk, and papers (reading from field in csv)
 
 Research:
 

@@ -2,7 +2,7 @@
 import { ref, computed, onMounted } from "vue";
 import { useInterval } from "@vueuse/core";
 import { useLanguage } from "../composables/useLanguage";
-import { parsePapersCSV, parseEventsCSV, parseProjectsCSV, type Paper, type Project, type Event } from "../utils/csvParser";
+import { parsePapersCSV, parseEventsCSV, parseProjectsCSV, parseCollaborationsCSV, type Paper, type Project, type Event, type Collaboration } from "../utils/csvParser";
 
 const greetings = ref(["Hola,", "Hi,", "Bonjour,", "Hallo,", "Olá,"]);
 const counter = useInterval(1500);
@@ -13,17 +13,20 @@ const { lang } = useLanguage();
 const papers = ref<Paper[]>([]);
 const projects = ref<Project[]>([]);
 const events = ref<Event[]>([]);
+const collaborations = ref<Collaboration[]>([]);
 
 onMounted(async () => {
   try {
-    const [papersResponse, projectsResponse, eventsResponse] = await Promise.all([
+    const [papersResponse, projectsResponse, eventsResponse, collaborationsResponse] = await Promise.all([
       fetch("/data/papers.csv"),
       fetch("/data/projects.csv"),
       fetch("/data/events.csv"),
+      fetch("/data/collaborations.csv"),
     ]);
     papers.value = parsePapersCSV(await papersResponse.text());
     projects.value = parseProjectsCSV(await projectsResponse.text());
     events.value = parseEventsCSV(await eventsResponse.text());
+    collaborations.value = parseCollaborationsCSV(await collaborationsResponse.text());
   } catch (error) {
     console.error("Error loading data:", error);
   }
@@ -37,6 +40,12 @@ const featuredProjects = computed(() =>
 );
 const highlightTalks = computed(() =>
   events.value.filter((event) => event.status === "highlights")
+);
+const researchCollaborations = computed(() =>
+  collaborations.value.filter((c) => c.type === "research")
+);
+const speakerCollaborations = computed(() =>
+  collaborations.value.filter((c) => c.type === "speaker")
 );
 </script>
 
@@ -218,7 +227,6 @@ const highlightTalks = computed(() =>
     </div>
   </Container>
 
-  <!-- # REVIEW how to add this
   <Container class="bg-yellow-50 dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
       <div class="px-8">
@@ -247,7 +255,6 @@ const highlightTalks = computed(() =>
       </div>
     </div>
   </Container>
-  -->
 
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8">
@@ -298,6 +305,64 @@ const highlightTalks = computed(() =>
         >{{ lang === 'en' ? 'More Research' : 'Más Investigación' }}</router-link>
       </div>
 
+    </div>
+  </Container>
+
+  <Container class="bg-gray-50 dark:bg-gray-800">
+    <div class="h-full flex flex-col gap-10 lg:py-8 px-8">
+      <div class="text-3xl mb-2">
+        {{ lang === 'en' ? 'Collaborations' : 'Colaboraciones' }}
+      </div>
+
+      <div v-if="researchCollaborations.length > 0">
+        <div class="text-lg font-medium mb-4 text-gray-600 dark:text-gray-300">
+          {{ lang === 'en' ? 'Research' : 'Investigación' }}
+        </div>
+        <div class="flex flex-wrap gap-8 items-center">
+          <a
+            v-for="c in researchCollaborations"
+            :key="c.name"
+            :href="c.url"
+            target="_blank"
+            :title="c.name"
+          >
+            <img
+              :src="c.logo"
+              :alt="c.name"
+              class="h-10 w-auto max-w-32 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-200"
+            />
+          </a>
+        </div>
+        <router-link
+          class="text-accent-500 hover:underline text-sm mt-4 inline-block"
+          to="/research"
+        >{{ lang === 'en' ? 'See all research →' : 'Ver toda la investigación →' }}</router-link>
+      </div>
+
+      <div v-if="speakerCollaborations.length > 0">
+        <div class="text-lg font-medium mb-4 text-gray-600 dark:text-gray-300">
+          {{ lang === 'en' ? 'Speaking' : 'Ponencias' }}
+        </div>
+        <div class="flex flex-wrap gap-8 items-center">
+          <a
+            v-for="c in speakerCollaborations"
+            :key="c.name"
+            :href="c.url"
+            target="_blank"
+            :title="c.name"
+          >
+            <img
+              :src="c.logo"
+              :alt="c.name"
+              class="h-10 w-auto max-w-32 object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-200"
+            />
+          </a>
+        </div>
+        <router-link
+          class="text-accent-500 hover:underline text-sm mt-4 inline-block"
+          to="/divulgation"
+        >{{ lang === 'en' ? 'See all talks →' : 'Ver todas las charlas →' }}</router-link>
+      </div>
     </div>
   </Container>
 

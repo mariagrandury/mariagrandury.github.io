@@ -1,5 +1,47 @@
 // Shared CSV parsing utilities
 
+export interface Collaboration {
+  type: string; // 'research' | 'speaker'
+  name: string;
+  logo: string;
+  url?: string;
+}
+
+export function parseCollaborationsCSV(csvText: string): Collaboration[] {
+  const lines = csvText.trim().split("\n");
+  if (lines.length < 2) return [];
+
+  const headers = parseCSVLine(lines[0]).map((h) => h.trim());
+  const col = (name: string) => headers.indexOf(name);
+  const idx = {
+    type: col("type"),
+    name: col("name"),
+    logo: col("logo"),
+    url: col("url"),
+  };
+
+  const get = (values: string[], index: number) => {
+    if (index < 0) return "";
+    return (values[index] || "").trim();
+  };
+
+  const data: Collaboration[] = [];
+  for (let i = 1; i < lines.length; i++) {
+    const values = parseCSVLine(lines[i]);
+    if (values.length < 3) continue;
+
+    const collab: Collaboration = {
+      type: get(values, idx.type),
+      name: get(values, idx.name),
+      logo: get(values, idx.logo),
+      url: get(values, idx.url) || undefined,
+    };
+    if (!collab.url) delete collab.url;
+    data.push(collab);
+  }
+  return data;
+}
+
 export interface Event {
   status?: string;
   year: string;

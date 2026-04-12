@@ -1,0 +1,11 @@
+type,name,logo,url
+research,Hugging Face,/images/logos/HuggingFace.svg,https://huggingface.co/mariagrandury
+research,EPFL NLP,/images/logos/EPFL_NLP.jpeg,https://nlp.epfl.ch
+research,BSC,/images/logos/BSC.png,https://www.bsc.es
+research,University of Cambridge,/images/logos/UniCambridge_square.png,https://www.cam.ac.uk
+research,University of Oxford,/images/logos/UniOxford_horizontal.png,https://www.ox.ac.uk
+speaker,UNAM,/images/patrocinios/UNAM.png,https://www.unam.mx
+speaker,Universidad de Chile,/images/logos/UChile_color.png,https://www.uchile.cl
+speaker,UNA Paraguay,/images/logos/UNA.jpeg,https://pol.una.py
+speaker,UNIA,/images/logos/UNIA_square.png,https://unia.es
+speaker,CENIA,/images/logos/CENIA_square.jpeg,https://cenia.cl
