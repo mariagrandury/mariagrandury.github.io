@@ -215,7 +215,8 @@ const guestLectures = computed(() =>
         <CardGeneric class="p-5">
           <h3 class="font-semibold mb-2">{{ lang === 'en' ? 'Reviewer' : 'Revisora' }}</h3>
           <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-200">
-            <li>Journal Royal Society Open Science, 2026</li>
+            <li>Journal Information Processing and Management (Q1, Elsevier), 2026</li>
+            <li>Journal Royal Society Open Science (Q1), 2026</li>
             <li>Simposio LANLP: Bridging Latin American NLP, 2026</li>
             <li>Workshop EXIST: sEXism Identification in Social neTworks, 2025</li>
             <!-- https://clef2025.clef-initiative.eu/index.php?page=Pages/Labs/EXIST.html -->
