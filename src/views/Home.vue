@@ -362,7 +362,7 @@ const highlightTalks = computed(() =>
         </div>
       </div> -->
 
-      <div class="px-3 flex flex-col justify-center items-center gap-6 h-full">
+      <div class="px-2 flex flex-col justify-center items-center gap-6 h-full">
         <div
           class="
             border-2
@@ -370,40 +370,43 @@ const highlightTalks = computed(() =>
             rounded-md
             bg-white
             dark:bg-gray-900
-            p-4
+            p-2
             flex
             justify-center
             items-center
             shadow-sm
+            w-full
           "
         >
           <img
             src="https://mariagrandury.ai/images/awards/2026_CONSOLIDACYL.png"
             alt="CONSOLIDACYL 2026"
-            class="max-w-xs rounded"
+            class="w-full max-w-lg rounded"
           />
         </div>
-
-        <router-link
-          class="
-            flex
-            justify-center
-            place-self-center
-            font-medium
-            p-6
-            gap-3
-            items-center
-            border-dashed
-            rounded-md
-            border-2 border-gray-200
-            hover:border-accent-400
-          "
-          to="/about"
-        >{{ lang === 'en' ? 'Full Bio' : 'Ver Biografía' }}
-        </router-link>
       </div>
-
     </div>
+
+    <div class="px-8 flex flex-col justify-center items-center h-full">
+      <router-link
+        class="
+          flex
+          justify-center
+          place-self-center
+          font-medium
+          p-6
+          gap-3
+          items-center
+          border-dashed
+          rounded-md
+          border-2 border-gray-200
+          hover:border-accent-400
+        "
+        to="/about"
+      >{{ lang === 'en' ? 'Full Bio' : 'Ver Biografía' }}
+      </router-link>
+    </div>
+
   </Container>
 
 

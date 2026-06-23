@@ -76,7 +76,7 @@ const eventsByYear = computed(() => {
     </div>
     <div>
       <p class="italic text-sm text-gray-500" v-if="lang === 'en'">
-        Last update: January 2026 | For up-to-date information check
+        Last update: June 2026 | For up-to-date information check
         <a
           href="https://www.linkedin.com/in/mariagrandury/"
           target="_blank"
@@ -85,7 +85,7 @@ const eventsByYear = computed(() => {
         >!
       </p>
       <p class="italic text-sm text-gray-500" v-else>
-        Última actualización: enero 2026 | Para información actualizada consulta
+        Última actualización: junio 2026 | Para información actualizada consulta
         <a
           href="https://www.linkedin.com/in/mariagrandury/"
           target="_blank"
