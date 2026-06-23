@@ -217,6 +217,7 @@ const highlightTalks = computed(() =>
 
     </div>
   </Container>
+  <!-- # TODO: Add a line with the logos (in gray scale) of the institutions that have host me -->
 
   <!-- # REVIEW how to add this
   <Container class="bg-yellow-50 dark:bg-gray-900">
@@ -248,6 +249,9 @@ const highlightTalks = computed(() =>
     </div>
   </Container>
   -->
+
+  <!-- # TODO: Add a line with the logos (in gray scale) of media appearances "Featured in" -->
+
 
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8">
@@ -300,6 +304,8 @@ const highlightTalks = computed(() =>
 
     </div>
   </Container>
+
+  <!-- # TODO: Add a line with the logos (in gray scale) of conferences and journals I have published in "Published by" -->
 
   <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
@@ -356,7 +362,7 @@ const highlightTalks = computed(() =>
         </div>
       </div> -->
 
-      <div class="px-8 flex flex-col justify-center items-center gap-6 h-full">
+      <div class="px-3 flex flex-col justify-center items-center gap-6 h-full">
         <div
           class="
             border-2
@@ -377,9 +383,8 @@ const highlightTalks = computed(() =>
             class="max-w-xs rounded"
           />
         </div>
-      </div>
 
-      <router-link
+        <router-link
           class="
             flex
             justify-center
@@ -395,7 +400,8 @@ const highlightTalks = computed(() =>
           "
           to="/about"
         >{{ lang === 'en' ? 'Full Bio' : 'Ver Biografía' }}
-      </router-link>
+        </router-link>
+      </div>
 
     </div>
   </Container>

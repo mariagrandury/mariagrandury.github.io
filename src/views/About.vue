@@ -68,8 +68,8 @@ const organizationEntities = computed(() => entities.value.filter((entity) => en
                     🤗 I'm a
                     <a href="https://huggingface.co/mariagrandury" target="_blank"
                         class="font-bold text-accent-500 dark:text-accent-300 hover:underline">Hugging Face Fellow</a>
-                    and have contributed to projects like BigScience, FineWeb and BERTIN.
-                    I enjoy giving talks and workshops and joining round tables, usually about Responsible AI.
+                    and have contributed to open-source multilingual projects like BigScience, FineWeb and BERTIN.
+                    I teach at several universities in LATAM. I enjoy giving talks and workshops and joining round tables, usually about Responsible AI.
                 </h2>
 
                 <h2 class="py-2">
@@ -101,8 +101,8 @@ const organizationEntities = computed(() => entities.value.filter((entity) => en
                         🤗 Soy
                         <a href="https://huggingface.co/mariagrandury" target="_blank"
                             class="font-bold text-accent-500 dark:text-accent-300 hover:underline">Hugging Face Fellow</a>
-                        y he contribuido a proyectos como BigScience, FineWeb y BERTIN.
-                        Disfruto impartiendo charlas, talleres y participando en mesas redondas, normalmente sobre IA Responsable.
+                        y he contribuido a proyectos de código abierto como BigScience, FineWeb y BERTIN.
+                        Imparto clases en varias universidades de LATAM. Me encanta dar charlas, talleres y participar en mesas redondas, normalmente sobre IA Responsable.
                     </h2>
                     <h2 class="py-2">
                         ⚡ Tengo 3 años de experiencia en startups de IA.
@@ -110,7 +110,7 @@ const organizationEntities = computed(() => entities.value.filter((entity) => en
                         En <strong>neurocat</strong>, startup con base en Berlín, desarrollé métodos de explicabilidad (XAI) y ataques adversarios para evaluar la fiabilidad de modelos de ML.
                     </h2>
                     <h2 class="pb-12">
-                        💚 Además de todo lo friki, me encanta hacer rutas, viajar con mi mochila y bailar.
+                        💚 Si no estoy trabajando, seguramente esté en la montaña.
                     </h2>
                 </template>
             </CardGeneric>
