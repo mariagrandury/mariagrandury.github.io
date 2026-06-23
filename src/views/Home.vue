@@ -306,7 +306,8 @@ const highlightTalks = computed(() =>
 
       <div class="px-8">
         <div class="text-3xl mb-4">
-          {{ lang === 'en' ? 'Funding and awards' : 'Financiación y reconocimientos' }}
+          <!-- {{ lang === 'en' ? 'Funding and awards' : 'Financiación y reconocimientos' }} -->
+          {{ lang === 'en' ? 'Funding' : 'Financiación' }}
         </div>
         <div class="grid py-6 gap-x-6 gap-y-3">
           <div
@@ -332,7 +333,7 @@ const highlightTalks = computed(() =>
         </div>
       </div>
 
-      <div class="px-8 flex flex-col justify-center items-center gap-6 h-full">
+      <!-- <div class="px-8 flex flex-col justify-center items-center gap-6 h-full">
         <div
           class="
             border-2
@@ -353,7 +354,32 @@ const highlightTalks = computed(() =>
             class="max-w-xs rounded"
           />
         </div>
-        <router-link
+      </div> -->
+
+      <div class="px-8 flex flex-col justify-center items-center gap-6 h-full">
+        <div
+          class="
+            border-2
+            border-gray-200
+            rounded-md
+            bg-white
+            dark:bg-gray-900
+            p-4
+            flex
+            justify-center
+            items-center
+            shadow-sm
+          "
+        >
+          <img
+            src="https://mariagrandury.ai/images/awards/2026_CONSOLIDACYL.png"
+            alt="CONSOLIDACYL 2026"
+            class="max-w-xs rounded"
+          />
+        </div>
+      </div>
+
+      <router-link
           class="
             flex
             justify-center
@@ -368,8 +394,8 @@ const highlightTalks = computed(() =>
             hover:border-accent-400
           "
           to="/about"
-        >{{ lang === 'en' ? 'Full Bio' : 'Ver Biografía' }}</router-link>
-      </div>
+        >{{ lang === 'en' ? 'Full Bio' : 'Ver Biografía' }}
+      </router-link>
 
     </div>
   </Container>
