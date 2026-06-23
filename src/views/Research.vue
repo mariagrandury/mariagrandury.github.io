@@ -209,7 +209,8 @@ const guestLectures = computed(() =>
 
     <div class="py-6 lg:px-24 sm:px-12">
       <h2 class="font-semibold tracking-tight text-2xl">
-        {{ lang === 'en' ? 'Community Service' : 'Servicio a la Comunidad' }}
+        {{ lang === 'en' ? 'Community Service' : 'Servicio a la Comunidad' }} 
+        <!-- Review wording: "Volunteering"? -->
       </h2>
       <div class="grid gap-4 py-4 md:grid-cols-2">
         <CardGeneric class="p-5">
@@ -217,8 +218,10 @@ const guestLectures = computed(() =>
           <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-200">
             <li>Journal Information Processing and Management (Q1, Elsevier), 2026</li>
             <li>Journal Royal Society Open Science (Q1), 2026</li>
-            <li>Simposio LANLP: Bridging Latin American NLP, 2026</li>
-            <li>Workshop EXIST: sEXism Identification in Social neTworks, 2025</li>
+            <li>ACL Rolling Review (ARR), 2026</li>
+            <li>Symposium LANLP: Bridging Latin American NLP, 2026</li>
+            <li>Conference SIMBig: International Conference on Information Management and Big Data (LATAM), 2026</li>
+            <li>Workshop EXIST: sEXism Identification in Social neTworks, 2025-26</li>
             <!-- https://clef2025.clef-initiative.eu/index.php?page=Pages/Labs/EXIST.html -->
           </ul>
         </CardGeneric>
@@ -228,6 +231,7 @@ const guestLectures = computed(() =>
             <li>Diversity & Inclusion Chair at EACL 2026</li>
             <li>Birds-of-a-Feather (BoF) organizer at ACL 2025</li>
             <li>Birds-of-a-Feather (BoF) organizer at COLM 2025</li>
+            <!-- TODO: Add links to somosnlp.org pages -->
           </ul>
         </CardGeneric>
       </div>
