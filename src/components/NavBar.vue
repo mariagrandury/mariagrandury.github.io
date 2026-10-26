@@ -12,6 +12,9 @@ const { lang, toggleLanguage } = useLanguage();
       <Logo class="<md:mx-auto" />
     </router-link>
     <div class="flex gap-6 justify-around items-center">
+      <router-link class="hover:underline underline-2px underline-accent-500" to="/news">
+        {{ lang === 'en' ? 'News' : 'Noticias' }}
+      </router-link>
       <router-link class="hover:underline underline-2px underline-accent-500" to="/research">
         {{ lang === 'en' ? 'Research' : 'Investigación' }}
       </router-link>
