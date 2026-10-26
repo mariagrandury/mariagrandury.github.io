@@ -1,0 +1,56 @@
+date,status,category,text,location,lat,lng,link
+2026-10,highlighted,paper,"INCLUDE-2.0: Disentangling Knowledge Gaps in Multilingual LLM Evaluation (first author) at EMNLP 2026 Main","Budapest, Hungary",47.4979,19.0402,https://aclanthology.org/2026.emnlp-main.1344/
+2026-07,,paper,"Apertus, the fully open Swiss multilingual LLM, presented at ACL 2026","San Diego, USA",32.7157,-117.1611,https://aclanthology.org/2026.acl-long.2172/
+2026-06-25,,talk,"Demo of Apertus at AI Tinkerers Lausanne","Lausanne, Switzerland",46.5197,6.6323,https://lausanne.aitinkerers.org/p/ai-tinkerers-lausanne-june-2026-meetup
+2026-06-18,,talk,"Talk ""Sovereign AI in Switzerland: What is possible today"" at the Open LLM Basque Day","Bilbao, Spain",43.2630,-2.9350,https://enpresadigitala.spri.eus/es/open-llm-basque-day-modelos-abiertos-de-ia-al-servicio-del-control-y-la-soberania-del-dato-en-la-empresa
+2026-06-16,,media,"Quoted in El País on what Europe can do if the US blocks access to frontier AI","Madrid, Spain",40.4168,-3.7038,https://elpais.com/tecnologia/2026-06-16/que-puede-hacer-europa-si-ee-uu-bloquea-el-acceso-a-la-mejor-ia-estamos-en-segunda-o-tercera-division.html
+2026-06-15,,talk,"Talk and round table on open-source multilingual AI (the case of Apertus) at EUNIC Science Day, invited by the Swiss Embassy in Spain","Madrid, Spain",40.4168,-3.7038,https://caixaforum.org/es/madrid/p/eunic-science-day-madrid
+2026-05,,service,"Co-organized the symposium Bridging Latin American NLP (LANLP) at LREC 2026","Palma, Spain",39.5696,2.6502,https://sites.google.com/view/lanlp2026/
+2026-04,,paper,"Kaleidoscope: In-language Exams for Massively Multilingual Vision Evaluation at ICLR 2026","Rio de Janeiro, Brazil",-22.9068,-43.1729,https://arxiv.org/abs/2504.07072
+2026-03,highlighted,service,"Diversity & Inclusion Chair at EACL 2026, where BabyBabelLM was also published","Rabat, Morocco",34.0209,-6.8416,https://2026.eacl.org/committees/organization/
+2026-03-02,highlighted,talk,"Keynote, co-organizer and jury of the LLM post-training hackathon ""Humans in the Loop"" and round table on ethical and cultural alignment at Talent Arena","Barcelona, Spain",41.3874,2.1686,https://talentarena.tech/humans-in-the-loop
+2026-01,,career,"Joined the Spanish General Direction of AI (DGIA) as technical lead of the national portal of AI resources","Madrid, Spain",40.4168,-3.7038,
+2026,highlighted,career,"Started my PhD at the EPFL NLP Lab, advised by Prof. Antoine Bosselut","Lausanne, Switzerland",46.5197,6.6323,https://nlp.epfl.ch
+2025-12-17,,talk,"Round table ""Aterrizando la IA a la realidad"" at the Spanish Secretary of State for Digitalization and AI (SEDIA)","Madrid, Spain",40.4168,-3.7038,https://digital.gob.es/comunicacion/notas-prensa/secretaria-digitalizacion-e-inteligencia-artificial/2025/12/17-12-2025
+2025-12,highlighted,paper,"Measuring what Matters: Construct Validity in LLM Benchmarks at NeurIPS 2025, with a SomosNLP social at NeurIPS in Mexico City","Mexico City, Mexico",19.4326,-99.1332,https://oxrml.com/measuring-what-matters
+2025-11,,career,"Joined UNED as a researcher to lead a data collection on the cultural adequacy of LLMs","Madrid, Spain",40.4168,-3.7038,
+2025-10,highlighted,paper,"Spotlight paper at the MELT workshop at COLM 2025: The Case of Spanish as a Pluricentric Language; also organized a Birds-of-a-Feather","Montreal, Canada",45.5019,-73.5674,https://melt-workshop.github.io/papers
+2025-10,,talk,"Taught the 20h module ""Deep Learning for NLP"" at the National University of Asunción",Remote,,,https://pol.una.py/extension/formacion-continua/diplomados/diplomado-en-procesamiento-de-lenguaje-natural-e-inteligencia-artificial
+2025-09-27,,talk,"Moderated the round table ""Critical intersections: AI, biases and subjectivities"" at the Ministry of Culture","Barcelona, Spain",41.3874,2.1686,https://espaciovirtual.culturayciudadania.es/programa/
+2025,,paper,"Finished my MSc in Language Technologies at UNED with a thesis on multicultural LLM evaluation (9.8/10)","Madrid, Spain",40.4168,-3.7038,https://hdl.handle.net/20.500.14468/31642
+2025-08,,talk,"Workshop on Natural Language Processing at the UNIA summer school","Baeza, Spain",37.9939,-3.4710,https://unia.es/estudios-y-acceso/oferta-academica/cursos-de-verano/fundamentos-de-inteligencia-artificial-modelos-generativos-y-aplicaciones-avanzadas
+2025-07,highlighted,paper,"La Leaderboard, my first first-author paper at ACL Main; also a GEM workshop paper and a Birds-of-a-Feather at ACL 2025","Vienna, Austria",48.2082,16.3738,https://aclanthology.org/2025.acl-long.1561
+2025-06-24,,media,"Invited to the COTEC Gala as co-lead of a #PIA Under 30 project on the climate impact of LLMs","Madrid, Spain",40.4168,-3.7038,https://cotec.es/informes/la-gala-2025/
+2025-06,,talk,"Round table on LLM grooming at the Ibero-American Pavilion of the Madrid Book Fair (SEGIB & Maldita.es)","Madrid, Spain",40.4168,-3.7038,https://exteriores.gob.es/es/PoliticaExterior/Documents/250527_Programa%20Pabell%c3%b3n%20Iberoamericano.pdf
+2025-05,highlighted,career,"Visiting student at the EPFL NLP Lab: multicultural benchmark (INCLUDE) and evaluation of Apertus","Lausanne, Switzerland",46.5197,6.6323,https://nlp.epfl.ch
+2025-04,,talk,"Talk ""How to impulse the development of LLMs in Spanish"" at the University of Chile and masterclass on RLHF at CENIA","Santiago, Chile",-33.4489,-70.6693,https://diplomado.cenia.cl/
+2025-03-10,,talk,"Presented SomosNLP at KHIPU 2025","Santiago, Chile",-33.4489,-70.6693,https://www.linkedin.com/posts/viviana-cotik-4815046_english-below-la-semana-pasada-tuve-el-activity-7308497550905401346-86Iz
+2025-02,highlighted,talk,"Talk ""Promoting inclusive NLP: Why and how to engage the community"" at MBZUAI","Abu Dhabi, UAE",24.4539,54.3773,
+2024-12-17,,talk,"Workshop on the evaluation of LLMs at the Technical University of Madrid (UPM)","Madrid, Spain",40.4168,-3.7038,https://somosnlp.org/blog/evento-eval-llm-upm
+2024-12-14,,talk,"Guest lecture on synthetic data and LLM evaluation at UNAM",Remote,,,https://www.acatlan.unam.mx/index.php?id=1805
+2024-11-30,,talk,"Opening keynote ""Open-Source Responsible AI with Hugging Face"" at the EFELIA Côte d'Azur hackathon","Nice, France",43.7102,7.2620,https://univ-cotedazur.fr/efelia-cote-dazur/hackathon-social-2024-efelia-cote-dazur
+2024-11-13,,media,"First radio interview: ""AI does not think, that's marketing"" on Cadena SER","Ponferrada, Spain",42.5499,-6.5983,https://cadenaser.com/castillayleon/2024/11/13/maria-grandury-experta-en-ia-la-inteligencia-artificial-no-piensa-eso-es-marketing-radio-bierzo/
+2024-11-01,,service,"Invited to the AI Value Chain workshop at the AI Policy Summit (RegHorizon & ETH)","Zurich, Switzerland",47.3769,8.5417,https://reghorizon.com/ai-policy-summit-2024/
+2024-09,,career,"Joined the Technical University of Madrid (UPM) as a part-time researcher on LLM evaluation","Madrid, Spain",40.4168,-3.7038,
+2024-08-19,,talk,"Masterclass on LLM alignment and evaluation at the UNIA summer school","Baeza, Spain",37.9939,-3.4710,
+2024-06,,paper,"The #Somos600M Project presented at the LatinX in AI workshop at NAACL 2024","Mexico City, Mexico",19.4326,-99.1332,https://arxiv.org/abs/2407.17479
+2024-06-07,,talk,"Round table ""Machines that reflect us"" and mentorship session at Women in Data Science Zurich","Zurich, Switzerland",47.3769,8.5417,https://www.wids.ch/
+2024-05-12,highlighted,media,"El País article on SomosNLP: ""The long march of a group of volunteers to build a Hispanic language model""","Madrid, Spain",40.4168,-3.7038,https://elpais.com/tecnologia/2024-05-10/la-larga-marcha-de-un-grupo-de-voluntarios-por-lograr-un-chatgpt-hispano-un-modelo-entrenado-en-espanol-seria-increible.html
+2024-03-13,,service,"Launched the #Somos600M hackathon to create instruction data for the languages of Spain and LATAM",Remote,,,https://somosnlp.org/hackathon
+2024-03-01,,talk,"Talk on open source and linguistic diversity at the 1st AI Congress of the University of Puerto Rico","San Juan, Puerto Rico",18.4655,-66.1057,https://adistancia.upr.edu/inteligencia_artificial/
+2023-11-14,,talk,"Round table on the impact of generative AI in the European creative industry (EFE, Panodyssey, European Commission)","Madrid, Spain",40.4168,-3.7038,https://www.youtube.com/watch?v=GdwXx3wmWBw
+2023-10-24,,talk,"Opening keynote on Responsible AI at IE University","Madrid, Spain",40.4168,-3.7038,https://www.ie.edu/cgc/news-and-events/events/responsible-ai/
+2023-09-23,,talk,"Round table on women entrepreneurs at the European Parliament","Brussels, Belgium",50.8503,4.3517,
+2023-06,,career,"Joined Clibrain as Machine Learning Engineer to lead LLM evaluation","Madrid, Spain",40.4168,-3.7038,
+2023-03-20,,service,"Organized the SomosNLP hackathon ""Los LLMs hablan español""",Remote,,,https://somosnlp.org/hackathon
+2022-11,,paper,"BLOOM, the 176B open multilingual LLM from BigScience, released",Remote,,,https://arxiv.org/abs/2211.05100
+2022-09-28,,talk,"Round table at the first forum of the PERTE of the New Language Economy","Alicante, Spain",38.3452,-0.4810,https://www.youtube.com/watch?v=XdHnsBbXbWc&t=7370s
+2022-03,,paper,"BERTIN, my first paper, published in Procesamiento del Lenguaje Natural",Remote,,,http://journal.sepln.org/sepln/ojs/ojs/index.php/pln/article/view/6403
+2022-04,highlighted,award,"Became one of the first Hugging Face Fellows",Remote,,,https://huggingface.co/mariagrandury
+2022-03,,service,"Organized the first SomosNLP hackathon, the largest open-source NLP hackathon in Spanish",Remote,,,https://somosnlp.org/blog/hackathon-2022
+2021-06-14,,talk,"Talk ""Is your ML model trustworthy?"" at MLOps World",Remote,,,https://mlopsworld.com/
+2021-03,highlighted,career,"Founded SomosNLP, the open community of Spanish-speaking NLP practitioners","Berlin, Germany",52.5200,13.4050,https://somosnlp.org
+2021-02,,career,"Joined neurocat as Research Engineer on ML robustness and explainability","Berlin, Germany",52.5200,13.4050,https://www.neurocat.ai
+2020,,career,"Graduated in Mathematics and Physics at the University of Oviedo","Oviedo, Spain",43.3614,-5.8593,https://www.uniovi.es
+2019-06,,career,"Software Engineering internship at Stelliant: my first chatbot","Paris, France",48.8566,2.3522,
+2018-09,,career,"Erasmus year at Université Paris-Saclay, where I discovered deep learning","Orsay, France",48.6986,2.1873,https://www.universite-paris-saclay.fr
