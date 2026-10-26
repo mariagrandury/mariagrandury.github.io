@@ -58,6 +58,26 @@ export interface Entity {
   url?: string;
 }
 
+// Split CSV text into rows, keeping line breaks inside quoted fields
+export function splitCSVRows(csvText: string): string[] {
+  const rows: string[] = [];
+  let current = "";
+  let inQuotes = false;
+
+  for (const char of csvText.trim()) {
+    if (char === '"') inQuotes = !inQuotes;
+    if (char === "\n" && !inQuotes) {
+      rows.push(current.replace(/\r$/, ""));
+      current = "";
+    } else {
+      current += char;
+    }
+  }
+  rows.push(current);
+
+  return rows;
+}
+
 // Parse CSV line handling quoted fields
 export function parseCSVLine(line: string): string[] {
   const result: string[] = [];
@@ -89,7 +109,7 @@ export function parseCSVLine(line: string): string[] {
 
 // Parse events CSV (header row defines column order)
 export function parseEventsCSV(csvText: string): Event[] {
-  const lines = csvText.trim().split("\n");
+  const lines = splitCSVRows(csvText);
   if (lines.length < 2) return [];
 
   const headers = parseCSVLine(lines[0]).map((h) => h.trim());
@@ -160,7 +180,7 @@ export function parseEventsCSV(csvText: string): Event[] {
 
 // Parse papers CSV (header row defines column order; supports legacy `arxiv_link`)
 export function parsePapersCSV(csvText: string): Paper[] {
-  const lines = csvText.trim().split("\n");
+  const lines = splitCSVRows(csvText);
   if (lines.length < 2) return [];
 
   const headers = parseCSVLine(lines[0]).map((h) => h.trim());
@@ -246,7 +266,7 @@ export function parsePapersCSV(csvText: string): Paper[] {
 
 // Parse projects CSV
 export function parseProjectsCSV(csvText: string): Project[] {
-  const lines = csvText.trim().split("\n");
+  const lines = splitCSVRows(csvText);
   if (lines.length < 2) return [];
 
   const headers = lines[0].split(",");
@@ -280,7 +300,7 @@ export function parseProjectsCSV(csvText: string): Project[] {
 
 // Parse entities CSV (About page)
 export function parseEntitiesCSV(csvText: string): Entity[] {
-  const lines = csvText.trim().split("\n");
+  const lines = splitCSVRows(csvText);
   if (lines.length < 2) return [];
 
   const headers = parseCSVLine(lines[0]).map((h) => h.trim());
