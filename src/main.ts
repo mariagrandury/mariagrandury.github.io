@@ -14,6 +14,9 @@ import Cookies from "./views/Cookies.vue"
 import Forbes30under30 from "./views/Forbes30under30.vue"
 import News from "./views/News.vue"
 import World from "./views/World.vue"
+import Academic from "./views/Academic.vue"
+import Publications from "./views/Publications.vue"
+import NotFound from "./views/NotFound.vue"
 
 export const createApp = ViteSSG(
     App,
@@ -31,6 +34,9 @@ export const createApp = ViteSSG(
             { path: '/forbes30under30', component: Forbes30under30 },
             { path: '/news', component: News },
             { path: '/world', component: World },
+            { path: '/academic', component: Academic },
+            { path: '/publications', component: Publications },
+            { path: '/:pathMatch(.*)*', component: NotFound },
         ]
     },
     // function to have custom setups
