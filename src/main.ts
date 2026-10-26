@@ -12,6 +12,7 @@ import Contact from "./views/Contact.vue"
 import CV from "./views/CV.vue"
 import Cookies from "./views/Cookies.vue"
 import Forbes30under30 from "./views/Forbes30under30.vue"
+import CVOverleaf from "./views/CVOverleaf.vue"
 
 export const createApp = ViteSSG(
     App,
@@ -27,6 +28,7 @@ export const createApp = ViteSSG(
             { path: '/cv', component: CV },
             { path: '/cookie-policy', component: Cookies },
             { path: '/forbes30under30', component: Forbes30under30 },
+            { path: '/cv_overleaf', component: CVOverleaf },
         ]
     },
     // function to have custom setups
