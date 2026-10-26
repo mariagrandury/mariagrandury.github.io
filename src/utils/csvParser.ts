@@ -58,6 +58,17 @@ export interface Entity {
   url?: string;
 }
 
+export interface NewsItem {
+  date: string;
+  highlighted: boolean;
+  category: string;
+  text: string;
+  location: string;
+  lat?: number;
+  lng?: number;
+  link?: string;
+}
+
 // Parse CSV line handling quoted fields
 export function parseCSVLine(line: string): string[] {
   const result: string[] = [];
@@ -323,3 +334,44 @@ export function parseEntitiesCSV(csvText: string): Entity[] {
   return data;
 }
 
+
+// Parse news CSV (News and World views), sorted newest first
+export function parseNewsCSV(csvText: string): NewsItem[] {
+  const lines = csvText.trim().split("\n");
+  if (lines.length < 2) return [];
+
+  const headers = parseCSVLine(lines[0]).map((h) => h.trim());
+  const data: NewsItem[] = [];
+
+  for (let i = 1; i < lines.length; i++) {
+    const values = parseCSVLine(lines[i]);
+    if (values.length !== headers.length) continue;
+    const get = (name: string) => (values[headers.indexOf(name)] || "").trim();
+
+    const item: NewsItem = {
+      date: get("date"),
+      highlighted: get("status") === "highlighted",
+      category: get("category"),
+      text: get("text"),
+      location: get("location"),
+      lat: get("lat") ? Number(get("lat")) : undefined,
+      lng: get("lng") ? Number(get("lng")) : undefined,
+      link: get("link") || undefined,
+    };
+
+    if (item.lat === undefined) delete item.lat;
+    if (item.lng === undefined) delete item.lng;
+    if (!item.link) delete item.link;
+    data.push(item);
+  }
+
+  return data.sort((a, b) => b.date.localeCompare(a.date));
+}
+
+// "2026-06-25" -> "Jun 2026", "2026" -> "2026"
+export function formatNewsDate(date: string, lang: "en" | "es"): string {
+  const [year, month] = date.split("-");
+  if (!month) return year;
+  const name = new Date(Number(year), Number(month) - 1).toLocaleString(lang, { month: "short" });
+  return `${name.charAt(0).toUpperCase()}${name.slice(1).replace(".", "")} ${year}`;
+}
