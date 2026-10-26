@@ -47,3 +47,12 @@ pnpm build
 * Install [Git LFS](https://github.com/git-lfs/git-lfs/wiki/Installation#debian-and-ubuntu)
 * Install Netlify CLI: `npm install netlify-cli -g`
 * Set up [Netlify Large Media](https://docs.netlify.com/large-media/setup/)
+
+### Content data
+
+All content lives in `public/data/` and is loaded by the views at runtime:
+
+* `events.csv`: talks, interviews and media (Divulgation, Research, Home)
+* `papers.csv`: publications (Research, Home)
+* `projects.csv`, `entities.csv`, `profiles.csv`, `bio.md`
+* `news.csv`: one line per news item (`/news` list and `/world` map). Columns: `date` (`YYYY`, `YYYY-MM` or `YYYY-MM-DD`), `status` (`highlighted` or empty), `category` (`paper`, `talk`, `media`, `career`, `award`, `service`), `text`, `location`, `lat`, `lng` (empty for remote items) and `link`. Highlighted items are shown in bold in `/news` and as always-visible labels in `/world`; the other items appear on hover.

@@ -12,6 +12,8 @@ import Contact from "./views/Contact.vue"
 import CV from "./views/CV.vue"
 import Cookies from "./views/Cookies.vue"
 import Forbes30under30 from "./views/Forbes30under30.vue"
+import News from "./views/News.vue"
+import World from "./views/World.vue"
 
 export const createApp = ViteSSG(
     App,
@@ -27,6 +29,8 @@ export const createApp = ViteSSG(
             { path: '/cv', component: CV },
             { path: '/cookie-policy', component: Cookies },
             { path: '/forbes30under30', component: Forbes30under30 },
+            { path: '/news', component: News },
+            { path: '/world', component: World },
         ]
     },
     // function to have custom setups
