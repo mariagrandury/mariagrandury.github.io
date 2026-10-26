@@ -85,7 +85,7 @@ const guestLectures = computed(() =>
         Quiero explorar la evaluación y mitigación de sesgos culturales y lingüísticos en LLMs con un enfoque holístico de la comprensión del lenguaje.
       </h2>
       <p class="italic text-sm text-gray-500" v-if="lang === 'en'">
-        Last update: March 2026 | For up-to-date information check my
+        Last update: October 2026 | For up-to-date information check my
         <a
           href="https://scholar.google.com/citations?user=3mc_-QsAAAAJ"
           target="_blank"
@@ -101,7 +101,7 @@ const guestLectures = computed(() =>
           > profiles!
       </p>
       <p class="italic text-sm text-gray-500" v-else>
-        Última actualización: marzo 2026 | Para información actualizada consulta mis perfiles de
+        Última actualización: octubre 2026 | Para información actualizada consulta mis perfiles de
         <a
           href="https://scholar.google.com/citations?user=3mc_-QsAAAAJ"
           target="_blank"
