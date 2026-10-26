@@ -47,3 +47,7 @@ pnpm build
 * Install [Git LFS](https://github.com/git-lfs/git-lfs/wiki/Installation#debian-and-ubuntu)
 * Install Netlify CLI: `npm install netlify-cli -g`
 * Set up [Netlify Large Media](https://docs.netlify.com/large-media/setup/)
+
+### CV page (`/cv_overleaf`)
+
+`/cv_overleaf` reproduces the Overleaf CV (YAAC class). Its content lives in `src/data/cv.ts` (copied from the LaTeX sources: `cv_research.tex` for the default view, `publications_apa.tex`, `talks_full.tex`, the internships and `skills.tex` behind the "See more" buttons). The PDF served at `/docs/cv_maria_grandury.pdf` is `cv_research.tex` compiled with `lualatex` (needs the FontAwesome 4 font, e.g. `apt install fonts-font-awesome`). When the CV changes on Overleaf, update both `src/data/cv.ts` and the PDF.
