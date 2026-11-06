@@ -7,13 +7,14 @@ education,Paris-Saclay,Erasmus,2018,2019,/images/logos/UniParisSaclay.png,https:
 affiliation,EPFL NLP,PhD Student,2026,present,/images/logos/EPFL_NLP.jpeg,https://nlp.epfl.ch
 affiliation,SomosNLP,Founder,2021,present,/images/logos/SomosNLP.png,https://somosnlp.org
 affiliation,DGIA (SEDIA),Researcher,2026,2026,/images/logos/SEDIA.png,https://digital.gob.es
-affiliation,UPM GING,Researcher,2024,2025,/images/logos/UPM.jpeg,
-affiliation,UNED NLP,Researcher,2025,2026,/images/logos/UNED_NLP.png,https://www.uned.es
+affiliation,UPM GING,Researcher,2024,2025,/images/logos/UPM.jpeg,https://ging.github.io
+affiliation,EPFL NLP,Visiting Student,2025,2025,/images/logos/EPFL_NLP.jpeg,https://nlp.epfl.ch
+affiliation,UNED NLP,Research Student,2024,2025,/images/logos/UNED_NLP.png,https://www.uned.es
 affiliation,Clibrain,ML Engineer,2023,2023,/images/logos/CliBrAIn.jpg,
-affiliation,neurocat.ai,Research Engineer,2021,2023,,
+affiliation,neurocat.ai,Research Engineer,2021,2023,,https://www.neurocat.ai
 org,Hugging Face,Fellow,2022,present,/images/logos/HF_Fellowship.png,https://huggingface.co/mariagrandury
 org,BERTIN,Contributor,2021,present,/images/logos/BERTIN.webp,https://huggingface.co/bertin-project
-org,SEPLN,Member,2025,present,/images/logos/SEPLN.png
+org,SEPLN,Member,2025,present,/images/logos/SEPLN.png,https://www.sepln.org
 org,BigScience,Research Collaborator,2021,2022,/images/logos/BigScience.png,https://bigscience.huggingface.co
 org,BigCode,Research Collaborator,2022,2022,/images/logos/BigCode.png,https://www.bigcode-project.org
 org,EleutherAI,Research Collaborator,2022,2022,/images/logos/EleutherAI.png,https://www.eleuther.ai

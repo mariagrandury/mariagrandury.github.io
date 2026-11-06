@@ -5,7 +5,9 @@ export interface Event {
   year: string;
   date: string;
   talk: string;
+  talk_es?: string;
   organizer?: string;
+  organizer_es?: string;
   event: string;
   event_link: string;
   recording_link?: string;
@@ -119,7 +121,9 @@ export function parseEventsCSV(csvText: string): Event[] {
     year: col("year"),
     date: col("date"),
     talk: col("talk"),
+    talk_es: col("talk_es"),
     organizer: col("organizer"),
+    organizer_es: col("organizer_es"),
     event: col("event"),
     event_link: col("event_link"),
     recording_link: col("recording_link"),
@@ -149,7 +153,9 @@ export function parseEventsCSV(csvText: string): Event[] {
       year: get(values, idx.year),
       date: get(values, idx.date),
       talk: get(values, idx.talk),
+      talk_es: get(values, idx.talk_es) || undefined,
       organizer: get(values, idx.organizer) || undefined,
+      organizer_es: get(values, idx.organizer_es) || undefined,
       event: get(values, idx.event),
       event_link: get(values, idx.event_link),
       recording_link: get(values, idx.recording_link) || undefined,
@@ -164,7 +170,9 @@ export function parseEventsCSV(csvText: string): Event[] {
 
     // Clean up undefined fields
     if (!event.status) delete event.status;
+    if (!event.talk_es) delete event.talk_es;
     if (!event.organizer) delete event.organizer;
+    if (!event.organizer_es) delete event.organizer_es;
     if (!event.recording_link) delete event.recording_link;
     if (!event.abstract) delete event.abstract;
     if (!event.sm_link) delete event.sm_link;
@@ -343,3 +351,17 @@ export function parseEntitiesCSV(csvText: string): Entity[] {
   return data;
 }
 
+
+// Title and event line in the current language (Spanish falls back to English).
+// `event` usually starts with the organizer; that prefix is swapped for the localized organizer.
+export function localizeEvent(
+  e: { talk?: string; talk_es?: string; organizer?: string; organizer_es?: string; event?: string },
+  lang: "en" | "es",
+) {
+  const es = lang === "es";
+  const organizer = (es && e.organizer_es) || e.organizer || "";
+  let subtitle = e.event || "";
+  const prefix = [e.organizer, e.organizer_es].find((p) => p && subtitle.startsWith(p));
+  if (prefix) subtitle = organizer + subtitle.slice(prefix.length);
+  return { title: (es && e.talk_es) || e.talk || "", subtitle };
+}

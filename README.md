@@ -28,6 +28,15 @@ Build bundled app:
 pnpm build
 ```
 
+### Content
+
+Most content lives in CSV files under `public/data/` (one row per line, newest first):
+
+* `papers.csv`: publications (`status`: `highlights` or `published`)
+* `events.csv`: talks, interviews and media. `talk`/`organizer` are in English; `talk_es`/`organizer_es` hold the Spanish version and are shown when the site is in Spanish (empty = use English). When `event` starts with the organizer, that part is shown in the current language.
+* `entities.csv`: education, affiliations and organizations (About page)
+* `projects.csv`: projects
+
 ### Used libraries/plugins
 
 * vite-ssg (pre-render pages for better SEO)

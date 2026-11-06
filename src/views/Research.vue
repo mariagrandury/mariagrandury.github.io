@@ -85,7 +85,7 @@ const guestLectures = computed(() =>
         Quiero explorar la evaluación y mitigación de sesgos culturales y lingüísticos en LLMs con un enfoque holístico de la comprensión del lenguaje.
       </h2>
       <p class="italic text-sm text-gray-500" v-if="lang === 'en'">
-        Last update: October 2026 | For up-to-date information check my
+        Last update: November 2026 | For up-to-date information check my
         <a
           href="https://scholar.google.com/citations?user=3mc_-QsAAAAJ"
           target="_blank"
@@ -101,7 +101,7 @@ const guestLectures = computed(() =>
           > profiles!
       </p>
       <p class="italic text-sm text-gray-500" v-else>
-        Última actualización: octubre 2026 | Para información actualizada consulta mis perfiles de
+        Última actualización: noviembre 2026 | Para información actualizada consulta mis perfiles de
         <a
           href="https://scholar.google.com/citations?user=3mc_-QsAAAAJ"
           target="_blank"
@@ -193,7 +193,9 @@ const guestLectures = computed(() =>
           v-for="lecture in guestLectures"
           :key="lecture.talk"
           :talk="lecture.talk"
+          :talk_es="lecture.talk_es"
           :organizer="lecture.organizer"
+          :organizer_es="lecture.organizer_es"
           :event="lecture.event"
           :event_link="lecture.event_link"
           :image_link="lecture.image_link"
@@ -228,9 +230,10 @@ const guestLectures = computed(() =>
         <CardGeneric class="p-5">
           <h3 class="font-semibold mb-2">{{ lang === 'en' ? 'Diversity & Inclusion' : 'Diversidad e Inclusión' }}</h3>
           <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-200">
-            <li>Diversity & Inclusion Chair at EACL 2026</li>
-            <li>Birds-of-a-Feather (BoF) organizer at ACL 2025</li>
-            <li>Birds-of-a-Feather (BoF) organizer at COLM 2025</li>
+            <li><a href="https://2026.eacl.org/committees/organization" target="_blank" class="hover:underline">Diversity & Inclusion Chair at EACL 2026</a></li>
+            <li><a href="https://2025.aclweb.org/program/bof" target="_blank" class="hover:underline">Birds-of-a-Feather (BoF) co-organizer at ACL 2025</a></li>
+            <li><a href="https://colmweb.org/2025/socials.html" target="_blank" class="hover:underline">Ibero-American NLP meetup co-organizer at COLM 2025</a></li>
+            <li><a href="https://blog.neurips.cc/2025/11/03/neurips-2025-socials-cdmx-join-the-conversations/" target="_blank" class="hover:underline">Social event co-organizer at NeurIPS 2025</a></li>
             <!-- TODO: Add links to somosnlp.org pages -->
           </ul>
         </CardGeneric>
