@@ -223,6 +223,7 @@ const guestLectures = computed(() =>
             <li>ACL Rolling Review (ARR), 2026</li>
             <li>Symposium LANLP: Bridging Latin American NLP, 2026</li>
             <li>Conference SIMBig: International Conference on Information Management and Big Data (LATAM), 2026</li>
+            <!-- https://simbig.org/SIMBig2026 -->
             <li>Workshop EXIST: sEXism Identification in Social neTworks, 2025-26</li>
             <!-- https://clef2025.clef-initiative.eu/index.php?page=Pages/Labs/EXIST.html -->
           </ul>
