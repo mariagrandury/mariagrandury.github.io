@@ -5,6 +5,4 @@ dist-ssr
 *.local
 .netlify
 .claude
-
-# Private CV LaTeX sources (kept local / in a separate private repo)
 cv/
