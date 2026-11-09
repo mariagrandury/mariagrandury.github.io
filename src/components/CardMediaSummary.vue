@@ -1,9 +1,14 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { computed, defineComponent } from 'vue'
+import { useLanguage } from '../composables/useLanguage'
+import { localizeEvent } from '../utils/csvParser'
 
 export default defineComponent({
     props: {
         talk: String,
+        talk_es: String,
+        organizer: String,
+        organizer_es: String,
         event: String,
         event_link: {
             type: String, default: "https://www.youtube.com/@mariagrandury", required: false
@@ -19,6 +24,10 @@ export default defineComponent({
             type: String,
             default: "text-accent-900 bg-accent-50 dark:text-white dark:bg-accent-600"
         },
+    },
+    setup(props) {
+        const { lang } = useLanguage()
+        return { text: computed(() => localizeEvent(props, lang.value)) }
     }
 })
 </script>
@@ -27,9 +36,9 @@ export default defineComponent({
     <CardGeneric class="py-6 px-8">
         <div class="grid gap-3 grid-cols-[1fr,auto]">
             <div class="grid gap-3">
-                <h1 class="text-lg">{{ talk }}</h1>
+                <h1 class="text-lg">{{ text.title }}</h1>
                 <a :href="event_link" target="_blank"
-                    class="self-start items-center text-gray-500 text-sm hover:underline">{{ event }}</a>
+                    class="self-start items-center text-gray-500 text-sm hover:underline">{{ text.subtitle }}</a>
             </div>
             <a v-if="recording_link" :href="recording_link" target="_blank"
                 class="border rounded-md flex border-gray-200 p-2 self-start items-center dark:border-black dark:bg-gray-700 hover:ring">
@@ -37,7 +46,7 @@ export default defineComponent({
             </a>
             <div class="col-start-1 col-span-full">
                 <div class="flex justify-center">
-                    <img class="p-2 max-h-80" :src="image_link" :alt="talk" />
+                    <img class="p-2 max-h-80" :src="image_link" :alt="text.title" />
                 </div>
             </div>
         </div>

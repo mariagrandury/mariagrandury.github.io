@@ -10,16 +10,21 @@ Landing page:
 Research:
 
 - add years to guest lectures
-    - UNA paraguay 2025 (25h)
-    - Chile was 2025 and 2026
+  - UNA paraguay 2025 (25h)
+  - Chile was 2025 and 2026
 
+News section:
+
+- Add papers presented by co-authors (do not add to talks though)
+  - GEM² @ ACL 2025, "Psycholinguistic Word Features" (talk slot 31 Jul 2025, 16:00): https://gem-benchmark.com/workshop
+  - BabyBabelLM @ EACL 2026, oral by Jaap Jumelet (27 Mar 2026, Rabat): https://aclanthology.org/2026.eacl-long.152
+  - Apertus @ ACL 2026, poster by Angelika Romanou (7 Jul 2026, San Diego): https://aclanthology.org/2026.acl-long.2172
 
 ## MANUAL
 
 Divulgación:
 
 - 2 cols, imagen en grande -> solo algunas, alternar entre CardMediaMini y CardMediaMaxi (implementar) dependiendo de si hay foto chula del evento
-
 
 Divulgación:
 
@@ -56,8 +61,44 @@ Posts:
 - HF fellows announcement: https://x.com/espejelomar/status/1512052588530728966
 
 Posts:
+
 - highlight / wrap relevant SM posts:
-    - https://www.linkedin.com/posts/mariagrandury_nlp-ai-aihealthcare-activity-6752915508678418432-tGO9/
-    - https://www.linkedin.com/posts/mariagrandury_opensource-nlp-spanish-activity-6744568353421066240-my8f
-    - screenshots of posts under images/projects
-    
+  - https://www.linkedin.com/posts/mariagrandury_nlp-ai-aihealthcare-activity-6752915508678418432-tGO9/
+  - https://www.linkedin.com/posts/mariagrandury_opensource-nlp-spanish-activity-6744568353421066240-my8f
+  - screenshots of posts under images/projects
+
+Dead links (no verified replacement found, Nov 2026):
+
+- 2025-10 Deep Learning for NLP (UNA): event_link redirects to the pol.una.py homepage
+- 2025-09-27 Cultura en las Ondas: event_link (medioscomunitarios.net) 404
+- 2025-08-21 Natural Language Processing (UNIA): event_link 404 (maybe https://unia.es/images/B147_Horario_Curso_fundamentos_IA.pdf)
+- 2024-12-14 Synthetic Data Generation and LLM Evaluation (UNAM): event_link 410 Gone
+- 2024-11-30 Open-Source Responsible AI with Hugging Face (EFELIA): event_link 404
+- 2023-05-29 IA y Español: recording youtube.com/live/epPXlt520Eo "video not available"
+- 2023-03-02 Bias detection and mitigation in LMs (Women Who Code): event_link (hopin) 404
+- 2022-02 PLN con SomosNLP y Hugging Face (AI The New Sexy): Spotify episode may be removed
+- 2021-11-30 Tecnologías del Lenguaje en la Empresa (DiverTLes): event_link (gplsi) 404
+- 2024-01-31 Discovering Tech Stories (ivoox): 502, maybe only bot-blocking
+- caixaforum, bbvaspark, womentech, medium: 403 to bots, probably fine in a browser
+
+Rows with no link that names me (add own LinkedIn/X post or organizer page):
+
+- 2026-06-25 Apertus demo (AI Tinkerers Lausanne)
+- 2026-03-03 AI With Human Values round table (Talent Arena)
+- 2026-03-02 LLM Post-training hackathon keynote (Talent Arena)
+- 2025-06-24 La Gala COTEC
+- 2025-10 Deep Learning for NLP (UNA)
+- 2025-08-21 Natural Language Processing (UNIA)
+- 2025-04 RLHF & Model Alignment (CENIA)
+- 2025-02 Promoting inclusive NLP (MBZUAI): no links at all
+- 2024-12-14 Synthetic Data Generation and LLM Evaluation (UNAM)
+- 2024-12-11 Workshop on Linguistic and Cultural Evaluation of LLMs (European Language Data Space)
+- 2024-11-30 Open-Source Responsible AI (EFELIA)
+- 2024-11-01 AI Value Chain Workshop (RegHorizon & ETH)
+- 2024-07-02 European LLM Multilingual Evaluation Expert Workshop (EC)
+- 2024-06-07 Open-Source LLMs and the HF ecosystem (WiDS Zurich mentorship)
+- 2024-03-01 Código Abierto y Diversidad Lingüística en IA (UPR)
+- 2023-11-01 Women Entrepreneurs (UU Prize, Madrid): no links at all
+- 2023-09-23 Women Entrepreneurs (UU Prize, Brussels): no links at all
+- 2023-03-02 Bias detection and mitigation in LMs (Women Who Code)
+- 2022-09-28 PERTE round table (Alicante)

@@ -5,7 +5,9 @@ export interface Event {
   year: string;
   date: string;
   talk: string;
+  talk_es?: string;
   organizer?: string;
+  organizer_es?: string;
   event: string;
   event_link: string;
   recording_link?: string;
@@ -36,6 +38,7 @@ export interface Paper {
   color: string;
   icon?: string;
   abstract?: string;
+  image?: string;
 }
 
 export interface Project {
@@ -56,6 +59,40 @@ export interface Entity {
   year_end?: string;
   logo: string;
   url?: string;
+}
+
+// Split CSV text into rows, keeping line breaks inside quoted fields
+export function splitCSVRows(csvText: string): string[] {
+  const rows: string[] = [];
+  let current = "";
+  let inQuotes = false;
+
+  for (const char of csvText.trim()) {
+    if (char === '"') inQuotes = !inQuotes;
+    if (char === "\n" && !inQuotes) {
+      rows.push(current.replace(/\r$/, ""));
+      current = "";
+    } else {
+      current += char;
+    }
+  }
+  rows.push(current);
+
+  return rows;
+}
+
+export interface NewsItem {
+  date: string;
+  highlighted: boolean;
+  category: string;
+  text: string;
+  location: string;
+  lat?: number;
+  lng?: number;
+  // Main link (the text links here)
+  link?: string;
+  // Extra labelled links, written in the CSV as `main_url | Label=url | Label=url`
+  extraLinks?: { label: string; url: string }[];
 }
 
 // Parse CSV line handling quoted fields
@@ -89,7 +126,7 @@ export function parseCSVLine(line: string): string[] {
 
 // Parse events CSV (header row defines column order)
 export function parseEventsCSV(csvText: string): Event[] {
-  const lines = csvText.trim().split("\n");
+  const lines = splitCSVRows(csvText);
   if (lines.length < 2) return [];
 
   const headers = parseCSVLine(lines[0]).map((h) => h.trim());
@@ -99,7 +136,9 @@ export function parseEventsCSV(csvText: string): Event[] {
     year: col("year"),
     date: col("date"),
     talk: col("talk"),
+    talk_es: col("talk_es"),
     organizer: col("organizer"),
+    organizer_es: col("organizer_es"),
     event: col("event"),
     event_link: col("event_link"),
     recording_link: col("recording_link"),
@@ -129,7 +168,9 @@ export function parseEventsCSV(csvText: string): Event[] {
       year: get(values, idx.year),
       date: get(values, idx.date),
       talk: get(values, idx.talk),
+      talk_es: get(values, idx.talk_es) || undefined,
       organizer: get(values, idx.organizer) || undefined,
+      organizer_es: get(values, idx.organizer_es) || undefined,
       event: get(values, idx.event),
       event_link: get(values, idx.event_link),
       recording_link: get(values, idx.recording_link) || undefined,
@@ -144,7 +185,9 @@ export function parseEventsCSV(csvText: string): Event[] {
 
     // Clean up undefined fields
     if (!event.status) delete event.status;
+    if (!event.talk_es) delete event.talk_es;
     if (!event.organizer) delete event.organizer;
+    if (!event.organizer_es) delete event.organizer_es;
     if (!event.recording_link) delete event.recording_link;
     if (!event.abstract) delete event.abstract;
     if (!event.sm_link) delete event.sm_link;
@@ -160,7 +203,7 @@ export function parseEventsCSV(csvText: string): Event[] {
 
 // Parse papers CSV (header row defines column order; supports legacy `arxiv_link`)
 export function parsePapersCSV(csvText: string): Paper[] {
-  const lines = csvText.trim().split("\n");
+  const lines = splitCSVRows(csvText);
   if (lines.length < 2) return [];
 
   const headers = parseCSVLine(lines[0]).map((h) => h.trim());
@@ -190,6 +233,7 @@ export function parsePapersCSV(csvText: string): Paper[] {
     color: col("color"),
     icon: col("icon"),
     abstract: col("abstract"),
+    image: col("image"),
   };
 
   const get = (values: string[], key: keyof typeof idx) => {
@@ -223,6 +267,7 @@ export function parsePapersCSV(csvText: string): Paper[] {
       color: get(values, "color"),
       icon: get(values, "icon") || undefined,
       abstract: get(values, "abstract") || undefined,
+      image: get(values, "image") || undefined,
     };
 
     if (!paper.venue) delete paper.venue;
@@ -246,7 +291,7 @@ export function parsePapersCSV(csvText: string): Paper[] {
 
 // Parse projects CSV
 export function parseProjectsCSV(csvText: string): Project[] {
-  const lines = csvText.trim().split("\n");
+  const lines = splitCSVRows(csvText);
   if (lines.length < 2) return [];
 
   const headers = lines[0].split(",");
@@ -280,7 +325,7 @@ export function parseProjectsCSV(csvText: string): Project[] {
 
 // Parse entities CSV (About page)
 export function parseEntitiesCSV(csvText: string): Entity[] {
-  const lines = csvText.trim().split("\n");
+  const lines = splitCSVRows(csvText);
   if (lines.length < 2) return [];
 
   const headers = parseCSVLine(lines[0]).map((h) => h.trim());
@@ -323,3 +368,67 @@ export function parseEntitiesCSV(csvText: string): Entity[] {
   return data;
 }
 
+
+// Title and event line in the current language (Spanish falls back to English).
+// `event` usually starts with the organizer; that prefix is swapped for the localized organizer.
+export function localizeEvent(
+  e: { talk?: string; talk_es?: string; organizer?: string; organizer_es?: string; event?: string },
+  lang: "en" | "es",
+) {
+  const es = lang === "es";
+  const organizer = (es && e.organizer_es) || e.organizer || "";
+  let subtitle = e.event || "";
+  const prefix = [e.organizer, e.organizer_es].find((p) => p && subtitle.startsWith(p));
+  if (prefix) subtitle = organizer + subtitle.slice(prefix.length);
+  return { title: (es && e.talk_es) || e.talk || "", subtitle };
+}
+
+// Parse news CSV (News and World views), sorted newest first
+export function parseNewsCSV(csvText: string): NewsItem[] {
+  const lines = splitCSVRows(csvText);
+  if (lines.length < 2) return [];
+
+  const headers = parseCSVLine(lines[0]).map((h) => h.trim());
+  const data: NewsItem[] = [];
+
+  for (let i = 1; i < lines.length; i++) {
+    const values = parseCSVLine(lines[i]);
+    if (values.length !== headers.length) continue;
+    const get = (name: string) => (values[headers.indexOf(name)] || "").trim();
+
+    const item: NewsItem = {
+      date: get("date"),
+      highlighted: get("status") === "highlighted",
+      category: get("category"),
+      text: get("text"),
+      location: get("location"),
+      lat: get("lat") ? Number(get("lat")) : undefined,
+      lng: get("lng") ? Number(get("lng")) : undefined,
+      link: undefined,
+    };
+    const [mainLink, ...extras] = get("link").split("|").map((part) => part.trim()).filter(Boolean);
+    if (mainLink) item.link = mainLink;
+    if (extras.length) {
+      item.extraLinks = extras.map((part) => {
+        const at = part.indexOf("=");
+        return { label: part.slice(0, at).trim(), url: part.slice(at + 1).trim() };
+      });
+    }
+
+    if (item.lat === undefined) delete item.lat;
+    if (item.lng === undefined) delete item.lng;
+    if (item.link === undefined) delete item.link;
+    if (!item.link) delete item.link;
+    data.push(item);
+  }
+
+  return data.sort((a, b) => b.date.localeCompare(a.date));
+}
+
+// "2026-06-25" -> "Jun 2026", "2026" -> "2026"
+export function formatNewsDate(date: string, lang: "en" | "es"): string {
+  const [year, month] = date.split("-");
+  if (!month) return year;
+  const name = new Date(Number(year), Number(month) - 1).toLocaleString(lang, { month: "short" });
+  return `${name.charAt(0).toUpperCase()}${name.slice(1).replace(".", "")} ${year}`;
+}

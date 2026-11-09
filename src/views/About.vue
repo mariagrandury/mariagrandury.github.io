@@ -68,7 +68,7 @@ const organizationEntities = computed(() => entities.value.filter((entity) => en
                     🤗 I'm a
                     <a href="https://huggingface.co/mariagrandury" target="_blank"
                         class="font-bold text-accent-500 dark:text-accent-300 hover:underline">Hugging Face Fellow</a>
-                    and have contributed to open-source multilingual projects like BigScience, FineWeb and BERTIN.
+                    and have contributed to open-source multilingual projects like Apertus, LATAM-GPT, INCLUDE-2.0, BigScience, FineWeb 2 and BERTIN.
                     I teach at several universities in LATAM. I enjoy giving talks and workshops and joining round tables, usually about Responsible AI.
                 </h2>
 
@@ -101,7 +101,7 @@ const organizationEntities = computed(() => entities.value.filter((entity) => en
                         🤗 Soy
                         <a href="https://huggingface.co/mariagrandury" target="_blank"
                             class="font-bold text-accent-500 dark:text-accent-300 hover:underline">Hugging Face Fellow</a>
-                        y he contribuido a proyectos de código abierto como BigScience, FineWeb y BERTIN.
+                        y he contribuido a proyectos de código abierto como Apertus, LATAM-GPT, INCLUDE-2.0, BigScience, FineWeb 2 y BERTIN.
                         Imparto clases en varias universidades de LATAM. Me encanta dar charlas, talleres y participar en mesas redondas, normalmente sobre IA Responsable.
                     </h2>
                     <h2 class="py-2">
@@ -114,6 +114,16 @@ const organizationEntities = computed(() => entities.value.filter((entity) => en
                     </h2>
                 </template>
             </CardGeneric>
+        </div>
+
+        <div class="my-12">
+            <h2 class="flex gap-2 items-center mb-4">
+                <div class="font-semibold tracking-tight text-2xl">
+                    {{ lang === 'en' ? 'Around the world' : 'Por el mundo' }}
+                </div>
+                <i-fluent-earth-24-regular style="font-size: 1.5rem" />
+            </h2>
+            <NewsMap />
         </div>
 
         <div class="my-12">

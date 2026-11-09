@@ -2,10 +2,14 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { Icon } from '@iconify/vue';
+import { useLanguage } from '../composables/useLanguage';
+import { localizeEvent } from '../utils/csvParser';
 
 const props = defineProps<{
     talk: string;
+    talk_es?: string;
     organizer?: string;
+    organizer_es?: string;
     event: string;
     event_link?: string;
     image_link?: string;
@@ -19,6 +23,9 @@ const props = defineProps<{
     sm_link?: string;
     abstract?: string;
 }>();
+
+const { lang } = useLanguage();
+const text = computed(() => localizeEvent(props, lang.value));
 
 // Determine recording icon based on event type
 const recordingIcon = computed(() => {
@@ -37,11 +44,11 @@ const recordingIcon = computed(() => {
     <CardGeneric class="py-6 px-8">
         <div class="grid gap-3 grid-cols-[1fr,6fr,auto]">
             <div class="flex justify-center items-start">
-                <img class="p-2 max-h-40" :src="image_link" :alt="talk" />
+                <img v-if="image_link" class="p-2 max-h-40" :src="image_link" :alt="text.title" />
             </div>
             <div class="grid gap-3 items-center">
-                <h1 class="text-lg">{{ talk }}</h1>
-                <div class="text-gray-500 text-sm">{{ event }}</div>
+                <h1 class="text-lg">{{ text.title }}</h1>
+                <div class="text-gray-500 text-sm">{{ text.subtitle }}</div>
                 <div class="flex flex-wrap gap-3">
                     <div v-for="(tag, index) in [type, location]" :key="index"
                         class="border rounded bg-gray-50 border-gray-100 text-sm py-0.5 px-2 select-none dark:border-black dark:bg-gray-700">

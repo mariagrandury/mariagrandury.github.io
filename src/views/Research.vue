@@ -85,7 +85,7 @@ const guestLectures = computed(() =>
         Quiero explorar la evaluación y mitigación de sesgos culturales y lingüísticos en LLMs con un enfoque holístico de la comprensión del lenguaje.
       </h2>
       <p class="italic text-sm text-gray-500" v-if="lang === 'en'">
-        Last update: March 2026 | For up-to-date information check my
+        Last update: November 2026 | For up-to-date information check my
         <a
           href="https://scholar.google.com/citations?user=3mc_-QsAAAAJ"
           target="_blank"
@@ -101,7 +101,7 @@ const guestLectures = computed(() =>
           > profiles!
       </p>
       <p class="italic text-sm text-gray-500" v-else>
-        Última actualización: marzo 2026 | Para información actualizada consulta mis perfiles de
+        Última actualización: noviembre 2026 | Para información actualizada consulta mis perfiles de
         <a
           href="https://scholar.google.com/citations?user=3mc_-QsAAAAJ"
           target="_blank"
@@ -145,6 +145,7 @@ const guestLectures = computed(() =>
         :color="paper.color"
         :icon="paper.icon"
         :abstract="paper.abstract"
+        :image="paper.image"
         :openAbstractByDefault="true"
       />
     </div>
@@ -174,6 +175,7 @@ const guestLectures = computed(() =>
         :color="paper.color"
         :icon="paper.icon"
         :abstract="paper.abstract"
+        :image="paper.image"
       />
     </div>
 
@@ -193,7 +195,9 @@ const guestLectures = computed(() =>
           v-for="lecture in guestLectures"
           :key="lecture.talk"
           :talk="lecture.talk"
+          :talk_es="lecture.talk_es"
           :organizer="lecture.organizer"
+          :organizer_es="lecture.organizer_es"
           :event="lecture.event"
           :event_link="lecture.event_link"
           :image_link="lecture.image_link"
@@ -221,6 +225,7 @@ const guestLectures = computed(() =>
             <li>ACL Rolling Review (ARR), 2026</li>
             <li>Symposium LANLP: Bridging Latin American NLP, 2026</li>
             <li>Conference SIMBig: International Conference on Information Management and Big Data (LATAM), 2026</li>
+            <!-- https://simbig.org/SIMBig2026 -->
             <li>Workshop EXIST: sEXism Identification in Social neTworks, 2025-26</li>
             <!-- https://clef2025.clef-initiative.eu/index.php?page=Pages/Labs/EXIST.html -->
           </ul>
@@ -228,10 +233,23 @@ const guestLectures = computed(() =>
         <CardGeneric class="p-5">
           <h3 class="font-semibold mb-2">{{ lang === 'en' ? 'Diversity & Inclusion' : 'Diversidad e Inclusión' }}</h3>
           <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-200">
-            <li>Diversity & Inclusion Chair at EACL 2026</li>
-            <li>Birds-of-a-Feather (BoF) organizer at ACL 2025</li>
-            <li>Birds-of-a-Feather (BoF) organizer at COLM 2025</li>
+            <li><a href="https://2026.eacl.org/committees/organization" target="_blank" class="hover:underline">Diversity & Inclusion Chair at EACL 2026</a></li>
+            <li><a href="https://2025.aclweb.org/program/bof" target="_blank" class="hover:underline">Birds-of-a-Feather (BoF) co-organizer at ACL 2025</a></li>
+            <li><a href="https://colmweb.org/2025/socials.html" target="_blank" class="hover:underline">Ibero-American NLP meetup co-organizer at COLM 2025</a></li>
+            <li><a href="https://blog.neurips.cc/2025/11/03/neurips-2025-socials-cdmx-join-the-conversations/" target="_blank" class="hover:underline">Social event co-organizer at NeurIPS 2025</a></li>
             <!-- TODO: Add links to somosnlp.org pages -->
+          </ul>
+        </CardGeneric>
+        <CardGeneric class="p-5">
+          <h3 class="font-semibold mb-2">{{ lang === 'en' ? 'Expert Contributions' : 'Contribuciones como Experta' }}</h3>
+          <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-200">
+            <li>
+              <a href="https://digital-strategy.ec.europa.eu/en/library/boosting-tech-deployment-beyond-2027-new-study-highlights-digital-opportunities-and-challenges-eu" target="_blank" class="hover:underline">{{ lang === 'en'
+                ? "Expert for the European Commission (DG CNECT) study \"The EU's Critical Digital Capacities: Deployment Beyond 2027\", 2026"
+                : 'Experta en el estudio de la Comisión Europea (DG CNECT) "The EU\'s Critical Digital Capacities: Deployment Beyond 2027", 2026' }}</a>
+              (<a href="https://op.europa.eu/en/publication-detail/-/publication/30406fe9-6d4b-11f1-ae88-01aa75ed71a1/language-en" target="_blank" class="text-accent-500 hover:underline">{{ lang === 'en' ? 'study' : 'estudio' }}</a>,
+              <a href="https://ec.europa.eu/newsroom/dae/redirection/document/131074" target="_blank" class="text-accent-500 hover:underline">{{ lang === 'en' ? 'acknowledgement' : 'agradecimientos' }}</a>)
+            </li>
           </ul>
         </CardGeneric>
       </div>

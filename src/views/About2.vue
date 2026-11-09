@@ -1,0 +1,240 @@
+<!-- Proposal: education and experience as two side-by-side timelines, organizations as grouped grey-scale logo strips -->
+<script setup lang="ts">
+import { computed, onMounted, ref } from 'vue';
+import Container from '../components/Container.vue';
+import { useHead } from '@vueuse/head'
+import { parseEntitiesCSV, type Entity } from '../utils/csvParser';
+import { useLanguage } from '../composables/useLanguage';
+
+useHead({
+    title: 'María Grandury - About Me, Bio & Collaborations',
+    meta: [
+        { name: 'description', content: 'Hello! I\'m María, an NLP Researcher and the Founder @ SomosNLP.org | Here are my bio and the organizations I collaborate with' },
+        { property: 'og:title', content: 'María Grandury - About Me, Bio & Collaborations' },
+        { property: 'og:image', content: 'https://pbs.twimg.com/profile_images/1584913293470273537/6u-Q8SJP_400x400.jpg' },
+        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:site', content: '@mariagrandury' },
+        { name: 'twitter:creator', content: '@mariagrandury' },
+    ],
+})
+
+const { lang } = useLanguage();
+
+const entities = ref<Entity[]>([]);
+
+onMounted(async () => {
+    try {
+        const response = await fetch('/data/entities.csv');
+        entities.value = parseEntitiesCSV(await response.text());
+    } catch (error) {
+        console.error('Error loading entities:', error);
+    }
+});
+
+const educationEntities = computed(() => entities.value.filter((entity) => entity.type === 'education'));
+const affiliationEntities = computed(() => entities.value.filter((entity) => entity.type === 'affiliation'));
+const organizationEntities = computed(() => entities.value.filter((entity) => entity.type === 'org'));
+
+const isCurrent = (entity: Entity) => entity.year_end === 'present';
+// Current first, then by end year and start year, newest first
+const endYear = (entity: Entity) => (isCurrent(entity) ? 9999 : Number(entity.year_end || entity.year_start));
+const newestFirst = (list: Entity[]) =>
+    [...list].sort((a, b) => endYear(b) - endYear(a) || Number(b.year_start) - Number(a.year_start));
+const sortedAffiliations = computed(() => newestFirst(affiliationEntities.value));
+const sortedEducation = computed(() => newestFirst(educationEntities.value));
+const years = (entity: Entity) =>
+    entity.year_end === 'present'
+        ? `${entity.year_start} – ${lang.value === 'en' ? 'now' : 'hoy'}`
+        : entity.year_start === entity.year_end || !entity.year_end
+          ? entity.year_start
+          : `${entity.year_start} – ${entity.year_end}`;
+
+// Organizations grouped by the kind of involvement
+const orgGroups = computed(() => {
+    const research = ['Hugging Face', 'BigScience', 'BigCode', 'EleutherAI', 'BERTIN'];
+    const women = ['Women in AI & Robotics', 'WomenTech', 'Women Who Code', 'Women in AI'];
+    return [
+        { key: 'research', en: 'Open research collaborations', es: 'Colaboraciones de investigación abierta', items: organizationEntities.value.filter((e) => research.includes(e.name)) },
+        { key: 'community', en: 'Communities & networks', es: 'Comunidades y redes', items: organizationEntities.value.filter((e) => !research.includes(e.name) && !women.includes(e.name)) },
+        { key: 'women', en: 'Women in tech', es: 'Mujeres en tecnología', items: organizationEntities.value.filter((e) => women.includes(e.name)) },
+    ];
+});
+</script>
+
+<template>
+    <Container class="bg-white dark:bg-gray-900">
+        <NavBar class="container mx-auto" />
+    </Container>
+    <Container>
+        <h1 class="flex mb-12 gap-2 items-center">
+            <div class="font-semibold tracking-tight text-4xl">
+                {{ lang === 'en' ? 'About Me' : 'Sobre Mí' }}
+            </div>
+            <!-- <i-fluent-earth-24-regular style="font-size: 2rem" /> -->
+            <i-fluent-rocket-24-regular style="font-size: 2rem" />
+        </h1>
+
+        <div class="lg:px-24 sm:px-12">
+            <CardGeneric class="px-12 my-12">
+                <template v-if="lang === 'en'">
+                <h2 class="pt-12">
+                    🚀 I'm dedicated to advancing responsible, inclusive, and open-source Natural Language Processing (NLP).
+                </h2>
+                <h2 class="py-2">
+                    💡 I'm a <strong>PhD student at EPFL</strong> and the founder of
+                    <a href="https://somosnlp.org" target="_blank"
+                        class="font-bold text-accent-500 dark:text-accent-300 hover:underline">SomosNLP</a>,
+                the largest open-source community of Spanish-speaking NLP practitioners. My research focuses on evaluating the multilingual capabilities of LLMs, with a particular emphasis on linguistic and cultural biases, climate impact and psycholinguistics.
+                </h2>
+                <h2 class="py-2">
+                    🌎 I hold degrees in Mathematics and Physics, and completed an MSc in Language Technologies.
+                </h2>
+                <h2 class="py-2">
+                    🤗 I'm a
+                    <a href="https://huggingface.co/mariagrandury" target="_blank"
+                        class="font-bold text-accent-500 dark:text-accent-300 hover:underline">Hugging Face Fellow</a>
+                    and have contributed to open-source multilingual projects like Apertus, LATAM-GPT, INCLUDE-2.0, BigScience, FineWeb 2 and BERTIN.
+                    I teach at several universities in LATAM. I enjoy giving talks and workshops and joining round tables, usually about Responsible AI.
+                </h2>
+
+                <h2 class="py-2">
+                    ⚡ I have 3 years of industry experience in AI startup labs.
+                    At <strong>Clibrain</strong>
+                    I designed how to evaluate whether AI models truly understand and respect the rich linguistic and cultural nuances of Spanish.
+                    At <strong>neurocat,</strong>
+                    a Berlin-based startup, I developed explainability methods (XAI) and adversarial attacks to assess the trustworthiness of ML models.
+                </h2>
+                <h2 class="pb-12">
+                    💚 Besides geeky things, I love hiking, backpacking, and dancing.
+                </h2>
+                </template>
+
+                <template v-else>
+                    <h2 class="pt-12">
+                        🚀 Mi misión es impulsar un Procesamiento del Lenguaje Natural (PLN) responsable, inclusivo y open-source.
+                    </h2>
+                    <h2 class="py-2">
+                        💡 Soy estudiante de <strong>doctorado en EPFL</strong> y la fundadora de
+                        <a href="https://somosnlp.org" target="_blank"
+                            class="font-bold text-accent-500 dark:text-accent-300 hover:underline">SomosNLP</a>,
+                        la mayor comunidad open-source de PLN para personas hispanohablantes. Mi investigación se centra en evaluar las capacidades multilingües de los LLMs, con especial atención en los sesgos lingüísticos y culturales, el impacto climático y la psicolingüística.
+                    </h2>
+                    <h2 class="py-2">
+                        🌎 Soy graduada en Matemáticas y Física, y tengo un máster en Tecnologías del Lenguaje.
+                    </h2>
+                    <h2 class="py-2">
+                        🤗 Soy
+                        <a href="https://huggingface.co/mariagrandury" target="_blank"
+                            class="font-bold text-accent-500 dark:text-accent-300 hover:underline">Hugging Face Fellow</a>
+                        y he contribuido a proyectos de código abierto como Apertus, LATAM-GPT, INCLUDE-2.0, BigScience, FineWeb 2 y BERTIN.
+                        Imparto clases en varias universidades de LATAM. Me encanta dar charlas, talleres y participar en mesas redondas, normalmente sobre IA Responsable.
+                    </h2>
+                    <h2 class="py-2">
+                        ⚡ Tengo 3 años de experiencia en startups de IA.
+                        En <strong>Clibrain</strong> diseñé evaluaciones para analizar si los modelos de IA entienden y respetan los matices lingüísticos y culturales del español.
+                        En <strong>neurocat</strong>, startup con base en Berlín, desarrollé métodos de explicabilidad (XAI) y ataques adversarios para evaluar la fiabilidad de modelos de ML.
+                    </h2>
+                    <h2 class="pb-12">
+                        💚 Si no estoy trabajando, seguramente esté en la montaña.
+                    </h2>
+                </template>
+            </CardGeneric>
+        </div>
+
+        <div class="my-12">
+            <h2 class="flex gap-2 items-center mb-4">
+                <div class="font-semibold tracking-tight text-2xl">
+                    {{ lang === 'en' ? 'Around the world' : 'Por el mundo' }}
+                </div>
+                <i-fluent-earth-24-regular style="font-size: 1.5rem" />
+            </h2>
+            <NewsMap />
+        </div>
+
+        <!-- Education and experience side by side, newest first -->
+        <div class="my-12 grid gap-12 md:grid-cols-2">
+            <div>
+                <h2 class="flex gap-2 items-center mb-6">
+                    <div class="font-semibold tracking-tight text-2xl">{{ lang === 'en' ? 'Experience & affiliations' : 'Experiencia y afiliaciones' }}</div>
+                    <i-fluent-people-team-24-regular style="font-size: 1.5rem" />
+                </h2>
+                <ol class="relative border-l-2 border-gray-200 dark:border-gray-700 ml-6">
+                    <li v-for="entity in sortedAffiliations" :key="`${entity.name}-${entity.title}`" class="relative pl-10 pb-6">
+                        <a
+                            :href="entity.url"
+                            target="_blank"
+                            class="absolute -left-6 top-0 w-12 h-12 rounded-full bg-white border border-gray-200 dark:border-gray-600 grid place-items-center overflow-hidden"
+                            :class="{ 'ring-2 ring-accent-400': isCurrent(entity) }"
+                        >
+                            <img v-if="entity.logo" :src="entity.logo" :alt="entity.name" class="max-w-full max-h-full object-contain p-1" />
+                            <span v-else class="text-xs font-semibold text-gray-700">{{ entity.name.slice(0, 2) }}</span>
+                        </a>
+                        <div class="text-xs text-gray-500 dark:text-gray-400 tabular-nums">
+                            {{ years(entity) }}
+                            <span v-if="isCurrent(entity)" class="ml-1 rounded-full bg-accent-500 text-white px-2 py-0.5">{{ lang === 'en' ? 'Current' : 'Actual' }}</span>
+                        </div>
+                        <div class="font-semibold">{{ entity.title }}</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">{{ entity.name }}</div>
+                    </li>
+                </ol>
+            </div>
+            <div>
+                <h2 class="flex gap-2 items-center mb-6">
+                    <div class="font-semibold tracking-tight text-2xl">{{ lang === 'en' ? 'Education' : 'Educación' }}</div>
+                    <i-fluent-book-24-regular style="font-size: 1.5rem" />
+                </h2>
+                <ol class="relative border-l-2 border-gray-200 dark:border-gray-700 ml-6">
+                    <li v-for="entity in sortedEducation" :key="`${entity.name}-${entity.title}`" class="relative pl-10 pb-6">
+                        <a
+                            :href="entity.url"
+                            target="_blank"
+                            class="absolute -left-6 top-0 w-12 h-12 rounded-full bg-white border border-gray-200 dark:border-gray-600 grid place-items-center overflow-hidden"
+                            :class="{ 'ring-2 ring-accent-400': isCurrent(entity) }"
+                        >
+                            <img v-if="entity.logo" :src="entity.logo" :alt="entity.name" class="max-w-full max-h-full object-contain p-1" />
+                            <span v-else class="text-xs font-semibold text-gray-700">{{ entity.name.slice(0, 2) }}</span>
+                        </a>
+                        <div class="text-xs text-gray-500 dark:text-gray-400 tabular-nums">
+                            {{ years(entity) }}
+                            <span v-if="isCurrent(entity)" class="ml-1 rounded-full bg-accent-500 text-white px-2 py-0.5">{{ lang === 'en' ? 'Current' : 'Actual' }}</span>
+                        </div>
+                        <div class="font-semibold">{{ entity.title }}</div>
+                        <div class="text-sm text-gray-600 dark:text-gray-300">{{ entity.name }}</div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Organizations: grey-scale logos grouped by type, colour on hover -->
+        <div class="my-12">
+            <h2 class="flex gap-2 items-center">
+                <div class="font-semibold tracking-tight text-2xl">{{ lang === 'en' ? 'Organizations' : 'Organizaciones' }}</div>
+                <i-fluent-color-24-regular style="font-size: 1.5rem" />
+            </h2>
+            <p class="py-3 text-gray-600 dark:text-gray-300">
+                {{ lang === 'en' ? "Organizations and networks I'm part of or I collaborate with." : 'Organizaciones y redes de las que formo parte o con las que colaboro.' }}
+            </p>
+            <div v-for="group in orgGroups" :key="group.key" class="py-4 border-t border-gray-100 dark:border-gray-800">
+                <h3 class="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-4">{{ group[lang] }}</h3>
+                <div class="flex flex-wrap gap-x-10 gap-y-6 items-start">
+                    <a
+                        v-for="entity in group.items"
+                        :key="entity.name"
+                        :href="entity.url"
+                        target="_blank"
+                        class="group flex flex-col items-center gap-2 w-36 text-center"
+                    >
+                        <div class="h-14 w-full grid place-items-center rounded-md bg-white px-2">
+                            <img :src="entity.logo" :alt="entity.name" class="max-h-12 max-w-full object-contain filter grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition" />
+                        </div>
+                        <div class="text-xs leading-tight">
+                            <div class="font-medium">{{ entity.name }}</div>
+                            <div class="text-gray-500 dark:text-gray-400">{{ entity.title }} · {{ years(entity) }}</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </Container>
+</template>

@@ -36,7 +36,7 @@ const featuredProjects = computed(() =>
   projects.value.filter((project) => project.status === "featured")
 );
 const highlightTalks = computed(() =>
-  events.value.filter((event) => event.status === "highlights")
+  events.value.filter((event) => event.status === "highlights").slice(0, 3)
 );
 </script>
 
@@ -114,6 +114,16 @@ const highlightTalks = computed(() =>
           </ul>
         </div>
       </div>
+    </div>
+  </Container>
+
+  <Container class="bg-white dark:bg-gray-900">
+    <div class="px-8 lg:py-8">
+      <div class="text-3xl mb-2 flex gap-2 items-center">
+        {{ lang === 'en' ? 'News' : 'Noticias' }}
+        <i-fluent-news-24-regular style="font-size: 2rem" />
+      </div>
+      <NewsTimeline />
     </div>
   </Container>
 
@@ -204,6 +214,9 @@ const highlightTalks = computed(() =>
             v-for="talk in highlightTalks"
             :key="talk.talk"
             :talk="talk.talk"
+            :talk_es="talk.talk_es"
+            :organizer="talk.organizer"
+            :organizer_es="talk.organizer_es"
             :event="talk.event"
             :event_link="talk.event_link"
             :image_link="talk.image_link"
@@ -279,6 +292,7 @@ const highlightTalks = computed(() =>
             :color="paper.color"
             :icon="paper.icon"
             :abstract="paper.abstract"
+            :image="paper.image"
           />
         </div>
       </div>
