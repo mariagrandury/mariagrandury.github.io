@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
+import { Icon } from "@iconify/vue";
+import { convertIconName } from "../utils/iconRegistry";
 
 const props = defineProps<{
   title: string;
@@ -17,6 +19,7 @@ const props = defineProps<{
   award?: string;
   color: string;
   icon?: string;
+  image?: string;
   openAbstractByDefault?: boolean;
 }>();
 
@@ -40,9 +43,19 @@ const abstractBtnClass = computed(() =>
 
 <template>
   <CardGeneric class="p-6">
-    <div class="grid gap-3 grid-cols-[auto,1fr]">
-      <div class="rounded-md h-4rem grid text-2rem w-4rem place-items-center" :class="color">
-        <component :is="icon" v-if="icon" />
+    <div class="grid gap-4" :class="image ? 'md:grid-cols-[16rem,1fr]' : 'grid-cols-[auto,1fr]'">
+      <a
+        v-if="image"
+        :href="paper_link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block rounded-md border border-gray-100 dark:border-gray-700 bg-white p-2 self-start hover:ring ring-accent-500"
+        :title="`Figure 1 · ${title}`"
+      >
+        <img :src="image" :alt="`Figure 1 of ${title}`" loading="lazy" class="w-full max-h-56 object-contain" />
+      </a>
+      <div v-else class="rounded-md h-4rem grid text-2rem w-4rem place-items-center" :class="color">
+        <Icon v-if="icon && convertIconName(icon)" :icon="convertIconName(icon)!" />
       </div>
       <div class="grid gap-3 min-w-0">
         <h2 class="font-semibold">{{ title }}</h2>
@@ -153,11 +166,10 @@ const abstractBtnClass = computed(() =>
             X
           </a>
         </div>
-
-        <div v-if="abstract && showAbstract" class="text-sm text-gray-600 dark:text-gray-300 border-t border-gray-100 dark:border-gray-700 pt-3">
-          {{ abstract }}
-        </div>
       </div>
+    </div>
+    <div v-if="abstract && showAbstract" class="mt-4 text-sm text-gray-600 dark:text-gray-300 border-t border-gray-100 dark:border-gray-700 pt-3">
+      {{ abstract }}
     </div>
   </CardGeneric>
 </template>

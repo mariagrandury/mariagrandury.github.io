@@ -118,6 +118,16 @@ const highlightTalks = computed(() =>
   </Container>
 
   <Container class="bg-white dark:bg-gray-900">
+    <div class="px-8 lg:py-8">
+      <div class="text-3xl mb-2 flex gap-2 items-center">
+        {{ lang === 'en' ? 'News' : 'Noticias' }}
+        <i-fluent-news-24-regular style="font-size: 2rem" />
+      </div>
+      <NewsTimeline />
+    </div>
+  </Container>
+
+  <Container class="bg-white dark:bg-gray-900">
     <div class="h-full grid gap-8 place-items-center lg:py-8 xl:grid-cols-2">
 
       <div class="px-8">
@@ -282,6 +292,7 @@ const highlightTalks = computed(() =>
             :color="paper.color"
             :icon="paper.icon"
             :abstract="paper.abstract"
+            :image="paper.image"
           />
         </div>
       </div>

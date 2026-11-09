@@ -38,6 +38,7 @@ export interface Paper {
   color: string;
   icon?: string;
   abstract?: string;
+  image?: string;
 }
 
 export interface Project {
@@ -78,6 +79,17 @@ export function splitCSVRows(csvText: string): string[] {
   rows.push(current);
 
   return rows;
+}
+
+export interface NewsItem {
+  date: string;
+  highlighted: boolean;
+  category: string;
+  text: string;
+  location: string;
+  lat?: number;
+  lng?: number;
+  link?: string;
 }
 
 // Parse CSV line handling quoted fields
@@ -218,6 +230,7 @@ export function parsePapersCSV(csvText: string): Paper[] {
     color: col("color"),
     icon: col("icon"),
     abstract: col("abstract"),
+    image: col("image"),
   };
 
   const get = (values: string[], key: keyof typeof idx) => {
@@ -251,6 +264,7 @@ export function parsePapersCSV(csvText: string): Paper[] {
       color: get(values, "color"),
       icon: get(values, "icon") || undefined,
       abstract: get(values, "abstract") || undefined,
+      image: get(values, "image") || undefined,
     };
 
     if (!paper.venue) delete paper.venue;
@@ -364,4 +378,45 @@ export function localizeEvent(
   const prefix = [e.organizer, e.organizer_es].find((p) => p && subtitle.startsWith(p));
   if (prefix) subtitle = organizer + subtitle.slice(prefix.length);
   return { title: (es && e.talk_es) || e.talk || "", subtitle };
+}
+
+// Parse news CSV (News and World views), sorted newest first
+export function parseNewsCSV(csvText: string): NewsItem[] {
+  const lines = splitCSVRows(csvText);
+  if (lines.length < 2) return [];
+
+  const headers = parseCSVLine(lines[0]).map((h) => h.trim());
+  const data: NewsItem[] = [];
+
+  for (let i = 1; i < lines.length; i++) {
+    const values = parseCSVLine(lines[i]);
+    if (values.length !== headers.length) continue;
+    const get = (name: string) => (values[headers.indexOf(name)] || "").trim();
+
+    const item: NewsItem = {
+      date: get("date"),
+      highlighted: get("status") === "highlighted",
+      category: get("category"),
+      text: get("text"),
+      location: get("location"),
+      lat: get("lat") ? Number(get("lat")) : undefined,
+      lng: get("lng") ? Number(get("lng")) : undefined,
+      link: get("link") || undefined,
+    };
+
+    if (item.lat === undefined) delete item.lat;
+    if (item.lng === undefined) delete item.lng;
+    if (!item.link) delete item.link;
+    data.push(item);
+  }
+
+  return data.sort((a, b) => b.date.localeCompare(a.date));
+}
+
+// "2026-06-25" -> "Jun 2026", "2026" -> "2026"
+export function formatNewsDate(date: string, lang: "en" | "es"): string {
+  const [year, month] = date.split("-");
+  if (!month) return year;
+  const name = new Date(Number(year), Number(month) - 1).toLocaleString(lang, { month: "short" });
+  return `${name.charAt(0).toUpperCase()}${name.slice(1).replace(".", "")} ${year}`;
 }

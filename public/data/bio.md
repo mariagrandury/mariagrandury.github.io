@@ -184,9 +184,6 @@ logos-lg: https://mariagrandury.ai/images/events/231114_efe_camera.png, https://
 - Co-organizadora de Birds-of-a-Feather en <a href="https://2025.aclweb.org/" target="_blank">ACL</a> & <a href="https://colmweb.org/" target="_blank">COLM 2025</a>
     - ACL: Association for Computational Linguistics, Viena, 2025
     - COLM: Conference on Language Modelling, Montreal, Canada, 2025
-- Co-organizadora del simposio <a href="https://sites.google.com/view/lanlp2026/" target="_blank"><b>Bridging Latin American NLP</b></a>
-  - Simposio LANLP @LREC 2026
-  - LREC: Language Resources and Evaluation Conference, Palma, 2026
 
 ### ¡Gracias!
 

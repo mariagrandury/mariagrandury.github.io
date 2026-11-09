@@ -145,6 +145,7 @@ const guestLectures = computed(() =>
         :color="paper.color"
         :icon="paper.icon"
         :abstract="paper.abstract"
+        :image="paper.image"
         :openAbstractByDefault="true"
       />
     </div>
@@ -174,6 +175,7 @@ const guestLectures = computed(() =>
         :color="paper.color"
         :icon="paper.icon"
         :abstract="paper.abstract"
+        :image="paper.image"
       />
     </div>
 
@@ -236,6 +238,17 @@ const guestLectures = computed(() =>
             <li><a href="https://colmweb.org/2025/socials.html" target="_blank" class="hover:underline">Ibero-American NLP meetup co-organizer at COLM 2025</a></li>
             <li><a href="https://blog.neurips.cc/2025/11/03/neurips-2025-socials-cdmx-join-the-conversations/" target="_blank" class="hover:underline">Social event co-organizer at NeurIPS 2025</a></li>
             <!-- TODO: Add links to somosnlp.org pages -->
+          </ul>
+        </CardGeneric>
+        <CardGeneric class="p-5">
+          <h3 class="font-semibold mb-2">{{ lang === 'en' ? 'Expert Contributions' : 'Contribuciones como Experta' }}</h3>
+          <ul class="list-disc list-inside text-sm text-gray-700 dark:text-gray-200">
+            <li>
+              <a href="https://ec.europa.eu/newsroom/dae/redirection/document/131074" target="_blank" class="hover:underline">{{ lang === 'en'
+                ? "Expert for the European Commission (DG CNECT) study \"The EU's Critical Digital Capacities: Deployment Beyond 2027\", 2026"
+                : 'Experta en el estudio de la Comisión Europea (DG CNECT) "The EU\'s Critical Digital Capacities: Deployment Beyond 2027", 2026' }}</a>
+              <!-- https://digital-strategy.ec.europa.eu/en/library/boosting-tech-deployment-beyond-2027-new-study-highlights-digital-opportunities-and-challenges-eu -->
+            </li>
           </ul>
         </CardGeneric>
       </div>

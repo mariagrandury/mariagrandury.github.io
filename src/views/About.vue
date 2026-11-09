@@ -117,6 +117,16 @@ const organizationEntities = computed(() => entities.value.filter((entity) => en
         </div>
 
         <div class="my-12">
+            <h2 class="flex gap-2 items-center mb-4">
+                <div class="font-semibold tracking-tight text-2xl">
+                    {{ lang === 'en' ? 'Around the world' : 'Por el mundo' }}
+                </div>
+                <i-fluent-earth-24-regular style="font-size: 1.5rem" />
+            </h2>
+            <NewsMap />
+        </div>
+
+        <div class="my-12">
             <h2 class="flex gap-2 items-center mb-8">
                 <div class="font-semibold tracking-tight text-2xl">
                     {{ lang === 'en' ? 'Education' : 'Educación' }}
