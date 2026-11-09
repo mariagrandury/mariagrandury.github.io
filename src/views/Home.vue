@@ -36,7 +36,7 @@ const featuredProjects = computed(() =>
   projects.value.filter((project) => project.status === "featured")
 );
 const highlightTalks = computed(() =>
-  events.value.filter((event) => event.status === "highlights")
+  events.value.filter((event) => event.status === "highlights").slice(0, 3)
 );
 </script>
 

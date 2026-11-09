@@ -61,6 +61,7 @@ const showYear = (item: NewsItem, index: number) =>
           </div>
           <a v-if="item.link" :href="item.link" target="_blank" class="hover:underline" :class="{ 'font-semibold': emphasise(item) }">{{ item.text }}</a>
           <span v-else :class="{ 'font-semibold': emphasise(item) }">{{ item.text }}</span>
+          <span v-for="extra in item.extraLinks || []" :key="extra.url" class="text-xs"> · <a :href="extra.url" target="_blank" class="text-accent-500 hover:underline">{{ extra.label }}</a></span>
         </div>
       </li>
     </ol>

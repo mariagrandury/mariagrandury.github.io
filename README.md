@@ -64,6 +64,6 @@ All content lives in `public/data/` and is loaded by the views at runtime:
 * `events.csv`: talks, interviews and media (Divulgation, Research, Home)
 * `papers.csv`: publications (Research, Home)
 * `projects.csv`, `entities.csv`, `profiles.csv`, `bio.md`
-* `news.csv`: one line per news item, shown as the timeline on Home (`NewsTimeline`) and the map on Bio (`NewsMap`). Columns: `date` (`YYYY`, `YYYY-MM` or `YYYY-MM-DD`), `status` (`highlighted` or empty), `category` (`paper`, `talk`, `media`, `career`, `award`, `service`), `text`, `location` (online items use the city of the host, or where I lived), `lat`, `lng` and `link`.
+* `news.csv`: one line per news item, shown as the timeline on Home (`NewsTimeline`) and the map on Bio (`NewsMap`). Columns: `date` (`YYYY`, `YYYY-MM` or `YYYY-MM-DD`), `status` (`highlighted` or empty), `category` (`paper`, `talk`, `media`, `career`, `award`, `service`), `text`, `location` (online items use the city of the host, or where I lived), `lat`, `lng` and `link` (extra labelled links go after the main one: `url | Study=url | Acknowledgement=url`).
 * `papers.csv` `image`: Figure 1 of the paper, stored in `public/images/papers/` (empty = colored icon).
-* Proposals to compare (remove before merging): `/home1` single "Explore" section, `/home2` slimmer sections with a "Featured in" strip, `/research2` figure gallery, `/divulgation2` timeline with format filters, `/projects2` card grid.
+* Proposals to compare (remove before merging): `/home1` single "Explore" section, `/home2` slimmer sections with a "Featured in" strip, `/research2` figure gallery, `/divulgation2` timeline with format filters, `/projects2` card grid, `/about2` timelines and grouped logos, `/contact2` ways to get involved.

@@ -1,4 +1,4 @@
-<!-- Proposal: talks & media in the same timeline style as the news, with format filters and a logo tile per item -->
+<!-- Proposal: talks & media in the same timeline style as the news, with format filters, a thumbnail per item and wide highlighted cards with the photo below -->
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
 import { useHead } from "@vueuse/head";
@@ -34,6 +34,8 @@ const formatOf = (e: Event): Format => {
 };
 
 const formatFilter = ref<string[]>([]);
+const onlyHighlights = ref(false);
+const isHighlight = (e: Event) => e.status === "highlights";
 
 const formatOptions = computed(() =>
   (Object.keys(formats) as Format[]).map((key) => ({
@@ -47,7 +49,7 @@ const formatOptions = computed(() =>
 const visible = computed(() =>
   events.value.filter(
     (e) =>
-      !formatFilter.value.length || formatFilter.value.includes(formatOf(e)),
+      (!formatFilter.value.length || formatFilter.value.includes(formatOf(e))) && (!onlyHighlights.value || isHighlight(e)),
   ),
 );
 
@@ -75,7 +77,15 @@ const imageSrc = (link: string) => (/^https?:/.test(link) ? link : "/" + link.re
     </p>
 
     <div class="flex flex-col gap-2 py-2 sticky top-0 z-10 bg-white dark:bg-gray-900">
-      <FilterPills v-model="formatFilter" :options="formatOptions" :total="events.length" />
+      <FilterPills v-model="formatFilter" :options="formatOptions" :total="events.length">
+        <button
+          class="rounded-full border px-3 py-1 text-sm border-yellow-400"
+          :class="{ 'bg-yellow-400 text-gray-900': onlyHighlights }"
+          @click="onlyHighlights = !onlyHighlights"
+        >
+          ★ {{ lang === 'en' ? 'Highlights' : 'Destacados' }}
+        </button>
+      </FilterPills>
     </div>
 
     <ol class="relative border-l-2 border-gray-200 dark:border-gray-700 ml-24 my-6">
@@ -85,7 +95,37 @@ const imageSrc = (link: string) => (/^https?:/.test(link) ? link : "/" + link.re
           class="absolute rounded-full ring-4 ring-white dark:ring-gray-900"
           :style="{ background: formats[formatOf(e)].color, left: '-7px', top: '22px', width: '12px', height: '12px' }"
         />
-        <div class="flex gap-3 items-start rounded-md border border-gray-100 dark:border-gray-700 p-3 hover:shadow-sm">
+        <!-- Highlight: wide card, photo below the text -->
+        <div
+          v-if="isHighlight(e)"
+          class="rounded-md border-l-4 bg-gray-50 dark:bg-gray-800 p-4 shadow-sm"
+          :style="{ borderColor: formats[formatOf(e)].color }"
+        >
+          <div class="text-xs text-gray-500 dark:text-gray-400">
+            ★ {{ formatNewsDate(e.date, lang) }} · {{ formats[formatOf(e)].emoji }} {{ cleanType(e.type) }} · {{ e.location }}
+          </div>
+          <a v-if="e.event_link || e.recording_link" :href="e.recording_link || e.event_link" target="_blank" class="text-lg font-semibold hover:underline">
+            {{ localizeEvent(e, lang).title }}
+          </a>
+          <span v-else class="text-lg font-semibold">{{ localizeEvent(e, lang).title }}</span>
+          <div class="text-sm text-gray-600 dark:text-gray-300">{{ localizeEvent(e, lang).subtitle }}</div>
+          <div class="flex gap-3 pt-1 text-xs">
+            <a v-if="e.event_link" :href="e.event_link" target="_blank" class="text-accent-500 hover:underline">{{ lang === 'en' ? 'Event' : 'Evento' }}</a>
+            <a v-if="e.recording_link" :href="e.recording_link" target="_blank" class="text-accent-500 hover:underline">{{ lang === 'en' ? 'Recording / article' : 'Grabación / artículo' }}</a>
+            <a v-if="e.sm_link" :href="e.sm_link" target="_blank" class="text-accent-500 hover:underline">{{ lang === 'en' ? 'Post' : 'Publicación' }}</a>
+          </div>
+          <img
+            v-if="e.image_link"
+            :src="imageSrc(e.image_link)"
+            :alt="e.event"
+            loading="lazy"
+            class="mt-3 rounded-md max-w-full w-auto object-contain"
+            style="max-height: 26rem"
+          />
+        </div>
+
+        <!-- Regular item: compact card with a thumbnail on the left -->
+        <div v-else class="max-w-3xl flex gap-3 items-start rounded-md border border-gray-100 dark:border-gray-700 p-3 hover:shadow-sm">
           <div class="flex-shrink-0 w-24 h-20 rounded-md bg-gray-50 dark:bg-gray-800 grid place-items-center overflow-hidden">
             <img v-if="e.image_link" :src="imageSrc(e.image_link)" :alt="e.event" loading="lazy" class="w-full h-full object-cover" />
             <span v-else class="text-2xl">{{ formats[formatOf(e)].emoji }}</span>

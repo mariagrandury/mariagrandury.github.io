@@ -89,7 +89,10 @@ export interface NewsItem {
   location: string;
   lat?: number;
   lng?: number;
+  // Main link (the text links here)
   link?: string;
+  // Extra labelled links, written in the CSV as `main_url | Label=url | Label=url`
+  extraLinks?: { label: string; url: string }[];
 }
 
 // Parse CSV line handling quoted fields
@@ -401,11 +404,20 @@ export function parseNewsCSV(csvText: string): NewsItem[] {
       location: get("location"),
       lat: get("lat") ? Number(get("lat")) : undefined,
       lng: get("lng") ? Number(get("lng")) : undefined,
-      link: get("link") || undefined,
+      link: undefined,
     };
+    const [mainLink, ...extras] = get("link").split("|").map((part) => part.trim()).filter(Boolean);
+    if (mainLink) item.link = mainLink;
+    if (extras.length) {
+      item.extraLinks = extras.map((part) => {
+        const at = part.indexOf("=");
+        return { label: part.slice(0, at).trim(), url: part.slice(at + 1).trim() };
+      });
+    }
 
     if (item.lat === undefined) delete item.lat;
     if (item.lng === undefined) delete item.lng;
+    if (item.link === undefined) delete item.link;
     if (!item.link) delete item.link;
     data.push(item);
   }

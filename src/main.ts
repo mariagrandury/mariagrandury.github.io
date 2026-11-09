@@ -15,6 +15,8 @@ import Forbes30under30 from "./views/Forbes30under30.vue"
 import Research2 from "./views/Research2.vue"
 import Home1 from "./views/Home1.vue"
 import Home2 from "./views/Home2.vue"
+import About2 from "./views/About2.vue"
+import Contact2 from "./views/Contact2.vue"
 import Divulgation2 from "./views/Divulgation2.vue"
 import Projects2 from "./views/Projects2.vue"
 
@@ -38,6 +40,8 @@ export const createApp = ViteSSG(
             { path: '/research2', component: Research2 },
             { path: '/divulgation2', component: Divulgation2 },
             { path: '/projects2', component: Projects2 },
+            { path: '/about2', component: About2 },
+            { path: '/contact2', component: Contact2 },
         ]
     },
     // function to have custom setups

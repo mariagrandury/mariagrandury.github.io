@@ -134,6 +134,7 @@ const selectedItems = computed(() =>
         <span>
           <a v-if="item.link" :href="item.link" target="_blank" class="hover:underline" :class="{ 'font-semibold': item.highlighted }">{{ item.text }}</a>
           <span v-else :class="{ 'font-semibold': item.highlighted }">{{ item.text }}</span>
+          <span v-for="extra in item.extraLinks || []" :key="extra.url" class="text-xs"> · <a :href="extra.url" target="_blank" class="text-accent-500 hover:underline">{{ extra.label }}</a></span>
           <span v-if="!selected" class="text-sm text-gray-500 dark:text-gray-400"> · {{ item.location }}</span>
         </span>
       </li>
